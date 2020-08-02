@@ -1,0 +1,28 @@
+.carousel-caption{
+	background-color: rgba(0,0,0,0.5);
+	color: #000000;
+}
+.red{
+	color: red;
+}
+div.card-body{
+	padding:0;
+}
+
+div.card{
+	opacity: 0.8;
+}
+
+body{ 
+  background: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.sticky-top-2{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 56px;
+    z-index:1030;
+}
