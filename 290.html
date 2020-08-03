@@ -63,7 +63,8 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-4">
+     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0082-CUSA02694_00-DQHEROESDIGSLIME/1596206856000/image?w=253&amp;h=253">
@@ -81,9 +82,9 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-8">
-      		<!-- Vamos a probar los grafiquitos -->
-      		<canvas class="my-4 w-100 chartjs-render-monitor" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
+      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
+      		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
       		
      </div><!--END ROW -->
 
@@ -129,10 +130,18 @@ body{
       }]
     },
     options: {
+      responsive: true,
+      title:{
+            display:true,
+            text: 'Evolución Precio'
+        },
       scales: {
         yAxes: [{
           ticks: {
-            beginAtZero: false
+            beginAtZero: false,
+            callback: function(value, index, values) {
+                        return value + ' €';
+                    }
           }
         }]
       },
