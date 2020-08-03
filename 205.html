@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0082-CUSA11161_00-DQB2DELUXEDIGITA/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 63.22 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 39.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> DRAGON QUEST BUILDERS 2 es un juego de rol y construcción a base de bloques con una campaña fascinante para un jugador y un sólido modo multijugador en línea para un máximo de cuatro constructores. Ponte manos a la obra junto a tu misterioso compañero, Malroth, para devolver la vida a un mundo abandonado. Después pon a tu constructor en línea y únete a tus amigos para crear algo que quite el hipo. Incluye lo siguiente:<br><br>- DRAGON QUEST BUILDERS 2 <br>- Receta de limo apilable<br>- Season Pass <br><br>El Season Pass incluye:<br>Gafas de sol de diseñador<br>Paquete del tesoro de Awasaki<br>Paquete de acuario<br>Paquete modernista<br><br>El 'Paquete del tesoro de Awasaki', 'Paquete de acuario' y 'Paquete modernista' podrán comprarse por separado.<br><br>Las 'Gafas de sol de diseñador' están disponibles en exclusiva para quienes compren el Season Pass de DRAGON QUEST BUILDERS 2.<br><br>Ahorra dinero en contenido para este juego adquiriendo el Season Pass. El contenido puede ser descargado de PlayStation™Store una vez sea lanzado.<br><br>1 jugador<br>Jugadores en red: 2-4 - El juego completo requiere ser miembro de PlayStation®Plus para acceder a las partidas multijugador online<br>Salida de vídeo HD 720p,1080i,1080p<br><br></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {

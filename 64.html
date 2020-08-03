@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0006-CUSA09216_00-THESIMS400000000/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 29.42 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 14.79 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 06/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> Nueva imagen, mismo fantástico contenido<br>¡Da rienda suelta a tu imaginación y crea un mundo único de Sims a tu imagen y semejanza! Explora y personaliza todos los detalles, desde tus Sims a sus hogares y mucho más. <br><br>Crea Sims únicos. Personaliza una gran variedad de Sims con aspectos definidos, personalidades dinámicas y aspiraciones inspiradoras.<br><br>Construye la casa perfecta. Edifica y diseña las casas ideales de tus Sims sin ningún esfuerzo con el modo Construir.<br><br>Explora mundos vibrantes. Desplázate entre distintas ubicaciones, explora increíbles y singulares barrios, y descubre lugares cautivadores.<br><br>Juega a la vida. Controla los momentos interesantes y entretenidos de las vidas personales y profesionales de tus Sims.<br><br>Añade nuevas experiencias. Utiliza la galería para buscar inspiración entre una comunidad de jugadores como tú, añadir contenido a tus partidas o compartir tus propias creaciones.<br><br></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {

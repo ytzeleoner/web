@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4108-CUSA12641_00-MO3DDX0000000000/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 69.59 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 55.19 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> ¡Vive la mayor experiencia en el cénit del género musou! ¡La versión definitiva de WO4 ya está aquí!<br>Este producto es un lote que incluye el juego base WO4 y WO4: The Ultimate Upgrade Pack.<br><br>Visita la web oficial para más detalles:<br>https://www.koeitecmoeurope.com/wo4u/ <br><br>Si ya tienes WO4, es mejor que compres WO4: The Ultimate Upgrade Pack Deluxe Edition.<br><br>Contenido:<br>- El juego base WO4<br>- The Ultimate Upgrade Pack<br>- Legendary Costumes Orochi Pack 4<br>- 2 Special Costumes<br>- Legendary Weapons Orochi Pack 4<br>- 2 Sacred Treasures<br>- Series BGM Pack<br><br>Recompensas de la Deluxe Edition:<br>- 3 armas adicionales<br>- Personajes que se desbloquean antes: Ky?bi, Tamamo, Yinglong<br>- Growth Points, Arena Points y Crystals<br><br>Todo este contenido podrá estar disponible mediante pago en el futuro.<br><br>Este producto es compatible con los siguientes idiomas; Inglés<br><br><br></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {

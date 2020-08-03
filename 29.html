@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA17419_00-PERSONA5R0000000/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 53.70 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 44.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 06/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> Ponte la máscara.  Desvela la verdad.<br/>Prepárate para disfrutar de una nueva experiencia RPG en Persona®5 Royal basada en el universo de Persona®. Ponte la máscara de Joker y únete a los Ladrones Fantasma de Corazones. Escapa de las cadenas de la sociedad y organiza espectaculares asaltos para infiltrarte en la mente de los corruptos y provocar que cambien. Persona®5 Royal cuenta con nuevos personajes y lugares, más profundidad de la trama y una mecánica de arpeo para acceder a nuevas zonas. Comienza el curso escolar, así que prepárate para mejorar tus habilidades en el Metaverso y en tu día a día. Persona®5 Royal presenta un estilo visual excepcional y una exclusiva banda sonora de la mano del compositor Shoji Meguro. Explora Tokio, desbloquea Personas, personaliza la Guarida de los Ladrones y descubre una parte de la historia nunca vista, cinemáticas, finales alternativos, y mucho más.<br/><br/><br/><br/>Un único jugador offline<br/>Usa la función de vibración DUALSHOCK 4<br/>Las funciones online requieren una cuenta y están sujetas a los términos del servicio (playstationnetwork.com/terms-of-service), la política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/><br><br></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {

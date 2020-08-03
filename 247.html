@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0082-CUSA15266_00-ONINAKI000000000/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 39.51 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 24.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> El original juego de rol y acción ONINAKI narra la aventura de un Watcher que protege la vida después de la muerte. Con combates trepidantes de estilo hack and slash y una amplia personalización de los Daemons y las armas, ONINAKI te atrapará con su amplísima variedad de contenidos. ¡Disfruta de una jugabilidad de acción única y una historia fascinante a la vez!<br/><br/>La reencarnación es la piedra angular de nuestro modo de vida.<br/><br/>La tristeza que aflige a los vivos ante la muerte hace que los fallecidos se extravíen.<br/><br/>Por eso convertimos nuestro dolor en alegría al despedirlos.<br/><br/>Pero las almas de los que contienen sus lágrimas en vida necesitan la salvación en la muerte. Esa es la labor de los Watchers.<br/><br/>Ellos guían a las almas errantes, o Lost, y sirven de guardianes del mundo de los vivos y del más allá.<br/><br/>Los Watchers cortan los lazos que vinculan a los Lost con este mundo y los envían al próximo. Se mueven entre las emociones de los vivos y de los muertos y aprecian la vida más que nada.<br/><br/></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {

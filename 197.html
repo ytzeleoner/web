@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA00362_00-AITCOLLECTIONPS4/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 36.54 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 10.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> Ganador de 50 galardones de Juego del Año, incluido el de la Revista Oficial de PlayStation.<br><br>Contiene el juego completo y siete paquetes de contenido adicional:<br>- Última superviviente (con los actores originales de AlienTM)<br>- Tripulación prescindible (con los actores originales de AlienTM)<br>- Paquete de Superviviente Cierre corporativo<br>- Paquete de Superviviente Trauma<br>- Paquete de Superviviente Refugio seguro<br>- Paquete de Superviviente Contacto perdido<br>- Paquete de Superviviente El detonante<br><br>Conoce el verdadero miedo con Alien: Isolation, un survival horror donde el miedo te persigue y el peligro es mortal. 15 años después de lo sucedido en Alien™, Amanda, la hija de Ellen Ripley, inicia una lucha desesperada por sobrevivir en una misión para descubrir la verdad sobre la desaparición de su madre.<br><br>Sin la preparación suficiente, tendrás que buscar recursos, hallar soluciones y usar tu inteligencia, no solo para cumplir la misión, sino simplemente para sobrevivir.<br><br>Creado con el motor de juego CATHODE™.<br><br><br></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {

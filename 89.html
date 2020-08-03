@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4133-CUSA14208_00-GREEDFALL0000000/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 36.36 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 17.49 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> Explora tierras ignotas en una isla recóndita que rebosa magia, riquezas, secretos y criaturas fantásticas.<br/><br/>Decide la suerte de este nuevo mundo entablando amistades o traicionando a compañeros y facciones. Forma parte de un mundo vivo y en evolución mediante la diplomacia, el engaño y la fuerza: altera el curso de la historia y elige tu propio destino.<br/><br/>- Adéntrate en una experiencia de rol: completa misiones y objetivos de distintas formas, como el combate, la diplomacia, el engaño o el sigilo.<br/><br/>- Libertad total en la evolución del personaje: juega como hombre o mujer, personaliza tu apariencia y elige los hechizos, talentos y habilidades que quieras.<br/><br/>- Indaga en un misterioso mundo mágico: comienza una gran aventura y descubre antiguos secretos que se hallan protegidos por criaturas sobrenaturales, la manifestación de la magia terrenal de la isla.<br/><br/><br/><br/>Un único jugador offline<br/>Usa la función de vibración DUALSHOCK 4<br/>El juego de PS4 puede controlarse con PS Vita<br/><br><br></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {

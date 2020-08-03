@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1001-CUSA15381_00-CIV6BASE00000000/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 39.51 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 24.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> Civilization, creado originalmente por el legendario diseñador de videojuegos Sid Meier, es un juego de estrategia por turnos en el que tu objetivo es construir un imperio que resista el paso del tiempo. Explora nuevos territorios, investiga tecnologías, conquista a tus enemigos y enfréntate cara a cara a los líderes más famosos de la historia para crear la mayor civilización jamás conocida.<br/><br/>Civilization VI para PlayStation®4 incluye las últimas mejoras y actualizaciones del juego y cuatro contenidos adicionales con cuatro nuevas civilizaciones, líderes y escenarios:<br/><br/>•Pack de escenario vikingo<br/>•Pack de civilización y escenario de Polonia<br/>•Pack de civilización y escenario de Australia<br/>•Pack de civilización y escenario persas y macedonios<br/><br/>Quienes compraron Civilization VI para PlayStation®4 recibirán además los contenidos adicionales siguientes:<br/><br/>•Pack de civilización y escenario nubios<br/>•Pack civilización y escenario indonesios y jemeres<br/><br/></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {

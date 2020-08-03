@@ -63,8 +63,9 @@ body{
     
     
      <div class="row m-0">
-     	<div class="col-3 col-sm-3 d-md-none d-lg-none"></div>
-     	<div class="col-6 col-sm-6 col-md-4 col-lg-4">
+     	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
+     	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0778-CUSA12817_00-PIXARK0000000001/1596206856000/image?w=253&amp;h=253">
@@ -82,12 +83,17 @@ body{
           		</div>
         	</div> 
       	</div>
-      	<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+      	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 31.60 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 19.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </p>
      </div><!--END ROW -->
-
+	<div class="row m-0">
+		<p class=" col-12 rounded text-center container-fluid  text-light p-2 m-2" style="background-color: rgba(0,0,0,0.8);"> Bienvenido a PixARK, un vasto y salvaje mundo lleno de feroces dinosaurios, criaturas mágicas y aventuras sin fin! Para sobrevivir en esta misteriosa tierra, deberás domesticar tanto a criaturas feroces como adorables, crear herramientas mágicas y de alta tecnología y construir tu propia base con cubos. <br><br>Con un completo creador de personajes, un número infinito de mapas basados en vóxeles y misiones generadas procedimentalmente, tu aventura en PixARK será totalmente única. Únete con amigos para formar una tribu o juega por tu cuenta. Dedica tu tiempo a crear una imponente fortaleza o sumérgete en una búsqueda en una enorme caverna. Vuela sobre la espalda de un dragón y castiga a tus enemigos con tu vara mágica, o monta un poderoso T-Rex y haz volar a tus rivales con un lanzacohetes. En el mundo de PixARK, tu estilo de juego dependerá solo de ti, ¡siempre y cuando puedas sobrevivir! <br><br>1 jugador<br>Jugadores en red: 2-64 - El juego completo requiere ser miembro de PlayStation®Plus para acceder a las partidas multijugador online<br>3GB mínimo<br>Función de vibración DUALSHOCK®4<br>Salida de vídeo HD 720p,1080p<br><br></p>
+	</div> <!-- END DEL ROW 2 -->
+	
 
 </section>
     
@@ -131,8 +137,11 @@ body{
     },
     options: {
       responsive: true,
+      hover: {
+                    mode: 'label'
+                },
       title:{
-            display:true,
+            display:false,
             text: 'Evolución Precio'
         },
       scales: {
