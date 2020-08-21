@@ -1,5 +1,13 @@
 <!DOCTYPE html><html><head>  <meta charset="utf-8">  <title>BuscaPlay</title>  <link rel="stylesheet" href="css/styles.css">  <script src="https://kit.fontawesome.com/d9ea194290.js" crossorigin="anonymous"></script>  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script><style type="text/css">.linkGame:hover{	pointer:cursor;	text-decoration: none;}#myBtn {    position: fixed;    bottom: 0em;    z-index: 2;    background-color: rgba(23, 162, 184,0.7);}</style><script>var orderEuros=false;var orderPercentage=false;		$( document ).ready(function() {		    console.log( "ready!" );		    		    $( "#orderByEuros" ).click(function() {			  console.log("Ordenando by Euros!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderEuros){					orderEuros=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.name - +b.dataset.name;					}).appendTo( $wrapper );				}else{					orderEuros=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.name - +a.dataset.name;					}).appendTo( $wrapper );				}							});						$( "#orderByPercentage" ).click(function() {			  console.log("Ordenando by Percentage!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (orderPercentage){					orderPercentage=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.percentage - +b.dataset.percentage;					}).appendTo( $wrapper );				}else{					orderPercentage=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.percentage - +a.dataset.percentage;					}).appendTo( $wrapper );				}							});		    		    		});//Fin Jquery ready			</script></head><body><button id="myBtn" class="btn btn-info btn-block p-2"><a href="#top" class="text-white">Back to the Top</a></button>  <section id="title">    <!-- Nav Bar -->    <nav class="navbar bg-info sticky-top navbar-expand-lg navbar-dark">        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>        <a class="navbar-brand" href="">BuscaPlay</a>               <div class="collapse navbar-collapse" id="navbarSupportedContent">        <ul class="navbar-nav ml-auto">            <li class="nav-item">                <a class="nav-link" href="">Contact</a>            </li>            <li class="nav-item">                <a class="nav-link" href="">Pricing</a>            </li>            <li class="nav-item">                <a class="nav-link" href="">Download</a>            </li>        </ul>     </div>    </nav>    <!--Slider -->         <div class="row m-0">      <div class="col-lg-2 col-md-1"></div>      <div id="carouselExampleCaptions" class="carousel slide carousel-fade col-lg-8 col-md-10 col-sm-12" data-ride="carousel">          <ol class="carousel-indicators">          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>          </ol>        <div class="carousel-inner">        
         	<div class="carousel-item active">
+          		<a href="./681.html"><img src="https://apollo2.dl.playstation.net/cdn/EP8923/CUSA07792_00/wz4nuSCZaBP2OHU15ew5HKsfxX0dwpPW.jpg" class="d-block w-100" alt="Shadow Tactics: Blades of the Shogun™"></a>
+          		<div class="carousel-caption ">
+            		<h5>Shadow Tactics: Blades of the Shogun™ <div class="text-warning">9.99 €</div></h5>
+            		<p class="text-info">¡Hasta el 03 de septiembre!</p>
+          		</div>
+        	</div>
+        
+        	<div class="carousel-item ">
           		<a href="./614.html"><img src="https://apollo2.dl.playstation.net/cdn/EP0001/CUSA11560_00/FhagTtnLlBdGuHdGP2bUUjcq78CsJlX4.jpg" class="d-block w-100" alt="Assassin's Creed® III Remastered™"></a>
           		<div class="carousel-caption ">
             		<h5>Assassin's Creed® III Remastered™ <div class="text-warning">19.99 €</div></h5>
@@ -8,17 +16,9 @@
         	</div>
         
         	<div class="carousel-item ">
-          		<a href="./2024.html"><img src="https://vulcan.dl.playstation.net/img/cfn/11307YwVpXw9GDC9wmRafvwOFFnGBzxtLsaqKJr8cWVruyHU_uxYxOFPFrJjcOaZ3tDENJL2QodXD0D_VZ_rVzYN-AYgUTy8.jpg" class="d-block w-100" alt="Devil May Cry 5 (with Red Orbs)™"></a>
+          		<a href="./902.html"><img src="https://apollo2.dl.playstation.net/cdn/EP8923/CUSA03770_00/QMc3scGZW6FId0cUeIx70bNjEsfAxLxM.jpg" class="d-block w-100" alt="Deponia™"></a>
           		<div class="carousel-caption ">
-            		<h5>Devil May Cry 5 (with Red Orbs)™ <div class="text-warning">19.99 €</div></h5>
-            		<p class="text-info">¡Hasta el 03 de septiembre!</p>
-          		</div>
-        	</div>
-        
-        	<div class="carousel-item ">
-          		<a href="./677.html"><img src="https://apollo2.dl.playstation.net/cdn/EP0700/CUSA05952_00/f0l1kPCz8jjfJa5L0hySJZevgsQoVaTp.jpg" class="d-block w-100" alt="Little Nightmares Complete Edition™"></a>
-          		<div class="carousel-caption ">
-            		<h5>Little Nightmares Complete Edition™ <div class="text-warning">7.49 €</div></h5>
+            		<h5>Deponia™ <div class="text-warning">4.93 €</div></h5>
             		<p class="text-info">¡Hasta el 03 de septiembre!</p>
           		</div>
         	</div>
@@ -8657,19 +8657,19 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2462.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2328.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1877-CUSA04741_00-LICHDOMBTMGMMGUK/1596206856000/image?w=253&amp;h=253" alt="Lichdom: Battlemage">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4062-CUSA00593_00-MCOMPLREDUXDISC1/1596206856000/image?w=253&amp;h=253" alt="Metro Redux">
             <div class="fluid-container">
 		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 85%</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 70%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
           </div>
         </div> 
@@ -8706,24 +8706,6 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 22.50€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2463.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4365-CUSA07275_00-DAEDAKALYBLACKG2/1596206856000/image?w=253&amp;h=253" alt="Blackguards 2">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
           </div>
         </div> 
@@ -8891,24 +8873,6 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2328.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4062-CUSA00593_00-MCOMPLREDUXDISC1/1596206856000/image?w=253&amp;h=253" alt="Metro Redux">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 70%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
-          </div>
-        </div> 
-      
-      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./703.html">
       
         <div class="card m-2">
@@ -8994,24 +8958,6 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 11.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2464.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0966-CUSA02850_00-WTD0101PS4000001/1596206856000/image?w=253&amp;h=253" alt="101 Ways to Die">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
           </div>
         </div> 
@@ -9341,24 +9287,6 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2465.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4040-CUSA03743_00-LONEWOLF00000000/1596206856000/image?w=253&amp;h=253" alt="Joe Dever’s Lone Wolf Console Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
-          </div>
-        </div> 
-      
-      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./893.html">
       
         <div class="card m-2">
@@ -9665,24 +9593,6 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2466.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1063-CUSA14697_00-LAPISLABYRINTHEU/1596206856000/image?w=253&amp;h=253" alt="Lapis x Labyrinth">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 67%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.89€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.10€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
-          </div>
-        </div> 
-      
-      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./902.html">
       
         <div class="card m-2">
@@ -9713,24 +9623,6 @@
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 14.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2467.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4062-CUSA06713_00-UTAWAREITSUKAMEN/1596206856000/image?w=253&amp;h=253" alt="Utawarerumono: Mask of Deception">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 70%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
           </div>
@@ -10313,6 +10205,24 @@
         </div> 
       
       </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2462.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1877-CUSA04741_00-LICHDOMBTMGMMGUK/1596206856000/image?w=253&amp;h=253" alt="Lichdom: Battlemage">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 85%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
+          </div>
+        </div> 
+      
+      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./712.html">
       
         <div class="card m-2">
@@ -10619,6 +10529,24 @@
         </div> 
       
       </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2463.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4365-CUSA07275_00-DAEDAKALYBLACKG2/1596206856000/image?w=253&amp;h=253" alt="Blackguards 2">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
+          </div>
+        </div> 
+      
+      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./716.html">
       
         <div class="card m-2">
@@ -10853,6 +10781,24 @@
         </div> 
       
       </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2464.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0966-CUSA02850_00-WTD0101PS4000001/1596206856000/image?w=253&amp;h=253" alt="101 Ways to Die">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
+          </div>
+        </div> 
+      
+      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./750.html">
       
         <div class="card m-2">
@@ -10884,6 +10830,24 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2465.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4040-CUSA03743_00-LONEWOLF00000000/1596206856000/image?w=253&amp;h=253" alt="Joe Dever’s Lone Wolf Console Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
           </div>
         </div> 
@@ -11195,6 +11159,24 @@
         </div> 
       
       </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2466.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1063-CUSA14697_00-LAPISLABYRINTHEU/1596206856000/image?w=253&amp;h=253" alt="Lapis x Labyrinth">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 67%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.89€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.10€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
+          </div>
+        </div> 
+      
+      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./848.html">
       
         <div class="card m-2">
@@ -11496,6 +11478,24 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 14.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 45.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2467.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4062-CUSA06713_00-UTAWAREITSUKAMEN/1596206856000/image?w=253&amp;h=253" alt="Utawarerumono: Mask of Deception">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 70%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 19 de agosto</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
           </div>
         </div> 
