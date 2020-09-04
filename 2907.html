@@ -83,7 +83,7 @@ body{
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 11.12 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 11.02 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 8.99 € </b></p>
       		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 26/ago/2020 al 10/sep/2020 </small></p>
      </div><!--END ROW -->
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['04 AGO', '07 AGO', '10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP'],
+      labels: ['05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP'],
       datasets: [{
-        data: [11.99, 11.99, 11.99, 11.99, 11.99, 11.99, 11.99, 11.99, 8.99, 8.99, 8.99],
+        data: [11.99, 11.99, 11.99, 11.99, 11.99, 11.99, 11.99, 8.99, 8.99, 8.99, 8.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
