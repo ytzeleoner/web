@@ -76,16 +76,16 @@ body{
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 20.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 06 de agosto</p>
+            		<p class="card-text text-info text-center">Hasta el 08 de octubre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 30.31 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 35.81 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 19.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 06/ago/2020 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 23/sep/2020 al 08/oct/2020 </small></p>
      </div><!--END ROW -->
 	<div class="row p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> ¡La popular serie Chocobo's Dungeon vuelve con una nueva entrega! El clásico FINAL FANTASY FABLES: Chocobo’s Dungeon regresa con un sistema de juego mejorado para el disfrute de los fans de la serie y de quienes no la conozcan. <br><br>Ponte a prueba en mazmorras infinitas (Insatiable Hunger) y hazte amigo de los monstruos con el nuevo Buddy System. Las reglas son muy sencillas: cada vez que entras, todo lo que te rodea cambia, pero solo se mueve cuando el chocobo se mueve. <br><br>¡Coge otro mando y ponte a jugar con tus amigos! ¡Abre bien los ojos, porque te toparás con viejos conocidos! <br><br>Además, tu chocobo puede asumir 14 oficios distintos y conseguir habilidades y atuendos increíbles. <br><br>¡Cada compra incluye un Buddy Alpha especial!<br><br></p>
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['06 JUL', '09 JUL', '12 JUL', '15 JUL', '18 JUL', '21 JUL', '24 JUL', '27 JUL', '30 JUL', '02 AGO', '05 AGO'],
+      labels: ['28 JUN', '01 JUL', '04 JUL', '07 JUL', '10 JUL', '13 JUL', '16 JUL', '19 JUL', '22 JUL', '25 JUL', '28 JUL', '31 JUL', '03 AGO', '06 AGO', '09 AGO', '12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP'],
       datasets: [{
-        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 19.99, 19.99, 19.99, 19.99, 19.99],
+        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 19.99, 19.99, 19.99, 19.99, 19.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 19.99, 19.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
