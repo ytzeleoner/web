@@ -76,18 +76,18 @@ body{
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 10.99€</b></p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 44.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>54.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de agosto</p>
+            		<p class="card-text text-info text-center">Hasta el 03 de noviembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 13.83 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 40.48 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 10.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 14/oct/2020 al 03/nov/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> Ganador de 50 galardones de Juego del Año, incluido el de la Revista Oficial de PlayStation.<br><br>Contiene el juego completo y siete paquetes de contenido adicional:<br>- Última superviviente (con los actores originales de AlienTM)<br>- Tripulación prescindible (con los actores originales de AlienTM)<br>- Paquete de Superviviente Cierre corporativo<br>- Paquete de Superviviente Trauma<br>- Paquete de Superviviente Refugio seguro<br>- Paquete de Superviviente Contacto perdido<br>- Paquete de Superviviente El detonante<br><br>Conoce el verdadero miedo con Alien: Isolation, un survival horror donde el miedo te persigue y el peligro es mortal. 15 años después de lo sucedido en Alien™, Amanda, la hija de Ellen Ripley, inicia una lucha desesperada por sobrevivir en una misión para descubrir la verdad sobre la desaparición de su madre.<br><br>Sin la preparación suficiente, tendrás que buscar recursos, hallar soluciones y usar tu inteligencia, no solo para cumplir la misión, sino simplemente para sobrevivir.<br><br>Creado con el motor de juego CATHODE™.<br><br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 JUL', '24 JUL', '27 JUL', '30 JUL', '02 AGO', '05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO'],
+      labels: ['16 JUL', '19 JUL', '22 JUL', '25 JUL', '28 JUL', '31 JUL', '03 AGO', '06 AGO', '09 AGO', '12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT'],
       datasets: [{
-        data: [54.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 54.99],
+        data: [54.99, 54.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 10.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 54.99, 10.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

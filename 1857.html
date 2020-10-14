@@ -76,18 +76,18 @@ body{
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 29.59€</b></p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 50.40€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>79.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 17 de septiembre</p>
+            		<p class="card-text text-info text-center">Hasta el 03 de noviembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 63.37 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 62.82 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 29.59 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/sep/2020 al 17/sep/2020 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 14/oct/2020 al 03/nov/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> La Digital Deluxe Edition incluye:<br>• Libro de arte y música original digitales.*<br>• 3 aspectos de moto de errante<br>• Desbloqueo anticipado de la habilidad Llave inglesa<br>• Tema dinámico de PS4™.<br><br>EL MUNDO CONTRA TI<br>Ponte en la piel de Deacon St. John, errante y cazarrecompensas, y recorre un mundo despiadado donde impera la ley del más fuerte, devastado por una pandemia mortífera.<br><br>Exponte a los riesgos de la carretera rota a lomos de tu fiel moto de errante mientras te enfrentas a enjambres de feroces engendros descerebrados... y humanos igualmente aterradores.<br><br>El clima impredecible y el paso del día y la noche pueden provocar grandes peligros y sorpresas impactantes... y todo te quiere muerto.<br><br>• Un mundo abierto hostil: explora regiones increíblemente realistas, vastas y peligrosas del noroeste del Pacífico estadounidense.<br>• Un mundo abierto con combates brutales: traza tus estrategias mientras personalizas armas, elaboras trampas y mejoras tu moto.<br>• Una historia cautivadora: sobrevive a unas implacables tierras salvajes mientras buscas una razón por la que vivir tras sufrir una gran pérdida personal.<br><br>*OJO: SI NO QUIERES DESTRIPARTE LA HISTORIA, TE RECOMENDAMOS QUE NO ABRAS EL LIBRO DE ARTE HASTA TERMINAR LA CAMPAÑA PRINCIPAL.<br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['18 JUN', '21 JUN', '24 JUN', '27 JUN', '30 JUN', '03 JUL', '06 JUL', '09 JUL', '12 JUL', '15 JUL', '18 JUL', '21 JUL', '24 JUL', '27 JUL', '30 JUL', '02 AGO', '05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP'],
+      labels: ['16 JUL', '19 JUL', '22 JUL', '25 JUL', '28 JUL', '31 JUL', '03 AGO', '06 AGO', '09 AGO', '12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT'],
       datasets: [{
-        data: [79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 29.59, 29.59, 29.59, 29.59, 29.59, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 29.59, 29.59, 29.59, 29.59, 29.59],
+        data: [79.99, 79.99, 29.59, 29.59, 29.59, 29.59, 29.59, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 29.59, 29.59, 29.59, 29.59, 29.59, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 29.59],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

@@ -76,18 +76,18 @@ body{
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.89€</b></p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 20.10€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 17 de septiembre</p>
+            		<p class="card-text text-info text-center">Hasta el 29 de octubre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 22.23 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 24.38 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 2.99 € </b></p>
       		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 08/jul/2020 al 23/jul/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> Far Cry®3 Classic Edition lleva Rook Island a la generación actual de consolas.<br/>Descubre sus sangrientos secretos y enfréntate a uno de los villanos más famosos de Far Cry: Vaas Montenegro <br/><br/>Far Cry®3 Classic Edition viene incluido gratis en el Season Pass de Far Cry®5<br/><br/>GRÁFICOS Y JUGABILIDAD ACTUALIZADOS<br/>Far Cry®3 Classic Edition ha sido optimizado en las plataformas más actuales y permite a fans y novatos vivir la campaña para un jugador de Far Cry® 3 con todo lujo de detalles<br/><br/>DESCUBRE UNA HISTORIA MEMORABLE Y UNOS PERSONAJES DE LOCURA<br/>Vive una profunda historia en la que la moral es cuestionable y la esperanza es lo último que se pierde<br/><br/>UN SHOOTER CARGADO DE ACCIÓN<br/>Usa un arsenal de armas y explosivos para entrar de lleno en la acción, elimina enemigos de cerca con tu cuchillo o dispárales desde lejos como un francotirador<br/><br/>UNA ISLA DE PELIGROS Y DESCUBRIMIENTOS<br/>Explora una isla tan hermosa como variada, desde cadenas montañosas hasta cenagosas praderas y playas de arena blanca<br/><br/></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['18 JUN', '21 JUN', '24 JUN', '27 JUN', '30 JUN', '03 JUL', '06 JUL', '09 JUL', '12 JUL', '15 JUL', '18 JUL', '21 JUL', '24 JUL', '27 JUL', '30 JUL', '02 AGO', '05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP'],
+      labels: ['16 JUL', '19 JUL', '22 JUL', '25 JUL', '28 JUL', '31 JUL', '03 AGO', '06 AGO', '09 AGO', '12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 2.99, 2.99, 2.99, 2.99, 2.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 9.89, 9.89, 9.89, 9.89, 9.89],
+        data: [2.99, 2.99, 2.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 9.89, 9.89, 9.89, 9.89, 9.89, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 9.89],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
