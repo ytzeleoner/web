@@ -1,24 +1,24 @@
 <!DOCTYPE html><html><head>  <meta charset="utf-8">  <title>BuscaPlay</title>  <link rel="stylesheet" href="css/styles.css">  <script src="https://kit.fontawesome.com/d9ea194290.js" crossorigin="anonymous"></script>  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script><style type="text/css">.linkGame:hover{	pointer:cursor;	text-decoration: none;}#myBtn {    position: fixed;    bottom: 0em;    z-index: 2;    background-color: rgba(23, 162, 184,0.7);}</style><script>var orderEuros=false;var orderPercentage=false;var orderStars=false;		$( document ).ready(function() {		    console.log( "ready!" );		    		    $( "#orderByEuros" ).click(function() {			  console.log("Ordenando by Euros!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderEuros){					orderEuros=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.name - +b.dataset.name;					}).appendTo( $wrapper );				}else{					orderEuros=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.name - +a.dataset.name;					}).appendTo( $wrapper );				}							});						$( "#orderByStars" ).click(function() {			  console.log("Ordenando by Stars "+orderStars);				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderStars){					orderStars=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.stars - +b.dataset.stars;					}).appendTo( $wrapper );				}else{					orderStars=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.stars - +a.dataset.stars;					}).appendTo( $wrapper );				}							});						$( "#orderByPercentage" ).click(function() {			  console.log("Ordenando by Percentage!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (orderPercentage){					orderPercentage=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.percentage - +b.dataset.percentage;					}).appendTo( $wrapper );				}else{					orderPercentage=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.percentage - +a.dataset.percentage;					}).appendTo( $wrapper );				}							});		    		    		});//Fin Jquery ready			</script></head><body><button id="myBtn" class="btn btn-info btn-block p-2"><a href="#top" class="text-white">Back to the Top</a></button>  <section id="title">    <!-- Nav Bar -->    <nav class="navbar bg-info sticky-top navbar-expand-lg navbar-dark">        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>        <a class="navbar-brand" href="">BuscaPlay</a>               <div class="collapse navbar-collapse" id="navbarSupportedContent">        <ul class="navbar-nav ml-auto">            <li class="nav-item">                <a class="nav-link" href="">Contact</a>            </li>            <li class="nav-item">                <a class="nav-link" href="">Pricing</a>            </li>            <li class="nav-item">                <a class="nav-link" href="">Download</a>            </li>        </ul>     </div>    </nav>    <!--Slider -->         <div class="row m-0">      <div class="col-lg-2 col-md-1"></div>      <div id="carouselExampleCaptions" class="carousel slide carousel-fade col-lg-8 col-md-10 col-sm-12" data-ride="carousel">          <ol class="carousel-indicators">          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>          </ol>        <div class="carousel-inner">        
         	<div class="carousel-item active">
-          		<a href="./686.html"><img src="https://apollo2.dl.playstation.net/cdn/EP0102/CUSA04543_00/wgqHdy3VrOoGsvJAaLaSMIO3rmuQsDPO.jpg" class="d-block w-100" alt="ULTIMATE MARVEL VS. CAPCOM 3™"></a>
+          		<a href="./3310.html"><img src="https://vulcan.dl.playstation.net/ap/rnd/202009/2406/egAwTrdxVVCVM5H9NJnook6N.png" class="d-block w-100" alt="DOOM (1993)™"></a>
           		<div class="carousel-caption ">
-            		<h5>ULTIMATE MARVEL VS. CAPCOM 3™ <div class="text-warning">7.99 €</div></h5>
-            		<p class="text-info">¡Hasta el 29 de octubre!</p>
-          		</div>
-        	</div>
-        
-        	<div class="carousel-item ">
-          		<a href="./2343.html"><img src="https://apollo2.dl.playstation.net/cdn/EP1003/CUSA08974_00/f6HiV4h7dJe4nFyi0xkcUXP8R1RhbfEK.jpg" class="d-block w-100" alt="The Evil Within® 2™"></a>
-          		<div class="carousel-caption ">
-            		<h5>The Evil Within® 2™ <div class="text-warning">19.99 €</div></h5>
+            		<h5>DOOM (1993)™ <div class="text-warning">2.49 €</div></h5>
             		<p class="text-info">¡Hasta el 03 de noviembre!</p>
           		</div>
         	</div>
         
         	<div class="carousel-item ">
-          		<a href="./2306.html"><img src="https://apollo2.dl.playstation.net/cdn/EP4497/CUSA05572_00/GtEiCCNRQTR8lHM4UH7MHwUPnjVVdPdc.jpg" class="d-block w-100" alt="The Witcher 3: Wild Hunt – Game of the Year Edition™"></a>
+          		<a href="./652.html"><img src="https://vulcan.dl.playstation.net/img/cfn/11307_mC5jDy859328S7QapQJtwJ9PW1IOeC2DZQQffdjBBIYVt6eATXOBiAHp_gXUbm9C-A9Bno6lpFE3NLRi5fEoYygCFK.jpg" class="d-block w-100" alt="Concrete Genie™"></a>
           		<div class="carousel-caption ">
-            		<h5>The Witcher 3: Wild Hunt – Game of the Year Edition™ <div class="text-warning">14.99 €</div></h5>
+            		<h5>Concrete Genie™ <div class="text-warning">14.99 €</div></h5>
+            		<p class="text-info">¡Hasta el 29 de octubre!</p>
+          		</div>
+        	</div>
+        
+        	<div class="carousel-item ">
+          		<a href="./3298.html"><img src="https://apollo2.dl.playstation.net/cdn/EP0634/CUSA16049_00/XgiAwIcZUenafK4YHwmMRPwASotntUf1.png" class="d-block w-100" alt="Five Nights at Freddy's: Help Wanted™"></a>
+          		<div class="carousel-caption ">
+            		<h5>Five Nights at Freddy's: Help Wanted™ <div class="text-warning">19.49 €</div></h5>
             		<p class="text-info">¡Hasta el 03 de noviembre!</p>
           		</div>
         	</div>
