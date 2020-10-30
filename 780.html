@@ -76,18 +76,18 @@ body{
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.99€</b></p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 30.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 10 de septiembre</p>
+            		<p class="card-text text-info text-center">Hasta el 12 de noviembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 25.47 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 34.06 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 6.79 € </b></p>
       		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 01/jul/2020 al 16/jul/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> PlayStation®VR no es apto para niños menores de 12 años.<br><br>PlayStation®VR es compatible con este producto. Se necesita PlayStation®VR y PlayStation®Camera para utilizar la realidad virtual.<br><br>En un mundo donde dominan el freestyle y el riesgo, impón tu estilo de pilotaje en cada rincón del planeta. ¡Gana las carreras con clase e impresiona a tus rivales!  <br><br>Moto Racer 4 es un juego de carreras que ofrece un modo Asfalto y Tierra para un jugador o multijugador (hasta 10 jugadores).<br><br>Domina los giros, caballitos, bandazos y muchas otras técnicas para subir al podio. <br><br>Personaliza tu moto a tu imagen y hazle mejoras. Avanza por los entornos sobrecogedores que componen Moto Racer 4. <br>Desde Estados Unidos hasta al Asia pasando por el desierto, Moto Racer 4 transporta a 100 por hora por peligrosos circuitos con decorados que te dejarán sin aliento.<br><br>1-2 jugadores<br>Jugadores en red: 2-10 - El juego completo requiere ser miembro de PlayStation®Plus para acceder a las partidas multijugador online<br>4GB mínimo<br>Función de vibración DUALSHOCK®4<br>Compatible con juego a distancia<br>Salida de vídeo HD 720p,1080i,1080p<br>PlayStation®VR es compatible con este producto. PlayStation®VR y PlayStation®Camera opcionales.<br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP'],
+      labels: ['01 AGO', '04 AGO', '07 AGO', '10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT'],
       datasets: [{
-        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 9.99, 9.99, 9.99, 9.99, 9.99],
+        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 9.99, 9.99, 9.99, 9.99, 9.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 9.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
