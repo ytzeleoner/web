@@ -76,18 +76,18 @@ body{
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 14.99€</b></p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 10.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 10 de septiembre</p>
+            		<p class="card-text text-info text-center">Hasta el 21 de noviembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 20.15 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 23.12 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 14.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 26/ago/2020 al 10/sep/2020 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 04/nov/2020 al 21/nov/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> ¡Overcooked vuelve con un nuevo y caótico juego de cocina en acción!<br><br>Regresa al Reino de la Cebolla y organiza tu equipo de chefs en un cooperativo clásico o en partidas en línea de hasta cuatro jugadores.<br><br>Agarraos los delantales... es hora de salvar el mundo (¡otra vez!)<br><br>Fuera de sartén, al fuego...<br><br>Ya salvaste al mundo del Ever Peckish. Ahora ha surgido una nueva amenaza y es hora de volver a las cocinas para detener al Pan Demonium.<br><br>MULTIJUGADOR LOCAL/EN LÍNEA: tendréis que trabajar en equipo para alcanzar la máxima puntuación en caóticas partidas multijugador.<br><br>MIRA QUÉ FESTÍN: ¡nuevas cocinas que abarcan desde restaurantes de sushi a escuelas de magia y minas!<br><br>¡VAMOS A CALMARNOS! - Viaja con teletransportadores y plataformas móviles, y ahorra tiempo lanzando los ingredientes por cocinas que cambian y evolucionan.<br><br>¡ABRE EL APETITO! - Cocina un montón de recetas nuevas que incluyen sushi, tartas, hamburguesas y pizzas.<br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP'],
+      labels: ['07 AGO', '10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV'],
       datasets: [{
-        data: [24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 14.99, 14.99, 14.99, 14.99, 14.99],
+        data: [24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 14.99, 14.99, 14.99, 14.99, 14.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 14.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
