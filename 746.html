@@ -76,18 +76,18 @@ body{
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 17.99€</b></p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 57.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>74.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
+            		<p class="card-text text-info text-center">Hasta el 01 de diciembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 58.44 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 63.09 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 17.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 19/ago/2020 al 03/sep/2020 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 11/nov/2020 al 01/dic/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> ¡Es el MOMENTO! ¡Compra ya la Edición Deluxe y disfruta del contenido principal del juego y del pase de temporada! Únete a tus superhéroes y supervillanos favoritos de distintas eras y realidades en su lucha contra Kang el Conquistador, quien viaja por el tiempo, en una aventura original y completamente nueva: LEGO® Marvel Super Heroes 2. ¡Juega como Guardianes de la Galaxia, Spider-Man, Thor, Hulk, Pantera Negra, Capitán Marvel, Doctor Extraño, Duende Verde y decenas de otros superhéroes y supervillanos de Marvel en esta batalla cósmica en Chronopolis, la ciudad apartada del tiempo! ¡Viaja por distintas épocas (del Antiguo Egipto al Lejano Oeste, Sakaar y la ciudad de Nueva York en 2099) y transporta objetos y personajes a través de los siglos! ¡Además, con los nuevos modos de batalla, podrás jugar contra amigos y familiares en una serie de desafíos temáticos y escenarios de combate!<br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['28 JUL', '31 JUL', '03 AGO', '06 AGO', '09 AGO', '12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO'],
+      labels: ['16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV'],
       datasets: [{
-        data: [74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 17.99, 17.99, 17.99],
+        data: [74.99, 17.99, 17.99, 17.99, 17.99, 17.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 17.99, 17.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

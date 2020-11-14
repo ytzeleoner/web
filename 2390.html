@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1018-CUSA11550_00-LEGODCVILLAINSDX/1596206856000/image?w=253&amp;h=253">
@@ -72,22 +72,22 @@ body{
 		  		</picture>
          		<!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1018-CUSA11550_00-LEGODCVILLAINSDX/1596206856000/image" alt="LEGO® DC Super-Villains: Deluxe Edition"> -->
           		<div class="card-body p-0">
-          			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 18.98€</b></p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 56.01€</b></p>
+          			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.63</p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 55.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>74.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de septiembre</p>
+            		<p class="card-text text-info text-center">Hasta el 01 de diciembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 58.73 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 63.34 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 18.98 € </b></p>
       		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 19/ago/2020 al 03/sep/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> Está bien ser malo… Compra ya la Deluxe Edition y disfruta del contenido principal del juego y del pase de temporada. Embárcate en una aventura totalmente nueva de DC/LEGO® y conviértete en el mejor villano del universo en LEGO® DC Super-Villains. Los jugadores podrán crear y jugar, durante todo el título, en la piel de un super villano totalmente nuevo, quien ideará disparatadas travesuras y desatará el caos en una historia llena de acción. La historia se desarrolla en un mundo abierto: la Liga de la Justicia ha desaparecido y sus compañeros deberán proteger la Tierra. Junto a un grupo de inadaptados, deberás descubrir las intenciones de los nuevos aspirantes a superhéroes de la Tierra. Los super villanos de DC más conocidos (el Joker, Harley Quinn y muchos más procedentes de la Liga de la Justicia) se unirán a los jugadores en una aventura épica para asegurar su título de villanos.<br><br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['28 JUL', '31 JUL', '03 AGO', '06 AGO', '09 AGO', '12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO'],
+      labels: ['16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV'],
       datasets: [{
-        data: [74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 18.98, 18.98, 18.98],
+        data: [74.99, 18.98, 18.98, 18.98, 18.98, 18.98, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 19.99, 19.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

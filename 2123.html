@@ -76,18 +76,18 @@ body{
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 17.49€</b></p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 7.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de agosto</p>
+            		<p class="card-text text-info text-center">Hasta el 21 de noviembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimo mes: <b> 17.97 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 23.75 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 17.49 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jul/2020 al 20/ago/2020 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 04/nov/2020 al 21/nov/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> ¡Disfruta de la sensación especial del paquete 'Mosaic 1% Edition', que incluye el juego base y el 1% DLC!<br/><br/>— Corbata de ejecutivo: ¡vístete para el éxito! Con esta exclusiva corbata de ejecutivo, seguro que los jefes se fijan en ti y consigues mejorar tus posibilidades de ascenso en la Mosaic Corporation.<br/>— Funda de teléfono Deluxe: una elegante funda de teléfono para ejecutivos. Tu teléfono dentro del juego estará protegido de los elementos y podrás Blipear con más ganas.<br/>— Postergador de anuncios: sabemos que te gustan nuestros anuncios corporativos cuando estás jugando a BlipBlop, pero a veces solo quieres quedarte un poco más en esa «zona Blop». Gracias al Postergador de anuncios, verás menos anuncios en tu teléfono del juego. ¡Porque respetamos tu Blipeo!<br/>— Cuenta Love+ Premium: ¿te cuesta encontrar a esa persona especial? Gracias a la cuenta Love+ Premium, conectarás con más usuarios Premium en la aplicación Love+ del teléfono del juego.<br/><br/><br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 JUL', '24 JUL', '27 JUL', '30 JUL', '02 AGO', '05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO'],
+      labels: ['16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV'],
       datasets: [{
-        data: [24.99, 17.49, 17.49, 17.49, 17.49, 17.49, 17.49, 17.49, 17.49, 17.49, 24.99],
+        data: [17.49, 17.49, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 17.49, 17.49, 17.49, 17.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
