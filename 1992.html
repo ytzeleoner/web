@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP3392-CUSA07980_00-0350212829173377/1596206856000/image?w=253&amp;h=253">
@@ -73,21 +73,21 @@ body{
          		<!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP3392-CUSA07980_00-0350212829173377/1596206856000/image" alt="Arizona Sunshine® - Deluxe Edition"> -->
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.88</p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 15.74€</b></p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 29.25€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 22.49€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 22.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>44.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 24 de septiembre</p>
+            		<p class="card-text text-info text-center">Hasta el 01 de diciembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 37.75 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 37.45 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 15.74 € </b></p>
       		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 09/sep/2020 al 24/sep/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> La edición Deluxe de Arizona Sunshine® otorga acceso inmediato a la experiencia completa de aniquilación de zombis en RV. Incluye el shooter original en RV y dos DLC de campaña: Dead Man y The Damned, que juntos concluyen el relato de Arizona Sunshine®.<br/><br/>La edición Deluxe completa la colección de Arizona Sunshine® con el siguiente contenido digital adicional:<br/><br/>● Banda sonora de Arizona Sunshine®<br/><br/>La banda sonora oficial de Arizona Sunshine® incluye 12 pistas y un esbozo inicial adicional de Jonathan vd Wijngaarden Solo disponible en la PS Store como parte de la edición Deluxe.<br/><br/>● Tema de Arizona Sunshine® para PlayStation 4<br/><br/>Originalmente exclusivo de la edición de lanzamiento, este tema incluye arte del mundo posapocalíptico de Arizona Sunshine®<br/><br/>● Pack de Arizona Sunshine® para After the Fall*<br/><br/>After the Fall es un shooter en primera persona con multijugador cooperativo y RV para 4 jugadores sin pausas de los creadores de Arizona Sunshine®. Demuestra tu capacidad de supervivencia en este mundo multijugador devastado con los colores de Arizona Sunshine® gracias a este paquete de artículos, que incluye:<br/><br/>- Skins de Arizona Sunshine® para armas<br/>- Equipamiento de Arizona Sunshine®<br/>- Insignia de Arizona Sunshine®<br/><br/>*Disponible tras el lanzamiento en 2020 de After the Fall.<br/><br/><br/><br/>Offline single player<br/>Online multiplayer (2-4 players). Online features require an account and are subject to our terms of service (playstationnetwork.com/terms-of-service), our privacy policy (playstationnetwork.com/privacy-policy), and the game publisher’s privacy policy.<br/>Online multiplayer (2-4 players). A paid-for PlayStation Plus membership is required. Online features require an account and are subject to our terms of service (playstationnetwork.com/terms-of-service), our privacy policy (playstationnetwork.com/privacy-policy), and the game publisher’s privacy policy.<br/>Enhanced play with PlayStation VR aim controller<br/>PlayStation VR headset required<br/>PlayStation Camera required<br/>Enhanced play with 2 PlayStation Move motion controllers<br/>Uses DUALSHOCK 4 vibration function<br/>Online features require an account and are subject to terms of service (playstationnetwork.com/terms-of-service), privacy policy (playstationnetwork.com/privacy-policy), and the game publisher’s privacy policy.<br/><br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 JUN', '24 JUN', '27 JUN', '30 JUN', '03 JUL', '06 JUL', '09 JUL', '12 JUL', '15 JUL', '18 JUL', '21 JUL', '24 JUL', '27 JUL', '30 JUL', '02 AGO', '05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP', '19 SEP'],
+      labels: ['01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP', '19 SEP', '22 SEP', '25 SEP', '28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV'],
       datasets: [{
-        data: [44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 22.49, 22.49, 22.49, 22.49, 22.49, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 15.74, 15.74, 15.74, 15.74],
+        data: [44.99, 44.99, 44.99, 15.74, 15.74, 15.74, 15.74, 15.74, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 44.99, 22.49, 22.49, 22.49, 22.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

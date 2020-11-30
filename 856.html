@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0002-CUSA01766_00-PROTOTYPEPS42014/1596206856000/image?w=253&amp;h=253">
@@ -73,21 +73,21 @@ body{
          		<!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0002-CUSA01766_00-PROTOTYPEPS42014/1596206856000/image" alt="PROTOTYPE™"> -->
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.44</p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.39€</b></p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 24.60€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 24.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 17 de septiembre</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de diciembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 22.23 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 25.67 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.39 € </b></p>
       		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/sep/2020 al 17/sep/2020 </small></p>
      </div><!--END ROW -->
-	<div class="row p-2 m-0">
+	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> Bienvenido a Prototype. Eres Alex Mercer, un hombre amnésico armado con habilidades de metamorfosis increíbles. Ábrete camino hasta el corazón de la conspiración que te ha creado y véngate.<br> <br>Combate cambiaformas rápido y mortal: altera tu cuerpo a cada situación. Usa garras, espada, martillo o látigo, eligiendo la mejor opción para cada momento.<br> <br>Movimiento y agilidad increíbles: salta de edificio a edificio, corre por las paredes, salta sobre vehículos y todo lo que se ponga en tu camino. El parkour se adapta y te permite moverte libremente en el mundo abierto de Nueva York.<br> <br>Habilidades de camuflaje únicas: consume a cualquier persona en cualquier momento, toma su apariencia y usa sus memorias y habilidades.<br> <br>Historia de conspiración apasionante: despiértate sin recuerdo alguno... Solo sabes que tienes poderes y algo que ver con un pueblo de Idaho. Sumérgete en los misterios de tu origen, de la naturaleza de tu poder y de tu participación en una conspiración de más de 40 años.<br><br>1 jugador<br>Salida de vídeo HD 720p,1080p<br><br></p>
 	</div> <!-- END DEL ROW 2 -->
 	
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['18 JUN', '21 JUN', '24 JUN', '27 JUN', '30 JUN', '03 JUL', '06 JUL', '09 JUL', '12 JUL', '15 JUL', '18 JUL', '21 JUL', '24 JUL', '27 JUL', '30 JUL', '02 AGO', '05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP'],
+      labels: ['01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP', '19 SEP', '22 SEP', '25 SEP', '28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 7.49, 7.49, 7.49, 7.49, 7.49, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 5.39, 5.39, 5.39, 5.39, 5.39],
+        data: [29.99, 5.39, 5.39, 5.39, 5.39, 5.39, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 5.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
