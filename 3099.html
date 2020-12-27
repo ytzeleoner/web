@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP3678-CUSA12789_00-UDOLLSBASEGAME01/1596206856000/image?w=253&amp;h=253">
@@ -73,19 +73,19 @@ body{
          		<!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP3678-CUSA12789_00-UDOLLSBASEGAME01/1596206856000/image" alt="Ugly Dolls: Una aventura imperfecta "> -->
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.33</p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.99€</b></p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 30.00€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 34.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 21 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 27.20 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 6.39 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 16/sep/2020 al 01/oct/2020 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 29.39 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2020 al 20/ene/2021 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> 'Los robots son súper guay cuando hacen brillar sus luces intermitentes y zumban por ahí con su elegante acabado metálico. En Uglydolls: Una aventura imperfecta. Una horda completa de robots anda suelta y se ha apoderado de Uglyville, ¡intentando hacerla “perfecta”!  <br>Lo bueno es que juegas como Moxy, ¡el vigoroso UglyDoll que tiene mucho de “moxy”! ¿Prefieres a Ox? Elígelo. Y estás a punto de formar un equipo con tus amigos de la película de los Uglydolls, de explorar Uglyville, y de trabajar juntos para atraer, atrapar y mandar a esos estirados robots por donde vinieron.  ¿Tendrás el valor de no salir huyendo? ¿No? No te preocupes. Moxy (o Ox) huirá contigo. <br><br><br>1-2 jugadores<br>2GB mínimo<br>Salida de vídeo HD 720p,1080i,1080p<br><br></p>
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 6.39, 6.39, 6.39, 6.39, 6.39, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99],
+        data: [6.39, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 5.99, 5.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

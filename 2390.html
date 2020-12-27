@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1018-CUSA11550_00-LEGODCVILLAINSDX/1596206856000/image?w=253&amp;h=253">
@@ -73,19 +73,19 @@ body{
          		<!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1018-CUSA11550_00-LEGODCVILLAINSDX/1596206856000/image" alt="LEGO® DC Super-Villains: Deluxe Edition"> -->
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.63</p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 55.00€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 18.74€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 56.25€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>74.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 01 de diciembre</p>
+            		<p class="card-text text-info text-center">Hasta el 09 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 61.67 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 18.98 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 19/ago/2020 al 03/sep/2020 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 59.19 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 18.74 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2020 al 09/ene/2021 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> Está bien ser malo… Compra ya la Deluxe Edition y disfruta del contenido principal del juego y del pase de temporada. Embárcate en una aventura totalmente nueva de DC/LEGO® y conviértete en el mejor villano del universo en LEGO® DC Super-Villains. Los jugadores podrán crear y jugar, durante todo el título, en la piel de un super villano totalmente nuevo, quien ideará disparatadas travesuras y desatará el caos en una historia llena de acción. La historia se desarrolla en un mundo abierto: la Liga de la Justicia ha desaparecido y sus compañeros deberán proteger la Tierra. Junto a un grupo de inadaptados, deberás descubrir las intenciones de los nuevos aspirantes a superhéroes de la Tierra. Los super villanos de DC más conocidos (el Joker, Harley Quinn y muchos más procedentes de la Liga de la Justicia) se unirán a los jugadores en una aventura épica para asegurar su título de villanos.<br><br><br></p>
@@ -122,9 +122,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP', '19 SEP', '22 SEP', '25 SEP', '28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [18.98, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99],
+        data: [74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 74.99, 18.74, 18.74],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
