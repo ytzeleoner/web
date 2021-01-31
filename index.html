@@ -1,24 +1,24 @@
 <!DOCTYPE html><html><head>  <meta charset="utf-8">  <title>BuscaPlay</title>  <link rel="stylesheet" href="css/styles.css">  <script src="https://kit.fontawesome.com/d9ea194290.js" crossorigin="anonymous"></script>  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script><style type="text/css">.linkGame:hover{	pointer:cursor;	text-decoration: none;}#myBtn {    position: fixed;    bottom: 0em;    z-index: 2;    background-color: rgba(23, 162, 184,0.7);}</style><script>var orderEuros=false;var orderPercentage=false;var orderStars=false;		$( document ).ready(function() {		    console.log( "ready!" );		    		    $( "#orderByEuros" ).click(function() {			  console.log("Ordenando by Euros!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderEuros){					orderEuros=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.name - +b.dataset.name;					}).appendTo( $wrapper );				}else{					orderEuros=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.name - +a.dataset.name;					}).appendTo( $wrapper );				}							});						$( "#orderByStars" ).click(function() {			  console.log("Ordenando by Stars "+orderStars);				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderStars){					orderStars=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.stars - +b.dataset.stars;					}).appendTo( $wrapper );				}else{					orderStars=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.stars - +a.dataset.stars;					}).appendTo( $wrapper );				}							});						$( "#orderByPercentage" ).click(function() {			  console.log("Ordenando by Percentage!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (orderPercentage){					orderPercentage=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.percentage - +b.dataset.percentage;					}).appendTo( $wrapper );				}else{					orderPercentage=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.percentage - +a.dataset.percentage;					}).appendTo( $wrapper );				}							});		    		    		});//Fin Jquery ready			</script></head><body><button id="myBtn" class="btn btn-info btn-block p-2"><a href="#top" class="text-white">Back to the Top</a></button>  <section id="title">    <!-- Nav Bar -->    <nav class="navbar bg-info sticky-top navbar-expand-lg navbar-dark">        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>        <a class="navbar-brand" href="">BuscaPlay</a>               <div class="collapse navbar-collapse" id="navbarSupportedContent">        <ul class="navbar-nav ml-auto">            <li class="nav-item">                <a class="nav-link" href="">Contact</a>            </li>            <li class="nav-item">                <a class="nav-link" href="">Pricing</a>            </li>            <li class="nav-item">                <a class="nav-link" href="">Download</a>            </li>        </ul>     </div>    </nav>    <!--Slider -->         <div class="row m-0">      <div class="col-lg-2 col-md-1"></div>      <div id="carouselExampleCaptions" class="carousel slide carousel-fade col-lg-8 col-md-10 col-sm-12" data-ride="carousel">          <ol class="carousel-indicators">          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>          </ol>        <div class="carousel-inner">        
         	<div class="carousel-item active">
-          		<a href="./3258.html"><img src="https://apollo2.dl.playstation.net/cdn/EP3862/CUSA10484_00/yBWNwtzZiTbsRVQtorKYTi06O7iXq5fd.jpg" class="d-block w-100" alt="Dead Cells™"></a>
+          		<a href="./3310.html"><img src="https://vulcan.dl.playstation.net/ap/rnd/202009/2406/egAwTrdxVVCVM5H9NJnook6N.png" class="d-block w-100" alt="DOOM (1993)™"></a>
           		<div class="carousel-caption ">
-            		<h5>Dead Cells™ <div class="text-warning">12.49 €</div></h5>
+            		<h5>DOOM (1993)™ <div class="text-warning">2.49 €</div></h5>
             		<p class="text-info">¡Hasta el 11 de febrero!</p>
           		</div>
         	</div>
         
         	<div class="carousel-item ">
-          		<a href="./625.html"><img src="https://apollo2.dl.playstation.net/cdn/EP0001/CUSA10326_00/D2Ade0XRBZZFf3cefEVQiHztvBu8D5ds.jpg" class="d-block w-100" alt="Far Cry®3 Classic Edition™"></a>
+          		<a href="./614.html"><img src="https://apollo2.dl.playstation.net/cdn/EP0001/CUSA11560_00/FhagTtnLlBdGuHdGP2bUUjcq78CsJlX4.jpg" class="d-block w-100" alt="Assassin's Creed® III Remastered™"></a>
           		<div class="carousel-caption ">
-            		<h5>Far Cry®3 Classic Edition™ <div class="text-warning">8.99 €</div></h5>
+            		<h5>Assassin's Creed® III Remastered™ <div class="text-warning">15.99 €</div></h5>
             		<p class="text-info">¡Hasta el 11 de febrero!</p>
           		</div>
         	</div>
         
         	<div class="carousel-item ">
-          		<a href="./845.html"><img src="https://apollo2.dl.playstation.net/cdn/EP9000/CUSA02826_00/UlcrMuKw2XkDbwuhiI6Kbh1nFRqhRiG1.jpg" class="d-block w-100" alt="Uncharted™: The Nathan Drake Collection™"></a>
+          		<a href="./3976.html"><img src="https://vulcan.dl.playstation.net/img/cfn/11307TBEDysLBAzBZD1Hip0ytEWqfFwY9reRutao7_7Fw3IEc99U_7_Lu3hI-jZu2HfF55lg2MSNMhw6Kxozs0autl49sE30.jpg" class="d-block w-100" alt="Streets Of Rage 4™"></a>
           		<div class="carousel-caption ">
-            		<h5>Uncharted™: The Nathan Drake Collection™ <div class="text-warning">9.99 €</div></h5>
+            		<h5>Streets Of Rage 4™ <div class="text-warning">17.49 €</div></h5>
             		<p class="text-info">¡Hasta el 11 de febrero!</p>
           		</div>
         	</div>
@@ -132,28 +132,6 @@
           </div>
         </div> 
       </a>
-      <a data-name="30.00" data-stars="4.79" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3312.html">
-        <div class="card m-2">
-          <picture>
-			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253">
-			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253" alt="Pack triple de Resident Evil">
-		  </picture>
-		  <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.79</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
-		  </div>
-         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image" alt="Pack triple de Resident Evil"> -->
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      </a>
       <a data-name="30.00" data-stars="4.83" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4045.html">
         <div class="card m-2">
           <picture>
@@ -168,6 +146,28 @@
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
 		  </div>
          <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1001-CUSA01446_00-BLLEGENDARY00000/1596206856000/image" alt="Colección Legendaria de Borderlands"> -->
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      </a>
+      <a data-name="30.00" data-stars="4.79" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3312.html">
+        <div class="card m-2">
+          <picture>
+			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253">
+			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image?w=253&amp;h=253" alt="Pack triple de Resident Evil">
+		  </picture>
+		  <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.79</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
+		  </div>
+         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA03840_00-RE456BUND00000EU/1596206856000/image" alt="Pack triple de Resident Evil"> -->
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
@@ -946,28 +946,6 @@
           </div>
         </div> 
       </a>
-      <a data-name="15.00" data-stars="4.39" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2395.html">
-        <div class="card m-2">
-          <picture>
-			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253">
-			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253" alt="Contra Anniversary Collection">
-		  </picture>
-		  <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.39</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
-		  </div>
-         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image" alt="Contra Anniversary Collection"> -->
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      </a>
       <a data-name="15.00" data-stars="4.35" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./671.html">
         <div class="card m-2">
           <picture>
@@ -1008,6 +986,28 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 14.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      </a>
+      <a data-name="15.00" data-stars="4.39" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2395.html">
+        <div class="card m-2">
+          <picture>
+			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253">
+			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image?w=253&amp;h=253" alt="Contra Anniversary Collection">
+		  </picture>
+		  <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.39</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
+		  </div>
+         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15488_00-CONTRACOLLECTION/1596206856000/image" alt="Contra Anniversary Collection"> -->
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -2398,6 +2398,28 @@
           </div>
         </div> 
       </a>
+      <a data-name="7.50" data-stars="4.58" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2506.html">
+        <div class="card m-2">
+          <picture>
+			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253">
+			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253" alt="LocoRoco™ Remastered">
+		  </picture>
+		  <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.58</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image" alt="LocoRoco™ Remastered"> -->
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      </a>
       <a data-name="7.50" data-stars="4.62" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3840.html">
         <div class="card m-2">
           <picture>
@@ -2434,28 +2456,6 @@
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
          <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02273_00-SCUS972030000001/1596206856000/image" alt="Wild Arms 3"> -->
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      </a>
-      <a data-name="7.50" data-stars="4.58" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2506.html">
-        <div class="card m-2">
-          <picture>
-			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253">
-			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253" alt="LocoRoco™ Remastered">
-		  </picture>
-		  <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.58</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image" alt="LocoRoco™ Remastered"> -->
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
@@ -2926,28 +2926,6 @@
           </div>
         </div> 
       </a>
-      <a data-name="5.00" data-stars="4.15" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2277.html">
-        <div class="card m-2">
-          <picture>
-			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253">
-			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253" alt="MX Nitro: Unleashed">
-		  </picture>
-		  <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.15</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image" alt="MX Nitro: Unleashed"> -->
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      </a>
       <a data-name="5.00" data-stars="4.16" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3861.html">
         <div class="card m-2">
           <picture>
@@ -2984,6 +2962,28 @@
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
          <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02269_00-SCES508850000001/1596206856000/image" alt="Ape Escape 2"> -->
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      </a>
+      <a data-name="5.00" data-stars="4.15" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2277.html">
+        <div class="card m-2">
+          <picture>
+			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253">
+			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image?w=253&amp;h=253" alt="MX Nitro: Unleashed">
+		  </picture>
+		  <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.15</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2609-CUSA13623_00-MXNITROUNLEASHEU/1596206856000/image" alt="MX Nitro: Unleashed"> -->
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
@@ -3212,28 +3212,6 @@
           </div>
         </div> 
       </a>
-      <a data-name="3.50" data-stars="4.41" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2876.html">
-        <div class="card m-2">
-          <picture>
-			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253">
-			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253">
-			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="ACA NEOGEO ZED BLADE">
-		  </picture>
-		  <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.41</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image" alt="ACA NEOGEO ZED BLADE"> -->
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      </a>
       <a data-name="3.50" data-stars="4.63" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4506.html">
         <div class="card m-2">
           <picture>
@@ -3248,6 +3226,28 @@
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
          <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA11380_00-HAMPRDC000000001/1596206856000/image" alt="ACA NEOGEO THE KING OF FIGHTERS '99"> -->
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      </a>
+      <a data-name="3.50" data-stars="4.41" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2876.html">
+        <div class="card m-2">
+          <picture>
+			  <source media="(min-width: 1200px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 992px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 768px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253">
+			  <source media="(min-width: 576px)" srcset="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253">
+			  <img class="card-img-top" loading="lazy" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="ACA NEOGEO ZED BLADE">
+		  </picture>
+		  <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.41</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+         <!-- <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA09321_00-HAMPRDC000000001/1596206856000/image" alt="ACA NEOGEO ZED BLADE"> -->
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
@@ -4730,20 +4730,6 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4042.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4389-CUSA06355_00-SLES543840000001/1596206856000/image?w=253&amp;h=253" alt="Destroy All Humans! 2">
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Lanzado el 30/nov/2016</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4501.html">
       
         <div class="card m-2">
@@ -4753,6 +4739,20 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.74€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.25€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4042.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4389-CUSA06355_00-SLES543840000001/1596206856000/image?w=253&amp;h=253" alt="Destroy All Humans! 2">
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Lanzado el 30/nov/2016</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -5710,156 +5710,12 @@
         </div> 
       
       </a>
-	</div>  </div>    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">  	<div class="row container-fluid m-0">  	</div>  </div>    <div class="tab-pane fade" id="pills-last-offers" role="tabpanel" aria-labelledby="pills-profile-tab">  	<div class="row container-fluid m-0">      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1921.html">
+	</div>  </div>    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">  	<div class="row container-fluid m-0">  	</div>  </div>    <div class="tab-pane fade" id="pills-last-offers" role="tabpanel" aria-labelledby="pills-profile-tab">  	<div class="row container-fluid m-0">      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2507.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA14123_00-BHB0000000000002/1596206856000/image?w=253&amp;h=253" alt="RACCOON CITY EDITION">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07695_00-LOCOROCO2HD00001/1596206856000/image?w=253&amp;h=253" alt="LocoRoco™ 2 Remastered">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.88</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 31.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 48.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>79.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4464.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2363-CUSA11988_00-EUCB0DSINKER00PS/1596206856000/image?w=253&amp;h=253" alt="Dragon Sinker: Descendants of Legend">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.29</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2423.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15189_00-ARCADECLASSICS01/1596206856000/image?w=253&amp;h=253" alt="Arcade Classics Anniversary Collection">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.53</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2421.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA16182_00-SMB2019EU0000001/1596206856000/image?w=253&amp;h=253" alt="Super Monkey Ball: Banana Blitz HD">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.60</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 47%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 15.89€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.10€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3137.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA10776_00-VC4VCRBUNDLE0000/1596206856000/image?w=253&amp;h=253" alt="Valkyria Chronicles Remastered + Valkyria Chronicles 4 Bundle">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 5.00</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3322.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA00951_00-SHADOWOFBEAST0EU/1596206856000/image?w=253&amp;h=253" alt="Shadow of the Beast™">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.36</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 53%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.04€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.95€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3535.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2107-CUSA13340_00-MARKOFTHENINJARE/1596206856000/image?w=253&amp;h=253" alt="Mark of the Ninja: Remastered">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.80</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 55%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3868.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA04164_00-SLUS215540000001/1596206856000/image?w=253&amp;h=253" alt="THE KING OF FIGHTERS™ 'COLLECTION: THE OROCHI SAGA">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.41</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3840.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07934_00-SCES503610000001/1596206856000/image?w=253&amp;h=253" alt="Jak and Daxter: The Precursor Legacy™">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.62</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.66</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
@@ -5872,145 +5728,19 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3870.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3159.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02273_00-SCUS972030000001/1596206856000/image?w=253&amp;h=253" alt="Wild Arms 3">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0700-CUSA03862_00-ARCADEGS00000001/1596206856000/image?w=253&amp;h=253" alt="ARCADE GAME SERIES 3-in-1 Pack">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.65</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.64</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1958.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1018-CUSA04607_00-RETURNTOARKHAM00/1596206856000/image?w=253&amp;h=253" alt="Batman: Return to Arkham">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.71</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4495.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2363-CUSA24513_00-EU0DLAPIS0000PS4/1596206856000/image?w=253&amp;h=253" alt="Dragon Lapis">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.00</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 25%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 11.24€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.75€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2488.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA08364_00-OKAMIHD000000001/1596206856000/image?w=253&amp;h=253" alt="OKAMI HD">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.88</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4507.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2846-CUSA18469_00-PIXELBOTEXTREME0/1596206856000/image?w=253&amp;h=253" alt="pixelBOT EXTREME!">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 5.00</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 30%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 6.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2506.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253" alt="LocoRoco™ Remastered">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.58</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3155.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA10902_00-SHININGRESREF100/1596206856000/image?w=253&amp;h=253" alt="Shining Resonance Refrain">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.56</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 70%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3346.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA01944_00-SCES502950000001/1596206856000/image?w=253&amp;h=253" alt="Dark Cloud™">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.75</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 4.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>7.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -6124,55 +5854,55 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4508.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4497.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA10296_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="ACA NEOGEO TOP HUNTER RODDY and CATHY">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4389-CUSA06353_00-SLES531960000001/1596206856000/image?w=253&amp;h=253" alt="Destroy All Humans!">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.82</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.49</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2507.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2515.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07695_00-LOCOROCO2HD00001/1596206856000/image?w=253&amp;h=253" alt="LocoRoco™ 2 Remastered">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07694_00-UCES009950000001/1596206856000/image?w=253&amp;h=253" alt="Patapon™ 2 Remastered">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.66</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.39</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 40%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3159.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4103.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0700-CUSA03862_00-ARCADEGS00000001/1596206856000/image?w=253&amp;h=253" alt="ARCADE GAME SERIES 3-in-1 Pack">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4365-CUSA16260_00-COMMANDOS2HD0001/1596206856000/image?w=253&amp;h=253" alt="Commandos 2 - HD Remaster">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.64</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.75</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 40%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 4.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>7.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 11.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -6209,6 +5939,24 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4507.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2846-CUSA18469_00-PIXELBOTEXTREME0/1596206856000/image?w=253&amp;h=253" alt="pixelBOT EXTREME!">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 5.00</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 30%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 6.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -6340,168 +6088,6 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4497.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4389-CUSA06353_00-SLES531960000001/1596206856000/image?w=253&amp;h=253" alt="Destroy All Humans!">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.49</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2515.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07694_00-UCES009950000001/1596206856000/image?w=253&amp;h=253" alt="Patapon™ 2 Remastered">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.39</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 40%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4509.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA02668_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="Arcade Archives Renegade">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.85</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4103.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4365-CUSA16260_00-COMMANDOS2HD0001/1596206856000/image?w=253&amp;h=253" alt="Commandos 2 - HD Remaster">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.75</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 40%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 11.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4510.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA10381_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="ACA NEOGEO SAMURAI SHODOWN III">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.52</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4106.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1470-CUSA03650_00-PANGADVENTURES01/1596206856000/image?w=253&amp;h=253" alt="Pang Adventures">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.41</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2528.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07172_00-UCES007750000001/1596206856000/image?w=253&amp;h=253" alt="PaRappa the Rapper Remastered">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.71</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 53%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.04€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.95€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3139.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA01113_00-GRAVITYRUSHHDEU1/1596206856000/image?w=253&amp;h=253" alt="Gravity Rush™ Remastered">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.70</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 67%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.89€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.10€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3349.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02274_00-SCES519200000001/1596206856000/image?w=253&amp;h=253" alt="Forbidden Siren">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.27</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3353.html">
       
         <div class="card m-2">
@@ -6569,6 +6155,114 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4106.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1470-CUSA03650_00-PANGADVENTURES01/1596206856000/image?w=253&amp;h=253" alt="Pang Adventures">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.41</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2528.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07172_00-UCES007750000001/1596206856000/image?w=253&amp;h=253" alt="PaRappa the Rapper Remastered">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.71</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 53%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.04€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.95€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4508.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA10296_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="ACA NEOGEO TOP HUNTER RODDY and CATHY">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.82</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3139.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA01113_00-GRAVITYRUSHHDEU1/1596206856000/image?w=253&amp;h=253" alt="Gravity Rush™ Remastered">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.70</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 67%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.89€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.10€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3349.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02274_00-SCES519200000001/1596206856000/image?w=253&amp;h=253" alt="Forbidden Siren">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.27</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3355.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1004-CUSA03541_00-SLES525410000001/1596206856000/image?w=253&amp;h=253" alt="Grand Theft Auto: San Andreas">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.55</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 33%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 10.04€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 4.95€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -6646,24 +6340,6 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4511.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8925-CUSA03355_00-VDHBND000000000E/1596206856000/image?w=253&amp;h=253" alt="Vertical Drop Heroes HD">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.00</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.74€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.25€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4110.html">
       
         <div class="card m-2">
@@ -6700,6 +6376,24 @@
         </div> 
       
       </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4509.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA02668_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="Arcade Archives Renegade">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.85</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
       <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3153.html">
       
         <div class="card m-2">
@@ -6718,19 +6412,55 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3355.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2618.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1004-CUSA03541_00-SLES525410000001/1596206856000/image?w=253&amp;h=253" alt="Grand Theft Auto: San Andreas">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0700-CUSA03865_00-GALAGA0000000000/1596206856000/image?w=253&amp;h=253" alt="ARCADE GAME SERIES: GALAGA">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.55</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 33%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.50</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 10.04€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 4.95€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 2.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>3.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4510.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA10381_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="ACA NEOGEO SAMURAI SHODOWN III">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.52</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3163.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA02241_00-METAL0SLUG300000/1596206856000/image?w=253&amp;h=253" alt="METAL SLUG 3">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.52</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.39€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.60€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>11.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -6844,12 +6574,48 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2618.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3895.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0700-CUSA03865_00-GALAGA0000000000/1596206856000/image?w=253&amp;h=253" alt="ARCADE GAME SERIES: GALAGA">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA04156_00-SLES546770000001/1596206856000/image?w=253&amp;h=253" alt="METAL SLUG ANTHOLOGY™">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.50</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.88</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 70%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./699.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8923-CUSA17132_00-DAEEUHARVEY00001/1596206856000/image?w=253&amp;h=253" alt="Edna and Harvey: Harvey's New Eyes">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.59</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 90%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 18.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2686.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0700-CUSA03863_00-DIGDUG0000000000/1596206856000/image?w=253&amp;h=253" alt="ARCADE GAME SERIES: DIG DUG">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.20</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
@@ -6857,24 +6623,6 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 2.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>3.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3163.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA02241_00-METAL0SLUG300000/1596206856000/image?w=253&amp;h=253" alt="METAL SLUG 3">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.52</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.39€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.60€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>11.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -6911,6 +6659,24 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4511.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8925-CUSA03355_00-VDHBND000000000E/1596206856000/image?w=253&amp;h=253" alt="Vertical Drop Heroes HD">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.00</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.74€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.25€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -7060,55 +6826,37 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3895.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3444.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA04156_00-SLES546770000001/1596206856000/image?w=253&amp;h=253" alt="METAL SLUG ANTHOLOGY™">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4389-CUSA08953_00-THERAVENEU000001/1596206856000/image?w=253&amp;h=253" alt="The Raven Remastered">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.88</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 70%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.12</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./699.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./901.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8923-CUSA17132_00-DAEEUHARVEY00001/1596206856000/image?w=253&amp;h=253" alt="Edna and Harvey: Harvey's New Eyes">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8923-CUSA14186_00-DAEEUDEPONIA4000/1596206856000/image?w=253&amp;h=253" alt="Deponia Doomsday">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.59</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.36</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 90%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 18.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2686.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0700-CUSA03863_00-DIGDUG0000000000/1596206856000/image?w=253&amp;h=253" alt="ARCADE GAME SERIES: DIG DUG">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.20</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 2.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>3.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.29€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.70€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>12.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -7240,37 +6988,37 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3444.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3193.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4389-CUSA08953_00-THERAVENEU000001/1596206856000/image?w=253&amp;h=253" alt="The Raven Remastered">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA08819_00-SSVS000000BUNDLE/1596206856000/image?w=253&amp;h=253" alt="SAMURAI SHODOWN V SPECIAL">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.12</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.61</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./901.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./617.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8923-CUSA14186_00-DAEEUDEPONIA4000/1596206856000/image?w=253&amp;h=253" alt="Deponia Doomsday">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA12982_00-00000MEDIEVILDLX/1596206856000/image?w=253&amp;h=253" alt="Edición digital deluxe de MediEvil">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.36</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 90%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.85</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 1.29€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.70€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>12.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -7402,37 +7150,55 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3193.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4501.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA08819_00-SSVS000000BUNDLE/1596206856000/image?w=253&amp;h=253" alt="SAMURAI SHODOWN V SPECIAL">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4389-CUSA06354_00-SLES502770000001/1596206856000/image?w=253&amp;h=253" alt="Red Faction">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.61</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.30</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.74€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.25€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./617.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2995.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA12982_00-00000MEDIEVILDLX/1596206856000/image?w=253&amp;h=253" alt="Edición digital deluxe de MediEvil">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0082-CUSA00109_00-000000TOMBRAIDER/1596206856000/image?w=253&amp;h=253" alt="Tomb Raider: Definitive Edition">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.85</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.70</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 85%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 17.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3310.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1003-CUSA15565_00-DOOM199300000000/1596206856000/image?w=253&amp;h=253" alt="DOOM (1993)">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.60</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 2.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>4.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -7546,55 +7312,55 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4501.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2272.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4389-CUSA06354_00-SLES502770000001/1596206856000/image?w=253&amp;h=253" alt="Red Faction">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1004-CUSA03542_00-SLES524780000001/1596206856000/image?w=253&amp;h=253" alt="Red Dead Revolver">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.30</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.09</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 40%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.74€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.25€</b></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2995.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3889.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0082-CUSA00109_00-000000TOMBRAIDER/1596206856000/image?w=253&amp;h=253" alt="Tomb Raider: Definitive Edition">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA04154_00-SLPS257810000001/1596206856000/image?w=253&amp;h=253" alt="FU'UN SUPER COMBO™">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.70</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 85%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.45</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 17.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3310.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2385.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1003-CUSA15565_00-DOOM199300000000/1596206856000/image?w=253&amp;h=253" alt="DOOM (1993)">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1018-CUSA00690_00-GAUNTLETGAME0001/1596206856000/image?w=253&amp;h=253" alt="Gauntlet: Slayer Edition">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.60</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.12</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 2.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>4.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -7780,55 +7546,37 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2272.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3409.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1004-CUSA03542_00-SLES524780000001/1596206856000/image?w=253&amp;h=253" alt="Red Dead Revolver">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0006-CUSA10851_00-STELLARPARADISE0/1596206856000/image?w=253&amp;h=253" alt="Burnout™ Paradise Remastered">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.51</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4050.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA09771_00-SEGAMEGADRIVECLS/1596206856000/image?w=253&amp;h=253" alt="SEGA® Mega Drive Classics™ ">
             <div class="fluid-container">
 		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.09</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 40%</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3889.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA04154_00-SLPS257810000001/1596206856000/image?w=253&amp;h=253" alt="FU'UN SUPER COMBO™">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.45</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2385.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1018-CUSA00690_00-GAUNTLETGAME0001/1596206856000/image?w=253&amp;h=253" alt="Gauntlet: Slayer Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.12</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 14.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -7960,37 +7708,37 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3409.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3227.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0006-CUSA10851_00-STELLARPARADISE0/1596206856000/image?w=253&amp;h=253" alt="Burnout™ Paradise Remastered">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA11041_00-KOF97GM0CROSSBUY/1596206856000/image?w=253&amp;h=253" alt="THE KING OF FIGHTERS ’97 GLOBAL MATCH">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.51</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.65</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.99€</b></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4050.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./672.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA09771_00-SEGAMEGADRIVECLS/1596206856000/image?w=253&amp;h=253" alt="SEGA® Mega Drive Classics™ ">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA10738_00-MM30ANBUNDLE0001/1596206856000/image?w=253&amp;h=253" alt="Mega Man 30th Anniversary Bundle">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.09</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 5.00</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 33%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 14.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 40.19€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 19.80€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -8122,37 +7870,37 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3227.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3059.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA11041_00-KOF97GM0CROSSBUY/1596206856000/image?w=253&amp;h=253" alt="THE KING OF FIGHTERS ’97 GLOBAL MATCH">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02356_00-HRPS400000000001/1596206856000/image?w=253&amp;h=253" alt="Heavy Rain™">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.65</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.43</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 67%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.89€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.10€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./672.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2834.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA10738_00-MM30ANBUNDLE0001/1596206856000/image?w=253&amp;h=253" alt="Mega Man 30th Anniversary Bundle">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4029-CUSA01126_00-TRINEBUNDLE00000/1596206856000/image?w=253&amp;h=253" alt="Trine Bundle">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 5.00</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 33%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.78</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 40.19€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 19.80€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 6.24€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 18.75€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -8284,37 +8032,73 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3059.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1850.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02356_00-HRPS400000000001/1596206856000/image?w=253&amp;h=253" alt="Heavy Rain™">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0002-CUSA14876_00-CRASHTEAMRACING1/1596206856000/image?w=253&amp;h=253" alt="Crash™ Team Racing Nitro-Fueled">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.43</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 67%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.24</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.89€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.10€</b></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 15.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3907.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02269_00-SCES508850000001/1596206856000/image?w=253&amp;h=253" alt="Ape Escape 2">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.55</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2418.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA10576_00-MAINGAME00000000/1596206856000/image?w=253&amp;h=253" alt="ZONE OF THE ENDERS: The 2nd Runner - MARS">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.81</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 22.50€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2834.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4506.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP4029-CUSA01126_00-TRINEBUNDLE00000/1596206856000/image?w=253&amp;h=253" alt="Trine Bundle">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA11380_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="ACA NEOGEO THE KING OF FIGHTERS '99">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.78</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.63</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 6.24€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 18.75€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
@@ -8482,73 +8266,289 @@
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1850.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3535.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0002-CUSA14876_00-CRASHTEAMRACING1/1596206856000/image?w=253&amp;h=253" alt="Crash™ Team Racing Nitro-Fueled">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2107-CUSA13340_00-MARKOFTHENINJARE/1596206856000/image?w=253&amp;h=253" alt="Mark of the Ninja: Remastered">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.24</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.80</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 55%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3868.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0576-CUSA04164_00-SLUS215540000001/1596206856000/image?w=253&amp;h=253" alt="THE KING OF FIGHTERS™ 'COLLECTION: THE OROCHI SAGA">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.41</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 80%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 2.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1921.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA14123_00-BHB0000000000002/1596206856000/image?w=253&amp;h=253" alt="RACCOON CITY EDITION">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.88</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 15.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 31.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 48.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>79.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3907.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4464.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02269_00-SCES508850000001/1596206856000/image?w=253&amp;h=253" alt="Ape Escape 2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2363-CUSA11988_00-EUCB0DSINKER00PS/1596206856000/image?w=253&amp;h=253" alt="Dragon Sinker: Descendants of Legend">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.55</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.29</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 5.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2418.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2423.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA10576_00-MAINGAME00000000/1596206856000/image?w=253&amp;h=253" alt="ZONE OF THE ENDERS: The 2nd Runner - MARS">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0101-CUSA15189_00-ARCADECLASSICS01/1596206856000/image?w=253&amp;h=253" alt="Arcade Classics Anniversary Collection">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.81</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.53</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 75%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 22.50€</b></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 4.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2421.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA16182_00-SMB2019EU0000001/1596206856000/image?w=253&amp;h=253" alt="Super Monkey Ball: Banana Blitz HD">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.60</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 47%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 15.89€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.10€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
       
       </a>
-      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4506.html">
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3137.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP8908-CUSA11380_00-HAMPRDC000000001/1596206856000/image?w=253&amp;h=253" alt="ACA NEOGEO THE KING OF FIGHTERS '99">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA10776_00-VC4VCRBUNDLE0000/1596206856000/image?w=253&amp;h=253" alt="Valkyria Chronicles Remastered + Valkyria Chronicles 4 Bundle">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.63</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 5.00</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3322.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA00951_00-SHADOWOFBEAST0EU/1596206856000/image?w=253&amp;h=253" alt="Shadow of the Beast™">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.36</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 53%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.04€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.95€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3346.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA01944_00-SCES502950000001/1596206856000/image?w=253&amp;h=253" alt="Dark Cloud™">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.75</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 5.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3840.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07934_00-SCES503610000001/1596206856000/image?w=253&amp;h=253" alt="Jak and Daxter: The Precursor Legacy™">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.62</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 3.49€</b></p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>6.99€</del>)</small></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3870.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA02273_00-SCUS972030000001/1596206856000/image?w=253&amp;h=253" alt="Wild Arms 3">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.65</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1958.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1018-CUSA04607_00-RETURNTOARKHAM00/1596206856000/image?w=253&amp;h=253" alt="Batman: Return to Arkham">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.71</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 60%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 19.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4495.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP2363-CUSA24513_00-EU0DLAPIS0000PS4/1596206856000/image?w=253&amp;h=253" alt="Dragon Lapis">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.00</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 25%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 11.24€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 3.75€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2488.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0102-CUSA08364_00-OKAMIHD000000001/1596206856000/image?w=253&amp;h=253" alt="OKAMI HD">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.88</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 9.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2506.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP9000-CUSA07286_00-UCES003040000001/1596206856000/image?w=253&amp;h=253" alt="LocoRoco™ Remastered">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.58</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 50%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 7.49€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a class="linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3155.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP0177-CUSA10902_00-SHININGRESREF100/1596206856000/image?w=253&amp;h=253" alt="Shining Resonance Refrain">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.56</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;"><i class="text-danger fas fa-caret-down"></i> 70%</p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 27 de enero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>Por 8.99€</b></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 11 de febrero</p>
           </div>
         </div> 
