@@ -1,0 +1,115 @@
+<html>
+<meta charset="UTF-8">
+<head>
+<link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+<script src="js/chess.js"></script>
+<script src="js/ejercicios.js"></script>
+<script src="js/utils.js"></script>
+ <script>   
+ var respuestasCorrectas;
+ var simulacionErrorCPU;
+ var simulacionErrorPlayer;
+ var contestacionCPU;
+ var movimiento=0;
+ var posicionInicial;
+ var isApertura;
+ var $status;
+ var $fen;
+ var $pgn;
+ var $lastMove;
+ var $bestMove;
+ var $nombre;
+ var ejerciciosJugados= [];
+ 
+ var config = {
+		  draggable: true,
+		  position: 'start',
+		  onDragStart: onDragStart,
+		  onDrop: onDrop,
+		  onMouseoutSquare: onMouseoutSquare,
+		  onMouseoverSquare: onMouseoverSquare,
+		  onSnapEnd: onSnapEnd
+		}
+
+
+ 
+ 
+      function cargarEjercicio(){
+	 	
+	 
+			 if (ejerciciosJugados.length == ejercicios.length){
+				 alert("Ya has completado todos los ejercicios")
+			 }else{
+				 var numero=getRandomMaxNumber(ejercicios.length);
+				 	while (ejerciciosJugados.includes(numero)){
+				 		 numero=getRandomMaxNumber(ejercicios.length)
+				 	}
+					 	
+				 isApertura=false;
+			     $nombre.html('<h1>'+ejercicios[numero].nombre+'</h1>');
+			     posicionInicial=ejercicios[numero].posicionInicial;
+			     respuestasCorrectas=ejercicios[numero].jugadasPlayer;
+			     contestacionCPU=ejercicios[numero].jugadasCPU;
+			     board.orientation(ejercicios[numero].orientation)
+			     loadInitialPosition(posicionInicial)
+			     ejerciciosJugados.push(numero);
+			 }
+       
+      }
+
+ 
+ $( document ).ready(function() {
+	 $status = $('#status')
+	 $fen = $('#fen')
+	 $pgn = $('#pgn')
+	 $lastMove = $('#lastMove')
+	 $bestMove = $('#bestMove')
+	 $nombre = $('#nombre')
+	 
+	 
+	 
+	 
+	 
+ 		board = Chessboard('myBoard', config)
+ 	
+		//cargarEjercicio(ejercicios.length-1)
+ 		cargarEjercicio();
+	 	
+ });
+ 
+  </script> 
+  </head>
+
+
+<body>
+
+
+<div id="nombre"> <h1>Nombre</h1> </div>
+  <div id="myBoard" style="width: 400px"></div>
+  <button id="startBtn">Start Position</button>
+  <button id="clearBtn">Clear Board</button>
+  <label>Status:</label>
+  <div id="status"></div>
+  <label>FEN:</label>
+  <div id="fen"></div>
+  <label>PGN:</label>
+  <div id="pgn"></div>
+  <label>Last Move:</label>
+  <div id="lastMove"></div>
+  <label>Best Move:</label>
+  <div id="bestMove"></div>
+  <label>Jugada Error:</label>
+  <div id="bestMove"></div>
+</body>
+</html>
