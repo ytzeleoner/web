@@ -69,7 +69,7 @@ var apertura=[
 				id: 6,
 				nombre: "principal-6",
 				jugadasCPU: ['e4','Nf3','d4','Nxd4','Nc3','Be3','f3','Qd2','O-O-O','Bxd4','Kb1','g4','h4','h5','Qxc3','Kc1','Be3','Qd3','Qxe3','Kd2','END'],
-				jugadasPlayer: ['c5','d6','cxd4','Nf6','g6','Bg7','O-O','Nc6','Nxd4','Be6','Qc7','Rfc8','Qa5','Rxc3','Qxa2+','Bh6+','Rc8','Bxe3','Qa1+','Qxb2'],
+				jugadasPlayer: ['c5','d6','cxd4','Nf6','g6','Bg7','O-O','Nc6','Nxd4','Be6','Qc7','Rfc8','Qa5','Rxc3','Qxa2+','Bh6+','Rc8','Bxe3+','Qa1+','Qxb2'],
 				jugadaError: ['-','-','-','-','-','-','-','-','-','-','-','-','-'],
 				explicacionError: '',
 				simulacionErrorCPU: [],
