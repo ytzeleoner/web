@@ -1,0 +1,364 @@
+<html>
+<meta charset="UTF-8">
+<head>
+<link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+<script src="js/chess.js"></script>
+<script src="js/ejercicios.js"></script>
+<script>
+
+    // A $( document ).ready() block.
+  $( document ).ready(function() {
+      console.log( "ready!" );
+
+
+// NOTE: this example uses the chess.js library:
+// https://github.com/jhlywa/chess.js
+
+var board = null
+var game = new Chess()
+var whiteSquareGrey = '#a9a9a9'
+var blackSquareGrey = '#696969'
+
+
+
+
+var $status = $('#status')
+      var $fen = $('#fen')
+      var $pgn = $('#pgn')
+      var $lastMove = $('#lastMove')
+      var $bestMove = $('#bestMove')
+      var $nombre = $('#nombre')
+      var respuestasCorrectas;
+      var respuestasErroneas;
+      var jugadasVariantes;
+      var idsVariante;
+      var explicacionError;
+      var simulacionErrorCPU;
+      var simulacionErrorPlayer;
+      var contestacionCPU;
+      var movimiento=0;
+      var posicionInicial;
+      var isApertura;
+      var numeroApertura=0;
+
+
+function removeGreySquares () {
+  $('#myBoard .square-55d63').css('background', '')
+}
+
+function greySquare (square) {
+  var $square = $('#myBoard .square-' + square)
+
+  var background = whiteSquareGrey
+  if ($square.hasClass('black-3c85d')) {
+    background = blackSquareGrey
+  }
+
+  $square.css('background', background)
+}
+
+function onDragStart (source, piece) {
+  // do not pick up pieces if the game is over
+  if (game.game_over()) return false
+
+  // or if it's not that side's turn
+  if ((game.turn() === 'w' && piece.search(/^b/) !== -1) ||
+      (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
+    return false
+  }
+}
+
+function onDrop (source, target) {
+  removeGreySquares()
+
+  // see if the move is legal
+  var move = game.move({
+    from: source,
+    to: target,
+    promotion: 'q' // NOTE: always promote to a queen for example simplicity
+  })
+
+  // illegal move
+  if (move === null) return 'snapback'
+
+
+
+  $lastMove.html(move.san)
+          var bestMove=(move.san===respuestasCorrectas[movimiento]);
+          var badMove=false;
+          if (isApertura == true){
+            badMove = (move.san===respuestasErroneas[movimiento]);
+          }
+
+          if (isApertura == true && bestMove == false){
+            //A ver si es una alternativa
+            if (jugadasVariantes!== undefined && movimiento<jugadasVariantes.length){
+              var alternativaOK=(move.san===jugadasVariantes[movimiento]);
+                if (alternativaOK){
+                    var idVariante=idsVariante[movimiento];
+                    console.log("Cambiando a subvariante "+idVariante);
+                    cargarApertura(numeroApertura,idVariante);
+                    bestMove = true;
+
+                }
+            }
+            
+
+          }
+
+
+          if (bestMove == true) {
+            movimiento++; 
+            
+              var movimientoString=contestacionCPU[movimiento]
+            
+            if (movimientoString=='END'){
+              alert("Ejercicio Resuelto")
+            }else{
+
+            mover(contestacionCPU[movimiento]);
+              
+            }
+              
+            
+          }else{
+
+            if (badMove == true ){
+              alert(explicacionError)
+              board.draggable=false
+              for (var i=0;i<simulacionErrorCPU.length;i++){
+                
+                 moverTiempo(simulacionErrorCPU[i],(i*2)+1);
+                 moverTiempo(simulacionErrorPlayer[i],(i*2)+2);
+              
+              }
+            }else{
+              alert("NOOOO! la jugada correcta era "+respuestasCorrectas[movimiento]);
+              loadInitialPosition(posicionInicial)
+            }
+            
+          }
+          $bestMove.html(bestMove);
+
+          updateStatus();
+}
+
+
+
+
+function updateStatus () {
+        var status = ''
+
+        var moveColor = 'White'
+        if (game.turn() === 'b') {
+          moveColor = 'Black'
+
+        }
+
+        // checkmate?
+        if (game.in_checkmate()) {
+          status = 'Game over, ' + moveColor + ' is in checkmate.'
+        }
+
+        // draw?
+        else if (game.in_draw()) {
+          status = 'Game over, drawn position'
+        }
+
+        // game still on
+        else {
+          status = moveColor + ' to move'
+
+          // check?
+          if (game.in_check()) {
+            status += ', ' + moveColor + ' is in check'
+          }
+        }
+
+        $status.html(status)
+        $fen.html(game.fen())
+        $pgn.html(game.pgn())
+
+      }
+
+
+function onMouseoverSquare (square, piece) {
+  // get list of possible moves for this square
+  var moves = game.moves({
+    square: square,
+    verbose: true
+  })
+
+  // exit if there are no moves available for this square
+  if (moves.length === 0) return
+
+  // highlight the square they moused over
+  greySquare(square)
+
+  // highlight the possible squares for this piece
+  for (var i = 0; i < moves.length; i++) {
+    greySquare(moves[i].to)
+  }
+}
+
+function onMouseoutSquare (square, piece) {
+  removeGreySquares()
+}
+
+function onSnapEnd () {
+  board.position(game.fen())
+}
+
+var config = {
+  draggable: true,
+  position: 'start',
+  onDragStart: onDragStart,
+  onDrop: onDrop,
+  onMouseoutSquare: onMouseoutSquare,
+  onMouseoverSquare: onMouseoverSquare,
+  onSnapEnd: onSnapEnd
+}
+board = Chessboard('myBoard', config)
+
+
+
+
+//SI QUIERO CARGAR APERTURA
+console.log("Numero de aperturas disponibles: "+apertura.length)
+numeroApertura=getRandomMaxNumber(apertura.length);
+//QUITAR CUANDO NO QUIERA LA CARO KHAN
+numeroApertura=1;
+console.log("Apertura numero "+numeroApertura);
+
+console.log("Numero de variantes disponibles: "+apertura[numeroApertura].variante.length)
+var numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
+
+console.log("Variante numero "+numVariante);
+
+cargarAperturaInicial(numeroApertura,numVariante);
+
+
+
+//SI QUIERO CARGAR EJERCICIOS
+/*
+var numEjercicio = getRandomMaxNumber(ejercicios.length)
+cargarEjercicio(ejercicios.length-1)
+*/
+
+
+      
+      
+      
+
+
+      function cargarEjercicio(numero){
+        isApertura=false;
+        $nombre.html('<h1>'+ejercicios[numero].nombre+'</h1>');
+        posicionInicial=ejercicios[numero].posicionInicial;
+        respuestasCorrectas=ejercicios[numero].jugadasPlayer;
+        contestacionCPU=ejercicios[numero].jugadasCPU;
+        board.orientation(ejercicios[numero].orientation)
+        loadInitialPosition(posicionInicial)
+      }
+
+
+      function cargarApertura(numero,variante){
+        isApertura=true;
+        respuestasCorrectas=apertura[numero].variante[variante].jugadasPlayer;
+        contestacionCPU=apertura[numero].variante[variante].jugadasCPU;
+
+        respuestasErroneas=apertura[numero].variante[variante].jugadaError;
+        explicacionError=apertura[numero].variante[variante].explicacionError;
+        simulacionErrorPlayer=apertura[numero].variante[variante].simulacionErrorPlayer;
+        simulacionErrorCPU=apertura[numero].variante[variante].simulacionErrorCPU;
+        jugadasVariantes=apertura[numero].variante[variante].jugadasAlternativas;
+        idsVariante=apertura[numero].variante[variante].variante;
+      }
+
+      function cargarAperturaInicial(numero,variante){
+        
+        $nombre.html('<h1>'+apertura[numero].nombre+'</h1>');
+        posicionInicial=apertura[numero].posicionInicial;
+        
+        cargarApertura(numero,variante)
+        
+        board.orientation(apertura[numero].orientation)
+        loadInitialPosition(posicionInicial)
+
+        
+      }
+
+
+      function loadInitialPosition(posicionInicial){
+        movimiento=0;
+        
+        board.position(posicionInicial)
+         
+        game.load(posicionInicial);
+
+        console.log("Movimiento 0 "+contestacionCPU[movimiento])
+
+        mover(contestacionCPU[movimiento]);
+
+      }
+
+
+  function mover(movimiento){
+    moverTiempo(movimiento,1);
+  }
+
+
+
+
+  function moverTiempo(movimiento,tiempo){
+        setTimeout(function (){
+          game.move(movimiento)
+          board.position(game.fen())
+          },tiempo*1000);
+      }
+
+
+      function getRandomMaxNumber(maximo){
+        console.log(Math.floor(Math.random() * maximo));
+        return Math.floor(Math.random() * maximo)  
+      }
+
+});
+
+    
+</script>
+</head>
+
+
+<body>
+
+
+<div id="nombre"> <h1>Nombre</h1> </div>
+  <div id="myBoard" style="width: 400px"></div>
+  <button id="startBtn">Start Position</button>
+  <button id="clearBtn">Clear Board</button>
+  <label>Status:</label>
+  <div id="status"></div>
+  <label>FEN:</label>
+  <div id="fen"></div>
+  <label>PGN:</label>
+  <div id="pgn"></div>
+  <label>Last Move:</label>
+  <div id="lastMove"></div>
+  <label>Best Move:</label>
+  <div id="bestMove"></div>
+  <label>Jugada Error:</label>
+  <div id="bestMove"></div>
+</body>
+</html>
