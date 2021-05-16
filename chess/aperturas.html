@@ -108,6 +108,19 @@ $( document ).ready(function() {
 });
 
 </script>
+<style>
+	@media (orientation: landscape) {
+	  .tablero{
+	  	width: 50%;
+	  }
+	}
+	
+	@media (orientation: portrait) {
+	  .tablero{
+	  	width: 90%;
+	  }
+	}
+</style>
 </head>
 
 
@@ -115,7 +128,7 @@ $( document ).ready(function() {
 
 
 <div id="nombre"> <h1>Nombre</h1> </div>
-  <div id="myBoard" class="container col-sm-11 col-11 col-md-11 col-lg-6 col-xl-6"></div>
+  <div id="myBoard" class="container tablero"></div>
   <button id="startBtn">Start Position</button>
   <button id="clearBtn">Clear Board</button>
   <label>Status:</label>
