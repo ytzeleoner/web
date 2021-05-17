@@ -114,6 +114,7 @@ $( document ).ready(function() {
 	$( ".apertura" ).click(function() {
   			aperturaSeleccionada=$(this).attr("id");
   			nuevoTablero();
+  			$idAperturas.html('<a href="aperturas.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>');
 	});
 
 
@@ -167,11 +168,15 @@ function nuevoTablero(){
 	  	    position: -webkit-sticky;
     	position: sticky;
     	top: 0px;
-   		 z-index: 1000;
+   		 /*z-index: 1000;*/
     	background-color: rgba(255,255,255,0.8);
     }
 	
-	
+	html, body {
+    	height: 100%;
+    	overflow: hidden;
+	}
+
 
 	a{
 	text-decoration: none;
@@ -184,8 +189,8 @@ function nuevoTablero(){
 <body>
 
 
-<div id="nombre">
-  <h1>Nombre</h1> 
+<div id="nombre" class="container-fluid text-center text-white">
+  <h1></h1> 
   
 </div>
 <div id="myBoard" class="tablero container-fluid"></div>
