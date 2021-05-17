@@ -194,7 +194,7 @@ var apertura=[
 			{
 				id: 6,
 				nombre: "variante del cambio - Ataque Panov",
-				jugadasCPU: ['e4','d4','exd5','c4','Nc3','Nf3','cxd5','Qb3','gxf3','Qxb7','Bb5+','Qc6+','Qxb5','Nxd5','Qxd5','Be3','O-O-O','Kb1','Re1','END'],
+				jugadasCPU: ['e4','d4','exd5','c4','Nc3','Nf3','cxd5','Qb3','gxf3','Qxb7','Bb5+','Qc6+','Qxb5','Nxd5','Qxd5','Be3','O-O-O','Kb1','Rhe1','END'],
 				jugadasPlayer: ['c6','d5','cxd5','Nf6','Nc6','Bg4','Nxd5','Bxf3','e6','Nxd4','Nxb5','Ke7','Qd7','Qxd5','exd5','Ke6','Rc8+','Bc5','Kd6'],
 				jugadaError: ['-','-','-','-','-','-','-'],
 				explicacionError: '',

@@ -229,7 +229,55 @@ var ejercicios=[
 		jugadasCPU: ['Bxg8','Bf7','Kd6','END'],
 		jugadasPlayer: ['Kg7','Bg4+','Kxf7'],
 		orientation: 'white'
-	}
+	},
+	{
+		nombre: "Partidas 1",
+		tipo: "Tactica",
+		subtipo: "Atrapada",
+		posicionInicial:"5Nk1/p6p/6p1/3P1p1n/3P4/7P/Pr3PPB/R5K1 b - - 0 27",
+		jugadasCPU: ['Kxf8','Ke7','fxg4','END'],
+		jugadasPlayer: ['Be5','g4','hxg4'],
+		orientation: 'white'
+	},
+	{
+		nombre: "Partidas 2",
+		tipo: "Tactica",
+		subtipo: "Doble Ataque",
+		posicionInicial:"r1bqkb1r/p1p5/1p2p1pp/3pPp2/3P1B2/3P1N1P/PP1N1PP1/2RQK2R b Kkq - 1 13",
+		jugadasCPU: ['Ba6','Qd7','END'],
+		jugadasPlayer: ['Qa4+','Qxa6'],
+		orientation: 'white'
+	},
+	{
+		nombre: "Partidas 3",
+		tipo: "Tactica",
+		subtipo: "Clavada",
+		posicionInicial:"1k1r3r/p2q4/Qpp1p2p/3pPp2/3P4/R2P3p/PP1N1PPB/2R3K1 b - - 1 23",
+		jugadasCPU: ['Rhg8','Qxc6','Kc8','Rxg2+','Qxc3','END'],
+		jugadasPlayer: ['Rxc6','Qxa7+','Rc3','Kh1','bxc3'],
+		orientation: 'white'
+	},
+	{
+		nombre: "Partidas 4 - Victorias perdidas",
+		tipo: "Jaque",
+		subtipo: "Basicos",
+		posicionInicial:"R7/5pk1/4p1p1/2N2n1p/P7/4P2P/1P3PK1/1RBr1r2 w - - 5 34",
+		jugadasCPU: ['Nb3','Kg3','Rg8+','Nd4','Kh2','END'],
+		jugadasPlayer: ['Nh4+','g5','Kxg8','Rg1+','Rg2#'],
+		orientation: 'black'
+	},
+	{
+		nombre: "Partidas 5 - Victorias perdidas",
+		tipo: "Jaque",
+		subtipo: "Basicos",
+		posicionInicial:"R7/5pk1/4p3/5n2/P2N2p1/4PK2/1P3P2/1RBr2r1 w - - 0 38",
+		jugadasCPU: ['Ke2','END'],
+		jugadasPlayer: ['Rge1#'],
+		orientation: 'black'
+	}		
+	
+	
+	
 	
 
 ]

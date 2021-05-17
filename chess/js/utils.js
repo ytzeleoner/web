@@ -79,6 +79,8 @@ function onDrop (source, target) {
               alert("Ejercicio Resuelto");
               if (isApertura == false){
             	  cargarEjercicio();
+              }else{
+                nuevoTablero();
               }
             }else{
 

@@ -55,6 +55,7 @@
 				 alert("Ya has completado todos los ejercicios")
 			 }else{
 				 var numero=getRandomMaxNumber(ejercicios.length);
+				 numero=ejercicios.length-1;
 				 	while (ejerciciosJugados.includes(numero)){
 				 		 numero=getRandomMaxNumber(ejercicios.length)
 				 	}

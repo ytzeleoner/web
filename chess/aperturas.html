@@ -1,6 +1,8 @@
 <html>
-<meta charset="UTF-8">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet"
       href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
       integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
@@ -34,11 +36,13 @@ var posicionInicial;
 var isApertura;
 var numeroApertura=0;
 var $status;
+var $idAperturas;
 var $fen;
 var $pgn;
 var $lastMove;
 var $bestMove;
 var $nombre;
+var aperturaSeleccionada=-1;
 
 var config = {
 		  draggable: true,
@@ -61,6 +65,24 @@ function cargarApertura(numero,variante){
   simulacionErrorCPU=apertura[numero].variante[variante].simulacionErrorCPU;
   jugadasVariantes=apertura[numero].variante[variante].jugadasAlternativas;
   idsVariante=apertura[numero].variante[variante].variante;
+}
+function mostrarAperturas(){
+  var htmlCompose="";
+
+		var i=0;
+				var claseBackground="bg-info";
+				 	while (i<apertura.length){
+				 		if (i%2==0){
+				 			claseBackground="bg-dark";
+				 		}else{
+				 			claseBackground="bg-info";
+				 		}
+				 		htmlCompose=htmlCompose.concat('<a href="#"><div id="'+i+'" class="apertura fluid h3 '+claseBackground+' p-2 text-white">'+apertura[i].nombre+'</div></a>');
+				 		i++;
+				 	}
+  			htmlCompose=htmlCompose.concat('<a href="#"><div id="-1" class="apertura fluid h3 bg-dark p-2 text-white">¡¡Todas!!</div></a>');
+			htmlCompose=htmlCompose.concat('<a href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>');
+	$idAperturas.html(htmlCompose)
 }
 
 function cargarAperturaInicial(numero,variante){
@@ -85,27 +107,46 @@ $( document ).ready(function() {
 	 $lastMove = $('#lastMove')
 	 $bestMove = $('#bestMove')
 	 $nombre = $('#nombre')
+	 $idAperturas = $('#aperturas')
+	
+	mostrarAperturas();
+
+	$( ".apertura" ).click(function() {
+  			aperturaSeleccionada=$(this).attr("id");
+  			nuevoTablero();
+	});
+
+
+	
+
 	
 	
 	
-	
-	
-	
+		
+});
+
+
+
+function nuevoTablero(){
 		board = Chessboard('myBoard', config)
 		
 		//SI QUIERO CARGAR APERTURA
-		console.log("Numero de aperturas disponibles: "+apertura.length)
-		numeroApertura=getRandomMaxNumber(apertura.length);
-		//QUITAR CUANDO NO QUIERA LA CARO KHAN
-		console.log("Apertura numero "+numeroApertura);
-
+		if (aperturaSeleccionada== -1){
+			console.log("Numero de aperturas disponibles: "+apertura.length)
+			numeroApertura=getRandomMaxNumber(apertura.length);
+		
+			console.log("Apertura numero "+numeroApertura);
+		}else{
+			numeroApertura=aperturaSeleccionada;
+		}
+		
 		console.log("Numero de variantes disponibles: "+apertura[numeroApertura].variante.length)
 		var numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
 
 		console.log("Variante numero "+numVariante);
 
 		cargarAperturaInicial(numeroApertura,numVariante);
-});
+	}
 
 </script>
 <style>
@@ -120,6 +161,11 @@ $( document ).ready(function() {
 	  	width: 90%;
 	  }
 	}
+
+	a{
+	text-decoration: none;
+	}
+
 </style>
 </head>
 
@@ -143,5 +189,10 @@ $( document ).ready(function() {
   <div id="bestMove"></div>
   <label>Jugada Error:</label>
   <div id="bestMove"></div>
+  <div id="aperturas" class="fluid bg-white text-center">
+			<a href="#"><div  id="0" class="apertura fluid h3 bg-dark p-2 text-white">Siciliana Dragon</div></a>
+			<a href="#"><div id="1" class="apertura fluid h3 bg-info p-2 text-white">Caro Khan</div></a>
+			
+	</div>
 </body>
 </html>
