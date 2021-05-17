@@ -150,17 +150,28 @@ function nuevoTablero(){
 
 </script>
 <style>
-	@media (orientation: landscape) {
-	  .tablero{
-	  	width: 50%;
-	  }
+	body{
+		background-color: #196e76;
 	}
 	
-	@media (orientation: portrait) {
+	@media (orientation: landscape) {
 	  .tablero{
-	  	width: 90%;
+	  	max-width: 50%;
+	  	position: sticky;
+	  	top: 0;
 	  }
 	}
+
+	.tablero{
+	  	background-color: #196e76;
+	  	    position: -webkit-sticky;
+    	position: sticky;
+    	top: 0px;
+   		 z-index: 1000;
+    	background-color: rgba(255,255,255,0.8);
+    }
+	
+	
 
 	a{
 	text-decoration: none;
@@ -173,11 +184,13 @@ function nuevoTablero(){
 <body>
 
 
-<div id="nombre"> <h1>Nombre</h1> </div>
-  <center><div id="myBoard" class="tablero"></div></center>
-  <button id="startBtn">Start Position</button>
-  <button id="clearBtn">Clear Board</button>
-  <label>Status:</label>
+<div id="nombre">
+  <h1>Nombre</h1> 
+  
+</div>
+<div id="myBoard" class="tablero container-fluid"></div>
+
+ <!-- <label>Status:</label>
   <div id="status"></div>
   <label>FEN:</label>
   <div id="fen"></div>
@@ -188,7 +201,7 @@ function nuevoTablero(){
   <label>Best Move:</label>
   <div id="bestMove"></div>
   <label>Jugada Error:</label>
-  <div id="bestMove"></div>
+  <div id="bestMove"></div>-->
   <div id="aperturas" class="fluid bg-white text-center">
 			<a href="#"><div  id="0" class="apertura fluid h3 bg-dark p-2 text-white">Siciliana Dragon</div></a>
 			<a href="#"><div id="1" class="apertura fluid h3 bg-info p-2 text-white">Caro Khan</div></a>
