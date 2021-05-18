@@ -91,7 +91,6 @@ function cargarAperturaInicial(numero,variante){
   
   $nombre.html('<h1>'+apertura[numero].nombre+'</h1>');
   posicionInicial=apertura[numero].posicionInicial;
-  
   cargarApertura(numero,variante)
   
   board.orientation(apertura[numero].orientation)
@@ -146,6 +145,7 @@ function nuevoTablero(){
 		console.log("Numero de variantes disponibles: "+apertura[numeroApertura].variante.length)
 		var numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
 
+		
 		console.log("Variante numero "+numVariante);
 
 		cargarAperturaInicial(numeroApertura,numVariante);
