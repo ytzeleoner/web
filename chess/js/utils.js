@@ -101,7 +101,7 @@ function onDrop (source, target) {
               
               }
             }else{
-              alert("NOOOO! la jugada correcta era "+respuestasCorrectas[movimiento]);
+              alert("NOOOO! la jugada correcta era "+respuestasCorrectas[movimiento]+" tu has hecho "+move.san);
               loadInitialPosition(posicionInicial)
             }
             
