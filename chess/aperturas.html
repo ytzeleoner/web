@@ -45,6 +45,7 @@ var $lastMove;
 var $bestMove;
 var $nombre;
 var aperturaSeleccionada=-1;
+var aperturasJugadas= [];
 
 var config = {
 		  draggable: true,
@@ -57,20 +58,25 @@ var config = {
 		}
 
 function cargarApertura(numero,variante){
-  isApertura=true;
-  respuestasCorrectas=apertura[numero].variante[variante].jugadasPlayer;
-  contestacionCPU=apertura[numero].variante[variante].jugadasCPU;
+	
 
-  respuestasErroneas=apertura[numero].variante[variante].jugadaError;
-  explicacionError=apertura[numero].variante[variante].explicacionError;
-  simulacionErrorPlayer=apertura[numero].variante[variante].simulacionErrorPlayer;
-  simulacionErrorCPU=apertura[numero].variante[variante].simulacionErrorCPU;
-  jugadasVariantes=apertura[numero].variante[variante].jugadasAlternativas;
-  idsVariante=apertura[numero].variante[variante].variante;
+
+	  isApertura=true;
+	  respuestasCorrectas=apertura[numero].variante[variante].jugadasPlayer;
+	  contestacionCPU=apertura[numero].variante[variante].jugadasCPU;
+
+	  respuestasErroneas=apertura[numero].variante[variante].jugadaError;
+	  explicacionError=apertura[numero].variante[variante].explicacionError;
+	  simulacionErrorPlayer=apertura[numero].variante[variante].simulacionErrorPlayer;
+	  simulacionErrorCPU=apertura[numero].variante[variante].simulacionErrorCPU;
+	  jugadasVariantes=apertura[numero].variante[variante].jugadasAlternativas;
+	  idsVariante=apertura[numero].variante[variante].variante;
+
+	
 }
 function mostrarAperturas(){
   var htmlCompose="";
-
+aperturasJugadas= [];
 		var i=0;
 				var claseBackground="bg-info";
 				 	while (i<apertura.length){
@@ -130,6 +136,9 @@ $( document ).ready(function() {
 
 
 function nuevoTablero(){
+
+		console.log("Aperturas jugadas "+aperturasJugadas);
+
 		board = Chessboard('myBoard', config)
 		
 		//SI QUIERO CARGAR APERTURA
@@ -141,15 +150,26 @@ function nuevoTablero(){
 		}else{
 			numeroApertura=aperturaSeleccionada;
 		}
+
+	console.log("Numero de variantes disponibles: "+apertura[numeroApertura].variante.length)
 		
-		console.log("Numero de variantes disponibles: "+apertura[numeroApertura].variante.length)
-		var numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
+		if (aperturasJugadas.length == apertura[numeroApertura].variante.length){
+			alert("Ya has completado todas las variantes de esta apertura")
+		}else{
+			 var numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
+			 
+		 	while (aperturasJugadas.includes(numVariante)){
+		 		 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length)
+			}
+		}
 
 		//numVariante=26;
 		
 		console.log("Variante numero "+numVariante);
 
 		cargarAperturaInicial(numeroApertura,numVariante);
+
+		 aperturasJugadas.push(numVariante);
 	}
 
 </script>
