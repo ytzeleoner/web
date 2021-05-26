@@ -189,7 +189,7 @@ var apertura=[
 				simulacionErrorCPU: [],
 				simulacionErrorPlayer: [],
 				jugadasAlternativas: ['-','-','-','Nc6'],
-				variante: ['-','-','-','-','-','-','4'],
+				variante: ['-','-','-','4'],
 			},
 			{
 				id: 6,
@@ -315,7 +315,7 @@ var apertura=[
 				id: 16,
 				nombre: "variante clásica - variante Capablanca h4 --- Bd2 -- Dama ",
 				jugadasCPU: ['e4','d4','Nc3','Nxe4','Ng3','h4','Nf3','h5','Bd3','Qxd3','Bd2','O-O-O','Ne4','Qxe4','Qe2','END'],
-				jugadasPlayer: ['c6','d5','dxe4','Bf5','Bg6','h6','Nd7','Bh7','Bxd3','e6','Nf6','Be7','Nxe4','Nf6','Qd5'],
+				jugadasPlayer: ['c6','d5','dxe4','Bf5','Bg6','h6','Nd7','Bh7','Bxd3','e6','Ngf6','Be7','Nxe4','Nf6','Qd5'],
 				jugadaError: ['-','-','-','-','-','-','-'],
 				explicacionError: '',
 				simulacionErrorCPU: [],
@@ -446,5 +446,357 @@ var apertura=[
 		],
 
 		orientation: 'black'
+	},
+	{
+		nombre: "Apertura Vienesa",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "spoiler",
+				jugadasCPU: ['-','e5','END'],
+				jugadasPlayer: ['e4','Nc3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Gambito de Rey",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "spoiler",
+				jugadasCPU: ['-','e5','END'],
+				jugadasPlayer: ['e4','f4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Apertura Abierta Principal",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Defensa Petrov",
+				jugadasCPU: ['-','e5','Nf6','d6','Nxe4','d5','END'],
+				jugadasPlayer: ['e4','Nf3','Nxe5','Nf3','d4','Bd3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			},
+			{
+				id: 1,
+				nombre: "Defensa Philidor",
+				jugadasCPU: ['-','e5','d6','END'],
+				jugadasPlayer: ['e4','Nf3','d4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Apertura Italiana",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','e5','Nc6','END'],
+				jugadasPlayer: ['e4','Nf3','Bc4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Cuatro Caballos",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','e5','Nc6','Nf6','END'],
+				jugadasPlayer: ['e4','Nf3','Nc3','Bc4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Apertura Escocesa",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','e5','Nc6','exd4','END'],
+				jugadasPlayer: ['e4','Nf3','d4','Nxd4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Apertura Rui Lopez",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','e5','Nc6','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Gambito de Dama",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Gambito Dama Aceptado",
+				jugadasCPU: ['-','d5','dxc4','END'],
+				jugadasPlayer: ['d4','c4','e4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			},
+			{
+				id: 1,
+				nombre: "Defensa Eslava",
+				jugadasCPU: ['-','d5','c6','END'],
+				jugadasPlayer: ['d4','c4','Nc3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','cxd5','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','2','-','-','-',''],
+			},
+			{
+				id: 2,
+				nombre: "Defensa Eslava - Eslava del cambio",
+				jugadasCPU: ['-','d5','c6','cxd5','Nc6','Nf6','END'],
+				jugadasPlayer: ['d4','c4','cxd5','Bf4','Nc3','e3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','Nc3','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','1','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Sistema Colle",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','d5','Nf6','END'],
+				jugadasPlayer: ['d4','Nf3','e3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Alfil-Dama",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','d5','Nf6','END'],
+				jugadasPlayer: ['d4','Nf3','Bf4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Ataque Torre",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','d5','Nf6','END'],
+				jugadasPlayer: ['d4','Nf3','Bg5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Sistema Londres",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','d5','END'],
+				jugadasPlayer: ['d4','Bf4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Defensa Benoni",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','Nf6','c5','END'],
+				jugadasPlayer: ['d4','c4','d5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			},
+			{
+				id: 1,
+				nombre: "Gambito Volga",
+				jugadasCPU: ['-','Nf6','c5','b5','END'],
+				jugadasPlayer: ['d4','c4','d5','cxb5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Ataque Trompowsky",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','Nf6','e6','END'],
+				jugadasPlayer: ['d4','Nf3','Bg5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Apertura Catalana",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','Nf6','e6','END'],
+				jugadasPlayer: ['d4','c4','g3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
+	},
+	{
+		nombre: "Defensa Nimzoindia",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		variante: [
+			{
+				id: 0,
+				nombre: "Spoiler",
+				jugadasCPU: ['-','Nf6','e6','Bb4','Bxc3','END'],
+				jugadasPlayer: ['d4','c4','Nc3','a3','bxc3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+			}
+		],
+		orientation: 'white'
 	}
 ]

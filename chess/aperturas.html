@@ -89,7 +89,7 @@ aperturasJugadas= [];
 				 		i++;
 				 	}
   			htmlCompose=htmlCompose.concat('<a href="#"><div id="-1" class="apertura fluid h3 bg-dark p-2 text-white">¡¡Todas!!</div></a>');
-			htmlCompose=htmlCompose.concat('<a href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>');
+			
 	$idAperturas.html(htmlCompose)
 }
 
@@ -197,10 +197,9 @@ function nuevoTablero(){
   <div id="bestMove"></div>
   <label>Jugada Error:</label>
   <div id="bestMove"></div>-->
-  <div id="aperturas" class="fluid bg-white text-center">
-			<a href="#"><div  id="0" class="apertura fluid h3 bg-dark p-2 text-white">Siciliana Dragon</div></a>
-			<a href="#"><div id="1" class="apertura fluid h3 bg-info p-2 text-white">Caro Khan</div></a>
-			
+ 
+  <div id="aperturas" class="fluid bg-white overflow-scroll text-center ">
 	</div>
+	<a class="text-center" href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>
 </body>
 </html>

@@ -274,10 +274,89 @@ var ejercicios=[
 		jugadasCPU: ['Ke2','END'],
 		jugadasPlayer: ['Rge1#'],
 		orientation: 'black'
-	}		
-	
-	
-	
+	},
+	{
+		nombre: "Ejercicios Escuela",
+		tipo: "Doble Ataque",
+		subtipo: "Basicos",
+		posicionInicial:"r3r1k1/1pqb1nbp/2pp2p1/8/2PNBP2/1P4PP/2Q2B1K/2R1R3 b - - 0 38",
+		jugadasCPU: ['Ra3','hxg6','Bxe8','Qe7','Kxg7','Kh7','END'],
+		jugadasPlayer: ['Bxg6','Rxe8+','Ne6','Nxg7','Qb2+','Qxa3'],
+		orientation: 'white'
+		
+	},
+	{
+		nombre: "Ejercicios Escuela",
+		tipo: "Doble Ataque",
+		subtipo: "Basicos",
+		posicionInicial:"8/5pk1/8/4p3/pp1qPn2/8/PP2BP2/2Q2K2 w - - 0 38",
+		jugadasCPU: ['f3','Kxg1','Kf2','END'],
+		jugadasPlayer: ['Qg1+','Nxe2+','Nxc1'],
+		orientation: 'black'
+	},
+	{
+		nombre: "1051026 (Dif 1605)",
+		tipo: "Jaque Mate",
+		subtipo: "Basicos",
+		posicionInicial:"1r3r2/4p1kN/nqp2np1/p7/2Pp4/2N2P2/P2Q2P1/2KR3R b - - 0 22",
+		jugadasCPU: ['dxc3','Kf7','Ke8','END'],
+		jugadasPlayer: ['Qh6+','Ng5+','Qxg6+'],
+		orientation: 'white'
+	},
+	{
+		nombre: "1236311 (Dif 1464)",
+		tipo: "Calculo",
+		subtipo: "Basicos",
+		posicionInicial:"8/6K1/8/5k2/6pp/7P/6P1/8 w - - 0 72",
+		jugadasCPU: ['Kh6','gxh3','Kg6','Kg5','Kf4','Kg4','END'],
+		jugadasPlayer: ['gxh3','Kf4','Kg3','Kxh3','Kg2','h3'],
+		orientation: 'black'
+	},
+	{
+		nombre: "1351078  (Dif 1717)",
+		tipo: "Doble Ataque",
+		subtipo: "Basicos",
+		posicionInicial:"5bnr/1rk2pp1/8/pBqp4/P2N2QB/2PP3P/1P6/4K1Nb b - - 0 25",
+		jugadasCPU: ['Nh6','Kb6','Ka7','Qxc6','END'],
+		jugadasPlayer: ['Qd7+','Bd8+','Nc6+','Qxc6'],
+		orientation: 'white'
+	},
+	{
+		nombre: "Magnusen",
+		tipo: "Clavada",
+		subtipo: "Basicos",
+		posicionInicial:"kr6/pr4pp/1R1p4/3P1p2/2QPp3/q1p1P1P1/2R2P1P/1K6 w - - 0 25",
+		jugadasCPU: ['Qc6','END'],
+		jugadasPlayer: ['Qa6'],
+		orientation: 'black'
+	},
+	{
+		nombre: "Magnusen",
+		tipo: "Atrapar",
+		subtipo: "Basicos",
+		posicionInicial:"1k6/1pp5/p3pn2/3p1p1p/3Pq3/P3P3/1PP1BP2/1K1Q4 b - - 0 25",
+		jugadasCPU: ['h4','END'],
+		jugadasPlayer: ['Bf3'],
+		orientation: 'white'
+	},
+	{
+		nombre: "Ejercicio Escuela",
+		tipo: "Atrapar",
+		subtipo: "Basicos",
+		posicionInicial:"2br1rk1/1p2bppp/p1p2n2/q3Np2/PnBPP3/2N3B1/1P2Q1PP/R4RK1 b - - 0 25",
+		jugadasCPU: ['h6','Rxf7','END'],
+		jugadasPlayer: ['Bxf7+','Nc4'],
+		orientation: 'white'
+	},
+	{
+		nombre: "Ejercicio Escuela",
+		tipo: "Atrapar",
+		subtipo: "Basicos",
+		posicionInicial:"1qr1n3/1pnr1p2/k3p1p1/B2p1bPp/3P1P1P/1N2P3/1K1Q4/2RR4 b - - 0 25",
+		jugadasCPU: ['Nb5','Qxc7','Rcxc7','END'],
+		jugadasPlayer: ['Bc7','Rxc7','Qa5#'],
+		orientation: 'white'
+	}
 	
 
 ]

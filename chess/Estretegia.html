@@ -1,0 +1,205 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<script src="js/chess.js"></script>
+<script src="js/aperturas.js"></script>
+<script src="js/utils.js"></script>
+ <link  rel="stylesheet" type="text/css" href="css/styles.css">    
+<script>
+
+var respuestasCorrectas;
+var respuestasErroneas;
+var jugadasVariantes;
+var idsVariante;
+var explicacionError;
+var simulacionErrorCPU;
+var simulacionErrorPlayer;
+var contestacionCPU;
+var movimiento=0;
+var posicionInicial;
+var isApertura;
+var numeroApertura=0;
+var $status;
+var $idAperturas;
+var $fen;
+var $pgn;
+var $lastMove;
+var $bestMove;
+var $nombre;
+var aperturaSeleccionada=-1;
+var aperturasJugadas= [];
+
+var config = {
+		  draggable: true,
+		  position: 'start',
+		  onDragStart: onDragStart,
+		  onDrop: onDrop,
+		  onMouseoutSquare: onMouseoutSquare,
+		  onMouseoverSquare: onMouseoverSquare,
+		  onSnapEnd: onSnapEnd
+		}
+
+function cargarApertura(numero,variante){
+	
+
+
+	  isApertura=true;
+	  respuestasCorrectas=apertura[numero].variante[variante].jugadasPlayer;
+	  contestacionCPU=apertura[numero].variante[variante].jugadasCPU;
+
+	  respuestasErroneas=apertura[numero].variante[variante].jugadaError;
+	  explicacionError=apertura[numero].variante[variante].explicacionError;
+	  simulacionErrorPlayer=apertura[numero].variante[variante].simulacionErrorPlayer;
+	  simulacionErrorCPU=apertura[numero].variante[variante].simulacionErrorCPU;
+	  jugadasVariantes=apertura[numero].variante[variante].jugadasAlternativas;
+	  idsVariante=apertura[numero].variante[variante].variante;
+
+	
+}
+function mostrarAperturas(){
+  var htmlCompose="";
+aperturasJugadas= [];
+		var i=0;
+				var claseBackground="bg-info";
+				 	while (i<apertura.length){
+				 		if (i%2==0){
+				 			claseBackground="bg-dark";
+				 		}else{
+				 			claseBackground="bg-info";
+				 		}
+				 		htmlCompose=htmlCompose.concat('<a href="#"><div id="'+i+'" class="apertura fluid h3 '+claseBackground+' p-2 text-white">'+apertura[i].nombre+'</div></a>');
+				 		i++;
+				 	}
+  			htmlCompose=htmlCompose.concat('<a href="#"><div id="-1" class="apertura fluid h3 bg-dark p-2 text-white">¡¡Todas!!</div></a>');
+			
+	$idAperturas.html(htmlCompose)
+}
+
+function cargarAperturaInicial(numero,variante){
+  
+  $nombre.html('<h1>'+apertura[numero].nombre+'</h1>');
+  posicionInicial=apertura[numero].posicionInicial;
+  cargarApertura(numero,variante)
+  
+  board.orientation(apertura[numero].orientation)
+  loadInitialPosition(posicionInicial)
+
+  
+}
+
+
+
+$( document ).ready(function() {
+	 $status = $('#status')
+	 $fen = $('#fen')
+	 $pgn = $('#pgn')
+	 $lastMove = $('#lastMove')
+	 $bestMove = $('#bestMove')
+	 $nombre = $('#nombre')
+	 $idAperturas = $('#aperturas')
+	
+	mostrarAperturas();
+
+	$( ".apertura" ).click(function() {
+  			aperturaSeleccionada=$(this).attr("id");
+  			nuevoTablero();
+  			$idAperturas.html('<a href="aperturas.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>');
+	});
+
+
+	
+
+	
+	
+	
+		
+});
+
+
+
+function nuevoTablero(){
+
+		console.log("Aperturas jugadas "+aperturasJugadas);
+
+		board = Chessboard('myBoard', config)
+		
+		//SI QUIERO CARGAR APERTURA
+		if (aperturaSeleccionada== -1){
+			console.log("Numero de aperturas disponibles: "+apertura.length)
+			numeroApertura=getRandomMaxNumber(apertura.length);
+		
+			console.log("Apertura numero "+numeroApertura);
+		}else{
+			numeroApertura=aperturaSeleccionada;
+		}
+
+	console.log("Numero de variantes disponibles: "+apertura[numeroApertura].variante.length)
+		
+		if (aperturasJugadas.length == apertura[numeroApertura].variante.length){
+			alert("Ya has completado todas las variantes de esta apertura")
+		}else{
+			 var numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
+			 
+		 	while (aperturasJugadas.includes(numVariante)){
+		 		 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length)
+			}
+		}
+
+		//numVariante=26;
+		
+		console.log("Variante numero "+numVariante);
+
+		cargarAperturaInicial(numeroApertura,numVariante);
+
+		 aperturasJugadas.push(numVariante);
+	}
+
+</script>
+</head>
+
+
+<body>
+
+
+<div id="nombre" class="container-fluid text-center text-white">
+  <h1></h1> 
+  
+</div>
+<div id="myBoard" class="tablero container-fluid"></div>
+
+ <!-- <label>Status:</label>
+  <div id="status"></div>
+  <label>FEN:</label>
+  <div id="fen"></div>
+  <label>PGN:</label>
+  <div id="pgn"></div>
+  <label>Last Move:</label>
+  <div id="lastMove"></div>
+  <label>Best Move:</label>
+  <div id="bestMove"></div>
+  <label>Jugada Error:</label>
+  <div id="bestMove"></div>-->
+ 
+  <div id="aperturas" class="fluid bg-white overflow-scroll text-center ">
+	</div>
+	<a class="text-center" href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>
+</body>
+</html>

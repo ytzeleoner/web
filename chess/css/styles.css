@@ -28,3 +28,7 @@ html, body {
 a{
 	text-decoration: none;
 }
+
+#aperturas{
+	height: 80%;
+}

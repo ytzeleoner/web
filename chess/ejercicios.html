@@ -62,7 +62,12 @@
 				 	while (ejerciciosJugados.includes(numero)){
 				 		 numero=getRandomMaxNumber(ejercicios.length)
 				 	}
-					 	
+
+				 /* SOLO PARA PROBAR
+				 
+				 	numero=ejercicios.length-1;
+				*/
+
 				 isApertura=false;
 			     $nombre.html('<h1>'+ejercicios[numero].nombre+'</h1>');
 			     posicionInicial=ejercicios[numero].posicionInicial;
