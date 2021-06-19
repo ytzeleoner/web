@@ -24,7 +24,7 @@ var ejercicios=[
 		orientation: 'black'
 	},
 	{
-		nombre: "Ejercicio Escuela 1",
+		nombre: "Ejercicio Escuela",
 		tipo: "Mate",
 		subtipo: "Damiano",
 		posicionInicial:"1r5k/6p1/5pP1/8/5Q2/8/8/6K1 b - - 0 1",
@@ -33,7 +33,7 @@ var ejercicios=[
 		orientation: 'white'
 	},
 	{
-		nombre: "Ejercicio Escuela 2",
+		nombre: "Ejercicio Escuela",
 		tipo: "Mate",
 		subtipo: "Anastasia",
 		posicionInicial:"1r4k1/5pp1/8/3N4/2R5/8/PP6/K7 b - - 0 1",
@@ -42,7 +42,7 @@ var ejercicios=[
 		orientation: 'white'
 	},
 	{
-		nombre: "Ejercicio Escuela 3",
+		nombre: "Ejercicio Escuela",
 		tipo: "Mate",
 		subtipo: "Boden",
 		posicionInicial:"2k1rb1r/ppp3pp/2n2q2/3B1b2/5PQ1/2P1B3/PP1N1P1P/2KR3R w - - 0 1",
@@ -355,6 +355,24 @@ var ejercicios=[
 		posicionInicial:"1qr1n3/1pnr1p2/k3p1p1/B2p1bPp/3P1P1P/1N2P3/1K1Q4/2RR4 b - - 0 25",
 		jugadasCPU: ['Nb5','Qxc7','Rcxc7','END'],
 		jugadasPlayer: ['Bc7','Rxc7','Qa5#'],
+		orientation: 'white'
+	},
+	{
+		nombre: "Ejercicio Escuela",
+		tipo: "Mate",
+		subtipo: "Damiano",
+		posicionInicial:"k1qr3r/p1p2p2/1p2p1p1/P2pPn2/2nP1P1p/1NP5/2PBQ1PP/R3R2K w - - 0 1",
+		jugadasCPU: ['Reb1','hxg3','Kg1','Kxh1','Kg1','Kxh1','Kg1','Kf1','END'],
+		jugadasPlayer: ['Ng3+','hxg3+','Rh1+','Rh8+','Rh1+','Qh8+','Qh2+','Qh1#'],
+		orientation: 'black'
+	},
+	{
+		nombre: "Ejercicio Escuela",
+		tipo: "Mate",
+		subtipo: "Morphy",
+		posicionInicial:"4nrk1/5ppp/8/8/3B4/6R1/8/6K1 b - - 0 1",
+		jugadasCPU: ['Nc7','Kh8','Kg8','Kh8','Rf6','END'],
+		jugadasPlayer: ['Rxg7+','Rxf7+','Rg7+','Rg6+','Bxf6#'],
 		orientation: 'white'
 	}
 	

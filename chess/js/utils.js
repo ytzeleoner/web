@@ -24,6 +24,17 @@ function onDragStart (source, piece) {
   // do not pick up pieces if the game is over
   if (game.game_over()) return false
 
+
+  try{
+    if (preguntaRespondida == false){
+        alert("Primero responde la pregunta!")
+          return false
+      }
+  } catch (error){
+   // console.log(error);
+  } 
+  
+
   // or if it's not that side's turn
   if ((game.turn() === 'w' && piece.search(/^b/) !== -1) ||
       (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
@@ -214,3 +225,45 @@ function onSnapEnd () {
         console.log(Math.floor(Math.random() * maximo));
         return Math.floor(Math.random() * maximo)  
       }
+
+
+
+
+  /* PARA QUIZ
+
+  */
+
+
+function pintarQuiz(pregunta){
+ var html='<p class="p-0 m-0 bg-white"> '+pregunta.titulo+'</p> ';
+    for (var i=0;i<pregunta.opciones.length;i++){
+            html=html.concat('<p class="p-0 m-0">'+
+        '<input class="form-check-input" type="checkbox" value="'+(i+1)+'" id="flexCheckDefault">'+
+        '<label class="form-check-label" for="flexCheckDefault">'+
+            pregunta.opciones[i].texto+
+        '</label>'+
+    '</p>');  
+    }
+
+   
+
+    html=html.concat(' <p><button id="responder" class="bg-success text-white"> Responder </button></p> ');
+
+    $quiz.html(html);
+
+}
+
+
+function comprobarRespuesta(respuestaCorrecta){
+  var cadena="";
+   $('.form-check-input:checked').each(
+        
+          function() {
+             cadena=cadena+$(this).val();
+          }
+
+      );
+   return cadena == respuestaCorrecta;
+}
+
+
