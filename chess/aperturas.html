@@ -37,6 +37,7 @@ var movimiento=0;
 var posicionInicial;
 var isApertura;
 var numeroApertura=0;
+var numVariante;
 var $status;
 var $idAperturas;
 var $fen;
@@ -46,6 +47,8 @@ var $bestMove;
 var $nombre;
 var aperturaSeleccionada=-1;
 var aperturasJugadas= [];
+ var preguntaRespondida;
+ var respuestaCorrecta;
 
 var config = {
 		  draggable: true,
@@ -115,6 +118,7 @@ $( document ).ready(function() {
 	 $bestMove = $('#bestMove')
 	 $nombre = $('#nombre')
 	 $idAperturas = $('#aperturas')
+	 $quiz = $('#quiz')
 	
 	mostrarAperturas();
 
@@ -122,12 +126,11 @@ $( document ).ready(function() {
   			aperturaSeleccionada=$(this).attr("id");
   			nuevoTablero();
   			$idAperturas.html('<a href="aperturas.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>');
+
 	});
 
 
-	
 
-	
 
 	
 	
@@ -138,7 +141,6 @@ $( document ).ready(function() {
 
 
 function nuevoTablero(){
-
 		console.log("Aperturas jugadas "+aperturasJugadas);
 
 		board = Chessboard('myBoard', config)
@@ -157,25 +159,100 @@ function nuevoTablero(){
 		
 		if (aperturasJugadas.length == apertura[numeroApertura].variante.length){
 			alert("Ya has completado todas las variantes de esta apertura")
-		}else{
-			 var numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
+			numeroApertura=getRandomMaxNumber(apertura.length);
+			aperturaSeleccionada=numeroApertura
+			aperturasJugadas=[]
+			numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
 			 
 		 	while (aperturasJugadas.includes(numVariante)){
 		 		 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length)
 			}
+
+			console.log("Variante numero "+numVariante);
+
+			cargarAperturaInicial(numeroApertura,numVariante);
+
+			 aperturasJugadas.push(numVariante);
+		}else{
+			 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
+			 
+		 	while (aperturasJugadas.includes(numVariante)){
+		 		 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length)
+			}
+
+			/* PARA FORZAR VARIANTE CONCRETA
+			numVariante=33;
+			*/
+
+			console.log("Variante numero "+numVariante);
+
+			cargarAperturaInicial(numeroApertura,numVariante);
+
+			 aperturasJugadas.push(numVariante);
 		}
 
-		/* PARA FORZAR VARIANTE CONCRETA
-		numVariante=33;
-		*/
-
-		console.log("Variante numero "+numVariante);
-
-		cargarAperturaInicial(numeroApertura,numVariante);
-
-		 aperturasJugadas.push(numVariante);
+		
 	}
 
+
+function comprobarQuiz(){
+
+			
+			if (movimiento+1<=apertura[numeroApertura].variante[numVariante].preguntas.length && apertura[numeroApertura].variante[numVariante].preguntas[movimiento].id){
+				 respuestaCorrecta=apertura[numeroApertura].variante[numVariante].preguntas[movimiento].respuestaCorrecta;
+				 	preguntaRespondida=false;
+
+	     	//Si existe
+	     	 pintarQuiz(apertura[numeroApertura].variante[numVariante].preguntas[movimiento]);
+
+	
+				$( "#responder" ).click(function() {
+				     		if (comprobarRespuesta(respuestaCorrecta)){
+				     			preguntaRespondida=true;	
+				     			$('#quiz').removeClass("bg-info");
+				     			$('#quiz').css("background-color","#008f39","slow");
+				     			$('#quiz').css("color","white","slow");
+				     			 setTimeout(function (){
+							          $('#quiz').hide(1000)
+							      },1000);
+				     		}else{
+				     			$('#quiz').removeClass("bg-info");
+				     			$('#quiz').css("background-color","#aa0000","slow");
+				     			$('#quiz').css("color","white","slow");
+				     		}
+				     		
+				  		});
+
+				  		$( "#verTablero" ).click(function() {
+				     		
+				     			 setTimeout(function (){
+							          $('#quiz').hide(1000)
+							      },300);
+				     		
+
+				     		$('#botonera').html(' <p><button id="verPregunta" class="bg-info text-white"> Ver Pregunta > </button></p> ');
+				     		$('#botonera').show(1000);
+
+				  		});
+					 
+
+					 $( "#botonera" ).click(function() {
+					 	$('#botonera').hide(1000);
+					 	 $('#quiz').show(1000);
+					 });
+
+					 $( ".form-check-label" ).click(function() {
+					 		if ($(this).parent().css("background-color")=="rgba(229, 190, 1, 0.6)"){
+					 			$(this).parent().css("background-color","rgba(0, 0, 0, 0)");
+					 		}else{
+					 			$(this).parent().css("background-color","rgba(229, 190, 1,0.6)","slow");
+					 		}
+					 });
+
+	     }
+}
+
+	
 </script>
 </head>
 
@@ -201,10 +278,14 @@ function nuevoTablero(){
   <div id="bestMove"></div>
   <label>Jugada Error:</label>
   <div id="bestMove"></div>-->
- 
+ <div id="quiz" class="fluid p-0 overflow-scroll"> 
+	</div>
+ <div id="botonera"></div>
   <div id="aperturas" class="fluid bg-white overflow-scroll text-center ">
 	</div>
 	
-	<a class="text-center" href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>
+	
+	 
+ <a class="text-center" href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>
 </body>
 </html>

@@ -32,3 +32,51 @@ a{
 #aperturas{
 	height: 80%;
 }
+
+#estrategia{
+	height: 80%;
+}
+
+#quiz{
+		position: absolute;
+    width: 98%;
+    height: auto;
+    background-color: rgba(255,255,255,0.8);
+    bottom: 4.7em;
+    border-radius: 2em 2em 0% 0%;
+    margin-left: 1%;
+    box-shadow: 5px 1px 20px black;
+    display:  none;
+}
+
+#botonera{
+	display: none;
+	position: absolute;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3em;
+    bottom:  0%;
+}
+
+.tituloPregunta{
+	font-weight:  bold;
+	font-size:  1.5em;
+}
+
+.respuesta{
+		width: 102%;
+    padding: 0.2em;
+    margin-left: -20px;
+    margin-right: -20px;
+    font-size: 1.3em;
+}
+.form-check-label{
+	width: 90%;
+}
+.form-check-input{
+	opacity: 0;
+}
+hr{
+	margin: 0;
+	padding: 0;
+}

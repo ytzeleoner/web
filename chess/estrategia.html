@@ -115,6 +115,9 @@
      			$('#quiz').removeClass("bg-info");
      			$('#quiz').css("background-color","#008f39","slow");
      			$('#quiz').css("color","white","slow");
+     			 setTimeout(function (){
+			          $('#quiz').hide(1000)
+			      },1000);
      		}else{
      			$('#quiz').removeClass("bg-info");
      			$('#quiz').css("background-color","#aa0000","slow");
@@ -122,7 +125,24 @@
      		}
      		
   		});
+
+  		$( "#verTablero" ).click(function() {
+     		
+     			 setTimeout(function (){
+			          $('#quiz').hide(1000)
+			      },300);
+     		
+
+     		$('#botonera').html(' <p><button id="verPregunta" class="bg-info text-white"> Ver Pregunta > </button></p> ');
+     		$('#botonera').show(1000);
+
+  		});
 	 
+
+	 $( "#botonera" ).click(function() {
+	 	$('#botonera').hide(1000);
+	 	 $('#quiz').show(1000);
+	 });
 	 	
  });
  
@@ -148,11 +168,12 @@
 
 <div id="nombre" class="container-fluid text-center text-white"><h1>Nombre</h1> </div>
   <div id="myBoard" class="tablero container-fluid"></div>
-  <div id="quiz" class="fluid bg-info p-1 overflow-scroll text-center"> 
-	</div>
+  
 
 
   <a href="index.html"><div class="text-center fluid h3 bg-primary p-2 text-white">Volver</div></a>
- 
+ <div id="quiz" class="fluid p-1 overflow-scroll text-center"> 
+	</div>
+ <div id="botonera"></div>
 </body>
 </html>

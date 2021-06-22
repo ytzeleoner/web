@@ -45,6 +45,8 @@ function onDragStart (source, piece) {
 function onDrop (source, target) {
   removeGreySquares()
 
+
+
   // see if the move is legal
   var move = game.move({
     from: source,
@@ -62,6 +64,7 @@ function onDrop (source, target) {
           var badMove=false;
           if (isApertura == true){
             badMove = (move.san===respuestasErroneas[movimiento]);
+            comprobarQuiz();
           }
 
           if (isApertura == true && bestMove == false){
@@ -73,7 +76,6 @@ function onDrop (source, target) {
                     console.log("Cambiando a subvariante "+idVariante);
                     cargarApertura(numeroApertura,idVariante);
                     bestMove = true;
-
                 }
             }
             
@@ -235,22 +237,28 @@ function onSnapEnd () {
 
 
 function pintarQuiz(pregunta){
- var html='<p class="p-0 m-0 bg-white"> '+pregunta.titulo+'</p> ';
+ var html='<p class="p-0 m-0 text-center tituloPregunta"> '+pregunta.titulo+'</p> ';
     for (var i=0;i<pregunta.opciones.length;i++){
-            html=html.concat('<p class="p-0 m-0">'+
-        '<input class="form-check-input" type="checkbox" value="'+(i+1)+'" id="flexCheckDefault">'+
-        '<label class="form-check-label" for="flexCheckDefault">'+
+            html=html.concat('<p class="respuesta p-0 m-0">'+
+        '<input class="form-check-input" type="checkbox" value="'+(i+1)+'" id="flexCheckDefault'+(i+1)+'">'+
+        '<label class="form-check-label" for="flexCheckDefault'+(i+1)+'">'+
             pregunta.opciones[i].texto+
         '</label>'+
-    '</p>');  
+    '</p><hr>');  
     }
 
    
 
-    html=html.concat(' <p><button id="responder" class="bg-success text-white"> Responder </button></p> ');
+    html=html.concat(' <p class="text-center"><button id="responder" class="bg-success text-white"> Responder </button><button id="verTablero" class="bg-info text-white"> Ver Tablero </button></p> ');
+    
 
     $quiz.html(html);
-
+    if (isApertura==true){
+     $quiz.delay(1000).show(1000); 
+    }else{
+      $quiz.show(1000);
+    }
+    
 }
 
 
@@ -263,6 +271,7 @@ function comprobarRespuesta(respuestaCorrecta){
           }
 
       );
+
    return cadena == respuestaCorrecta;
 }
 

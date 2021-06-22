@@ -687,7 +687,7 @@ var apertura=[
 		variante: [
 			{
 				id: 0,
-				nombre: "Spoiler",
+				nombre: "Apertura Abierta",
 				jugadasCPU: ['-','e5','Nc6','END'],
 				jugadasPlayer: ['e4','Nf3','Bb5'],
 				jugadaError: ['-','-','-','-','-','-','-'],
@@ -696,6 +696,28 @@ var apertura=[
 				simulacionErrorPlayer: [],
 				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
 				variante: ['-','-','-','-','-','-','-','-','-',''],
+				preguntas: [
+					{},
+					{
+						id: 'Nc6',
+						titulo: "¿Qué trata de hacer el negro con la jugada Nc6?",
+						opciones: [
+									{
+										texto:"Fuerte centro"
+									},
+									{
+										texto: "Ventaja en el desarrollo"
+									},
+									{
+										texto:"Ventaja de espacio"
+									},
+									{
+										texto:"Enroque"
+									}
+								],
+						respuestaCorrecta:"123"
+					}
+				],
 			}
 		],
 		orientation: 'white'
@@ -726,7 +748,7 @@ var apertura=[
 				simulacionErrorCPU: [],
 				simulacionErrorPlayer: [],
 				jugadasAlternativas: ['-','-','cxd5','-','-','-','-','-','-',''],
-				variante: ['-','-','-','-','-','2','-','-','-',''],
+				variante: ['-','-','2','-','-','-',''],
 			},
 			{
 				id: 2,
@@ -738,7 +760,7 @@ var apertura=[
 				simulacionErrorCPU: [],
 				simulacionErrorPlayer: [],
 				jugadasAlternativas: ['-','-','Nc3','-','-','-','-','-','-',''],
-				variante: ['-','-','-','-','-','1','-','-','-',''],
+				variante: ['-','-','1','-','-','-',''],
 			}
 		],
 		orientation: 'white'
