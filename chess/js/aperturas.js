@@ -688,14 +688,14 @@ var apertura=[
 			{
 				id: 0,
 				nombre: "Variante Principal",
-				jugadasCPU: ['-','e5','Nc6','a6','Nf6','Be7','b5','d6','O-O','END'],
-				jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bb3','c3','h3'],
+				jugadasCPU: ['-','e5','Nc6','a6','Nf6','Be7','b5','d6','O-O','Na5','c5','Qc7','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bb3','c3','h3','Bc2','d4','Nd2'],
 				jugadaError: ['-','-','-','-','-','-','-'],
 				explicacionError: '',
 				simulacionErrorCPU: [],
 				simulacionErrorPlayer: [],
-				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
-				variante: ['-','-','-','-','-','-','-','-','-',''],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','d4',''],
+				variante: ['-','-','-','-','-','-','-','-','5','-'],
 				preguntas: [
 					{},{},
 					{
@@ -896,6 +896,26 @@ var apertura=[
 								],
 						respuestaCorrecta:"23"
 					}
+				],
+			},
+			{
+				id: 5,
+				nombre: "Variante Principal sin h3",
+				jugadasCPU: ['-','e5','Nc6','a6','Nf6','Be7','b5','d6','O-O','Bg4','Nxe4','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bb3','c3','d4','Be3','Bd5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','h3',''],
+				variante: ['-','-','-','-','-','-','-','-','0','-'],
+				preguntas: [
+					{},{},
+					{},
+					{},{},{},
+					{},
+					{},
+					{}
 				],
 			},
 		],
