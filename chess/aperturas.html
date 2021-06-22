@@ -197,58 +197,60 @@ function nuevoTablero(){
 
 function comprobarQuiz(){
 
-			
-			if (movimiento+1<=apertura[numeroApertura].variante[numVariante].preguntas.length && apertura[numeroApertura].variante[numVariante].preguntas[movimiento].id){
-				 respuestaCorrecta=apertura[numeroApertura].variante[numVariante].preguntas[movimiento].respuestaCorrecta;
-				 	preguntaRespondida=false;
-
-	     	//Si existe
-	     	 pintarQuiz(apertura[numeroApertura].variante[numVariante].preguntas[movimiento]);
-
+			if (apertura[numeroApertura].variante[numVariante].preguntas){
+				
+				
+				if (movimiento+1<=apertura[numeroApertura].variante[numVariante].preguntas.length && apertura[numeroApertura].variante[numVariante].preguntas[movimiento].id){
+					 respuestaCorrecta=apertura[numeroApertura].variante[numVariante].preguntas[movimiento].respuestaCorrecta;
+					 	preguntaRespondida=false;
 	
-				$( "#responder" ).click(function() {
-				     		if (comprobarRespuesta(respuestaCorrecta)){
-				     			preguntaRespondida=true;	
-				     			$('#quiz').removeClass("bg-info");
-				     			$('#quiz').css("background-color","#008f39","slow");
-				     			$('#quiz').css("color","white","slow");
-				     			 setTimeout(function (){
-							          $('#quiz').hide(1000)
-							      },1000);
-				     		}else{
-				     			$('#quiz').removeClass("bg-info");
-				     			$('#quiz').css("background-color","#aa0000","slow");
-				     			$('#quiz').css("color","white","slow");
-				     		}
-				     		
-				  		});
-
-				  		$( "#verTablero" ).click(function() {
-				     		
-				     			 setTimeout(function (){
-							          $('#quiz').hide(1000)
-							      },300);
-				     		
-
-				     		$('#botonera').html(' <p><button id="verPregunta" class="bg-info text-white"> Ver Pregunta > </button></p> ');
-				     		$('#botonera').show(1000);
-
-				  		});
-					 
-
-					 $( "#botonera" ).click(function() {
-					 	$('#botonera').hide(1000);
-					 	 $('#quiz').show(1000);
-					 });
-
-					 $( ".form-check-label" ).click(function() {
-					 		if ($(this).parent().css("background-color")=="rgba(229, 190, 1, 0.6)"){
-					 			$(this).parent().css("background-color","rgba(0, 0, 0, 0)");
-					 		}else{
-					 			$(this).parent().css("background-color","rgba(229, 190, 1,0.6)","slow");
-					 		}
-					 });
-
+		     	//Si existe
+		     	 pintarQuiz(apertura[numeroApertura].variante[numVariante].preguntas[movimiento]);
+	
+		
+					$( "#responder" ).click(function() {
+					     		if (comprobarRespuesta(respuestaCorrecta)){
+					     			preguntaRespondida=true;	
+					     			$('#quiz').removeClass("bg-info");
+					     			$('#quiz').css("background-color","#008f39","slow");
+					     			$('#quiz').css("color","white","slow");
+					     			 setTimeout(function (){
+								          $('#quiz').hide(1000)
+								      },1000);
+					     		}else{
+					     			$('#quiz').removeClass("bg-info");
+					     			$('#quiz').css("background-color","#aa0000","slow");
+					     			$('#quiz').css("color","white","slow");
+					     		}
+					     		
+					  		});
+	
+					  		$( "#verTablero" ).click(function() {
+					     		
+					     			 setTimeout(function (){
+								          $('#quiz').hide(1000)
+								      },300);
+					     		
+	
+					     		$('#botonera').html(' <p><button id="verPregunta" class="bg-info text-white"> Ver Pregunta > </button></p> ');
+					     		$('#botonera').show(1000);
+	
+					  		});
+						 
+	
+						 $( "#botonera" ).click(function() {
+						 	$('#botonera').hide(1000);
+						 	 $('#quiz').show(1000);
+						 });
+	
+						 $( ".form-check-label" ).click(function() {
+						 		if ($(this).parent().css("background-color")=="rgba(229, 190, 1, 0.6)"){
+						 			$(this).parent().css("background-color","rgba(0, 0, 0, 0)");
+						 		}else{
+						 			$(this).parent().css("background-color","rgba(229, 190, 1,0.6)","slow");
+						 		}
+						 });
+				}
 	     }
 }
 
