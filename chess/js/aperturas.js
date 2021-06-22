@@ -687,9 +687,122 @@ var apertura=[
 		variante: [
 			{
 				id: 0,
-				nombre: "Apertura Abierta",
-				jugadasCPU: ['-','e5','Nc6','END'],
-				jugadasPlayer: ['e4','Nf3','Bb5'],
+				nombre: "Variante Principal",
+				jugadasCPU: ['-','e5','Nc6','a6','Nf6','Be7','b5','d6','O-O','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bb3','c3','h3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+				preguntas: [
+					{},{},
+					{
+						id: 'a6',
+						titulo: "¿Sería buena opción intercambiar alfil por caballo para comerse el peon de a5?",
+						opciones: [
+									{
+										texto:"Si comen el caballo con el peón de b SI"
+									},
+									{
+										texto: "Si comen el caballo con el peón de d NO, existe la jugada Qd4"
+									},
+									{
+										texto:"Si, porque debilitariamos la estructura de peones"
+									},
+									{
+										texto:"No, bajo ningún concepto"
+									}
+								],
+						respuestaCorrecta:"12"
+					},
+					{
+						id: 'Nf6',
+						titulo: "¿Que planea esta jugada de las negras caballo f6?",
+						opciones: [
+									{
+										texto:"Desarrollar una pieza menor en la apertura"
+									},
+									{
+										texto: "Preparar enroque corto"
+									},
+									{
+										texto:"Quiere ir a h5"
+									},
+									{
+										texto:"Ataca el peón de e4"
+									}
+								],
+						respuestaCorrecta:"124"
+					},{},{},
+					{
+						id: 'd6',
+						titulo: "¿Que planea esta jugada de las negras peon d6?",
+						opciones: [
+									{
+										texto:"Desarrollar una pieza menor en la apertura"
+									},
+									{
+										texto: "Protege e5 del caballo en f3"
+									},
+									{
+										texto:"Abre la diagonal al alfil de casillas blancas"
+									},
+									{
+										texto:"Es una imprecisión, tapa al alfil de casillas negras"
+									},
+									{
+										texto:"Prepara caballo a5 (queda libre de la defensa del peon de e5) para intercambiar el alfil"
+									}
+								],
+						respuestaCorrecta:"235"	
+					},
+					{
+						id: 'c3',
+						titulo: "Acabas de mover peon c3 ¿Cuales son los planes del movimiento?",
+						opciones: [
+									{
+										texto:"Preparar refugio por si caballo mueve a a5 ataca alfil"
+									},
+									{
+										texto: "No dejamos caballo salte a d4"
+									},
+									{
+										texto:"Preparamos rotura en d4"
+									},
+									{
+										texto:"Es una imprecisión, hemos perdido un tiempo sin amenazar nada, perdiendo la iniciativa"
+									}
+								],
+						respuestaCorrecta:"12"	
+					},
+					{
+						id: 'h3',
+						titulo: "Acabas de mover peon h3 ¿Cuales son los planes de hacer ahora el movimiento?",
+						opciones: [
+									{
+										texto:"Para impedir la clavada del caballo de f3 con Bg4"
+									},
+									{
+										texto: "Para poder romper en d4, no podemos directamente por Bg4"
+									},
+									{
+										texto:"Dar una casilla de salida al rey"
+									},
+									{
+										texto:"Es una imprecisión, hemos perdido un tiempo sin amenazar nada, perdiendo la iniciativa"
+									}
+								],
+						respuestaCorrecta:"12"	
+					}
+				],
+			},
+			{
+				id: 1,
+				nombre: "Defensa Petrov",
+				jugadasCPU: ['-','e5','Nf6','d6','END'],
+				jugadasPlayer: ['e4','Nf3','Nxe5','Nf3'],
 				jugadaError: ['-','-','-','-','-','-','-'],
 				explicacionError: '',
 				simulacionErrorCPU: [],
@@ -699,26 +812,92 @@ var apertura=[
 				preguntas: [
 					{},
 					{
-						id: 'Nc6',
-						titulo: "¿Qué trata de hacer el negro con la jugada Nc6?",
+						id: 'Nf6',
+						titulo: "¿Cómo se llama esta defensa?",
 						opciones: [
 									{
-										texto:"Fuerte centro"
+										texto:"Gambito de Dama"
 									},
 									{
-										texto: "Ventaja en el desarrollo"
+										texto: "Defensa Petrov"
 									},
 									{
-										texto:"Ventaja de espacio"
+										texto:"Variante del intercambio"
 									},
 									{
-										texto:"Enroque"
+										texto:"Ataque Marshall"
 									}
 								],
-						respuestaCorrecta:"123"
+						respuestaCorrecta:"2"
 					}
 				],
-			}
+			},
+			{
+				id: 2,
+				nombre: "Defensa Petrov Fallo Castigar",
+				jugadasCPU: ['-','e5','Nf6','Nxe4','Nf6','END'],
+				jugadasPlayer: ['e4','Nf3','Nxe5','Qe2','Nc6+'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+				preguntas: [
+					
+				],
+			},
+			{
+				id: 3,
+				nombre: "Defensa amateur",
+				jugadasCPU: ['-','e5','f6','fxe5','g6','END'],
+				jugadasPlayer: ['e4','Nf3','Nxe5','Qh5+','Qe5+'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+				preguntas: [
+					{},
+					{}
+				],
+			},
+			{
+				id: 4,
+				nombre: "Variante Principal - descuido 1",
+				jugadasCPU: ['-','e5','Nc6','a6','Nf6','Be7','O-O','dxc6','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bxc6','Nxe5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-',''],
+				preguntas: [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{
+						id: 'O-O',
+						titulo: "¿Que acaba de pasar?",
+						opciones: [
+									{
+										texto:"Las negras han jugado la variante principal"
+									},
+									{
+										texto: "Podemos ganar el peón en e5"
+									},
+									{
+										texto:"Podemos dañar la estructura de peones negra"
+									}
+								],
+						respuestaCorrecta:"23"
+					}
+				],
+			},
 		],
 		orientation: 'white'
 	},

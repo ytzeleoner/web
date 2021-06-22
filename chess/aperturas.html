@@ -180,9 +180,9 @@ function nuevoTablero(){
 		 		 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length)
 			}
 
-			/* PARA FORZAR VARIANTE CONCRETA
-			numVariante=33;
-			*/
+			// PARA FORZAR VARIANTE CONCRETA
+			numVariante=0;
+			
 
 			console.log("Variante numero "+numVariante);
 
@@ -216,6 +216,8 @@ function comprobarQuiz(){
 					     			$('#quiz').css("color","white","slow");
 					     			 setTimeout(function (){
 								          $('#quiz').hide(1000)
+								          $('#quiz').css("background-color","rgba(255,255,255,0.8)","slow");
+					     						$('#quiz').css("color","black","slow");
 								      },1000);
 					     		}else{
 					     			$('#quiz').removeClass("bg-info");
