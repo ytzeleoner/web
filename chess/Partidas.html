@@ -1,0 +1,291 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<script src="js/chess.js"></script>
+<script src="js/partidas.js"></script>
+<script src="js/utils.js"></script>
+ <link  rel="stylesheet" type="text/css" href="css/styles.css">    
+<script>
+
+
+var contestacionCPU;
+var movimiento=0;
+var posicionInicial;
+var isApertura;
+var isPartida=true;
+var numeroPartida=0;
+var $status;
+var $idAperturas;
+var $fen;
+var $pgn;
+var $lastMove;
+var $bestMove;
+var $nombre;
+var partidaSeleccionada=-1;
+var partidasJugadas= [];
+ var preguntaRespondida=true;
+ var respuestaCorrecta;
+ var jugadasAuto;
+
+var config = {
+		  draggable: true,
+		  position: 'start',
+		  onDragStart: onDragStart,
+		  onDrop: onDrop,
+		  onMouseoutSquare: onMouseoutSquare,
+		  onMouseoverSquare: onMouseoverSquare,
+		  onSnapEnd: onSnapEnd
+		}
+
+function cargarPartida(numero){
+	
+
+
+	  isApertura=false;
+	  respuestasCorrectas=partida[numero].jugadasPlayer;
+	  contestacionCPU=partida[numero].jugadasCPU;
+	  jugadasAuto=partida[numero].moverAuto;
+	
+}
+
+		function cargarEjercicio(){
+	 	
+	 
+			 if (partidasJugadas.length == partida.length){
+				  setTimeout(function (){
+                         alert("Ya has vista todas las partidas")
+                        },3000);
+			 }else{
+				 var numeroPartida=getRandomMaxNumber(partida.length);
+				 
+				 	while (partidasJugadas.includes(numeroPartida)){
+				 		 numeroPartida=getRandomMaxNumber(ejercicios.length)
+				 	}
+
+				 //SOLO PARA PROBAR
+				 
+				 //	numero=ejercicios.length-1;
+				
+
+				cargarPartidaInicial(numeroPartida);
+			 }
+       
+     }
+
+
+
+
+
+function mostrarPartidas(){
+  var htmlCompose="";
+partidasJugadas= [];
+		var i=0;
+				var claseBackground="bg-info";
+				 	while (i<partida.length){
+				 		if (i%2==0){
+				 			claseBackground="bg-dark";
+				 		}else{
+				 			claseBackground="bg-info";
+				 		}
+				 		htmlCompose=htmlCompose.concat('<a href="#"><div id="'+i+'" class="apertura fluid h3 '+claseBackground+' p-2 text-white">'+partida[i].nombre+'</div></a>');
+				 		i++;
+				 	}
+  			htmlCompose=htmlCompose.concat('<a href="#"><div id="-1" class="apertura fluid h3 bg-dark p-2 text-white">¡¡Todas!!</div></a>');
+			
+	$idAperturas.html(htmlCompose)
+}
+
+function cargarPartidaInicial(numero){
+  
+  $nombre.html('<h1>'+partida[numero].nombre+'</h1>');
+  posicionInicial=partida[numero].posicionInicial;
+  cargarPartida(numero)
+  
+  board.orientation(partida[numero].orientation)
+  loadInitialPosition(posicionInicial)
+
+  
+}
+
+
+
+$( document ).ready(function() {
+	 $status = $('#status')
+	 $fen = $('#fen')
+	 $pgn = $('#pgn')
+	 $lastMove = $('#lastMove')
+	 $bestMove = $('#bestMove')
+	 $nombre = $('#nombre')
+	 $idAperturas = $('#aperturas')
+	 $quiz = $('#quiz')
+	
+	mostrarPartidas();
+
+	$( ".apertura" ).click(function() {
+  			partidaSeleccionada=$(this).attr("id");
+  			nuevoTablero();
+  			$idAperturas.html('<a href="Partidas.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>');
+
+	});
+
+
+
+
+	
+	
+	
+		
+});
+
+
+
+function nuevoTablero(){
+		console.log("Partidas vistas "+partidasJugadas);
+
+		board = Chessboard('myBoard', config)
+		
+		//SI QUIERO CARGAR APERTURA
+		if (partidaSeleccionada== -1){
+			console.log("Numero de partidas disponibles: "+partida.length)
+			numeroPartida=getRandomMaxNumber(partida.length);
+		
+			console.log("Partida numero "+numeroPartida);
+		}else{
+			numeroPartida=partidaSeleccionada;
+		}
+
+		
+		
+
+			cargarPartidaInicial(numeroPartida);
+
+			 partidasJugadas.push(numeroPartida);
+
+		
+	}
+
+
+function comprobarQuiz(){
+
+
+
+		console.log("Comprobando quiz")
+
+			if (partida[numeroPartida].preguntas){
+				
+				console.log("Hay preguntas")
+				if (movimiento+1<=partida[numeroPartida].preguntas.length && partida[numeroPartida].preguntas[movimiento].id){
+
+					 respuestaCorrecta=partida[numeroPartida].preguntas[movimiento].respuestaCorrecta;
+					 	preguntaRespondida=false;
+	
+		     	//Si existe
+		     	 pintarQuiz(partida[numeroPartida].preguntas[movimiento]);
+	
+		
+					$( "#responder" ).click(function() {
+					     		if (comprobarRespuesta(respuestaCorrecta)){
+					     			preguntaRespondida=true;	
+					     			$('#quiz').removeClass("bg-info");
+					     			$('#quiz').css("background-color","#008f39","slow");
+					     			$('#quiz').css("color","white","slow");
+					     			 setTimeout(function (){
+								          $('#quiz').hide(1000)
+								          $('#quiz').css("background-color","rgba(255,255,255,0.8)","slow");
+					     						$('#quiz').css("color","black","slow");
+
+					     							moverAutoPartida(true);
+								      },1000);
+
+					     		}else{
+					     			$('#quiz').removeClass("bg-info");
+					     			$('#quiz').css("background-color","#aa0000","slow");
+					     			$('#quiz').css("color","white","slow");
+					     		}
+					     		
+					  		});
+	
+					  		$( "#verTablero" ).click(function() {
+					     		
+					     			 setTimeout(function (){
+								          $('#quiz').hide(1000)
+								      },300);
+					     		
+	
+					     		$('#botonera').html(' <p><button id="verPregunta" class="bg-info text-white"> Ver Pregunta > </button></p> ');
+					     		$('#botonera').show(1000);
+	
+					  		});
+						 
+	
+						 $( "#botonera" ).click(function() {
+						 	$('#botonera').hide(1000);
+						 	 $('#quiz').show(1000);
+						 });
+	
+						 $( ".form-check-label" ).click(function() {
+						 		if ($(this).parent().css("background-color")=="rgba(229, 190, 1, 0.6)"){
+						 			$(this).parent().css("background-color","rgba(0, 0, 0, 0)");
+						 		}else{
+						 			$(this).parent().css("background-color","rgba(229, 190, 1,0.6)","slow");
+						 		}
+						 });
+				}
+	     }
+}
+
+	
+</script>
+</head>
+
+
+<body>
+
+
+<div id="nombre" class="container-fluid text-center text-white">
+  <h1></h1> 
+  
+</div>
+<div id="myBoard" class="tablero container-fluid"></div>
+
+ <!-- <label>Status:</label>
+  <div id="status"></div>
+  <label>FEN:</label>
+  <div id="fen"></div>
+  <label>PGN:</label>
+  <div id="pgn"></div>
+  <label>Last Move:</label>
+  <div id="lastMove"></div>
+  <label>Best Move:</label>
+  <div id="bestMove"></div>
+  <label>Jugada Error:</label>
+  <div id="bestMove"></div>-->
+ <div id="quiz" class="fluid p-0 overflow-scroll"> 
+	</div>
+ <div id="botonera"></div>
+  <div id="aperturas" class="fluid bg-white overflow-scroll text-center ">
+	</div>
+	
+	
+	 
+ <a class="text-center" href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>
+</body>
+</html>

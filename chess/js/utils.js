@@ -97,8 +97,13 @@ function onDrop (source, target) {
               }
             }else{
 
-            mover(contestacionCPU[movimiento]);
+              mover(contestacionCPU[movimiento]);
               
+
+              if (isPartida == true){
+                moverAutoPartida();
+              }
+
             }
               
             
@@ -125,6 +130,60 @@ function onDrop (source, target) {
 }
 
 
+
+function moverAutoPartida(acabaResponder){
+    console.log("Entrando en moverAutoPartida para el movimiento "+movimiento);
+    console.log("Acabo de responder "+acabaResponder);
+  if (acabaResponder != true){
+     comprobarQuiz();  
+  }
+  
+
+  console.log(preguntaRespondida)
+  if (preguntaRespondida == true){
+    if (jugadasAuto[movimiento]){
+      console.log("Toca mover "+respuestasCorrectas[movimiento]);
+        
+        setTimeout(function (){
+                  game.move(respuestasCorrectas[movimiento])
+                  board.position(game.fen())
+                  updateStatus();
+                  movimiento++;
+                  
+
+                  var movimientoString=contestacionCPU[movimiento]
+              
+                    if (movimientoString=='END'){
+                     setTimeout(function (){
+                         alert("Partida Finalizada");
+                        },3000);
+                      if (isApertura == false){
+                        cargarEjercicio();
+                      }else{
+                        nuevoTablero();
+                      }
+                    }else{
+                       setTimeout(function (){
+                        game.move(contestacionCPU[movimiento])
+                        board.position(game.fen())
+                        updateStatus();
+                        moverAutoPartida();
+                        },3000);
+                    }
+
+
+
+                  },2000);
+        
+        
+         
+       
+           
+        
+    }
+  }
+  
+}
 
 
 function updateStatus () {
@@ -201,9 +260,12 @@ function onSnapEnd () {
          
         game.load(posicionInicial);
 
-        console.log("Movimiento 0 "+contestacionCPU[movimiento])
 
         mover(contestacionCPU[movimiento]);
+
+        if (isPartida == true){
+          moverAutoPartida();
+        }
 
       }
 

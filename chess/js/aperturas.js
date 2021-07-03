@@ -918,6 +918,204 @@ var apertura=[
 					{}
 				],
 			},
+			{
+				id: 6,
+				nombre: "Variante Breyer",
+				jugadasCPU: ['-','e5','Nc6','a6','Nf6','Be7','b5','d6','O-O','Nb8','Nbd7','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bb3','c3','h3','d4','Nbd2'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','d4',''],
+				variante: ['-','-','-','-','-','-','-','-','5','-'],
+				preguntas: [
+					{},{},{},{},{},{},{},{},{
+						id: 'O-O',
+						titulo: "¿Cuál es el plan principal de las blancas?",
+						opciones: [
+									{
+										texto:"d4, Qd3, Nb---> g3"
+									},
+									{
+										texto: "d4, Nb ---> g3, Nf-->h4"
+									},
+									{
+										texto:"abrir columna a con a4"
+									}
+								],
+						respuestaCorrecta:"2"
+					},
+					{
+						id: 'Nb8',
+						titulo: "¿Como se llama esta variante? ¿Qué busca?",
+						opciones: [
+									{
+										texto:"Dephensa Morphy Cerrada - Bloquear el centro"
+									},
+									{
+										texto: "Variante Petrov - Proteger al Rey con el caballo cerca"
+									},
+									{
+										texto:"Breyer - influencia en el centro con c5 Nd7 y Bb7"
+									},
+									{
+										texto:"Variante Petrov - influencia en el centro con c5, Re8 y Bf8"
+									}
+								],
+						respuestaCorrecta:"3"
+					}
+				],
+			},
+			{
+				id: 7,
+				nombre: "Variante Principal - Graft",
+				jugadasCPU: ['-','e5','Nc6','a6','Nf6','Be7','b5','d6','O-O','Na5','c5','Nd7','exd4','Nc6','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bb3','c3','h3','Bc2','d4','Nbd2','cxd4','d5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','d4',''],
+				variante: ['-','-','-','-','-','-','-','-','5','-'],
+				preguntas: [{},{},{},{},{},{},{},{},{},{},{},{},
+				{
+					id: "Nc6",
+					titulo: "¿Cuál es la idea de caballo en c6 de las negras? ¿Qué busca?",
+						opciones: [
+									{
+										texto:"Hacerse con un caballo fuerte en la casilla d4"
+									},
+									{
+										texto: "Hacerse con un caballo fuerte en la casilla e5"
+									},
+									{
+										texto:"Atacar por el flanco de rey en vez del de dama"
+									}
+								],
+						respuestaCorrecta:"2"
+				}
+				],
+			},
+			{
+				id: 8,
+				nombre: "Variante Principal - Gambito Marshall",
+				jugadasCPU: ['-','e5','Nc6','a6','Nf6','Be7','b5','O-O','d5','Nxd5','Nxe5','c6','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bb3','c3','exd5','Nxe5','Rxe5'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-','-'],
+				preguntas: [{},{},{},{},{},{},{},{},
+				{
+					id: "d5",
+					titulo: "¿Cómo se llama este Ataque?",
+						opciones: [
+									{
+										texto:"Gambito Morphy "
+									},
+									{
+										texto: "Gambito Marshall "
+									},
+									{
+										texto:"Ataque Petrov"
+									}
+								],
+						respuestaCorrecta:"2"
+				}
+				],
+			},
+			{
+				id: 9,
+				nombre: "Variante Principal - d6 negras",
+				jugadasCPU: ['-','e5','Nc6','d6','exd4','Bd7','Nf6','Be7','O-O','Bxc6','bxc6','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','d4','Nxd4','Nc3','O-O','Re1','Nxc6','Bxc6','Qd3'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-','-'],
+				preguntas: [{},{},{},
+				{
+					id: "exd4",
+					titulo: "Evaluando la posicion, con el siguiente movimiento... como estarían las blancas",
+						opciones: [
+									{
+										texto:"Mejor, más espacio, centro dominado si capturo con el caballo el peón de d4"
+									},
+									{
+										texto: "Mejor, ahora puede intercambiar alfil por caballo en c6 rompiendo estructura negra de peones"
+									},
+									{
+										texto:"Peor, han liberado la pieza más poderosa de las negras, la dama"
+									}
+								],
+						respuestaCorrecta:"1"
+				},
+				{
+					id: "Bd7",
+					titulo: "Este movimiento de las negras , Bd7, ¿era imprescindible?",
+						opciones: [
+									{
+										texto:"Si, ahora el caballo de c6 estaba comprometido y perdian otro peón ademas de estructura."
+									},
+									{
+										texto: "No, se podía seguir con la variante principal"
+									}
+								],
+						respuestaCorrecta:"1"
+				},{},{},{},{},
+				{
+					id: "bxc6",
+					titulo: "Cúal es el plan inmediato del las blancas",
+						opciones: [
+									{
+										texto:"Molestar con la reina el peón débil de c6."
+									},
+									{
+										texto: "Desarrollar el alfil de casillas negras por e3"
+									},
+									{
+										texto: "Amenazar el caballo de f6 para abrir la posición"
+									}
+								],
+						respuestaCorrecta:"12"
+				}
+				],
+			},
+			{
+				id: 10,
+				nombre: "Defensa Berlinesa - principal",
+				jugadasCPU: ['-','e5','Nc6','Nf6','Nxe4','Nd6','Be7','Nxe5','O-O','Bf6','Re8','Rxe1','Ne8','END'],
+				jugadasPlayer: ['e4','Nf3','Bb5','O-O','Re1','Nxe5','Bf1','Rxe5','d4','Re1','c3','Qxe1','Bf4'],
+				jugadaError: ['-','-','-','-','-','-','-'],
+				explicacionError: '',
+				simulacionErrorCPU: [],
+				simulacionErrorPlayer: [],
+				jugadasAlternativas: ['-','-','-','-','-','-','-','-','-',''],
+				variante: ['-','-','-','-','-','-','-','-','-','-'],
+				preguntas: [{},{},
+				{
+					id: "Nf6",
+					titulo: "¿Cómo se llama esta defensa?",
+						opciones: [
+									{
+										texto:"Berlinesa"
+									},
+									{
+										texto: "Petrov"
+									},
+									{
+										texto:"Marshall"
+									}
+								],
+						respuestaCorrecta:"1"
+				}
+				],
+			}
 		],
 		orientation: 'white'
 	},

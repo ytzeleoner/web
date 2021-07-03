@@ -40,6 +40,7 @@ var numeroApertura=0;
 var numVariante;
 var $status;
 var $idAperturas;
+var isPartida=false;
 var $fen;
 var $pgn;
 var $lastMove;
@@ -181,7 +182,7 @@ function nuevoTablero(){
 			}
 
 			// PARA FORZAR VARIANTE CONCRETA
-			//numVariante=5;
+			numVariante=10;
 			
 
 			console.log("Variante numero "+numVariante);
