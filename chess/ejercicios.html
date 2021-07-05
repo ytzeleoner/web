@@ -70,7 +70,7 @@
 				
 
 				 isApertura=false;
-			     $nombre.html('<h1>'+ejercicios[numero].nombre+'</h1>');
+			     $nombre.html(ejercicios[numero].nombre);
 			     posicionInicial=ejercicios[numero].posicionInicial;
 			     respuestasCorrectas=ejercicios[numero].jugadasPlayer;
 			     contestacionCPU=ejercicios[numero].jugadasCPU;
@@ -104,27 +104,17 @@
  });
  
   </script> 
-  <style>
-	@media (orientation: landscape) {
-	  .tablero{
-	  	width: 50%;
-	  }
-	}
-	
-	@media (orientation: portrait) {
-	  .tablero{
-	  	width: 90%;
-	  }
-	}
-</style>
+ 
   </head>
 
 
 <body>
 
 
-<div id="nombre" class="container-fluid text-center text-white"><h1>Nombre</h1> </div>
-  <div id="myBoard" class="tablero container-fluid"></div>
+<div id="nombre">Nombre</div>
+<div id="myBoardWrapper">
+  <div id="myBoard"></div>
+</div>
   <div id="quiz" class="fluid bg-info p-1 overflow-scroll text-center"> 
 		<p class="p-0 m-0 bg-white"> ¿Qué pregunta de no se qué cosa te hago aquí?</p>
 		<p class="p-0 m-0">
@@ -155,7 +145,7 @@
 	</div>
 
 
-  <a href="index.html"><div class="text-center fluid h3 bg-primary p-2 text-white">Volver</div></a>
+  <a href="index.html"><div class="volver text-center fluid h3 bg-primary p-2 text-white">Volver</div></a>
   <label>Status:</label>
   <div id="status"></div>
   <label>FEN:</label>

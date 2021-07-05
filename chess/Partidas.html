@@ -115,7 +115,7 @@ partidasJugadas= [];
 
 function cargarPartidaInicial(numero){
   
-  $nombre.html('<h1>'+partida[numero].nombre+'</h1>');
+  $nombre.html(partida[numero].nombre);
   posicionInicial=partida[numero].posicionInicial;
   cargarPartida(numero)
   
@@ -142,8 +142,8 @@ $( document ).ready(function() {
 	$( ".apertura" ).click(function() {
   			partidaSeleccionada=$(this).attr("id");
   			nuevoTablero();
-  			$idAperturas.html('<a href="Partidas.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>');
-
+  			$idAperturas.html('<a class="volver volver2" href="Partidas.html"><div class=" h3 bg-primary p-2 text-white">Volver</div></a>');
+			$('#aperturas').css("display","none");
 	});
 
 
@@ -260,11 +260,13 @@ function comprobarQuiz(){
 <body>
 
 
-<div id="nombre" class="container-fluid text-center text-white">
-  <h1></h1> 
-  
+<div id="nombre" >
 </div>
-<div id="myBoard" class="tablero container-fluid"></div>
+<div id="myBoardWrapper">
+	<div id="myBoard" ></div>
+
+</div>
+
 
  <!-- <label>Status:</label>
   <div id="status"></div>
@@ -278,14 +280,14 @@ function comprobarQuiz(){
   <div id="bestMove"></div>
   <label>Jugada Error:</label>
   <div id="bestMove"></div>-->
- <div id="quiz" class="fluid p-0 overflow-scroll"> 
+ <div id="quiz" class="overflow-scroll"> 
 	</div>
  <div id="botonera"></div>
-  <div id="aperturas" class="fluid bg-white overflow-scroll text-center ">
+  <div id="aperturas" class="">
 	</div>
 	
 	
 	 
- <a class="text-center" href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>
+ <a class="text-center" href="index.html"><div class=" volver h3 bg-primary p-2 text-white">Volver</div></a>
 </body>
 </html>

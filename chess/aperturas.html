@@ -99,7 +99,7 @@ aperturasJugadas= [];
 
 function cargarAperturaInicial(numero,variante){
   
-  $nombre.html('<h1>'+apertura[numero].nombre+'</h1>');
+  $nombre.html(apertura[numero].nombre);
   posicionInicial=apertura[numero].posicionInicial;
   cargarApertura(numero,variante)
   
@@ -126,8 +126,8 @@ $( document ).ready(function() {
 	$( ".apertura" ).click(function() {
   			aperturaSeleccionada=$(this).attr("id");
   			nuevoTablero();
-  			$idAperturas.html('<a href="aperturas.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>');
-
+  			$idAperturas.html('<a href="aperturas.html"><div class="volver volver2 fluid h3 bg-primary p-2 text-white">Volver</div></a>');
+			  $('#aperturas').css("display","none");
 	});
 
 
@@ -182,7 +182,7 @@ function nuevoTablero(){
 			}
 
 			// PARA FORZAR VARIANTE CONCRETA
-			numVariante=10;
+			//numVariante=10;
 			
 
 			console.log("Variante numero "+numVariante);
@@ -265,12 +265,13 @@ function comprobarQuiz(){
 <body>
 
 
-<div id="nombre" class="container-fluid text-center text-white">
-  <h1></h1> 
+<div id="nombre">
+  
   
 </div>
-<div id="myBoard" class="tablero container-fluid"></div>
-
+<div id="myBoardWrapper">
+	<div id="myBoard" ></div>
+</div>
  <!-- <label>Status:</label>
   <div id="status"></div>
   <label>FEN:</label>
@@ -286,11 +287,11 @@ function comprobarQuiz(){
  <div id="quiz" class="fluid p-0 overflow-scroll"> 
 	</div>
  <div id="botonera"></div>
-  <div id="aperturas" class="fluid bg-white overflow-scroll text-center ">
+  <div id="aperturas">
 	</div>
 	
 	
 	 
- <a class="text-center" href="index.html"><div class="fluid h3 bg-primary p-2 text-white">Volver</div></a>
+ <a class="text-center" href="index.html"><div class="volver fluid h3 bg-primary p-2 text-white">Volver</div></a>
 </body>
 </html>
