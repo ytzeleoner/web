@@ -49,9 +49,9 @@ var partida=[
 	{
 		nombre: "Rui Lopez Modelo (Magnus Carlsen - Topalov)",
 		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
-		jugadasCPU: ['','e5','Nc6','a6','Nf6','Be7','b5','d6','Rb8','axb5','O-O','Bd7','Ra8','Qxa8','h6','Re8','END'],
-		jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','d3','Bb3','a4','axb5','Nbd2','Re1','c3','Rxa8','d4','Nf1','Ng3'],
-		moverAuto: [true,true,true,true,true,false,true,true,true,true,true,false,true,true,true,false],
+		jugadasCPU: ['','e5','Nc6','a6','Nf6','Be7','b5','d6','Rb8','axb5','O-O','Bd7','Ra8','Qxa8','h6','Re8','Qc8','Bf8','Na5','Rxf8','Re8','Bg4','exf4','Nc4','c5','cxd4','Qd8','Be6','Qa5','Nh7','g6','Nxe5','END'],
+		jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','d3','Bb3','a4','axb5','Nbd2','Re1','c3','Rxa8','d4','Nf1','Ng3','Nh4','Ng6','Nxf8','Bc2','f4','Qd3','Bxf4','Bc1','Rf1','cxd4','h3','b3','Kh2','e5','d5','dxe6'],
+		moverAuto:     [true, true, true, true, true,false,true,true,  true,  true, true,false, true,true, true,false,false, true, false, true,false,true,  true, true, true,  true,true,true,false,true,true,false],
 		orientation: "white",
 		comentarios:[
 
@@ -70,7 +70,7 @@ var partida=[
 			},
 			{
 				id: "b5",
-				titulo: "¿Cuales son la intenciones de el reciente b5?",
+				titulo: "¿Cuales son la intenciones de el reciente movimiento de las negras b5?",
 						opciones: [
 									{
 										texto:"Encerrar el alfil blanco"
@@ -111,7 +111,7 @@ var partida=[
 				titulo: "¡MUEVE! - Está clara la intención clasica de la española de llevar el caballo a g3... ¿lo hacemos directamente?",
 						opciones: [
 									{
-										texto:"No, hay que asegurar el centro antes"
+										texto:"No, hay que ganar espacio el centro antes"
 									},
 									{
 										texto: "Si, podemos seguir el plan principal con Nf1"
@@ -143,10 +143,138 @@ var partida=[
 										texto:"e3 quedando el caballo más centrado"
 									},
 									{
-										texto: "e3, porque si Nxe4 tenemos Nd5 amenazando peón de c7 y atacando al caballo de e4"
+										texto: "e3, porque si Nxe4 tenemos Nd5 amenazando peón de c7 y atacando al caballo de e4 con la torre en e1"
 									},
 									{
-										texto: "g3, si movemos Ne3, las negras tienen exd4 que tras cxd4 y Nxe4 nos dejan con peón de menos pues Nd5 atacando al peon de c7 tiene como respuesta Bd7. "
+										texto: "g3, si movemos Ne3, las negras tienen exd4 que tras cxd4 y Nxe4 nos dejan con peón de menos pues Nd5 atacando al peon de c7 tiene como respuesta la sutil Bd7. "
+									}
+								],
+						respuestaCorrecta:"3"
+			},
+			{
+				id: "Nh4 (blancas)",
+				titulo: "¡MUEVE! - La intención es llegar a la casilla f5 y hacer hueco a la reina",
+						opciones: [
+									{
+										texto:"MUEVE"
+									}
+								],
+						respuestaCorrecta:"1"
+			},{},
+			{
+				id: "Nxf8 (blancas",
+				titulo: " MUEVE ! La idea del caballo en g6 para las blancas cual es?",
+						opciones: [
+									{
+										texto:"Queremos dejar a las negras sin su pareja de alfiles para que nuestro alfil de casillas oscuras se vuelva más poderoso"
+									},
+									{
+										texto:"Queremos ir dejando al rey sin casillas donde escapar y el peon de f7 está clavado"
+									},
+									{
+										texto:"Queremos propiciar un mate de la coz"
+									}
+								],
+						respuestaCorrecta:"1"
+			},{},
+			{
+				id: "f4 (blancas",
+				titulo: "¡MUEVE! - ¿Qué tenía en mente magnus Carlsen habiendose comido el alfil anteriormente?",
+						opciones: [
+									{
+										texto:"MUEVE - Sacrificar el alfil negro en h5 para dejar al rey sin protección"
+									},
+									{
+										texto:"MUEVE - Abrir la posición en el flanco de rey para potenciar la pareja de alfiles"
+									}
+								],
+						respuestaCorrecta:"2"
+			},{},{},{},{},{},{},{},
+			{
+				id: "Kh2",
+				titulo: "¡MUEVE! - ¿Nos comemos el caballito?",
+						opciones: [
+									{
+										texto:"MUEVE - Si! las negras se han olvidado de el"
+									},
+									{
+										texto:"MUEVE - NO! nos devolverían la captura y nos quedamos minimo sin torre"
+									},
+									{
+										texto:"MUEVE - Vamos a por la partida, pero antes protejamos al rey del jaque de la reina"
+									}
+								],
+						respuestaCorrecta:"23"
+			},{},{},
+			{
+				id: "Ultimo movimiento",
+				titulo: "¡MUEVE! - ¿Cual fue el movimiento que hizo que Topalov abandonase?",
+						opciones: [
+									{
+										texto:"MUEVE!"
+									}
+								],
+						respuestaCorrecta:"1"
+			}
+		],
+		respuestas:[
+		],
+	},
+	{
+		nombre: "1750 - Francois Antoine de Legall de Kermeur - Saint Brie",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		jugadasCPU: ['','e5','d6','Bg4','g6','Bxd1','Ke7','END'],
+		jugadasPlayer: ['e4','Nf3','Bc4','Nc3','Nxe5','Bxf7+','Nd5#'],
+		moverAuto: [true,true,true,true,false,true,false],
+		orientation: "white",
+		comentarios:[
+
+		],
+		preguntas:[
+			{},{},{
+				id: "d6",
+				titulo: "Esta defensa (que estan utilizando las negras) se la conoce como",
+						opciones: [
+									{
+										texto:"Sistema Colle"
+									},
+									{
+										texto: "Defensa Philidor"
+									},
+									{
+										texto:"Defensa Inglesa"
+									},
+									{
+										texto: "Defensa Petrov"
+									}
+								],
+						respuestaCorrecta:"2"
+			},{},
+			{
+				id: "g6",
+				titulo: "MUEVE: Esta partida es famosa por castigar este error de las negras al mover g6",
+						opciones: [
+									{
+										texto:"¡MUEVE!"
+									}
+								],
+						respuestaCorrecta:"1"
+			},{},
+			{
+				id: "Ke7",
+				titulo: "MUEVE: ¿Cómo se conoce este mate que estás apunto de dar?",
+						opciones: [
+									{
+										texto:"Mate de Boden"
+									},
+									{
+										texto:"Mate de la Opera"
+									},
+									{
+										texto:"Mate de Legal"
+									},
+									{
+										texto:"Mate de ePaulette"
 									}
 								],
 						respuestaCorrecta:"3"

@@ -38,6 +38,7 @@
  var $bestMove;
  var $nombre;
  var ejerciciosJugados= [];
+ var numero;
  
  var config = {
 		  draggable: true,
@@ -58,7 +59,7 @@
 			 if (ejerciciosJugados.length == ejercicios.length){
 				 alert("Ya has completado todos los ejercicios")
 			 }else{
-				 var numero=getRandomMaxNumber(ejercicios.length);
+				numero=getRandomMaxNumber(ejercicios.length);
 				
 				 	while (ejerciciosJugados.includes(numero)){
 				 		 numero=getRandomMaxNumber(ejercicios.length)
@@ -66,7 +67,7 @@
 
 				 //SOLO PARA PROBAR
 				 
-				 //	numero=ejercicios.length-1;
+				//numero=ejercicios.length-1;
 				
 
 				 isApertura=false;
@@ -89,6 +90,7 @@
 	 $lastMove = $('#lastMove')
 	 $bestMove = $('#bestMove')
 	 $nombre = $('#nombre')
+	 $quiz = $('#quiz')
 	 
 	 	$( "#responder" ).click(function() {
      		comprobarRespuesta();
@@ -100,9 +102,81 @@
  	
 		//cargarEjercicio(ejercicios.length-1)
  		cargarEjercicio();
+		 comprobarQuiz();
 	 	
  });
  
+
+ function comprobarQuiz(){
+
+
+
+console.log("Comprobando quiz")
+
+	if (ejercicios[numero].pregunta){
+		
+		console.log("Hay Una pregunta")
+		
+
+			 respuestaCorrecta=ejercicios[numero].pregunta.respuestaCorrecta;
+			 console.log("Respuesta Correcta "+respuestaCorrecta)
+				 preguntaRespondida=false;
+
+		 //Si existe
+		  pintarQuiz(ejercicios[numero].pregunta);
+
+
+			$( "#responder" ).click(function() {
+						 if (comprobarRespuesta(respuestaCorrecta)){
+							 preguntaRespondida=true;	
+							 $('#quiz').removeClass("bg-info");
+							 $('#quiz').css("background-color","#008f39","slow");
+							 $('#quiz').css("color","white","slow");
+							  setTimeout(function (){
+								  $('#quiz').hide(1000)
+								  $('#quiz').css("background-color","rgba(255,255,255,0.8)","slow");
+										 $('#quiz').css("color","black","slow");
+
+											 moverAutoPartida(true);
+							  },1000);
+
+						 }else{
+							 $('#quiz').removeClass("bg-info");
+							 $('#quiz').css("background-color","#aa0000","slow");
+							 $('#quiz').css("color","white","slow");
+						 }
+						 
+					  });
+
+					  $( "#verTablero" ).click(function() {
+						 
+							  setTimeout(function (){
+								  $('#quiz').hide(1000)
+							  },300);
+						 
+
+						 $('#botonera').html(' <p><button id="verPregunta" class="bg-info text-white"> Ver Pregunta > </button></p> ');
+						 $('#botonera').show(1000);
+
+					  });
+				 
+
+				 $( "#botonera" ).click(function() {
+					 $('#botonera').hide(1000);
+					  $('#quiz').show(1000);
+				 });
+
+				 $( ".form-check-label" ).click(function() {
+						 if ($(this).parent().css("background-color")=="rgba(229, 190, 1, 0.6)"){
+							 $(this).parent().css("background-color","rgba(0, 0, 0, 0)");
+						 }else{
+							 $(this).parent().css("background-color","rgba(229, 190, 1,0.6)","slow");
+						 }
+				 });
+		
+ }
+}
+
   </script> 
  
   </head>
@@ -115,38 +189,14 @@
 <div id="myBoardWrapper">
   <div id="myBoard"></div>
 </div>
-  <div id="quiz" class="fluid bg-info p-1 overflow-scroll text-center"> 
-		<p class="p-0 m-0 bg-white"> ¿Qué pregunta de no se qué cosa te hago aquí?</p>
-		<p class="p-0 m-0">
-				<input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
-  			<label class="form-check-label" for="flexCheckDefault">
-    				Opcion 1
-  			</label>
-  	</p>
-  	<p class="p-0 m-0"> 
-  			<input class="form-check-input" type="checkbox" value="2" id="flexCheckDefault2">
-  			<label class="form-check-label" for="flexCheckDefault2">
-    				Opcion 2
-  			</label>
-  	</p>
-  	<p class="p-0 m-0">
-  		<input class="form-check-input" type="checkbox" value="3" id="flexCheckDefault3">
-  		<label class="form-check-label" for="flexCheckDefault3">
-    	Opcion 3
-  		</label>
-  	</p>
-  	<p class="p-0 m-0">
-  		<input class="form-check-input" type="checkbox" value="4" id="flexCheckDefault4">
-  		<label class="form-check-label" for="flexCheckDefault4">
-    	Opcion 4
-  		</label>
-  	</p>
-  	<p><button id="responder" class="bg-success text-white"> Responder </button></p>
-	</div>
+<div id="quiz" class="fluid p-0 overflow-scroll"> 
+</div>
+<div id="botonera"></div>
+ 
 
 
   <a href="index.html"><div class="volver text-center fluid h3 bg-primary p-2 text-white">Volver</div></a>
-  <label>Status:</label>
+  <!--<label>Status:</label>
   <div id="status"></div>
   <label>FEN:</label>
   <div id="fen"></div>
@@ -157,6 +207,6 @@
   <label>Best Move:</label>
   <div id="bestMove"></div>
   <label>Jugada Error:</label>
-  <div id="bestMove"></div>
+  <div id="bestMove"></div>-->
 </body>
 </html>

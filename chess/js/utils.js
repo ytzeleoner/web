@@ -62,6 +62,7 @@ function onDrop (source, target) {
   $lastMove.html(move.san)
           var bestMove=(move.san===respuestasCorrectas[movimiento]);
           var badMove=false;
+          
           if (isApertura == true){
             badMove = (move.san===respuestasErroneas[movimiento]);
             comprobarQuiz();
@@ -92,6 +93,7 @@ function onDrop (source, target) {
               alert("Ejercicio Resuelto");
               if (isApertura == false){
             	  cargarEjercicio();
+                
               }else{
                 nuevoTablero();
               }

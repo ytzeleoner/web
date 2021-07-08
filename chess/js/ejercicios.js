@@ -374,6 +374,99 @@ var ejercicios=[
 		jugadasCPU: ['Nc7','Kh8','Kg8','Kh8','Rf6','END'],
 		jugadasPlayer: ['Rxg7+','Rxf7+','Rg7+','Rg6+','Bxf6#'],
 		orientation: 'white'
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "Coz",
+		posicionInicial:"r1b2rk1/ppp3pp/2n5/2P1ppN1/5P2/2P5/P5PP/R1BQ1RK1 w - - 0 1",
+		jugadasCPU: ['','Kh8','Kg8','Kh8','Rxg8','END'],
+		jugadasPlayer: ['Qd5+','Nf7+','Nh6+','Qg8+','Nf7#'],
+		orientation: 'white',
+		pregunta: {
+			titulo: "¿Qué Táctica o Mate existe en esta jugada?",
+						opciones: [
+									{
+										texto:"Mate Morphy"
+									},
+									{
+										texto: "Mate de la Coz"
+									},
+									{
+										texto: "Doblete"
+									},
+									{
+										texto: "Ataque a la descubierta"
+									},
+									{
+										texto: "Encerrar pieza"
+									},
+									{
+										texto: "Mate de Boden"
+									}
+								],
+						respuestaCorrecta:"2"
+		}
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "",
+		posicionInicial:"r1b2r1k/ppp3pp/2n2qn1/2P1ppN1/2B2P2/2P5/P5PP/R1BQ1RK1 w - - 0 1",
+		jugadasCPU: ['','Kxh7','END'],
+		jugadasPlayer: ['Nxh7','Qh5#'],
+		orientation: 'white',
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "",
+		posicionInicial:"r2q3k/ppb3pp/2p1B3/2P1RQ2/8/6P1/PP1r3P/5RK1 w - - 0 1",
+		jugadasCPU: ['','Kxh7','Kg6','END'],
+		jugadasPlayer: ['Qxh7+','Rh5+','Bf7#'],
+		orientation: 'white',
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "",
+		posicionInicial:"2r1r1k1/pq3pb1/1p1p2p1/1b4B1/5P1R/P1P2N2/1PQ4R/2K5 w - - 0 1",
+		jugadasCPU: ['','Bxh8','END'],
+		jugadasPlayer: ['Rh8+','Rxh8+'],
+		orientation: 'white',
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "Boden",
+		posicionInicial:"2kr3r/pp1n1ppp/2p1p3/q7/1b1P1B2/P1N2Q1P/1PP1BPP1/R3K2R w - - 0 1",
+		jugadasCPU: ['','Qxa1+','Qxh1','bxc6','END'],
+		jugadasPlayer: ['axb4','Kd2','Qxc6+','Ba6#'],
+		orientation: 'white',
+		pregunta: {
+			titulo: "¿Qué Táctica o Mate existe en esta jugada?",
+						opciones: [
+									{
+										texto:"Mate Morphy"
+									},
+									{
+										texto: "Mate de la Coz"
+									},
+									{
+										texto: "Desviación"
+									},
+									{
+										texto: "Ataque a la descubierta"
+									},
+									{
+										texto: "Encerrar pieza"
+									},
+									{
+										texto: "Mate de Boden"
+									}
+								],
+						respuestaCorrecta:"36"
+		}
 	}
 	
 
