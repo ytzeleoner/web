@@ -74,19 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.30</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-					   <img src="img/ps-now.png" class="mini-icon">
+				   <i class="text-danger fas fa-caret-down"></i> 70%
+				   <img src="img/ps-now.png" class="mini-icon">
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>8.99€</b>
              		</p>
-             		</div>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 21.00€</b></p>
+            		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            		<p class="card-text text-info text-center">Hasta el 02 de diciembre</p>
+          		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 29.99 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 19.49 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2020 al 09/ene/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 29.76 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 8.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 10/nov/2021 al 02/dic/2021 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Las Islas Prohibidas te llaman, descubre sus secretos.<br/>Tras naufragar sola en una isla desierta, explora, adáptate y recorre la tierra y los peligrosos mares para sobrevivir.<br/><br/>Como Kara, eres una guerrera a la que una feroz tormenta en el mar separó de su tribu. Tras caer a las turbulentas aguas, te ves arrojada a las costas de las Islas Prohibidas, un paraíso misterioso.<br/><br/>Sin bote, ni comida ni herramientas, solo con tu voluntad y habilidad de supervivencia, descubre los abundantes recursos de esta hermosa isla. Fabrica utensilios y armas para cazar y defenderte de la salvaje y fantástica fauna de la naturaleza.<br/><br/>Al explorar otras islas y las ruinas dispersas por la tierra, descubrirás secretos del pasado y atisbos del futuro. Desvela el misterio tras todas ellas y quizá encuentres algo más que el modo de volver a casa.<br/><br/>Desvela los secretos de las islas<br/>Embárcate en un viaje personal y descubre la historia de las idílicas Islas Prohibidas; cada una tiene la llave de un misterio y revelaciones inesperadas.<br/><br/>Explora hasta donde alcanza la vista<br/>Pon rumbo al horizonte y recorre las islas, cada una con su propia y diversa fauna salvaje, paisajes y desafíos que afrontar. <br/><br/>Vive de la tierra<br/>Obtén recursos del agreste terreno de las islas, que puedes usar para crear diversas herramientas y armas par cazar animales salvajes y mejorar tu bote. Tendrás que zarpar cuando los recursos comiencen a escasear.<br/><br/>Construye la embarcación perfecta<br/>Tu bote es tu compañero clave en este viaje, fabrica tu embarcación personalizada para afrontar las traicioneras aguas y viajar de una isla a otra. Diseña tu bote para combatir los vientos tempestuosos, las olas monstruosas y las mortales criaturas marinas.<br/><br/><br/>Offline single player<br/>Uses DUALSHOCK 4 vibration function<br/>Enhanced game play on PS4 Pro console<br/>Offline play enabled<br/><br><br></p>
@@ -123,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP', '19 SEP', '22 SEP', '25 SEP', '28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV'],
+      labels: ['12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99],
+        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 8.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
