@@ -81,16 +81,16 @@ body{
              		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 6.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 28 de octubre</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de diciembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 9.00 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 8.74 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 3.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 13/oct/2021 al 28/oct/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 29/nov/2021 al 23/dic/2021 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Loading Human es el juego de aventuras del futuro. Tu padre moribundo, un científico renombrado, te llamó a su base en la Antártida para que emprendas una misión interestelar: recuperar la quintaesencia, una fuente de energía escurridiza que ayudará a revertir el proceso de envejecimiento.<br/><br/>Hecho exclusivamente para la Realidad Virtual, Loading Human aprovecha al máximo el hardware de RV y los controles de movimiento para crear una experiencia totalmente inmersiva. Con una libertad sin igual para moverte y explorar a gusto, Loading Human desafía los límites de la RV y te coloca directamente en una historia cargada de emoción que te hará experimentar el juego con todos los sentidos. En este viaje que es Loading Human, tomarás decisiones difíciles e interactuarás físicamente con otros personajes.<br/><br/>Al darle más importancia a tus acciones mediante una conexión emocional, decisiones morales y consecuencias reales, Loading Human es un juego que no se juega: se vive.<br/><br/>1 jugador<br/>5GB como mínimo<br/>DUALSHOCK®4<br/>Requiere PlayStation®VR<br/>Se requirere PlayStation®Camera<br/><br/>Además, en consolas PS5™: necesitas el adaptador para PlayStation Camera (no requiere compra), visita Playstation.com/camera-adaptor; para una mejor experiencia con PlayStation®VR en PS5™ recomendamos usar el mando inalámbrico DUALSHOCK®4.<br/><br/>  El software está sujeto a licencia y garantía limitada (us.playstation.com/softwarelicense/sp). Las funciones en línea requieren una cuenta y están sujetas a los términos de servicio y a la correspondiente política de privacidad (visita playstationnetwork.com para consultar los términos de servicio y las correspondientes políticas de privacidad de tu país). Tarifa única para jugar en el sistema PS4™ principal designado de la cuenta y en otros sistemas PS4™ al iniciar sesión con esa cuenta.<br/><br/>©2016 Untold Games. All rights reserved. Untold Games and the Untold Games logo are trademarks of Untold Games, Ltd.  Published under license by Maximum Games™. Maximum Games™ and the Maximum Games™ logo are trademarks of Maximum Games, LLC. All rights reserved.<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['29 JUL', '01 AGO', '04 AGO', '07 AGO', '10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT'],
+      labels: ['03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC'],
       datasets: [{
-        data: [9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 3.99, 3.99, 3.99, 3.99, 3.99],
+        data: [9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 3.99, 3.99, 3.99, 3.99, 3.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 3.99, 3.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

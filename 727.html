@@ -78,19 +78,20 @@ body{
 				   
 				   </p>
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
-             		</p>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 12.49€</small>
+            		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 35.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 28 de octubre</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de diciembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 44.22 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 42.68 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 14.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 13/oct/2021 al 28/oct/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 29/nov/2021 al 23/dic/2021 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>¡Las hordas de Hitler regresan a por más en este aterrador shooter de los creadores de Sniper Elite 4! En este juego, ambientado en la Europa de los años 40, te esperan abominables enemigos sobrenaturales, armas épicas y una nueva campaña para entre 1 y 4 jugadores. ¡Salva a la humanidad del apocalipsis no muerto!<br/><br/><br/>La Resistencia ha derrotado a la versión zombi de Hitler y lo ha mandado al infierno. ¡Pero los muertos han vuelto a alzarse y tienen más hambre que nunca! ¡Continúa la versión alternativa de la historia iniciada con Zombie Army Trilogy y destapa un siniestro plan que llevará a la brigada de supervivientes a recorrer toda Italia e incluso el más allá!<br/><br/><br/>Disfruta de un sistema de balística que definió un género, elige al personaje que más se amolde a tu estilo de juego y mejora tu arsenal con fuego, rayos y esencia divina para hacer frente a los muertos. ¡Y cuando la horda te rodee, destrózala con el combate cuerpo a cuerpo mejorado y con brutales eliminaciones!<br/><br/><br/><br/><br/></p>
@@ -127,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['29 JUL', '01 AGO', '04 AGO', '07 AGO', '10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT'],
+      labels: ['03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC'],
       datasets: [{
-        data: [49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 14.99, 14.99, 14.99, 14.99, 14.99],
+        data: [49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 14.99, 14.99, 14.99, 14.99, 14.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 14.99, 14.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://apollo2.dl.playstation.net/cdn/HP5036/CUSA07122_00/PdcLqLHhGhida7MhtoPgSDkeZvLrjWdh2BoDu4PqEFfdwoj1ZZPyVhVbcVjcEWD9.png?w=253&amp;h=253">
@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.70</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 80%
+				   <i class="text-danger fas fa-caret-down"></i> 95%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>0.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 16.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 19.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 28 de octubre</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de diciembre</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 17.35 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 2.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 30/nov/2020 al 23/dic/2020 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 16.52 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 0.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 29/nov/2021 al 23/dic/2021 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>En un circuito de carreras, es el coche el que marca la diferencia. En un rally, es el piloto. WRC 6 te pone a prueba: niebla, barro, pinchazos, conducción nocturna, averías del motor... Tendrás que hacer frente a todo. WRC 6 también incluye: todo el contenido oficial de 2016 (incluido el rally de China), 11 etapas superespeciales a escala 1:1, multijugador local en pantalla dividida, marcadores mundiales y nuevos desafíos online cada semana, todos los coches y las pistas en alta definición, dos nuevos modos de juego, cámaras de juego aún más espectaculares y acceso gratuito a la temporada eSport WRC 2017.<br/><br/><br/>Offline multiplayer (2-8 players)<br/>Online multiplayer (2-8 players). A paid-for PlayStation Plus membership is required. Online features require an account and are subject to our terms of service (playstationnetwork.com/terms-of-service), our privacy policy (playstationnetwork.com/privacy-policy), and the game publisher’s privacy policy.<br/>Uses DUALSHOCK 4 vibration function<br/>Remote Play allows users to connect to and play games on their PlayStation®4 or PlayStation®5 using a mobile device, PC, or another PlayStation®4 or PlayStation®5.<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['29 JUL', '01 AGO', '04 AGO', '07 AGO', '10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT'],
+      labels: ['03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 3.99, 3.99, 3.99, 3.99, 3.99],
+        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 3.99, 3.99, 3.99, 3.99, 3.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 0.99, 0.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

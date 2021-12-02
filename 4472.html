@@ -74,19 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.77</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-					   <img src="img/ps-now.png" class="mini-icon">
+				   <i class="text-danger fas fa-caret-down"></i> 80%
+				   <img src="img/ps-now.png" class="mini-icon">
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
-             		</p>
-             		</div>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>0.99€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 0.49€</small>
+            		</p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 4.00€</b></p>
+            		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>4.99€</del>)</small></p>
+            		<p class="card-text text-info text-center">Hasta el 23 de diciembre</p>
+          		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 4.33 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 4.15 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 0.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 13/oct/2021 al 28/oct/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 29/nov/2021 al 23/dic/2021 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Diviértete en este juego de pesca salvaje y surca los siete mares. ¡Olvídate de la pesca con mosca, es un tostón! Coge tu arma y explosivos y machaca peces a lo BESTIA. Aquí no verás estanques idílicos ni preciosos arrecifes de coral. Dynamite Fishing – World Games te envía a los mejores lugares de pesca del planeta, ¡incluso te aventurarás en la jungla! Elige tus personajes y barcos favoritos, explora peligrosos escenarios y pesca todo lo que puedas.<br><br>¡AVISO! Todos los peces del juego son acróbatas profesionales. No intentes recrear estas acrobacias ni realizar otras similares en casa. ¡A los peces de tu acuario no les hará ni pizca de gracia!<br><br>✔ Más de 10 barcas con equipo épico donde elegir<br>✔ Montones de trajes y accesorios para 5 chiflados personajes<br>✔ Un arsenal de armas excepcionales para usar<br>✔ Súper poderes exclusivos para cada personaje<br><br>1-2 jugadores<br>200MB mínimo<br>Función de vibración DUALSHOCK®4<br>Salida de vídeo HD 720p,1080i,1080p<br><br></p>
@@ -123,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['18 AGO', '21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV'],
+      labels: ['03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC'],
       datasets: [{
-        data: [4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 0.99, 0.99, 0.99, 0.99, 0.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99],
+        data: [4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 0.99, 0.99, 0.99, 0.99, 0.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 0.99, 0.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
