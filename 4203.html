@@ -78,19 +78,20 @@ body{
 				   
 				   </p>
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
-             		</p>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 15.99€</small>
+            		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 20.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 34.72 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 33.40 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 19.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 27/oct/2021 al 20/nov/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Recurre a tus conocimientos y elude todas las preguntas capciosas en tu camino para obtener el gran premio.<br/><br/>Responde 15 preguntas cada vez más difíciles para aumentar el pozo del premio: te esperan más de 3000 preguntas temáticas (geografía, ciencia, historia, arte o entretenimiento), una creciente dificultad y la presión del presentador y la audiencia…<br/>¡La recete perfecta para ponerte bajo presión!<br/><br/>En el juego se representan 6 países emblemáticos, cada uno con su propio escenario y una tanda de 2000 preguntas exclusivas: Reino Unido, EE. UU., España, Italia, Francia y Alemania.<br/><br/>Colecciona “Neurons” en juegos individuales, con amigos o de práctica y desbloquea paquetes de preguntas.<br/><br/>Elige el tema que quieras practicar y mejora tus conocimientos generales para ganar el gran premio.<br/><br/>Accede a una experiencia multijugador completa con diversos modos nunca antes vistos:<br/><br/>- “Familia”:  contiene preguntas especialmente adaptadas para niños de manera que se pueda jugar en familia sin importar la edad.<br/><br/>- “Cooperativo”: forma un equipo con hasta 3 jugadores y busquen juntos la respuesta correcta.<br/><br/>- “Por turnos”: comparte el controlador en LAN y compite con hasta 9 jugadores.<br/><br/>- “Todos contra todos”: responde la mayoría de preguntas en una ronda para ganar puntos de bonificación. Ganará el jugador con la mayor cantidad de puntos al final de la partida. <br/><br/>- “Battle Royale”: compara tus conocimientos generales con hasta 99 jugadores en línea. El último participante que sobreviva será el máximo campeón.<br/><br/><br/>Multijugador offline (2-10 jugadores)<br/>Multijugador online (2-99 jugadores). Requiere una suscripción pagada a PlayStation Plus. Las funciones online requieren tener una cuenta y están sujetas a nuestros términos de servicio (playstationnetwork.com/terms-of-service), nuestra política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/>Juegos mejorados en la consola PS4 Pro<br/>Las funciones online requieren una cuenta y están sujetas a los términos del servicio (playstationnetwork.com/terms-of-service), la política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/><br><br></p>
@@ -127,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99],
+        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 19.99, 19.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

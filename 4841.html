@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 25%
+				   <i class="text-danger fas fa-caret-down"></i> 30%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>18.74€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 17.49€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>17.49€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 14.99€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 6.25€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 7.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 04 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 23.96 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 18.74 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 20/oct/2021 al 04/nov/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 23.47 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 17.49 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Enfréntate a las pesadillas de los hombres silenciosos. No te asustes... ni siquiera respires.<br/><br/>Maid of Sker es un videojuego de terror y supervivencia en primera persona, ambientado en un hotel remoto con una sangrienta y macabra historia del folclore británico. Armado únicamente con un dispositivo de sonido defensivo, tendrás que valerte de tácticas sigilosas para evitar la muerte entre un culto de enemigos con IA basada en el sonido.<br/><br/>Ambientada en 1898 e inspirada en la inquietante historia galesa de Elisabeth Williams, esta es la historia de un imperio familiar basado en la tortura, la esclavitud, la piratería y un misterio sobrenatural que impregna los terrenos del hotel.<br/><br/>Desarrollado por Wales Interactive y con una trama creada por los expertos redactores y diseñadores de otros trabajos como SOMA, The Bunker y Battlefield 1.<br/><br/>-	Sistema de IA 3D basado en sonido como mecánica principal de supervivencia<br/>-	Mezcla de terror psicológico, gótico y británico<br/>-	Imágenes realistas, entornos envolventes y atmósferas misteriosas<br/>-	Famosos himnos galeses con la escalofriante voz de Tia Kalmaru<br/>-	Reinvención de la canción popular galesa «Y Ferch o'r Sger» (la doncella de Sker)<br/><br/><br/></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP', '19 SEP', '22 SEP', '25 SEP', '28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 18.74, 18.74, 18.74, 18.74, 18.74],
+        data: [24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 18.74, 18.74, 18.74, 18.74, 18.74, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 17.49, 17.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.00</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 60%
+				   <i class="text-danger fas fa-caret-down"></i> 80%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>7.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 12.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 16.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 11 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.01 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 7.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 27/oct/2021 al 11/nov/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 16.96 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 3.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Relicta es un juego de puzles en primera persona basado en física en el que deberás combinar magnetismo y gravedad de manera creativa para revelar los secretos de la base Chandra. En la soledad de la remota Luna, tus conocimientos científicos son lo único que puede mantener a tu hija con vida…<br/>Métete en la piel de una gran científica atrapada en una siniestra base lunar en ruinas. Ábrete camino por los misteriosos cráteres terraformados y resuelve puzles físicos controlando la gravedad y el magnetismo. ¿Intentarás alcanzar un lugar seguro lo antes posible o te detendrás para buscar pistas y descubrir las tramas ocultas de la política espacial del siglo XXII? En la oscuridad eterna de los cráteres lunares está enterrado un secreto que podría costarle la vida a tu hija… o cambiar para siempre el destino de la humanidad. ¿Te atreves a enfrentarte a las consecuencias de tu investigación?<br/>Características:<br/>- Mecánicas alucinantes: pon la gravedad y el magnetismo a tu servicio.<br/>- Puzles físicos complejos: combina tus habilidades e innova para resolver estos acertijos físicos.<br/>- Entornos detallados: cada rincón cuenta una historia. Cada paso ofrece un nuevo desafío.<br/>- Historia profunda y enigmática: busca pistas y descubre los detalles de la investigación de la anomalía de la Relicta.<br/>- Banda sonora original inmersiva: sumérgete en los sonidos de un thriller psicológico de ciencia ficción.<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 7.99, 7.99, 7.99, 7.99, 7.99],
+        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 7.99, 7.99, 7.99, 7.99, 7.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 3.99, 3.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

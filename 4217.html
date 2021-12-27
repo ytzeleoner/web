@@ -82,16 +82,16 @@ body{
             		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 12.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 13 de diciembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 22.38 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 21.56 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 12.49 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 09/dic/2021 al 13/dic/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>La historia de Raji: An Ancient Epic comienza con el conflicto en ciernes entre los demonios y los dioses. Los demonios, que buscan venganza tras ser humillados en la última gran guerra, hace ya mil años, han retado a los dioses invadiendo el reino de los humanos, amenazando su aniquilación total.<br/>Por su parte, los humanos viven ajenos al conflicto, y, durante estos mil años de paz, ya casi han olvidado el arte de la alquimia o a sus enemigos, derrotados ya hace tanto tiempo. Incapaces de defenderse, cayeron ciudades y fortalezas, y los humanos quedaron a merced de los demonios.<br/>Mientras todo se derrumbaba, mientras secuestraban a niños de sus casas, los dioses eligen a una joven llamada Raji, la última línea de defensa y esperanza de la raza humana.<br/><br/>Una historia entre hermanos<br/>Vive la historia de dos hermanos. Raji y Golu son hermanos a los que han separado las hordas demoníacas, y ahora se encuentran en medio de una refriega entre poderes que escapan a su comprensión. Raji se ha propuesto encontrar a su hermano y poner fin, de una vez por todas, a esta guerra sin sentido. Sin embargo, solo lo podrá lograr si consigue doblegar las estratagemas del señor demoníaco Mahabalasura.<br/><br/>Un arte asombroso<br/>Raji: An Ancient Epic está inspirado en los mitos indios, como Mahabharata y Ramayana, y en la arquitectura medieval de Rajasthan. ¡Una ambientación totalmente innovadora en el género de las aventuras de acción! Todos y cada uno de los rincones del juego han sido dibujados siguiendo el estilo artístico Pahari, esto, combinado con las texturas pintadas a mano, que cobran vida gracias al 3D, hacen de Raji: An Ancient Epic un título totalmente único en el medio.<br/><br/>Combate táctico<br/>Los dioses le han dado a Raji toda clase de armas y poderes. Dominarlos todos será vital para conseguir doblegar a las hordas demoníacas, ya que los enemigos se adaptarán a cada situación. Por ejemplo, el tridente Trishul puede ser perfecto para un combate, pero para el siguiente puede que sea necesario usar el arco Sharanga.<br/><br/>Un universo ambientado en la antigua India<br/>Por primera vez, vive un juego ambientado en la antigua India y rebosante de mitología hindú y balinesa. Gracias al cuidado que se ha puesto en cada uno de sus rincones, será realmente sencillo sumergirte en la India y sus misterios. Historias apasionantes, feroces batallas entre demonios, jefes finales, antiguos enigmas, fortalezas gigantescas y palacios majestuosos... vive todo esto entramado con la historia de dos hermanos que se encuentran en el epicentro de una guerra divina.<br/><br/><br/></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['13 SEP', '16 SEP', '19 SEP', '22 SEP', '25 SEP', '28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 12.49, 12.49, 12.49, 12.49, 12.49, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 12.49, 12.49],
+        data: [24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 12.49, 12.49, 12.49, 12.49, 12.49, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 12.49, 12.49, 24.99, 24.99, 24.99, 12.49, 12.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

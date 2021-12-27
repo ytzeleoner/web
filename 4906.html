@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 35%
+				   <i class="text-danger fas fa-caret-down"></i> 50%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 7.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 10.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 04 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.84 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 12.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 20/oct/2021 al 04/nov/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.18 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 9.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>El precio de oferta especial anterior válido de 15-09-2021 a 29-09-2021 era €15.99.<br/><br/>"Inspirado en los clásicos arcade, los jugadores tendrán que cazar potenciadores de armas y mejoras a la vez que esquivan el fuego enemigo, hacen explotar insectos interdimensionales y pelean contra enormes monstruos jefe. Es fácil aprender a medida que luchas por abrirte camino a través de la ramificada historia de la campaña, pero no será tan fácil dominar la gloria en las tablas de clasificación.<br/><br/>Características<br/><br/>•El clásico shooter reinventado: Disfruta de la acción energética de los tradicionales shooters en 2D ahora en un espacio 3D deformado. Escala paredes, da la vuelta de un lado a otro de tu escenario y disfruta de unas vistas impresionantes.<br/><br/>•Juega a tu estilo y llega a lo alto de la clasificación: Experimenta un angustioso viaje como piloto en el modo Campaña, <br/>acepta nuevos desafíos, pon a prueba tus habilidades y lucha por tu puesto en las tablas de clasificación en Carreras diarias, Arena, Supervivencia y modos de juego infinitos.<br/><br/>•Pilota el Synthwave: Concéntrate con la energética banda sonora Synthwave en colaboración con FiXT Neon, incluyendo a artistas como Scandroid, 3Force y Fury Weekend.<br/><br/>•Mejora y acaba con ellos: Recoge una plétora de habilidades y mejoras para armas. ¡Las armas son variadas (desde láseres y lanzallamas a motoguadañas), y están equipadas con sus propios estados de sobrecarga! <br/><br/>Modos <br/><br/>Campaña: Asume el papel de un cosechador de energía en medio de una invasión de arañas galácticas. Tus elecciones te llevarán a asumir una de las tres versiones potenciales del protagonista del juego para combatir la invasión en asteroides, estaciones espaciales y otros escenarios intergalácticos. Cada versión única lleva la historia en una dirección diferente. <br/><br/>Arena: Enfréntate a más de 60 desafíos aleatorios de la campaña del juego para poder llevar tu nombre a las tablas de clasificación locales.<br/><br/>Supervivencia: Lucha atravesando olas de invasores. Cada ola supone un desafío nuevo y más difícil.<br/><br/>Infinito: Enfréntate a oleadas de desafíos aleatorios de la campaña, así como a objetivos adicionales a medida que te adaptas a lo que el juego decida ponerte en el camino.<br/><br/>Carrera diaria: Cada día tendrás una oportunidad para completar esta carrera diaria y conseguir la mayor puntuación posible. ¿Fallaste en la clasificación de hoy? Mañana habrá un nuevo desafío."<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP', '19 SEP', '22 SEP', '25 SEP', '28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 12.99, 12.99, 12.99, 12.99, 12.99],
+        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 12.99, 12.99, 12.99, 12.99, 12.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 9.99, 9.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

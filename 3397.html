@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://vulcan.dl.playstation.net/ap/rnd/202006/1014/ORrwkbfh9B1OwfQbPGLBsgs7.png?w=253&amp;h=253">
@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.45</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 40%
+				   <i class="text-danger fas fa-caret-down"></i> 50%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>24.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 20.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 25.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 04 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 46.69 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 45.04 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 24.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2020 al 20/ene/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>DayZ es un juego de supervivencia extrema en mundo abierto donde solo existe una regla: sobrevivir a toda costa. Y no es fácil, porque una plétora de amenazas acechan en cada rincón...<br/><br/>Características:<br/><br/>• No hay puntos de control ni guardado, así que, si la diñas, lo pierdes todo y tienes que empezar de cero.<br/><br/>• Mecánicas de supervivencia complejas y realistas, como por ejemplo de caza, fabricación, construcción, salud y gestión de recursos.<br/><br/>• Interacciones impredecibles con otros jugadores que propician un abanico ilimitado de posibilidad de juego.<br/><br/>• Un enorme mapa de 230 km2 con diferentes y hermosos paisajes y lugares inspirados en el mundo real.<br/><br/>• Hasta 60 jugadores luchan por sobrevivir a toda costa. Haz amigos, mata sin pensarlo, rapta a desconocidos y somételos o sufre una traición por una lata de alubias. Todo es posible.<br/><br/>• Amenazas del entorno que te pondrán a prueba. Desde un clima muy variable hasta animales peligrosos, pasando por la oscuridad de la noche e infectados rabiosos.<br/><br/><br/>Multijugador online (2-60 jugadores). Requiere una suscripción pagada a PlayStation Plus. Las funciones online requieren tener una cuenta y están sujetas a nuestros términos de servicio (playstationnetwork.com/terms-of-service), nuestra política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/>Uso a distancia permite a los usuarios conectarse y jugar en consolas PlayStation®4 y PlayStation®5 a través de un dispositivo móvil, PC u otra consola PlayStation®4 o PlayStation®5.<br/>Se requiere juego online<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['05 AGO', '08 AGO', '11 AGO', '14 AGO', '17 AGO', '20 AGO', '23 AGO', '26 AGO', '29 AGO', '01 SEP', '04 SEP', '07 SEP', '10 SEP', '13 SEP', '16 SEP', '19 SEP', '22 SEP', '25 SEP', '28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 29.99, 29.99, 29.99, 29.99, 29.99],
+        data: [49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 29.99, 29.99, 29.99, 29.99, 29.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 24.99, 24.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

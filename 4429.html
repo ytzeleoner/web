@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="http://apollo2.dl.playstation.net/cdn/EP2871/CUSA12773_00/zPSWmbnzbemrYFMXjd3skVJVxWYrAvyk.png?w=253&amp;h=253">
@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.67</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 50%
+				   <i class="text-danger fas fa-caret-down"></i> 75%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>8.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 7.19€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>4.49€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 3.59€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 9.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 13.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>17.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 11 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 16.51 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 15.62 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 4.49 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2020 al 20/ene/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Transpose es un juego de puzles onírico en RV establecido en un universo donde el tiempo y la gravedad son herramientas para manipular el mundo. Los jugadores crean y operan con grabaciones en bucle de sus acciones que les servirán para resolver puzles de físicas cada vez más complejos en un escenario misterioso en el que las nociones de tiempo y espacio no funcionan. <br><br>Ecos  <br><br>Transpose incluye grabaciones del jugador en tiempo real que permiten reproducir de nuevo las acciones de forma idéntica para interaccionar con el yo del pasado. Debes crear ecos de ti mismo, retroceder en el tiempo y utilizar esos ecos para resolver puzles.  <br><br>Tiempo y gravedad <br><br>Establecido en un hipnótico mundo surrealista, Transpose permite a los jugadores controlar el tiempo y la gravedad. Haz girar el entorno a tu alrededor para caminar sobre paredes y techos, experimenta cambios de perspectiva y puzles de múltiples caras como solo es posible en la RV.<br><br>1 jugador<br>Salida de vídeo HD 720p,1080i,1080p<br>Requiere mando de movimiento PlayStation®Move y PlayStation®Camera.<br>Se necesita PlayStation®VR y PlayStation®Camera para jugar a este producto.<br><br></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['12 AGO', '15 AGO', '18 AGO', '21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV'],
+      labels: ['28 SEP', '01 OCT', '04 OCT', '07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC'],
       datasets: [{
-        data: [17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 8.99, 8.99, 8.99, 8.99, 8.99],
+        data: [17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 8.99, 8.99, 8.99, 8.99, 8.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 4.49, 4.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
