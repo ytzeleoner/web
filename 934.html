@@ -74,19 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.48</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-					   <img src="img/ps-now.png" class="mini-icon">
+				   <i class="text-danger fas fa-caret-down"></i> 90%
+				   <img src="img/ps-now.png" class="mini-icon">
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>7.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>0.79€</b>
              		</p>
-             		</div>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 7.20€</b></p>
+            		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>7.99€</del>)</small></p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
+          		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 5.83 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 5.75 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 0.79 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 06/oct/2021 al 21/oct/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 05/ene/2022 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Thomas Was Alone es un aclamado juego sobre amistad y saltos. Guía a un grupo de rectángulos por varios escenarios, combinando sus habilidades para llegar al final de cada nivel.<br/><br/>Escucha la increíble música compuesta por David Housden, sortea los obstáculos creados por Mike Bithell y sumérgete en un viaje narrado por Danny Wallace.<br/><br/>Descubre la historia de las primeras formas de vida artificial y de cómo trabajan en equipo para, bueno... 'escapar' es una palabra fuerte. 'Emerger' sería más adecuada. 'Emerger' tiene un aire de importancia mientras mantiene una gran cantidad de giros en la trama e historias secretas. Sin mencionar el rebote. Eso sería un exceso.<br/><br/>Incluye:<br/>• 100 niveles.<br/>• 12 personajes con características y habilidades únicas.<br/>• Historia narrada por Danny Wallace.<br/>• Banda sonora compuesta por el aclamado compositor David Housden.<br/>• Comentarios del creador Mike Bithell en cada nivel.<br/><br/>Este producto Cross-Buy te da derecho a descargar las versiones para PS3™, PS4™ y PS Vita.<br/><br/><br/></p>
@@ -123,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['07 OCT', '10 OCT', '13 OCT', '16 OCT', '19 OCT', '22 OCT', '25 OCT', '28 OCT', '31 OCT', '03 NOV', '06 NOV', '09 NOV', '12 NOV', '15 NOV', '18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC', '30 DIC', '02 ENE', '05 ENE'],
+      labels: ['08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV', '22 NOV', '25 NOV', '28 NOV', '01 DIC', '04 DIC', '07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC', '25 DIC', '28 DIC', '31 DIC', '03 ENE', '06 ENE'],
       datasets: [{
-        data: [0.79, 0.79, 0.79, 0.79, 0.79, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 1.59, 1.59, 1.59, 1.59, 1.59, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99],
+        data: [0.79, 0.79, 0.79, 0.79, 0.79, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 1.59, 1.59, 1.59, 1.59, 1.59, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 0.79],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

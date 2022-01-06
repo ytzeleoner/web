@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 35%
+				   <i class="text-danger fas fa-caret-down"></i> 50%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>25.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 14.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 20.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 02 de diciembre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 37.99 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 25.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 17/nov/2021 al 02/dic/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 37.24 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 19.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 05/ene/2022 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>"Cris Tales es un sentido y precioso homenaje a los JRPG clásicos con una nueva perspectiva. Explora el pasado, actúa en el presente y observa como tus decisiones cambian dinámicamente el futuro, ¡todo en tu misma pantalla de juego! Vive el despertar de Crisbell, la Maga del Tiempo, y únete a sus fantásticos compañeros en un mundo de fantasía que se enfrenta a un oscuro futuro. La poderosa Emperatriz de las Eras y sus fuerzas amenazan con provocar un cataclismo que destruya Crystallis y los otros cuatro reinos de la región.<br/>Para detener a la Emperatriz y reescribir el futuro de la nación, te embarcarás en un tormentoso viaje a lo largo y ancho de los reinos en el que conocerás y reclutarás a poderosos aliados que te ayudarán en la lucha. Domina sus habilidades y la magia temporal única de Crisbell para vencer a enemigos poderosos; envíalos al pasado para enfrentarte a una versión más joven y débil, transporta a un enemigo al futuro en el que ha sucumbido al daño de un veneno aplicado en el presente o crea tus propias estrategias en este sistema de combate.<br/>Conforme crece el poder de Crisbell, tomarás decisiones que tendrán sus consecuencias en la gente que conoces, consecuencias que tendrán un impacto en el mundo que experimentas en tiempo real a lo largo de tu viaje. ¡Todos los personajes, PNJ, enemigos y reinos tienen un pasado, un presente y uno o más futuros dependiendo de tus acciones! El precioso arte en 2D dibujado a mano se anima fotograma a fotograma para dar vida a todas las posibilidades en más de 20 horas de juego. <br/>Experimenta una combinación única de historias que se ramifican, combate innovador y la emoción de un RPG clásico en Cris Tales, una exploración apasionante e inolvidable de cómo nuestras acciones se repiten en el tiempo."<br/><br/><br/>Un único jugador offline<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV'],
+      labels: ['08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV', '22 NOV', '25 NOV', '28 NOV', '01 DIC', '04 DIC', '07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC', '25 DIC', '28 DIC', '31 DIC', '03 ENE', '06 ENE'],
       datasets: [{
-        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 25.99, 25.99, 25.99, 25.99, 25.99],
+        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 25.99, 25.99, 25.99, 25.99, 25.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 19.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

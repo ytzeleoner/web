@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://apollo2.dl.playstation.net/cdn/EP0001/CUSA04294_00/D65wP6Amsvp9N3wrFqJBjjhpI5e6L5uG.png?w=253&amp;h=253">
@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.34</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 80%
+				   <i class="text-danger fas fa-caret-down"></i> 85%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>15.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>11.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 64.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 68.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>79.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 28 de octubre</p>
+            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 69.44 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 14.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 08/jul/2020 al 23/jul/2020 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 67.95 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 11.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 05/ene/2022 al 20/ene/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Juega a los packs de contenido descargable con 30 días de antelación en PlayStation®4<br/><br/><br/>Juega como Marcus Holloway, un joven y brillante hacker que vive en la cuna de la revolución tecnológica, la zona de la bahía de San Francisco.<br/><br/><br/>Colabora con DedSec, un conocido grupo de hackers, para ejecutar el mayor pirateo de la historia acaba con ctOS 2.0, un sistema operativo utilizado por un grupo de genios criminales para vigilar y manipular a los ciudadanos a gran escala.<br/><br/><br/>· Explora un mundo abierto, dinámico, lleno de posibilidades.<br/>·  Hackea dispositivos conectados y hazte con el control de la ciudad. <br/>·  Desarrolla diferentes habilidades según tu estilo de juego y mejora tus herramientas de hacker: coches por radiocontrol, dron cuadrirrotor, armas impresas en 3D y mucho más. <br/>·   Mantente conectado con tus amigos en la nueva experiencia en cooperativo y de enfrentamiento de Watch Dogs.<br/><br/><br/>La edición Deluxe de Watch Dogs® 2 incluye:<br/>- El juego <br/>- El pack Deluxe: 2 packs de personalización <br/><br/><br/><br/><br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['29 JUL', '01 AGO', '04 AGO', '07 AGO', '10 AGO', '13 AGO', '16 AGO', '19 AGO', '22 AGO', '25 AGO', '28 AGO', '31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT'],
+      labels: ['08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV', '22 NOV', '25 NOV', '28 NOV', '01 DIC', '04 DIC', '07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC', '25 DIC', '28 DIC', '31 DIC', '03 ENE', '06 ENE'],
       datasets: [{
-        data: [79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 15.99, 15.99, 15.99, 15.99, 15.99],
+        data: [79.99, 79.99, 15.99, 15.99, 15.99, 15.99, 15.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 79.99, 11.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
