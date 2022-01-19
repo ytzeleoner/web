@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 2.89</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 62%
+				   <i class="text-danger fas fa-caret-down"></i> 65%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>4.93€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>4.54€</b>
             		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 3.89€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 8.06€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 8.45€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>12.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 02 de diciembre</p>
+            		<p class="card-text text-info text-center">Hasta el 03 de febrero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 10.51 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 4.93 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 17/nov/2021 al 02/dic/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 11.57 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 4.54 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 19/ene/2022 al 03/feb/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Nubla 2, continúa la aventura de nuestros personajes a partir de cómo la dejamos en Nubla. Una vez llegados al continente, deberán iniciar la búsqueda de La Ciudad en el Centro del Mundo, el lugar donde podrán devolver la memoria a ese mundo que ahora la ha perdido. Pero llegar no será fácil. La Ciudad no está en un lugar físico, sino que está más allá de los sueños y el viaje, sin duda será duro y peligroso, para nuestros protagonistas, que ahora cuentan, no sólo con Nubla para lograr su objetivo sino con muchos otros personajes y habitantes de ese mundo que irán encontrando en su camino. <br/><br/>Nubla 2, como su antecesor, no sólo conjuga la narrativa del videojuego y el arte y conceptos tras los cuadros del museo Thyssen-Bornemisza, sino que pretende hablarnos de mucho más: Si en Nubla el tema recurrente era la búsqueda de la identidad y la memoria, ahora lo es el tema de las fronteras, temporales y espaciales, que nos convierten a todos en refugiados en un mundo que ya no es el nuestro. <br/><br/><br/></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV'],
+      labels: ['21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE'],
       datasets: [{
-        data: [12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 4.93, 4.93, 4.93, 4.93, 4.93, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 4.93, 4.93, 4.93, 4.93, 4.93],
+        data: [12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 4.93, 4.93, 4.93, 4.93, 4.93, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 4.54],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
