@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://vulcan.dl.playstation.net/img/cfn/11307WgnaoFQf30um_YC1-__ir9kfb0jS0XUmY2od7ZjOOzQgQ02GHf91WxpE007B7-IkkCpcnnLfXrtY4jTqqoNXpMy5Xm7.png?w=253&amp;h=253">
@@ -74,24 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.66</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 70%
+				   <i class="text-danger fas fa-caret-down"></i> 80%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>17.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 14.99€</small>
-            		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 42.00€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>11.99€</b>
+             		</p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 48.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 23 de diciembre</p>
+            		<p class="card-text text-info text-center">Hasta el 17 de febrero</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 41.50 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 14.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 20/oct/2021 al 04/nov/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 48.39 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 11.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/feb/2022 al 17/feb/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>El precio de oferta especial anterior válido de 15-09-2021 a 29-09-2021 era €14.99.<br/><br/>*Zombie Army 4 Deluxe Edition incluye el juego principal y contenido descargable adicional*<br/><br/><br/>Las hordas de Hitler regresan a por más en este shooter de los creadores de Sniper Elite 4. En este juego, ambientado en la Europa de los años 40, te esperan abominables enemigos sobrenaturales, armas épicas y una nueva campaña para 1-4 jugadores. ¡Libra a la humanidad del apocalipsis!<br/><br/><br/>La Resistencia ha derrotado a la Hitler zombi y lo ha mandado al infierno. ¡Pero los muertos han vuelto a alzarse y tienen más hambre que nunca! Continúa la versión alternativa de la historia iniciada con Zombie Army Trilogy y destapa un siniestro plan que te llevará a recorrer toda Italia e incluso el más allá.<br/><br/><br/>Disfruta de un sistema de balística que definió un género, elige al personaje que más se amolde a tu estilo y mejora tu arsenal con fuego, rayos y esencia divina para hacer frente a los muertos. ¡Y cuando la horda te rodee, destrózala con el combate cuerpo a cuerpo mejorado y con brutales eliminaciones!<br/><br/><br/></p>
@@ -128,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV', '22 NOV', '25 NOV', '28 NOV', '01 DIC', '04 DIC', '07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC'],
+      labels: ['04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV', '22 NOV', '25 NOV', '28 NOV', '01 DIC', '04 DIC', '07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC', '25 DIC', '28 DIC', '31 DIC', '03 ENE', '06 ENE', '09 ENE', '12 ENE', '15 ENE', '18 ENE', '21 ENE', '24 ENE', '27 ENE', '30 ENE', '02 FEB'],
       datasets: [{
-        data: [59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 14.99, 14.99, 14.99, 14.99, 14.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99],
+        data: [59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 11.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
