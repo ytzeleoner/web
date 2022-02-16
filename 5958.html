@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 20%
+				   <i class="text-danger fas fa-caret-down"></i> 33%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>47.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>40.19€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 12.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 19.80€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 08 de enero</p>
+            		<p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 57.75 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 47.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 08/ene/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 57.53 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 40.19 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 16/feb/2022 al 03/mar/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Tres ciudades icónicas, tres historias épicas. Juega a los clásicos de la trilogía original de Grand Theft Auto que definieron el género: Grand Theft Auto III, Grand Theft Auto: Vice City y Grand Theft Auto: San Andreas, actualizados para una nueva generación con mejoras a todos los niveles, como una deslumbrante nueva iluminación, entornos perfeccionados, texturas de alta resolución, mayor distancia de dibujado, controles y apuntado al estilo de Grand Theft Auto V, y muchas cosas más que harán que estos mundos tan queridos cobren vida con niveles de detalle inéditos.<br/> <br/>Grand Theft Auto: The Trilogy – The Definitive Edition incluye: <br/> <br/>•	Grand Theft Auto III: todo empieza en Liberty City. Con la libertad revolucionaria de ir a cualquier sitio y atracar a quien quieras, Grand Theft Auto III pone el centro del inframundo criminal al alcance de tu mano, si tienes lo que hay que tener.<br/><br/>•	Grand Theft Auto: Vice City: te damos la bienvenida a los 80. De la década de los cardados y los trajes de tonos pastel, llega la historia de un hombre que ascendió a lo más alto del mundo del crimen. Grand Theft Auto regresa con la historia de traición y venganza de Tommy Vercetti en una ciudad tropical rebosante de neones, exceso y posibilidades.<br/><br/>•	Grand Theft Auto: San Andreas: hace cinco años, Carl "CJ" Johnson escapó de la bruma de Los Santos, San Andreas... una ciudad destrozada por las bandas, las drogas y la corrupción. Ahora, a principios de los 90, C. J. tiene que volver a casa. Su madre ha sido asesinada, su familia se ha desmoronado y sus amigos de la infancia van camino del desastre. Nada más volver al barrio, un par de policías corruptos lo acusan injustamente de homicidio. C. J. se ve obligado a emprender un viaje por todo el estado de San Andreas para salvar a su familia y hacerse con el control de las calles en la siguiente entrega de la saga que lo cambió todo.<br/><br/>Desarrollado por Rockstar Games. Adaptado por Grove Street Games.<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE'],
+      labels: ['18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC', '30 DIC', '02 ENE', '05 ENE', '08 ENE', '11 ENE', '14 ENE', '17 ENE', '20 ENE', '23 ENE', '26 ENE', '29 ENE', '01 FEB', '04 FEB', '07 FEB', '10 FEB', '13 FEB', '16 FEB'],
       datasets: [{
-        data: [59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 47.99, 47.99, 47.99, 47.99, 47.99, 47.99],
+        data: [59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 47.99, 47.99, 47.99, 47.99, 47.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 40.19],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

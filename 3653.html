@@ -74,24 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.34</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 40%
+				   <i class="text-danger fas fa-caret-down"></i> 45%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>11.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 9.99€</small>
-            		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 8.00€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>10.99€</b>
+             		</p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 9.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de febrero</p>
+            		<p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 16.74 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 11.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 19/ene/2022 al 03/feb/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 17.34 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 10.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 16/feb/2022 al 03/mar/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>VR FITNESS AWARDS 2018 BEST VR MEDITATION APP OF THE YEAR NOMINEE<br/><br/><br/>Mind Labyrinth VR Dreams te permitirá descubrir unos  tipos diferentes de ambientes imaginados y aprender nuevas emociones en los increíbles sueños virtuales. <br/><br/><br/>Es un viaje meditativo lleno de expresiones y acciones inspiradoras y alentadoras para intensificar tu experiencia.<br/><br/><br/>Investiga diferentes estados psíquicos y descubre el equilibrio emocional admirando una gran banda sonora con música de compositores de Hollywood que ganaron el Oscar y de artistas internacionales seleccionados  entre los mejores.<br/><br/><br/>Busca bolas luminosas de posibilidades, recógelas todas y vas a obtener acceso a un nuevo ambiente sobrenatural y a las funciones que se actualizan constantemente (DLC).<br/><br/><br/>Mind Labyrinth VR Dreams es mucho más ¡Es tu mundo de fantasía al que puedes acudir cuando quieras relajarte o experimentar nuevas emociones!<br/><br/><br/>Mind Labyrinth VR Dreams - MY WORLD -<br/><br/><br/>Made in collaboration with SHRO - Sbarro Health Research Organization - Philadelphia<br/><br/>Además, en consolas PS5™: necesitas el adaptador para PlayStation Camera (no requiere compra), visita Playstation.com/camera-adaptor; para una mejor experiencia con PlayStation®VR en PS5™ recomendamos usar el mando inalámbrico DUALSHOCK®4.<br/><br/><br/></p>
@@ -128,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV', '22 NOV', '25 NOV', '28 NOV', '01 DIC', '04 DIC', '07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC', '25 DIC', '28 DIC', '31 DIC', '03 ENE', '06 ENE', '09 ENE', '12 ENE', '15 ENE', '18 ENE', '21 ENE', '24 ENE', '27 ENE', '30 ENE', '02 FEB'],
+      labels: ['18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC', '30 DIC', '02 ENE', '05 ENE', '08 ENE', '11 ENE', '14 ENE', '17 ENE', '20 ENE', '23 ENE', '26 ENE', '29 ENE', '01 FEB', '04 FEB', '07 FEB', '10 FEB', '13 FEB', '16 FEB'],
       datasets: [{
-        data: [19.99, 19.99, 11.99, 11.99, 11.99, 11.99, 11.99, 11.99, 11.99, 11.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 11.99, 11.99, 11.99, 11.99, 11.99],
+        data: [11.99, 11.99, 11.99, 11.99, 11.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 11.99, 11.99, 11.99, 11.99, 11.99, 19.99, 19.99, 19.99, 19.99, 10.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

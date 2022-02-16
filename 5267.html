@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 40%
+				   <i class="text-danger fas fa-caret-down"></i> 45%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>17.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>16.49€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 12.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 13.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
+            		<p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 28.01 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 17.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 05/ene/2022 al 20/ene/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 27.86 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 16.49 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 16/feb/2022 al 03/mar/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>"Gran Ladrón de Caballos: Gánate el reino o acaba con él.<br/>¡El clásico juego GTA ahora con un lavado de cara medieval! El gran torneo ofrece la mano de la princesa como premio. Pasa de ser un forajido a un campeón. O no. ""Guy"" (ese es tu nombre) y su amigo (convenientemente llamado ""Buddy"") irán a por el premio usando granadas de mano santas, caballos tuneados, y escoltados por sus propios juglares personales.  <br/><br/>Características<br/><br/>?	Gran Ladrón de Caballos: Causa estragos en un mundo medieval inspirado en el clásico juego GTA. Usa espadas, lanzas, zurullos... ¡lo que haga falta para completar tu trabajo!<br/>?	Gánate la corona: Siendo un pobre plebeyo, tendrás que ponerte creativo para ganar el Gran Torneo. Forma extrañas alianzas, traiciona a tus enemigos y desentierra esqueletos de dinosaurio (¿por qué no?).<br/>?	Un sandbox medieval: Tu progreso depende de ti. ¡Pasa tiempo completando misiones, causando estragos y riéndote a costa de los demás!<br/>?	Haz muchas payasadas: Lanza a las vacas por los aires, arrastra tus vecinos por el barro, lanza granadas de mano santas o crea sofisticados dibujos mientras labras el campo.<br/>?	El poder de la juglaría: Contrata a un compañero musical para que toque las melodías que te gustan y añada una potente banda sonora a tus aventuras."<br/><br/><br/>Un único jugador offline<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE'],
+      labels: ['18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC', '30 DIC', '02 ENE', '05 ENE', '08 ENE', '11 ENE', '14 ENE', '17 ENE', '20 ENE', '23 ENE', '26 ENE', '29 ENE', '01 FEB', '04 FEB', '07 FEB', '10 FEB', '13 FEB', '16 FEB'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 17.99, 17.99, 17.99, 17.99, 17.99],
+        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 17.99, 17.99, 17.99, 17.99, 17.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 16.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
