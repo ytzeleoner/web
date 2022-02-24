@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.27</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 20%
+				   <i class="text-danger fas fa-caret-down"></i> 30%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>23.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>20.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 6.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 9.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 08 de enero</p>
+            		<p class="card-text text-info text-center">Hasta el 10 de marzo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 28.87 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 23.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 08/ene/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 28.67 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 20.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 23/feb/2022 al 10/mar/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Un laberinto de otro mundo ha aparecido de repente a las afueras de un tranquilo pueblo. ¡Haz un uso inteligente de tus habilidades para explorar hasta el último rincón, superar obstáculos y vencer a tus enemigos en batallas emocionantes!<br/><br/>De la mano del equipo de desarrollo de la legendaria franquicia FINAL FANTASY, DUNGEON ENCOUNTERS es un RPG de exploración de mazmorras en el que tendrás que usar la estrategia para sobrevivir. Su interfaz sencilla te da la libertad para preparar y gestionar tu grupo mientras te esfuerzas por llegar a la última planta.<br/><br/>Una filosofía de diseño minimalista y un aspecto gráfico intencionalmente sencillo para que te centres únicamente en las fascinantes mecánicas de juego. <br/>¡Te espera una formidable mazmorra subterránea de 99 pisos! <br/><br/>Durante tus expediciones, descubrirás objetos poderosos y raros, conocerás a aventureros errantes que podrían convertirse en nuevos aliados y te enfrentarás cara a cara a monstruos letales.<br/><br/>Tendrás que ir probando y descartando tácticas hasta dar con la mejor estrategia para alcanzar los niveles más profundos de la mazmorra.<br/><br/>¿Tendrás lo necesario para superar las muchas pruebas que te esperan y descubrir los secretos de la mazmorra?<br/><br/>?Eventos<br/>Al descubrir y visitar los espacios con números blancos, obtendrás objetos, desbloquearás y cambiarás habilidades, recuperarás la salud de tu grupo, encontrarás a comerciantes escondidos y mucho más.<br/><br/>Los enfrentamientos, marcados con números negros, están escondidos a lo largo del mapa. Sin embargo, se pueden revelar con una habilidad especial, por lo que podrás elegir cuándo y dónde enfrentarte a tus enemigos.<br/><br/>Los eventos que hayas descubierto con anterioridad se registrarán en el historial de eventos, un valioso recurso que te permitirá revisar las experiencias pasadas para enfrentarte a los desafíos futuros.<br/><br/><br/>?Batallas<br/>Prueba tu estrategia en batallas emocionantes con el sistema BTA (batalla de tiempo activo), que se hizo famoso con la saga FINAL FANTASY.<br/><br/>Bajo la dirección de Ito Hiroyuki, creador del sistema BTA, las batallas se jugarán en tiempo real, con una versión optimizada y pulida del diseño clásico, lo que promete combates divertidos y desafiantes.<br/><br/><br/>?Mapa<br/>Un mapa en blanco te espera. Mediante la exploración e investigación de las casillas de cada nivel, obtendrás puntos de habilidad. ¡Supera obstáculos que incluyen pasadizos secretos y trampas ocultas y conquista la mazmorra!<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE'],
+      labels: ['26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 23.99, 23.99, 23.99, 23.99, 23.99, 23.99],
+        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 23.99, 23.99, 23.99, 23.99, 23.99, 23.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 20.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
