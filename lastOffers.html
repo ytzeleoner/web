@@ -1,4 +1,338 @@
-<!DOCTYPE html><html><head>  <meta charset="utf-8">  <title>BuscaPlay</title>  <link rel="stylesheet" href="css/styles.css">  <script src="https://kit.fontawesome.com/d9ea194290.js" crossorigin="anonymous"></script>  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script><style type="text/css">.linkGame:hover{	pointer:cursor;	text-decoration: none;}#myBtn {    position: fixed;    bottom: 0em;    z-index: 2;    background-color: rgba(23, 162, 184,0.7);}#myBtn2 {    position: fixed;    bottom: 2em;    z-index: 2;}.paginacionLeft{	width: 50%;	float:left;}.paginacionRight{	width: 50%;	float:right;}</style><script>var orderEuros=true;var orderPercentage=false;var orderStars=true;var $superWrapper;var MAX_ITEMS=24;pagina=0;				function ocultando(){   				$superWrapper  = $('#pills-home > div.row.container-fluid.m-0').find('.ahorro');   				   				if (pagina==0){   					$('#prev').hide();   				}   				   				if (pagina==1){   					$('#prev').show();   				}   				   				if ($superWrapper.length>MAX_ITEMS*(pagina+1)){   					$('#next').show();   				}else{   					$('#next').hide();   				}   				   				var i=0;   				while (i<$superWrapper.length){   					if (i<MAX_ITEMS*(pagina+1) && (i>=MAX_ITEMS*pagina)){   						console.log("i--> "+i+" show");   						$($superWrapper[i]).show();   					}else{   						$($superWrapper[i]).hide();   						console.log("i--> "+i+" hide");   					}   					   					i++;   				}   							}		$( document ).ready(function() {		    console.log( "ready!" );		    		    		    		    $("#next").click(function() {		    	pagina++;		    	ocultando();		    });		     $("#prev").click(function() {		    	pagina--;		    	ocultando();		    });		    		    		    $( "#orderByEuros" ).click(function() {		    	pagina=0;			  console.log("Ordenando by Euros!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderEuros){					orderEuros=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.name - +b.dataset.name;					}).appendTo( $wrapper );				}else{					orderEuros=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.name - +a.dataset.name;					}).appendTo( $wrapper );				}								ocultando();			});						$( "#orderByStars" ).click(function() {			pagina=0;			  console.log("Ordenando by Stars "+orderStars);				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderStars){					orderStars=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.stars - +b.dataset.stars;					}).appendTo( $wrapper );				}else{					orderStars=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.stars - +a.dataset.stars;					}).appendTo( $wrapper );				}								ocultando();			});						$( "#orderByPercentage" ).click(function() {			pagina=0;			  console.log("Ordenando by Percentage!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (orderPercentage){					orderPercentage=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.percentage - +b.dataset.percentage;					}).appendTo( $wrapper );				}else{					orderPercentage=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.percentage - +a.dataset.percentage;					}).appendTo( $wrapper );				}								ocultando();			});		    		    $( "#orderByEuros" ).click();		    		});//Fin Jquery ready			</script></head><body><button id="myBtn2" class="btn btn-block p-2">	<div class="paginacionLeft text-left">		<a href="#top" id="prev" class="text-white h1 text-decoration-none"><i class="fas fa-arrow-alt-circle-left  bg-dark rounded w-auto"></i></a>	</div>	<div class="paginacionRight text-right">		<a href="#top" id="next" class="text-white h1 text-decoration-none"><i class="fas fa-arrow-alt-circle-right bg-dark rounded w-auto"></i></a>	</div></button><button id="myBtn" class="btn btn-info btn-block p-2"><a href="#top" class="text-white text-decoration-none">Back to the Top</a></button>  <section id="title">    <!-- Nav Bar -->    <nav class="navbar bg-info sticky-top navbar-expand-lg navbar-dark">        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>        <a class="navbar-brand" href="index.html">BuscaPlay</a>               <div class="collapse navbar-collapse" id="navbarSupportedContent">        <ul class="navbar-nav ml-auto">            <li class="nav-item">                <a class="nav-link" href="#">Nuevas Ofertas</a>            </li>            <li class="nav-item">                <a class="nav-link" href="psnow.html">Juegos PS Now</a>            </li>            <li class="nav-item">                <a class="nav-link" href="goodMoment.html">Buen Momento</a>            </li>        </ul>     </div>    </nav>    <div class="tab-content container-fluid" id="pills-tabContent">  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">    	    	    	    	    	<!-- Botones para ordenar -->    	<div class="container sticky-top-2">			<div class="btn-group btn-group-toggle bg-white" data-toggle="buttons">			  <label class="btn btn-outline-info active">			    <input type="radio" name="options" id="orderByEuros" autocomplete="off" checked> <i class="fas fa-sort-numeric-up">Desc. en €</i>			  </label>			  <label class="btn btn-outline-info">			    <input type="radio" name="options" id="orderByPercentage" autocomplete="off"> <i class="fas fa-sort-numeric-up"> Desc. en %</i>			  </label>			  <label class="btn btn-outline-info">			    <input type="radio" name="options" id="orderByStars" autocomplete="off"> <i class="fas fa-star"> Rating </i>			  </label>			</div>		</div>    <!-- FIN botones para ordenar -->              		  	<div class="row container-fluid m-0">      <a data-name="6.75" data-stars="3.00" data-percentage="45" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5692.html">
+<!DOCTYPE html><html><head>  <meta charset="utf-8">  <title>BuscaPlay</title>  <link rel="stylesheet" href="css/styles.css">  <script src="https://kit.fontawesome.com/d9ea194290.js" crossorigin="anonymous"></script>  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script><style type="text/css">.linkGame:hover{	pointer:cursor;	text-decoration: none;}#myBtn {    position: fixed;    bottom: 0em;    z-index: 2;    background-color: rgba(23, 162, 184,0.7);}#myBtn2 {    position: fixed;    bottom: 2em;    z-index: 2;}.paginacionLeft{	width: 50%;	float:left;}.paginacionRight{	width: 50%;	float:right;}</style><script>var orderEuros=true;var orderPercentage=false;var orderStars=true;var $superWrapper;var MAX_ITEMS=24;pagina=0;				function ocultando(){   				$superWrapper  = $('#pills-home > div.row.container-fluid.m-0').find('.ahorro');   				   				if (pagina==0){   					$('#prev').hide();   				}   				   				if (pagina==1){   					$('#prev').show();   				}   				   				if ($superWrapper.length>MAX_ITEMS*(pagina+1)){   					$('#next').show();   				}else{   					$('#next').hide();   				}   				   				var i=0;   				while (i<$superWrapper.length){   					if (i<MAX_ITEMS*(pagina+1) && (i>=MAX_ITEMS*pagina)){   						console.log("i--> "+i+" show");   						$($superWrapper[i]).show();   					}else{   						$($superWrapper[i]).hide();   						console.log("i--> "+i+" hide");   					}   					   					i++;   				}   							}		$( document ).ready(function() {		    console.log( "ready!" );		    		    		    		    $("#next").click(function() {		    	pagina++;		    	ocultando();		    });		     $("#prev").click(function() {		    	pagina--;		    	ocultando();		    });		    		    		    $( "#orderByEuros" ).click(function() {		    	pagina=0;			  console.log("Ordenando by Euros!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderEuros){					orderEuros=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.name - +b.dataset.name;					}).appendTo( $wrapper );				}else{					orderEuros=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.name - +a.dataset.name;					}).appendTo( $wrapper );				}								ocultando();			});						$( "#orderByStars" ).click(function() {			pagina=0;			  console.log("Ordenando by Stars "+orderStars);				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderStars){					orderStars=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.stars - +b.dataset.stars;					}).appendTo( $wrapper );				}else{					orderStars=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.stars - +a.dataset.stars;					}).appendTo( $wrapper );				}								ocultando();			});						$( "#orderByPercentage" ).click(function() {			pagina=0;			  console.log("Ordenando by Percentage!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (orderPercentage){					orderPercentage=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.percentage - +b.dataset.percentage;					}).appendTo( $wrapper );				}else{					orderPercentage=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.percentage - +a.dataset.percentage;					}).appendTo( $wrapper );				}								ocultando();			});		    		    $( "#orderByEuros" ).click();		    		});//Fin Jquery ready			</script></head><body><button id="myBtn2" class="btn btn-block p-2">	<div class="paginacionLeft text-left">		<a href="#top" id="prev" class="text-white h1 text-decoration-none"><i class="fas fa-arrow-alt-circle-left  bg-dark rounded w-auto"></i></a>	</div>	<div class="paginacionRight text-right">		<a href="#top" id="next" class="text-white h1 text-decoration-none"><i class="fas fa-arrow-alt-circle-right bg-dark rounded w-auto"></i></a>	</div></button><button id="myBtn" class="btn btn-info btn-block p-2"><a href="#top" class="text-white text-decoration-none">Back to the Top</a></button>  <section id="title">    <!-- Nav Bar -->    <nav class="navbar bg-info sticky-top navbar-expand-lg navbar-dark">        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>        <a class="navbar-brand" href="index.html">BuscaPlay</a>               <div class="collapse navbar-collapse" id="navbarSupportedContent">        <ul class="navbar-nav ml-auto">            <li class="nav-item">                <a class="nav-link" href="#">Nuevas Ofertas</a>            </li>            <li class="nav-item">                <a class="nav-link" href="psnow.html">Juegos PS Now</a>            </li>            <li class="nav-item">                <a class="nav-link" href="goodMoment.html">Buen Momento</a>            </li>        </ul>     </div>    </nav>    <div class="tab-content container-fluid" id="pills-tabContent">  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">    	    	    	    	    	<!-- Botones para ordenar -->    	<div class="container sticky-top-2">			<div class="btn-group btn-group-toggle bg-white" data-toggle="buttons">			  <label class="btn btn-outline-info active">			    <input type="radio" name="options" id="orderByEuros" autocomplete="off" checked> <i class="fas fa-sort-numeric-up">Desc. en €</i>			  </label>			  <label class="btn btn-outline-info">			    <input type="radio" name="options" id="orderByPercentage" autocomplete="off"> <i class="fas fa-sort-numeric-up"> Desc. en %</i>			  </label>			  <label class="btn btn-outline-info">			    <input type="radio" name="options" id="orderByStars" autocomplete="off"> <i class="fas fa-star"> Rating </i>			  </label>			</div>		</div>    <!-- FIN botones para ordenar -->              		  	<div class="row container-fluid m-0">      <a data-name="37.00" data-stars="4.60" data-percentage="74" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2370.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0700/CUSA09923_00/X3oJLtQpwaJKP3KES1SHA3NeEOQznOZu.png?w=253&amp;h=253" alt="DIGIMON STORY: CYBER SLEUTH - HACKER'S MEMORY">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.60</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 74%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 7.99€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 37.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="11.25" data-stars="4.18" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2898.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4034/CUSA05717_00/j6QttwuQjl1iiRaWAIstyYXnhFUuhega.png?w=253&amp;h=253" alt="88 Heroes">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.18</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 75%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.74€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 2.24€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.25€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="19.50" data-stars="4.80" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3093.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP0102/CUSA10713_00/wO6Ptc3TBB4lYB3Sz10UV3DWCxdKrbkc.png?w=253&amp;h=253" alt="Mega Man X Legacy Collection 1+2">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.80</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.49€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 19.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>38.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="2.40" data-stars="4.33" data-percentage="40" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5909.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202102/1010/NyrmRLbxTNKqgvgG55UAuOZr.png?w=253&amp;h=253" alt="Bishoujo Battle Cyber Panic!">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.33</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 40%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.59€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 2.40€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>5.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="35.00" data-stars="4.67" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1889.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0700/CUSA06210_00/p4461AvBMbNi2S9dsmKloUhD4iMbJbaH.png?w=253&amp;h=253" alt="NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.67</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 35.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="4.00" data-stars="4.97" data-percentage="20" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6360.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202109/2819/hv1FyW0hM3h4EjIRpBuhQAzD.png?w=253&amp;h=253" alt="Corpse Party">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.97</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 20%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>15.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 4.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="28.00" data-stars="4.70" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2066.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4492/CUSA08343_00/SBbsiPymnAXNpGKwGEzhwiJMxh8U30Rf.png?w=253&amp;h=253" alt="SENRAN KAGURA Peach Beach Splash Sexy Soaker Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.70</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>11.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 28.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="20.00" data-stars="4.13" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2996.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202010/2319/XtqYrG2LWer39eExYBsh9J5x.png?w=253&amp;h=253" alt="Shadow of the Colossus™">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.13</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="8.40" data-stars="4.43" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3812.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP0122/CUSA06010_00/Cy6Qu5eVf3LxAm2LRX2IbdhX2m9yGy9y.png?w=253&amp;h=253" alt="Kero Blaster">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.43</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.59€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.40€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>11.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="20.00" data-stars="4.49" data-percentage="40" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3203.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP1063/CUSA10488_00/TEG6VlKuAmpPWVWgJw9iHA70Tvoy0Z2K.png?w=253&amp;h=253" alt="SNK HEROINES Tag Team Frenzy">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.49</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 40%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="21.25" data-stars="4.11" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6147.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP1287/CUSA07606_00/WXG8xbhjHng9us8ujBDOOPe5s7NiyOJG.png?w=253&amp;h=253" alt="River City Melee: Battle Royal Special">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.11</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 85%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.74€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.25€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="7.00" data-stars="4.67" data-percentage="35" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5599.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202008/2608/nvW0GoBXGMIuWkGRRCjbjbm9.png?w=253&amp;h=253" alt="Ginga Force">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.67</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 35%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 10.99€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="40.20" data-stars="3.46" data-percentage="67" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3858.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/UP0700/CUSA11566_00/XkReiX46FZzQKwNkP1mRen0sNxXrci5D.png?w=253&amp;h=253" alt="New Gundam Breaker">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.46</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 67%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.79€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 13.79€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 40.20€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="50.40" data-stars="4.57" data-percentage="72" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1860.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/11307ZeyIJ-CNDOZaMijl0UcNihbdRUTuE7agy3ANCO38VewX7XgP038qyqJCPQ3qNuehqVUIjN-qFBD6qOVpEIv9Jk6l0j9.png?w=253&amp;h=253" alt="ONE PIECE: PIRATE WARRIORS 4">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.57</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 72%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.59€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 50.40€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="21.25" data-stars="3.87" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2134.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4293/CUSA15305_00/0ZLlEQ9o2MDjID9PLNAONYkOIyWfIsxo.png?w=253&amp;h=253" alt="Kotodama: The 7 Mysteries of Fujisawa">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.87</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 85%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.74€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.25€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="6.75" data-stars="3.00" data-percentage="45" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5692.html">
       
         <div class="card m-2">
           <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/11307JMad47b3r8vR99ehGkmtQqLhcGpkqKNMKSD__h9_PhUD4UeyxJLWPams0ufje_h5XkaSVUc4oJ4Aj7044kCmTMY-C0t.png?w=253&amp;h=253" alt="Holy Potatoes: What the Hell?!">
@@ -4897,344 +5231,78 @@
         </div> 
       
       </a>
-      <a data-name="37.00" data-stars="4.60" data-percentage="74" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2370.html">
+      <a data-name="12.50" data-stars="2.53" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5081.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0700/CUSA09923_00/X3oJLtQpwaJKP3KES1SHA3NeEOQznOZu.png?w=253&amp;h=253" alt="DIGIMON STORY: CYBER SLEUTH - HACKER'S MEMORY">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/0109/nK7LoU7h0tNJnCrRNvNwuRGa.png?w=253&amp;h=253" alt="Liftoff: Drone Racing">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.60</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 74%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 7.99€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 37.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="11.25" data-stars="4.18" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2898.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4034/CUSA05717_00/j6QttwuQjl1iiRaWAIstyYXnhFUuhega.png?w=253&amp;h=253" alt="88 Heroes">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.18</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 75%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.74€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 2.24€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.25€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="19.50" data-stars="4.80" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3093.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP0102/CUSA10713_00/wO6Ptc3TBB4lYB3Sz10UV3DWCxdKrbkc.png?w=253&amp;h=253" alt="Mega Man X Legacy Collection 1+2">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.80</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 2.53</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
 		   <i class="text-danger fas fa-caret-down"></i> 50%
 		   
 		   </p>
 		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.49€</b>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.49€</b>
              </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 19.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>38.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
       
       </a>
-      <a data-name="2.40" data-stars="4.33" data-percentage="40" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5909.html">
+      <a data-name="28.00" data-stars="4.96" data-percentage="40" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5169.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202102/1010/NyrmRLbxTNKqgvgG55UAuOZr.png?w=253&amp;h=253" alt="Bishoujo Battle Cyber Panic!">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202102/2321/RiRmEEjkFAcItGQ8cxcEBfGQ.png?w=253&amp;h=253" alt="Shin Megami Tensei III Nocturne HD Remaster Digital Deluxe Edition">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.33</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.96</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
 		   <i class="text-danger fas fa-caret-down"></i> 40%
 		   
 		   </p>
 		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.59€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 2.40€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>5.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="35.00" data-stars="4.67" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1889.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0700/CUSA06210_00/p4461AvBMbNi2S9dsmKloUhD4iMbJbaH.png?w=253&amp;h=253" alt="NARUTO SHIPPUDEN: Ultimate Ninja STORM 4 Road to Boruto">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.67</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 35.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="4.00" data-stars="4.97" data-percentage="20" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6360.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202109/2819/hv1FyW0hM3h4EjIRpBuhQAzD.png?w=253&amp;h=253" alt="Corpse Party">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.97</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 20%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>15.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 4.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="28.00" data-stars="4.70" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2066.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4492/CUSA08343_00/SBbsiPymnAXNpGKwGEzhwiJMxh8U30Rf.png?w=253&amp;h=253" alt="SENRAN KAGURA Peach Beach Splash Sexy Soaker Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.70</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>11.99€</b>
-             </p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>41.99€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 38.49€</small>
+            </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 28.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="20.00" data-stars="4.13" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2996.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202010/2319/XtqYrG2LWer39eExYBsh9J5x.png?w=253&amp;h=253" alt="Shadow of the Colossus™">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.13</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="8.40" data-stars="4.43" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3812.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP0122/CUSA06010_00/Cy6Qu5eVf3LxAm2LRX2IbdhX2m9yGy9y.png?w=253&amp;h=253" alt="Kero Blaster">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.43</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.59€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.40€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>11.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="20.00" data-stars="4.49" data-percentage="40" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3203.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP1063/CUSA10488_00/TEG6VlKuAmpPWVWgJw9iHA70Tvoy0Z2K.png?w=253&amp;h=253" alt="SNK HEROINES Tag Team Frenzy">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.49</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 40%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="21.25" data-stars="4.11" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6147.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP1287/CUSA07606_00/WXG8xbhjHng9us8ujBDOOPe5s7NiyOJG.png?w=253&amp;h=253" alt="River City Melee: Battle Royal Special">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.11</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 85%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.74€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.25€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="7.00" data-stars="4.67" data-percentage="35" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5599.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202008/2608/nvW0GoBXGMIuWkGRRCjbjbm9.png?w=253&amp;h=253" alt="Ginga Force">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.67</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 35%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 10.99€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 7.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="40.20" data-stars="3.46" data-percentage="67" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3858.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/UP0700/CUSA11566_00/XkReiX46FZzQKwNkP1mRen0sNxXrci5D.png?w=253&amp;h=253" alt="New Gundam Breaker">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.46</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 67%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.79€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 13.79€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 40.20€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="50.40" data-stars="4.57" data-percentage="72" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1860.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/11307ZeyIJ-CNDOZaMijl0UcNihbdRUTuE7agy3ANCO38VewX7XgP038qyqJCPQ3qNuehqVUIjN-qFBD6qOVpEIv9Jk6l0j9.png?w=253&amp;h=253" alt="ONE PIECE: PIRATE WARRIORS 4">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.57</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 72%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.59€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 50.40€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
       
       </a>
-      <a data-name="21.25" data-stars="3.87" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2134.html">
+      <a data-name="13.75" data-stars="4.32" data-percentage="55" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4202.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4293/CUSA15305_00/0ZLlEQ9o2MDjID9PLNAONYkOIyWfIsxo.png?w=253&amp;h=253" alt="Kotodama: The 7 Mysteries of Fujisawa">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202010/2715/usiqtct5gNf8ilfuK3nFYhZv.png?w=253&amp;h=253" alt="Morbid: The Seven Acolytes">
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.87</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.32</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 85%
+		   <i class="text-danger fas fa-caret-down"></i> 55%
 		   
 		   </p>
 		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 23 de febrero</small></h5>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.74€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 21.25€</b></p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>11.24€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 9.99€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 13.75€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 10 de marzo</p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
       
       </a>
-      <a data-name="54.00" data-stars="0" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5837.html">
+      <a data-name="54.00" data-stars="0" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2153.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/0917/ICHOFykRI9bLsZhju3Y0dIPl.png?w=253&amp;h=253" alt="Yakuza: Like a Dragon Legendary Hero Edition PS4 and PS5">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202101/2019/h1AhTWXwbelAnfrujVqqfKjz.png?w=253&amp;h=253" alt="Lote GTA V: Premium Online Edition y tarjeta Tiburón megalodón">
             <div class="fluid-container">
 		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
@@ -5248,6 +5316,764 @@
              </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 54.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>89.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="20.00" data-stars="4.38" data-percentage="80" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3499.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4731/CUSA13838_00/tWvEM5M1bE8v37eO0Zkvb8fzJfgRYgjX.png?w=253&amp;h=253" alt="Gun Club VR">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.38</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 80%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="9.00" data-stars="0" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4532.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202010/2700/BTFUw2KqSEnzsYtqv4GlZhXO.png?w=253&amp;h=253" alt="Maquette">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>8.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>17.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="14.00" data-stars="4.13" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4690.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP0966/CUSA06428_00/LwxyEwck02EquXOPagIkXbnh6hwdGfyg.png?w=253&amp;h=253" alt="RiftStar Raiders">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.13</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="9.00" data-stars="4.50" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2446.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/11307so5hxTb76VvTCjpufovTj8F1ekBd4t8dRo9fzPJ70f0qZildhciq49przgQqoiEj9a9crEyKgSnI8LK1XIx-uMTQ8pE.png?w=253&amp;h=253" alt="Curious Expedition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.50</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 60%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 4.49€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="13.75" data-stars="4.34" data-percentage="55" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4253.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202009/0910/ifsQEiqqeu9VG4JbMHBNfUIT.png?w=253&amp;h=253" alt="Cloudpunk">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.34</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 55%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>11.24€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 9.99€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 13.75€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="28.00" data-stars="3.82" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2350.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202011/0915/8wZUq4uN1nWDHdQxIzw3DEVG.png?w=253&amp;h=253" alt="Monster Jam Steel Titans">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.82</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>11.99€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 9.99€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 28.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="20.00" data-stars="4.87" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./617.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/113074TSlka-0BP2uYlrMKgDzNH4NZ8Rzgs1Zv81xLaberYo0VCleWyySnOL97Xwh--pChci2LrqrKAPYxCx__L4X3cCH80k.jpg?w=253&amp;h=253" alt="Edición digital deluxe de MediEvil">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.87</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="70.00" data-stars="4.56" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2056.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0001/CUSA13885_00/T8TtdrF28UHisecxR9GKkyQCBK2qaR0h.png?w=253&amp;h=253" alt="Far Cry® 5 + Far Cry® New Dawn Complete Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.56</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 70.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>99.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="12.75" data-stars="3.26" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2609.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/113073MxKo8FiSeamGEwnKT33qPLt-FhyDnNvQUcbdSHIyNANjgWxJHFN1VjgibwfjZ5Icm6Pov56U3Qf6U-1WTFD0E2Qja7.png?w=253&amp;h=253" alt="Elea - Deluxe Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.26</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 85%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>2.24€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 1.49€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.75€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="36.00" data-stars="4.41" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2222.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/11307BCdoIyaMYh0QyPHdsrepiw-flUMO3UqjhGSXqRDIsgoI5Icgmy3NjCr-wN3ZQH3htZSxU5DEqk_Vsrgy5Sy8hc2GwB9.png?w=253&amp;h=253" alt="Crash™ Team Racing Nitro-Fueled - Edición Nitros Oxide">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.41</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 60%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>23.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 36.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="35.00" data-stars="4.13" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3043.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202006/1514/C6jValrFcqhj3sGZi54BL7VG.png?w=253&amp;h=253" alt="Hunting Simulator 2 Bear Hunter Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.13</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>34.99€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 27.99€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 35.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="25.50" data-stars="4.53" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2977.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0082/CUSA01004_00/fCFO5UkjlOlOypZCZUvLWepuw7rBBHA4.png?w=253&amp;h=253" alt="Sleeping Dogs™ Definitive Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.53</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 85%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.49€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 25.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="11.25" data-stars="4.04" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2646.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP1121/CUSA08747_00/T9gNOtW3AR5iSKyZyntz5KkrC5yn669c.png?w=253&amp;h=253" alt="The Long Reach">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.04</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 75%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.74€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 2.99€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.25€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="13.20" data-stars="4.33" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3836.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/2913/wcgJXG9S9tWOJAqgVc3AmNzm.png?w=253&amp;h=253" alt="Descenders">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.33</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 60%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>8.79€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 13.20€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>21.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="16.00" data-stars="4.48" data-percentage="80" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2340.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4062/CUSA01106_00/kIGak2MLrIjFMbyuHWt7T2mewUIwUT1O.png?w=253&amp;h=253" alt="Saints Row IV: Re-Elected">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.48</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 80%
+		   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 16.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="25.50" data-stars="4.54" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4755.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4356/CUSA05164_00/VSlRGS4E8YbWqF6Lwr9HvMA0kGZdZbNR.png?w=253&amp;h=253" alt="Valentino Rossi The Game - Special Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.54</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 85%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.49€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 25.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="18.00" data-stars="5.00" data-percentage="30" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6317.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202110/0712/ksjbLrWTMGvdk6oZq6RkfalQ.png?w=253&amp;h=253" alt="Battle Brothers - Complete Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 5.00</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 30%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>41.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 18.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="22.50" data-stars="3.34" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2739.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/0115/ot7twBoSGL0QzTD84JwCj0Vp.png?w=253&amp;h=253" alt="Rock of Ages 3: Make and Break">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.34</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 75%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>7.49€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 22.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="29.75" data-stars="0" data-percentage="35" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5876.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202110/1821/rxjAOapzGmbZPwHXvZ4GcpfW.png?w=253&amp;h=253" alt="Just Dance® 2022 Ultimate Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 35%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>55.24€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 29.75€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>84.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="8.25" data-stars="4.15" data-percentage="55" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5064.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202012/1015/GCscgXEAegSQM62CYdOkIxDF.png?w=253&amp;h=253" alt="Colt Canyon">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.15</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 55%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>6.74€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 5.99€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.25€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="60.00" data-stars="0" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5750.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202106/0216/zaDCi090fEeqUeMzQu8qcD7R.png?w=253&amp;h=253" alt="Edición Definitiva de Riders Republic™ PS4 and PS5">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>59.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 60.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>119.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="10.00" data-stars="0" data-percentage="25" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6318.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202109/3012/c5lbBOxHj17DQXhDFhINGLcL.png?w=253&amp;h=253" alt="Fast and Furious: Spy Racers Retorno de SH1FT3R">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 25%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="52.50" data-stars="0" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3957.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/1308/LatA9PkqG1xnpBW5c8GyAui9.png?w=253&amp;h=253" alt="WRC 9 Deluxe Edition FIA World Rally Championship PS4 and PS5">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 75%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>17.49€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 10.49€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 52.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="6.30" data-stars="4.26" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5225.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4501/CUSA07110_00/PuKRtT1MmuZSe101nJSAUZAn6W0uTHe1.png?w=253&amp;h=253" alt="IRON CRYPTICLE">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.26</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>2.69€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.30€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>8.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="30.00" data-stars="0" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5819.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/0917/fid2e7IysrUvFqmppIxi48GT.png?w=253&amp;h=253" alt="Yakuza: Like a Dragon PS4 and PS5">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="60.00" data-stars="0" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5130.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202109/0712/PBl8MRpxqYhzALKQe2sfOFp7.png?w=253&amp;h=253" alt="Tom Clancy's Ghost Recon® Breakpoint Deluxe Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 75%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 60.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>79.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="10.00" data-stars="4.66" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1837.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202011/1018/9erXiwu0ozgKGPIUVTuy2siN.png?w=253&amp;h=253" alt="Horizon Zero Dawn™ Complete Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.66</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="0.60" data-stars="3.00" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6347.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/1130722Y67uzl2rkZTE6XUTWCOLKyQFeoObHnFfhtEvTy0YkY80fBJwonDPE450HWY32cqsojOXsTeG9qms4IjqcgokIu7Tg.png?w=253&amp;h=253" alt="Brain Breaker">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.00</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>0.59€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 0.60€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>1.19€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="8.40" data-stars="4.51" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3163.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202103/1604/vC0fKnn9URprb4C0sMXSdN6a.png?w=253&amp;h=253" alt="METAL SLUG 3">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.51</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.59€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.40€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>11.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="35.00" data-stars="4.00" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4493.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202011/1904/xjz2N9MqosjCQAyYdAGtUbew.png?w=253&amp;h=253" alt="Edición Deluxe de Fallout 76: Amanecer de Acero">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.00</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>34.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 35.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="14.00" data-stars="4.20" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2031.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4133/CUSA04850_00/kE2xMcnZetJ1mzaigF2cP0CF4UJY28bF.png?w=253&amp;h=253" alt="Call of Cthulhu®">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.20</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 70%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="10.50" data-stars="4.64" data-percentage="30" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4795.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202010/1322/zz3hYWUBYCDYoe1bwz0sa3Qo.png?w=253&amp;h=253" alt="Visage">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.64</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 30%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>24.49€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 22.74€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.50€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>34.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="24.00" data-stars="2.78" data-percentage="80" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3761.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP0822/CUSA09036_00/0zudPHF7rTFSRA7nYB15Rn2Ho1NfM2O5.png?w=253&amp;h=253" alt="Hero Defense">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 2.78</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 80%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 4.49€</small>
+            </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="10.00" data-stars="4.45" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5976.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202009/0405/GO4TUY9mA2UNJ54R0NPEEEBf.png?w=253&amp;h=253" alt="Untitled Goose Game">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.45</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
@@ -6092,6 +6918,28 @@
             </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 17.60€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>21.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="54.00" data-stars="0" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5837.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/0917/ICHOFykRI9bLsZhju3Y0dIPl.png?w=253&amp;h=253" alt="Yakuza: Like a Dragon Legendary Hero Edition PS4 and PS5">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 60%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>35.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 54.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>89.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
@@ -6960,28 +7808,6 @@
              </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.80€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>16.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="22.50" data-stars="4.21" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./732.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0006/CUSA08004_00/uYjNSTuC1lpCeOLL7M6Gye9tUH28W8F3.png?w=253&amp;h=253" alt="A Way Out">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.21</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 75%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>7.49€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 22.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
@@ -8266,6 +9092,28 @@
             <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 4.49€</small>
             </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="22.50" data-stars="4.21" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./732.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0006/CUSA08004_00/uYjNSTuC1lpCeOLL7M6Gye9tUH28W8F3.png?w=253&amp;h=253" alt="A Way Out">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.21</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 75%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>7.49€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 22.50€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
@@ -12196,28 +13044,6 @@
         </div> 
       
       </a>
-      <a data-name="15.00" data-stars="4.61" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2059.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4293/CUSA03467_00/82YhyWqff24ZsBKCnWwcQCNmrBBiqBYx.png?w=253&amp;h=253" alt="Earth Defense Force 4.1: The Shadow of New Despair">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.61</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 75%
-		   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="41.25" data-stars="4.71" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2097.html">
       
         <div class="card m-2">
@@ -13055,6 +13881,28 @@
              </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 75.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>99.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="15.00" data-stars="4.61" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2059.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4293/CUSA03467_00/82YhyWqff24ZsBKCnWwcQCNmrBBiqBYx.png?w=253&amp;h=253" alt="Earth Defense Force 4.1: The Shadow of New Despair">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.61</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 75%
+		   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 15.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
@@ -13946,28 +14794,6 @@
         </div> 
       
       </a>
-      <a data-name="6.00" data-stars="4.50" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5220.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202103/0815/g5cMrgqnEc3SmKeL1KHZQQWw.png?w=253&amp;h=253" alt="SturmFront - The Mutant War: Übel Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.50</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 60%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="21.25" data-stars="3.88" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2658.html">
       
         <div class="card m-2">
@@ -14823,6 +15649,28 @@
              </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="6.00" data-stars="4.50" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5220.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202103/0815/g5cMrgqnEc3SmKeL1KHZQQWw.png?w=253&amp;h=253" alt="SturmFront - The Mutant War: Übel Edition">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.50</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 60%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
@@ -17021,28 +17869,6 @@
         </div> 
       
       </a>
-      <a data-name="14.00" data-stars="0" data-percentage="40" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4516.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/1500/PzzL4lymRdZuLEerjeL58HG8.png?w=253&amp;h=253" alt="The Pathless PS4 and PS5">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 40%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>20.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>34.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="8.10" data-stars="5.00" data-percentage="45" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6077.html">
       
         <div class="card m-2">
@@ -17885,6 +18711,28 @@
              </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 28.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="14.00" data-stars="0" data-percentage="40" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4516.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/1500/PzzL4lymRdZuLEerjeL58HG8.png?w=253&amp;h=253" alt="The Pathless PS4 and PS5">
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 40%
+		   
+		   </p>
+		  </div>
+          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>20.99€</b>
+             </p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>34.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
@@ -18748,28 +19596,6 @@
              </p>
              <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
             <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="64.00" data-stars="4.15" data-percentage="80" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4247.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4389/CUSA08798_00/ifKesgBuP3efTzzPJCxUAMLQ14UIAWKP.png?w=253&amp;h=253" alt="Darksiders III Digital Deluxe Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.15</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 80%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>15.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 64.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>79.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
@@ -20040,849 +20866,23 @@
         </div> 
       
       </a>
-      <a data-name="12.50" data-stars="2.53" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5081.html">
+      <a data-name="64.00" data-stars="4.15" data-percentage="80" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4247.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/0109/nK7LoU7h0tNJnCrRNvNwuRGa.png?w=253&amp;h=253" alt="Liftoff: Drone Racing">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 2.53</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.49€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="28.00" data-stars="4.96" data-percentage="40" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5169.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202102/2321/RiRmEEjkFAcItGQ8cxcEBfGQ.png?w=253&amp;h=253" alt="Shin Megami Tensei III Nocturne HD Remaster Digital Deluxe Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.96</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 40%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>41.99€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 38.49€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 28.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="13.75" data-stars="4.32" data-percentage="55" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4202.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202010/2715/usiqtct5gNf8ilfuK3nFYhZv.png?w=253&amp;h=253" alt="Morbid: The Seven Acolytes">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.32</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 55%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>11.24€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 9.99€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 13.75€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="54.00" data-stars="0" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2153.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202101/2019/h1AhTWXwbelAnfrujVqqfKjz.png?w=253&amp;h=253" alt="Lote GTA V: Premium Online Edition y tarjeta Tiburón megalodón">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 60%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>35.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 54.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>89.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="20.00" data-stars="4.38" data-percentage="80" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3499.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4731/CUSA13838_00/tWvEM5M1bE8v37eO0Zkvb8fzJfgRYgjX.png?w=253&amp;h=253" alt="Gun Club VR">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.38</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 80%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="9.00" data-stars="0" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4532.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202010/2700/BTFUw2KqSEnzsYtqv4GlZhXO.png?w=253&amp;h=253" alt="Maquette">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>8.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>17.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="14.00" data-stars="4.13" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4690.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP0966/CUSA06428_00/LwxyEwck02EquXOPagIkXbnh6hwdGfyg.png?w=253&amp;h=253" alt="RiftStar Raiders">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.13</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="9.00" data-stars="4.50" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2446.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/11307so5hxTb76VvTCjpufovTj8F1ekBd4t8dRo9fzPJ70f0qZildhciq49przgQqoiEj9a9crEyKgSnI8LK1XIx-uMTQ8pE.png?w=253&amp;h=253" alt="Curious Expedition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.50</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 60%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 4.49€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 9.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="13.75" data-stars="4.34" data-percentage="55" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4253.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202009/0910/ifsQEiqqeu9VG4JbMHBNfUIT.png?w=253&amp;h=253" alt="Cloudpunk">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.34</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 55%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>11.24€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 9.99€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 13.75€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="28.00" data-stars="3.82" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2350.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202011/0915/8wZUq4uN1nWDHdQxIzw3DEVG.png?w=253&amp;h=253" alt="Monster Jam Steel Titans">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.82</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>11.99€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 9.99€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 28.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="20.00" data-stars="4.87" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./617.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/113074TSlka-0BP2uYlrMKgDzNH4NZ8Rzgs1Zv81xLaberYo0VCleWyySnOL97Xwh--pChci2LrqrKAPYxCx__L4X3cCH80k.jpg?w=253&amp;h=253" alt="Edición digital deluxe de MediEvil">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.87</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 20.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="70.00" data-stars="4.56" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2056.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0001/CUSA13885_00/T8TtdrF28UHisecxR9GKkyQCBK2qaR0h.png?w=253&amp;h=253" alt="Far Cry® 5 + Far Cry® New Dawn Complete Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.56</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 70.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>99.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="12.75" data-stars="3.26" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2609.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/113073MxKo8FiSeamGEwnKT33qPLt-FhyDnNvQUcbdSHIyNANjgWxJHFN1VjgibwfjZ5Icm6Pov56U3Qf6U-1WTFD0E2Qja7.png?w=253&amp;h=253" alt="Elea - Deluxe Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.26</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 85%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>2.24€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 1.49€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 12.75€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="36.00" data-stars="4.41" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2222.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/11307BCdoIyaMYh0QyPHdsrepiw-flUMO3UqjhGSXqRDIsgoI5Icgmy3NjCr-wN3ZQH3htZSxU5DEqk_Vsrgy5Sy8hc2GwB9.png?w=253&amp;h=253" alt="Crash™ Team Racing Nitro-Fueled - Edición Nitros Oxide">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.41</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 60%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>23.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 36.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="35.00" data-stars="4.13" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3043.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202006/1514/C6jValrFcqhj3sGZi54BL7VG.png?w=253&amp;h=253" alt="Hunting Simulator 2 Bear Hunter Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.13</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>34.99€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 27.99€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 35.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="25.50" data-stars="4.53" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2977.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0082/CUSA01004_00/fCFO5UkjlOlOypZCZUvLWepuw7rBBHA4.png?w=253&amp;h=253" alt="Sleeping Dogs™ Definitive Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.53</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 85%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.49€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 25.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="11.25" data-stars="4.04" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2646.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP1121/CUSA08747_00/T9gNOtW3AR5iSKyZyntz5KkrC5yn669c.png?w=253&amp;h=253" alt="The Long Reach">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.04</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 75%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.74€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 2.99€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 11.25€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="13.20" data-stars="4.33" data-percentage="60" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3836.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/2913/wcgJXG9S9tWOJAqgVc3AmNzm.png?w=253&amp;h=253" alt="Descenders">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.33</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 60%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>8.79€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 13.20€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>21.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="16.00" data-stars="4.48" data-percentage="80" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2340.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4062/CUSA01106_00/kIGak2MLrIjFMbyuHWt7T2mewUIwUT1O.png?w=253&amp;h=253" alt="Saints Row IV: Re-Elected">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.48</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 80%
-		   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 16.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="25.50" data-stars="4.54" data-percentage="85" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4755.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4356/CUSA05164_00/VSlRGS4E8YbWqF6Lwr9HvMA0kGZdZbNR.png?w=253&amp;h=253" alt="Valentino Rossi The Game - Special Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.54</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 85%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.49€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 25.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="18.00" data-stars="5.00" data-percentage="30" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6317.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202110/0712/ksjbLrWTMGvdk6oZq6RkfalQ.png?w=253&amp;h=253" alt="Battle Brothers - Complete Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 5.00</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 30%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>41.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 18.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="22.50" data-stars="3.34" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2739.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/0115/ot7twBoSGL0QzTD84JwCj0Vp.png?w=253&amp;h=253" alt="Rock of Ages 3: Make and Break">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.34</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 75%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>7.49€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 22.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="29.75" data-stars="0" data-percentage="35" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5876.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202110/1821/rxjAOapzGmbZPwHXvZ4GcpfW.png?w=253&amp;h=253" alt="Just Dance® 2022 Ultimate Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 35%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>55.24€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 29.75€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>84.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="8.25" data-stars="4.15" data-percentage="55" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5064.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202012/1015/GCscgXEAegSQM62CYdOkIxDF.png?w=253&amp;h=253" alt="Colt Canyon">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4389/CUSA08798_00/ifKesgBuP3efTzzPJCxUAMLQ14UIAWKP.png?w=253&amp;h=253" alt="Darksiders III Digital Deluxe Edition">
             <div class="fluid-container">
 		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.15</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 55%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>6.74€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 5.99€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.25€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="60.00" data-stars="0" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5750.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202106/0216/zaDCi090fEeqUeMzQu8qcD7R.png?w=253&amp;h=253" alt="Edición Definitiva de Riders Republic™ PS4 and PS5">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>59.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 60.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>119.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="10.00" data-stars="0" data-percentage="25" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6318.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202109/3012/c5lbBOxHj17DQXhDFhINGLcL.png?w=253&amp;h=253" alt="Fast and Furious: Spy Racers Retorno de SH1FT3R">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 25%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="52.50" data-stars="0" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3957.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/1308/LatA9PkqG1xnpBW5c8GyAui9.png?w=253&amp;h=253" alt="WRC 9 Deluxe Edition FIA World Rally Championship PS4 and PS5">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 75%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>17.49€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 10.49€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 52.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="6.30" data-stars="4.26" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5225.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4501/CUSA07110_00/PuKRtT1MmuZSe101nJSAUZAn6W0uTHe1.png?w=253&amp;h=253" alt="IRON CRYPTICLE">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.26</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>2.69€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 6.30€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>8.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="30.00" data-stars="0" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5819.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202007/0917/fid2e7IysrUvFqmppIxi48GT.png?w=253&amp;h=253" alt="Yakuza: Like a Dragon PS4 and PS5">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 30.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="60.00" data-stars="0" data-percentage="75" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5130.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202109/0712/PBl8MRpxqYhzALKQe2sfOFp7.png?w=253&amp;h=253" alt="Tom Clancy's Ghost Recon® Breakpoint Deluxe Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 75%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 60.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>79.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="10.00" data-stars="4.66" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1837.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202011/1018/9erXiwu0ozgKGPIUVTuy2siN.png?w=253&amp;h=253" alt="Horizon Zero Dawn™ Complete Edition">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.66</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="0.60" data-stars="3.00" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6347.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/cfn/1130722Y67uzl2rkZTE6XUTWCOLKyQFeoObHnFfhtEvTy0YkY80fBJwonDPE450HWY32cqsojOXsTeG9qms4IjqcgokIu7Tg.png?w=253&amp;h=253" alt="Brain Breaker">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.00</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>0.59€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 0.60€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>1.19€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="8.40" data-stars="4.51" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3163.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202103/1604/vC0fKnn9URprb4C0sMXSdN6a.png?w=253&amp;h=253" alt="METAL SLUG 3">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.51</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>3.59€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 8.40€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>11.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="35.00" data-stars="4.00" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4493.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202011/1904/xjz2N9MqosjCQAyYdAGtUbew.png?w=253&amp;h=253" alt="Edición Deluxe de Fallout 76: Amanecer de Acero">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.00</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>34.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 35.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>69.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="14.00" data-stars="4.20" data-percentage="70" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2031.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4133/CUSA04850_00/kE2xMcnZetJ1mzaigF2cP0CF4UJY28bF.png?w=253&amp;h=253" alt="Call of Cthulhu®">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.20</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 70%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
-             </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 14.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="10.50" data-stars="4.64" data-percentage="30" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4795.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202010/1322/zz3hYWUBYCDYoe1bwz0sa3Qo.png?w=253&amp;h=253" alt="Visage">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.64</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 30%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>24.49€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 22.74€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.50€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>34.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="24.00" data-stars="2.78" data-percentage="80" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3761.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP0822/CUSA09036_00/0zudPHF7rTFSRA7nYB15Rn2Ho1NfM2O5.png?w=253&amp;h=253" alt="Hero Defense">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 2.78</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
 		   <i class="text-danger fas fa-caret-down"></i> 80%
 		   
 		   </p>
 		  </div>
           <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
-            <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 4.49€</small>
-            </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 24.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="10.00" data-stars="4.45" data-percentage="50" class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5976.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202009/0405/GO4TUY9mA2UNJ54R0NPEEEBf.png?w=253&amp;h=253" alt="Untitled Goose Game">
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.45</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-		   <i class="text-danger fas fa-caret-down"></i> 50%
-		   
-		   </p>
-		  </div>
-          <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small> Oferta del 16 de febrero</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>15.99€</b>
              </p>
-             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 10.00€</b></p>
-            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
+             <p class="card-text bg-warning text-center m-0 p-1 text-dark"><b>Ahorras 64.00€</b></p>
+            <p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>79.99€</del>)</small></p>
             <p class="card-text text-info text-center">Hasta el 03 de marzo</p>
           </div>
         </div> 
