@@ -74,19 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.48</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-					   <img src="img/ps-now.png" class="mini-icon">
+				   <i class="text-danger fas fa-caret-down"></i> 50%
+				   <img src="img/ps-now.png" class="mini-icon">
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>39.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
              		</p>
-             		</div>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 20.00€</b></p>
+            		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>39.99€</del>)</small></p>
+            		<p class="card-text text-info text-center">Hasta el 17 de marzo</p>
+          		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 39.99 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 39.77 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 19.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 19/nov/2021 al 30/nov/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/mar/2022 al 17/mar/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Cinco años más tarde...<br/><br/>Después de un peligroso viaje por un Estados Unidos postapocalíptico, Ellie y Joel se asientan en Wyoming. <br/><br/>La vida en una próspera comunidad les proporciona estabilidad, a pesar de la amenaza de los infectados y los supervivientes desesperados. <br/><br/>Tras un hecho violento que altera la paz, Ellie comienza un viaje en busca de justicia. Al dar caza a los responsables, afronta las terribles repercusiones físicas y emocionales de sus actos.<br/><br/>•	Descubre una historia llena de emoción que pondrá a prueba tu concepto del bien y el mal.<br/>•	Adéntrate en un mundo lleno de belleza y peligros, donde recorrerás tranquilas montañas o ruinas tomadas por la vegetación.<br/>•	Disfruta de un juego de acción y supervivencia con tensos combates cuerpo a cuerpo, movimiento fluido y mecánicas de sigilo dinámicas.<br/><br/><br/></p>
@@ -123,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['01 DIC', '04 DIC', '07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC', '25 DIC', '28 DIC', '31 DIC', '03 ENE', '06 ENE', '09 ENE', '12 ENE', '15 ENE', '18 ENE', '21 ENE', '24 ENE', '27 ENE', '30 ENE', '02 FEB', '05 FEB', '08 FEB', '11 FEB', '14 FEB', '17 FEB', '20 FEB', '23 FEB', '26 FEB', '01 MAR'],
+      labels: ['02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR'],
       datasets: [{
-        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99],
+        data: [39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 19.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.60</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 60%
+				   <i class="text-danger fas fa-caret-down"></i> 70%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>13.19€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>9.89€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 19.80€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 23.10€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>32.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 17 de febrero</p>
+            		<p class="card-text text-info text-center">Hasta el 17 de marzo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 24.50 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 13.19 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/feb/2022 al 17/feb/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 24.90 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 9.89 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/mar/2022 al 17/mar/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Olvida todo lo que sabes sobre los shooters en primera persona: Void Bastards exige que te pongas al mando, no solo que apuntes y dispares. Tu misión es sacar a los desgraciados de los Void Bastards de la Nebulosa de los Sargazos. Tú decides a dónde ir, qué hacer y a qué enfrentarte. Y luego, tienes que llevar a cabo tu estrategia frente a enemigos extraños y terribles.  <br/><br/>Planearás la misión a bordo de naves espaciales a la deriva, tomando nota de la disposición de la nave, los obstáculos y los enemigos con los que te puedes encontrar y qué terminales y otros sistemas puedes aprovechar.  <br/><br/>Muévete con cuidado por las peligrosas naves, buscando suministros y manipulando sistemas de control. Reacciona a lo que vayas encontrando: ¿tomarás el desvío al generador para restaurar la electricidad o te harás con el control del módulo de seguridad para deshabilitar las defensas de la nave? Elige muy bien cuándo luchar, cuándo huir y cuándo ser un cabrón.  <br/><br/>Usa los suministros que tanto te cuesta conseguir para fabricar herramientas y armas, desde el llamativo robogatito hasta la inestable bomba de racimo.  <br/><br/>Navega por la inmensa nebulosa con tu diminuta cápsula de escape. Huye de piratas y ballenas del vacío, y evita respetuosamente a los ermitaños hambrientos. Mientras tanto, no puedes dejar de recuperar comida, combustible y otros recursos que necesitas para vivir.  <br/><br/>Void Bastards incluye una campaña de 12-15 horas que puedes completar con un suministro inagotable de prisioneros, cada cual con sus características únicas. Cuando uno muere, otro se levanta para continuar la lucha. Pero no te preocupes, porque el progreso de fabricación se conserva al cambiar de prisionero.<br/><br/>¡Haz una limpieza en tu nebulosa gracias al DLC Tydy! Tydy trae incorporados una organización completa, una nueva arma espectacular, un nuevo enemigo un pelín bastante peligroso, naves nuevas que saquear y la posibilidad de recibir desfibriladores adicionales, lo cual te permitiría mantener a tu cliente favorito con vida o completar el desafío "un intento".<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC', '30 DIC', '02 ENE', '05 ENE', '08 ENE', '11 ENE', '14 ENE', '17 ENE', '20 ENE', '23 ENE', '26 ENE', '29 ENE', '01 FEB', '04 FEB', '07 FEB', '10 FEB', '13 FEB', '16 FEB'],
+      labels: ['02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR'],
       datasets: [{
-        data: [32.99, 32.99, 32.99, 32.99, 13.19, 13.19, 13.19, 13.19, 13.19, 13.19, 13.19, 13.19, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 13.19, 13.19, 13.19, 13.19, 13.19],
+        data: [13.19, 13.19, 13.19, 13.19, 13.19, 13.19, 13.19, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 32.99, 13.19, 13.19, 13.19, 13.19, 13.19, 32.99, 32.99, 32.99, 32.99, 9.89],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
