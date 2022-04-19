@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://vulcan.dl.playstation.net/ap/rnd/202102/0515/kkLUfq3GoZGSmbREvUUNSQPd.png?w=253&amp;h=253">
@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.50</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 65%
+				   <i class="text-danger fas fa-caret-down"></i> 70%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>6.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 5.99€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 4.99€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 13.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 14.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+            		<p class="card-text text-info text-center">Hasta el 28 de abril</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 13.39 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 16.62 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 13/abr/2022 al 28/abr/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Van a demoler a Old Pete, el Astillero. Es el primero de sus amigos en ser demolido. Ha sido algo inesperado y todos están un poco preocupados.<br/><br/>Uno también tiene sus preocupaciones, aunque esté construido con ladrillos y argamasa.<br/><br/>Este dispar grupo de amigos estaba ahí desde el principio, cuando este lugar pasó a ser una ciudad. Con ellos, llegaron los titanes de la industria, cientos de trabajos y aún más casas si cabe. Pero la Vieja Hilandería de lino no ha recibido muchos pedidos textiles este año, el Almacén ha perdido otro contrato que se le ha concedido a la ciudad vecina y el Viejo Banco tiene problemas monetarios.<br/><br/>Algo no va bien. El cambio se avecina. ¿Y si son los siguientes?<br/><br/>Por suerte tú, el Hotel Medio Camino, estás a la vuelta de la esquina, preparado para dar el paso y tranquilizar a los demás. Pero lo que empieza con algunas tareas un tanto extrañas acaba llevando a más problemas, ya que las historias cambian tan rápido que no puedes seguir el ritmo.<br/><br/>Buildings Have Feelings Too! es un increíble juego nuevo de gestión de ciudades sobre edificios y las ciudades en las que viven.<br/><br/>Imagina una cuidad en la que los edificios pueden hablar y comunicarse entre ellos. Cada uno con sus aspiraciones, esperanzas y miedos. La mayoría solo intenta llevarse bien con los demás y sobrevivir al día a día. Haz que tu ciudad se convierta en un animado centro metropolitano con gran variedad de tiendas, oficinas, instalaciones de entretenimiento y comodidades para que tus edificios prosperen o, de lo contrario, serán demolidos para siempre.<br/><br/>- Descubre y funda una amplia variedad de negocios desde la era victoriana hasta la moderna.<br/><br/>- Haz amigos de diferentes edificios, cada uno con sus propias aspiraciones, esperanzas y temores conforme lidian con el mundo cambiante que les rodea.<br/><br/>- Mueve edificios y encuentra la combinación perfecta para personalizar y cambiar la distribución de los mismos y que tu ciudad crezca.<br/><br/>- Expándete a lo largo de los diferentes barrios de tu ciudad y descubre nuevos personajes y distritos característicos de cada uno.<br/><br/><br/></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR'],
+      labels: ['19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 6.99, 6.99, 6.99, 6.99, 6.99],
+        data: [5.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 6.99, 6.99, 6.99, 6.99, 6.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 5.99, 5.99, 5.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

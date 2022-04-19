@@ -81,16 +81,16 @@ body{
              		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 15.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+            		<p class="card-text text-info text-center">Hasta el 28 de abril</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 14.33 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 13.95 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 4.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 16/feb/2022 al 03/mar/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 30/mar/2022 al 28/abr/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>El precio de oferta especial anterior válido de 15-09-2021 a 29-09-2021 era €15.99.<br/><br/>"Inspirado en los clásicos arcade, los jugadores tendrán que cazar potenciadores de armas y mejoras a la vez que esquivan el fuego enemigo, hacen explotar insectos interdimensionales y pelean contra enormes monstruos jefe. Es fácil aprender a medida que luchas por abrirte camino a través de la ramificada historia de la campaña, pero no será tan fácil dominar la gloria en las tablas de clasificación.<br/><br/>Características<br/><br/>•El clásico shooter reinventado: Disfruta de la acción energética de los tradicionales shooters en 2D ahora en un espacio 3D deformado. Escala paredes, da la vuelta de un lado a otro de tu escenario y disfruta de unas vistas impresionantes.<br/><br/>•Juega a tu estilo y llega a lo alto de la clasificación: Experimenta un angustioso viaje como piloto en el modo Campaña, <br/>acepta nuevos desafíos, pon a prueba tus habilidades y lucha por tu puesto en las tablas de clasificación en Carreras diarias, Arena, Supervivencia y modos de juego infinitos.<br/><br/>•Pilota el Synthwave: Concéntrate con la energética banda sonora Synthwave en colaboración con FiXT Neon, incluyendo a artistas como Scandroid, 3Force y Fury Weekend.<br/><br/>•Mejora y acaba con ellos: Recoge una plétora de habilidades y mejoras para armas. ¡Las armas son variadas (desde láseres y lanzallamas a motoguadañas), y están equipadas con sus propios estados de sobrecarga! <br/><br/>Modos <br/><br/>Campaña: Asume el papel de un cosechador de energía en medio de una invasión de arañas galácticas. Tus elecciones te llevarán a asumir una de las tres versiones potenciales del protagonista del juego para combatir la invasión en asteroides, estaciones espaciales y otros escenarios intergalácticos. Cada versión única lleva la historia en una dirección diferente. <br/><br/>Arena: Enfréntate a más de 60 desafíos aleatorios de la campaña del juego para poder llevar tu nombre a las tablas de clasificación locales.<br/><br/>Supervivencia: Lucha atravesando olas de invasores. Cada ola supone un desafío nuevo y más difícil.<br/><br/>Infinito: Enfréntate a oleadas de desafíos aleatorios de la campaña, así como a objetivos adicionales a medida que te adaptas a lo que el juego decida ponerte en el camino.<br/><br/>Carrera diaria: Cada día tendrás una oportunidad para completar esta carrera diaria y conseguir la mayor puntuación posible. ¿Fallaste en la clasificación de hoy? Mañana habrá un nuevo desafío."<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR'],
+      labels: ['19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 4.99, 4.99, 4.99, 4.99, 4.99],
+        data: [9.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 4.99, 4.99, 4.99, 4.99, 4.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99, 4.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

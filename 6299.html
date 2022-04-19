@@ -81,16 +81,16 @@ body{
              		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 25.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+            		<p class="card-text text-info text-center">Hasta el 28 de abril</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 45.59 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 43.67 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 24.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 15/feb/2022 al 03/mar/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 13/abr/2022 al 28/abr/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en la megalópolis de Night City, donde te pondrás en la piel de un mercenario o una mercenaria ciberpunk y vivirás su lucha a vida o muerte por la supervivencia. Mejorado para la nueva generación y con contenido adicional gratuito. Personaliza tu personaje y tu estilo de juego a medida que aceptas trabajos, te labras una reputación y desbloqueas mejoras. Las relaciones que forjes y las decisiones que tomes darán forma al mundo que te rodea. Aquí nacen las leyendas. ¿Cuál será la tuya?<br/> <br/> CREA TU PROPIO CIBERPUNK<br/>Conviértete en un forajido urbano equipado con las últimas mejoras cibernéticas y escribe tu leyenda en las calles de Night City.<br/> <br/> EXPLORA LA CIUDAD DEL FUTURO<br/> Night City está repleta de cosas por hacer, lugares que visitar y gente que conocer. Y tú decides dónde ir, cuándo ir y cómo llegar allí. <br/> <br/> CONSTRUYE TU LEYENDA<br/> Emprende audaces aventuras y forja relaciones personales con personajes inolvidables cuyos destinos se decidirán a partir de las decisiones que tomes.<br/> <br/> EQUIPADO CON FUNCIONES DE NUEVA GENERACIÓN<br/> Sumérgete como nunca en Night City gracias a tiempos de carga más rápidos, características visuales y funciones de juego mejoradas, compatibilidad con trazado de rayos y 4K dinámico, y mucho más. Todo forma parte de una actualización gratuita para quienes ya dispongan de Cyberpunk 2077.<br/> <br/> INCLUYE CONTENIDO ADICIONAL GRATUITO<br/> Échale el guante a un montón de objetos gratuitos, entre los que se incluyen nuevas armas de fuego y cuerpo a cuerpo, además de opciones adicionales de personalización y muchas cosas más.<br/><br/><br/>Un único jugador offline<br/>Uso a distancia permite a los usuarios conectarse y jugar en consolas PlayStation®4 y PlayStation®5 a través de un dispositivo móvil, PC u otra consola PlayStation®4 o PlayStation®5.<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR'],
+      labels: ['19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR'],
       datasets: [{
-        data: [49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99],
+        data: [49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 24.99, 24.99, 24.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

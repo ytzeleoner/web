@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.40</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 25%
+				   <i class="text-danger fas fa-caret-down"></i> 100%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>0.00€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 2.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 7.99€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>7.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de febrero</p>
+            		<p class="card-text text-info text-center">Hasta el 03 de mayo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 7.66 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 19/ene/2022 al 03/feb/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 6.34 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 0.00 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 05/abr/2022 al 03/may/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Twogether: Project indigos una aventura de puzles en tercera persona para un jugador. Ambientado en las macabras instalaciones de Hexacells, Twogether te planteará originales puzles que sólo se podrán resolver mediante la colaboración. <br/><br/>El juego está pensado para que los jugadores examinen, valoren y actúen teniendo en cuenta los elementos del entorno y los poderes de los protagonistas, como si trataran de escapar de una tétrica Escape Room. Para hacerlo, el jugador tendrá que combinar los poderes de ambos personajes y adaptarse a cada situación.<br/><br/>Rafi cuenta con el poder de la telekinesis y Sam con la facultad de teletransportarse. Juntos deberán colaborar para resolver los diferentes retos que esconde Hexacells y escapar. <br/><br/>Durante su huida forjarán una poderosa amistad que les convertirá en un equipo implacable.<br/><br/>Características:<br/><br/>Poderes: Teletranspórtate a lugares inalcanzables siendo Sam y desplaza objetos a distancia con la telequinesis de Rafi. <br/><br/>Puzzles: Haz frente a intrincados rompecabezas en los que será clave combinar ambos poderes. <br/><br/>Ambientación: Descubre Hexacells, un laboratorio que investiga clandestinamente con niños con poderes sobrenaturales. <br/><br/>Amistad: Vive junto a Rafi y Sam la aventura en la que descubrirán por primera vez la amistad mientras escapan de Hexacells.<br/><br/><br/>Un único jugador offline<br/>Juego sin conexión activado<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV', '22 NOV', '25 NOV', '28 NOV', '01 DIC', '04 DIC', '07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC', '25 DIC', '28 DIC', '31 DIC', '03 ENE', '06 ENE', '09 ENE', '12 ENE', '15 ENE', '18 ENE', '21 ENE', '24 ENE', '27 ENE', '30 ENE', '02 FEB'],
+      labels: ['19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR'],
       datasets: [{
-        data: [7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 5.99, 5.99, 5.99, 5.99, 5.99],
+        data: [5.99, 5.99, 5.99, 5.99, 5.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 7.99, 0.0, 0.0, 0.0, 0.0, 0.0],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
