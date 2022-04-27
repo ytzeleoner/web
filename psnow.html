@@ -1,4 +1,26 @@
-<!DOCTYPE html><html><head>  <meta charset="utf-8">  <title>BuscaPlay</title>  <link rel="stylesheet" href="css/styles.css">  <script src="https://kit.fontawesome.com/d9ea194290.js" crossorigin="anonymous"></script>  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script><style type="text/css">.linkGame:hover{	pointer:cursor;	text-decoration: none;}#myBtn {    position: fixed;    bottom: 0em;    z-index: 2;    background-color: rgba(23, 162, 184,0.7);}#myBtn2 {    position: fixed;    bottom: 2em;    z-index: 2;}.paginacionLeft{	width: 50%;	float:left;}.paginacionRight{	width: 50%;	float:right;}</style><script>var orderEuros=false;var orderPercentage=false;var orderStars=true;var $superWrapper;var MAX_ITEMS=24;var pagina=0;				function ocultando(){   				$superWrapper  = $('#pills-home > div.row.container-fluid.m-0').find('.ahorro');   				   				if (pagina==0){   					$('#prev').hide();   				}   				   				if (pagina==1){   					$('#prev').show();   				}   				   				if ($superWrapper.length>MAX_ITEMS*(pagina+1)){   					$('#next').show();   				}else{   					$('#next').hide();   				}   				   				var i=0;   				while (i<$superWrapper.length){   					if (i<MAX_ITEMS*(pagina+1) && (i>=MAX_ITEMS*pagina)){   						console.log("i--> "+i+" show");   						$($superWrapper[i]).show();   					}else{   						$($superWrapper[i]).hide();   						console.log("i--> "+i+" hide");   					}   					   					i++;   				}   							}		$( document ).ready(function() {		    console.log( "ready!" );		    		    		    $("#next").click(function() {		    	pagina++;		    	ocultando();		    });		     $("#prev").click(function() {		    	pagina--;		    	ocultando();		    });		    		    $( "#orderByEuros" ).click(function() {		    pagina=0;			  console.log("Ordenando by Euros!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderEuros){					orderEuros=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return a.dataset.name.localeCompare(b.dataset.name);					}).appendTo( $wrapper );				}else{					orderEuros=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return b.dataset.name.localeCompare(a.dataset.name);					}).appendTo( $wrapper );				}								ocultando();			});						$( "#orderByStars" ).click(function() {			pagina=0;			  console.log("Ordenando by Stars "+orderStars);				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderStars){					orderStars=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.stars - +b.dataset.stars;					}).appendTo( $wrapper );				}else{					orderStars=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.stars - +a.dataset.stars;					}).appendTo( $wrapper );				}								ocultando();			});						$( "#orderByPercentage" ).click(function() {			pagina=0;			  console.log("Ordenando by Percentage!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (orderPercentage){					orderPercentage=false;					$wrapper.find('.ahorro').sort(function (a, b) {					var parts = a.dataset.percentage.split("/");					var dtA = new Date(parseInt(parts[2], 10),					                  parseInt(parts[1], 10) - 1,					                  parseInt(parts[0], 10));					var parts2 = b.dataset.percentage.split("/");					var dtB = new Date(parseInt(parts2[2], 10),					                  parseInt(parts2[1], 10) - 1,					                  parseInt(parts2[0], 10));					                  console.log(dtA);					                  console.log(dtB);				    	return dtA - dtB;					}).appendTo( $wrapper );				}else{					orderPercentage=true;					$wrapper.find('.ahorro').sort(function (a, b) {						var parts = a.dataset.percentage.split("/");					var dtA = new Date(parseInt(parts[2], 10),					                  parseInt(parts[1], 10) - 1,					                  parseInt(parts[0], 10));					var parts2 = b.dataset.percentage.split("/");					var dtB = new Date(parseInt(parts2[2], 10),					                  parseInt(parts2[1], 10) - 1,					                  parseInt(parts2[0], 10));					                  console.log(dtA);					                  console.log(dtB);									    	return dtB - dtA;					}).appendTo( $wrapper );				}								ocultando();			});		    		    $( "#orderByPercentage" ).click();		    		});//Fin Jquery ready			</script></head><body><button id="myBtn2" class="btn btn-block p-2">	<div class="paginacionLeft text-left">		<a href="#top" id="prev" class="text-white h1 text-decoration-none"><i class="fas fa-arrow-alt-circle-left  bg-dark rounded w-auto"></i></a>	</div>	<div class="paginacionRight text-right">		<a href="#top" id="next" class="text-white h1 text-decoration-none"><i class="fas fa-arrow-alt-circle-right bg-dark rounded w-auto"></i></a>	</div></button>	<button id="myBtn" class="btn btn-info btn-block p-2">		<a href="#top" class="text-white text-decoration-none">Back to the Top</a></button>  <section id="title">    <!-- Nav Bar -->    <nav class="navbar bg-info sticky-top navbar-expand-lg navbar-dark">        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>        <a class="navbar-brand" href="index.html">BuscaPlay</a>               <div class="collapse navbar-collapse" id="navbarSupportedContent">        <ul class="navbar-nav ml-auto">            <li class="nav-item">                <a class="nav-link" href="lastOffers.html">Nuevas Ofertas</a>            </li>            <li class="nav-item">                <a class="nav-link" href="#">Juegos PS Now</a>            </li>            <li class="nav-item">                <a class="nav-link" href="goodMoment.html">Buen Momento</a>            </li>        </ul>     </div>    </nav>    <div class="tab-content container-fluid" id="pills-tabContent">  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">    	    	    	    	    	<!-- Botones para ordenar -->    	<div class="container sticky-top-2">			<div class="btn-group btn-group-toggle bg-white" data-toggle="buttons">			  <label class="btn btn-outline-info active">			    <input type="radio" name="options" id="orderByPercentage" autocomplete="off"> <i class="fas fa-calendar-alt"> By released</i>			  </label>			  <label class="btn btn-outline-info">			    <input type="radio" name="options" id="orderByEuros" autocomplete="off"> <i class="fas fa-sort-alpha-down">A-Z</i>			  </label>			  <label class="btn btn-outline-info">			    <input type="radio" name="options" id="orderByStars" autocomplete="off"> <i class="fas fa-star"> Rating </i>			  </label>			</div>		</div>    <!-- FIN botones para ordenar -->              		  	<div class="row container-fluid m-0">      <a data-name="Yet Another Zombie Defense HD" data-stars="4.19" data-percentage="19/03/2021"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4837.html">
+<!DOCTYPE html><html><head>  <meta charset="utf-8">  <title>BuscaPlay</title>  <link rel="stylesheet" href="css/styles.css">  <script src="https://kit.fontawesome.com/d9ea194290.js" crossorigin="anonymous"></script>  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script><style type="text/css">.linkGame:hover{	pointer:cursor;	text-decoration: none;}#myBtn {    position: fixed;    bottom: 0em;    z-index: 2;    background-color: rgba(23, 162, 184,0.7);}#myBtn2 {    position: fixed;    bottom: 2em;    z-index: 2;}.paginacionLeft{	width: 50%;	float:left;}.paginacionRight{	width: 50%;	float:right;}</style><script>var orderEuros=false;var orderPercentage=false;var orderStars=true;var $superWrapper;var MAX_ITEMS=24;var pagina=0;				function ocultando(){   				$superWrapper  = $('#pills-home > div.row.container-fluid.m-0').find('.ahorro');   				   				if (pagina==0){   					$('#prev').hide();   				}   				   				if (pagina==1){   					$('#prev').show();   				}   				   				if ($superWrapper.length>MAX_ITEMS*(pagina+1)){   					$('#next').show();   				}else{   					$('#next').hide();   				}   				   				var i=0;   				while (i<$superWrapper.length){   					if (i<MAX_ITEMS*(pagina+1) && (i>=MAX_ITEMS*pagina)){   						console.log("i--> "+i+" show");   						$($superWrapper[i]).show();   					}else{   						$($superWrapper[i]).hide();   						console.log("i--> "+i+" hide");   					}   					   					i++;   				}   							}		$( document ).ready(function() {		    console.log( "ready!" );		    		    		    $("#next").click(function() {		    	pagina++;		    	ocultando();		    });		     $("#prev").click(function() {		    	pagina--;		    	ocultando();		    });		    		    $( "#orderByEuros" ).click(function() {		    pagina=0;			  console.log("Ordenando by Euros!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderEuros){					orderEuros=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return a.dataset.name.localeCompare(b.dataset.name);					}).appendTo( $wrapper );				}else{					orderEuros=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return b.dataset.name.localeCompare(a.dataset.name);					}).appendTo( $wrapper );				}								ocultando();			});						$( "#orderByStars" ).click(function() {			pagina=0;			  console.log("Ordenando by Stars "+orderStars);				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (!orderStars){					orderStars=true;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +a.dataset.stars - +b.dataset.stars;					}).appendTo( $wrapper );				}else{					orderStars=false;					$wrapper.find('.ahorro').sort(function (a, b) {				    	return +b.dataset.stars - +a.dataset.stars;					}).appendTo( $wrapper );				}								ocultando();			});						$( "#orderByPercentage" ).click(function() {			pagina=0;			  console.log("Ordenando by Percentage!");				var $wrapper = $('#pills-home > div.row.container-fluid.m-0');								if (orderPercentage){					orderPercentage=false;					$wrapper.find('.ahorro').sort(function (a, b) {					var parts = a.dataset.percentage.split("/");					var dtA = new Date(parseInt(parts[2], 10),					                  parseInt(parts[1], 10) - 1,					                  parseInt(parts[0], 10));					var parts2 = b.dataset.percentage.split("/");					var dtB = new Date(parseInt(parts2[2], 10),					                  parseInt(parts2[1], 10) - 1,					                  parseInt(parts2[0], 10));					                  console.log(dtA);					                  console.log(dtB);				    	return dtA - dtB;					}).appendTo( $wrapper );				}else{					orderPercentage=true;					$wrapper.find('.ahorro').sort(function (a, b) {						var parts = a.dataset.percentage.split("/");					var dtA = new Date(parseInt(parts[2], 10),					                  parseInt(parts[1], 10) - 1,					                  parseInt(parts[0], 10));					var parts2 = b.dataset.percentage.split("/");					var dtB = new Date(parseInt(parts2[2], 10),					                  parseInt(parts2[1], 10) - 1,					                  parseInt(parts2[0], 10));					                  console.log(dtA);					                  console.log(dtB);									    	return dtB - dtA;					}).appendTo( $wrapper );				}								ocultando();			});		    		    $( "#orderByPercentage" ).click();		    		});//Fin Jquery ready			</script></head><body><button id="myBtn2" class="btn btn-block p-2">	<div class="paginacionLeft text-left">		<a href="#top" id="prev" class="text-white h1 text-decoration-none"><i class="fas fa-arrow-alt-circle-left  bg-dark rounded w-auto"></i></a>	</div>	<div class="paginacionRight text-right">		<a href="#top" id="next" class="text-white h1 text-decoration-none"><i class="fas fa-arrow-alt-circle-right bg-dark rounded w-auto"></i></a>	</div></button>	<button id="myBtn" class="btn btn-info btn-block p-2">		<a href="#top" class="text-white text-decoration-none">Back to the Top</a></button>  <section id="title">    <!-- Nav Bar -->    <nav class="navbar bg-info sticky-top navbar-expand-lg navbar-dark">        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>        <a class="navbar-brand" href="index.html">BuscaPlay</a>               <div class="collapse navbar-collapse" id="navbarSupportedContent">        <ul class="navbar-nav ml-auto">            <li class="nav-item">                <a class="nav-link" href="lastOffers.html">Nuevas Ofertas</a>            </li>            <li class="nav-item">                <a class="nav-link" href="#">Juegos PS Now</a>            </li>            <li class="nav-item">                <a class="nav-link" href="goodMoment.html">Buen Momento</a>            </li>        </ul>     </div>    </nav>    <div class="tab-content container-fluid" id="pills-tabContent">  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">    	    	    	    	    	<!-- Botones para ordenar -->    	<div class="container sticky-top-2">			<div class="btn-group btn-group-toggle bg-white" data-toggle="buttons">			  <label class="btn btn-outline-info active">			    <input type="radio" name="options" id="orderByPercentage" autocomplete="off"> <i class="fas fa-calendar-alt"> By released</i>			  </label>			  <label class="btn btn-outline-info">			    <input type="radio" name="options" id="orderByEuros" autocomplete="off"> <i class="fas fa-sort-alpha-down">A-Z</i>			  </label>			  <label class="btn btn-outline-info">			    <input type="radio" name="options" id="orderByStars" autocomplete="off"> <i class="fas fa-star"> Rating </i>			  </label>			</div>		</div>    <!-- FIN botones para ordenar -->              		  	<div class="row container-fluid m-0">      <a data-name="Shadow Warrior 3" data-stars="4.23" data-percentage="01/03/2022"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./6438.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202107/2401/WdFb9QYf8U3oj8NHMsMfWxe5.png?w=253&amp;h=253" alt="Shadow Warrior 3">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.23</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+		   <i class="text-danger fas fa-caret-down"></i> 40%
+		   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>01/mar/2022</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
+             <small class="text-danger bg-white text-center">(<del>49.99€</del>)</small>
+              </p>
+           
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="Yet Another Zombie Defense HD" data-stars="4.19" data-percentage="19/03/2021"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4837.html">
       
         <div class="card m-2">
           <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202102/1914/WLJycKW8kM0r1Tvlkmev0LIr.png?w=253&amp;h=253" alt="Yet Another Zombie Defense HD">
@@ -520,13 +542,15 @@
             <div class="fluid-container">
 		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.75</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   <img src="img/ps-now.png" class="mini-icon">
 		   </p>
 		  </div>
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>03/sep/2019</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
-               </p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
+             <small class="text-danger bg-white text-center">(<del>19.99€</del>)</small>
+              </p>
            
           </div>
         </div> 
@@ -2477,26 +2501,6 @@
         </div> 
       
       </a>
-      <a data-name="Malicious™ Fallen" data-stars="3.68" data-percentage="21/02/2017"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3329.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP9000/CUSA07401_00/U7qD1q3WfyB1ipSakBZR07wYpYkpu4Oq.png?w=253&amp;h=253" alt="Malicious™ Fallen">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.68</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>21/feb/2017</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="Clouds and Sheep 2" data-stars="3.89" data-percentage="21/02/2017"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4411.html">
       
         <div class="card m-2">
@@ -2515,6 +2519,26 @@
              <small class="text-danger bg-white text-center">(<del>9.99€</del>)</small>
              <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 0.99€</small>
              </p>
+           
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="Malicious™ Fallen" data-stars="3.68" data-percentage="21/02/2017"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3329.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP9000/CUSA07401_00/U7qD1q3WfyB1ipSakBZR07wYpYkpu4Oq.png?w=253&amp;h=253" alt="Malicious™ Fallen">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.68</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>21/feb/2017</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
+               </p>
            
           </div>
         </div> 
@@ -2827,26 +2851,6 @@
         </div> 
       
       </a>
-      <a data-name="Amnesia: Collection" data-stars="4.25" data-percentage="22/11/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./854.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP1188/CUSA05457_00/DfPCH7L22DMjbnjodPCZqxQ0zM6EBfTS.png?w=253&amp;h=253" alt="Amnesia: Collection">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.25</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>22/nov/2016</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>28.49€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="Darksiders Warmastered Edition" data-stars="4.57" data-percentage="22/11/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2397.html">
       
         <div class="card m-2">
@@ -2861,6 +2865,26 @@
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>22/nov/2016</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
+               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="Amnesia: Collection" data-stars="4.25" data-percentage="22/11/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./854.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP1188/CUSA05457_00/DfPCH7L22DMjbnjodPCZqxQ0zM6EBfTS.png?w=253&amp;h=253" alt="Amnesia: Collection">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.25</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>22/nov/2016</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>28.49€</b>
                </p>
            
           </div>
@@ -2949,26 +2973,6 @@
         </div> 
       
       </a>
-      <a data-name="Mordheim: City of the Damned" data-stars="4.18" data-percentage="18/10/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2638.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202103/0516/oD2OciqWNaoeUE1JDN0lorTL.png?w=253&amp;h=253" alt="Mordheim: City of the Damned">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.18</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>18/oct/2016</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="Exist Archive: The Other Side of the Sky" data-stars="4.11" data-percentage="18/10/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3184.html">
       
         <div class="card m-2">
@@ -2983,6 +2987,26 @@
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>18/oct/2016</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>59.99€</b>
+               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="Mordheim: City of the Damned" data-stars="4.18" data-percentage="18/10/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2638.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/img/rnd/202103/0516/oD2OciqWNaoeUE1JDN0lorTL.png?w=253&amp;h=253" alt="Mordheim: City of the Damned">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.18</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>18/oct/2016</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
                </p>
            
           </div>
@@ -3253,6 +3277,26 @@
         </div> 
       
       </a>
+      <a data-name="Nightmares from the Deep: The Cursed Heart" data-stars="4.29" data-percentage="02/08/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4948.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP1667/CUSA04546_00/p8XI8duj7m2vN5HlA40GQ5IzUcha5xsD.png?w=253&amp;h=253" alt="Nightmares from the Deep: The Cursed Heart">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.29</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>02/ago/2016</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
+               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
       <a data-name="ABZÛ" data-stars="4.49" data-percentage="02/08/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1988.html">
       
         <div class="card m-2">
@@ -3307,26 +3351,6 @@
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>02/ago/2016</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="Nightmares from the Deep: The Cursed Heart" data-stars="4.29" data-percentage="02/08/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4948.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP1667/CUSA04546_00/p8XI8duj7m2vN5HlA40GQ5IzUcha5xsD.png?w=253&amp;h=253" alt="Nightmares from the Deep: The Cursed Heart">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.29</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>02/ago/2016</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
                </p>
            
           </div>
@@ -3977,6 +4001,26 @@
         </div> 
       
       </a>
+      <a data-name="Croixleur Sigma" data-stars="4.25" data-percentage="08/03/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5919.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0122/CUSA02163_00/VSZKC8ytafZ87ZHRBkDZb91OMIupHnfP.png?w=253&amp;h=253" alt="Croixleur Sigma">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.25</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>08/mar/2016</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>13.99€</b>
+               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
       <a data-name="Tetraminos" data-stars="3.34" data-percentage="08/03/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./703.html">
       
         <div class="card m-2">
@@ -4014,26 +4058,6 @@
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>08/mar/2016</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="Croixleur Sigma" data-stars="4.25" data-percentage="08/03/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./5919.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP0122/CUSA02163_00/VSZKC8ytafZ87ZHRBkDZb91OMIupHnfP.png?w=253&amp;h=253" alt="Croixleur Sigma">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.25</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>08/mar/2016</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>13.99€</b>
                </p>
            
           </div>
@@ -4424,26 +4448,6 @@
         </div> 
       
       </a>
-      <a data-name="Arc: El Crepúsculo de las Almas" data-stars="4.45" data-percentage="12/01/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3351.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP9000/CUSA02279_00/KCILuxqxN4gsGt5UZBWLus8Y9EKt4lPV.png?w=253&amp;h=253" alt="Arc: El Crepúsculo de las Almas">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.45</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>12/ene/2016</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="ACT IT OUT! Un juego de adivinanzas" data-stars="3.47" data-percentage="12/01/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4404.html">
       
         <div class="card m-2">
@@ -4458,6 +4462,26 @@
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>12/ene/2016</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>6.99€</b>
+               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="Arc: El Crepúsculo de las Almas" data-stars="4.45" data-percentage="12/01/2016"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3351.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP9000/CUSA02279_00/KCILuxqxN4gsGt5UZBWLus8Y9EKt4lPV.png?w=253&amp;h=253" alt="Arc: El Crepúsculo de las Almas">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.45</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>12/ene/2016</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
                </p>
            
           </div>
@@ -4532,13 +4556,15 @@
             <div class="fluid-container">
 		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.93</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
+		   <i class="text-danger fas fa-caret-down"></i> 50%
+		   <img src="img/ps-now.png" class="mini-icon">
 		   </p>
 		  </div>
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>05/dic/2015</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>15.99€</b>
-               </p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>7.99€</b>
+             <small class="text-danger bg-white text-center">(<del>15.99€</del>)</small>
+              </p>
            
           </div>
         </div> 
@@ -4666,13 +4692,13 @@
         </div> 
       
       </a>
-      <a data-name="MX vs. ATV Supercross Encore" data-stars="3.86" data-percentage="27/10/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2373.html">
+      <a data-name="Darksiders II Deathinitive Edition" data-stars="4.35" data-percentage="27/10/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2402.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4389/CUSA01768_00/YxnQV0uZTG0JqVUWHIsTviy6xfR2ICpO.png?w=253&amp;h=253" alt="MX vs. ATV Supercross Encore">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4389/CUSA02419_00/o0GhkFiKHrzDTV5XjBZM8l4wbOS4ltva.png?w=253&amp;h=253" alt="Darksiders II Deathinitive Edition">
            
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.86</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.35</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
 			   <img src="img/ps-now.png" class="mini-icon">
 		   </p>
@@ -4686,13 +4712,13 @@
         </div> 
       
       </a>
-      <a data-name="Darksiders II Deathinitive Edition" data-stars="4.35" data-percentage="27/10/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2402.html">
+      <a data-name="MX vs. ATV Supercross Encore" data-stars="3.86" data-percentage="27/10/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2373.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4389/CUSA02419_00/o0GhkFiKHrzDTV5XjBZM8l4wbOS4ltva.png?w=253&amp;h=253" alt="Darksiders II Deathinitive Edition">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4389/CUSA01768_00/YxnQV0uZTG0JqVUWHIsTviy6xfR2ICpO.png?w=253&amp;h=253" alt="MX vs. ATV Supercross Encore">
            
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.35</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.86</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
 			   <img src="img/ps-now.png" class="mini-icon">
 		   </p>
@@ -4754,13 +4780,15 @@
             <div class="fluid-container">
 		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.56</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
+		   <i class="text-danger fas fa-caret-down"></i> 75%
+		   <img src="img/ps-now.png" class="mini-icon">
 		   </p>
 		  </div>
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>16/oct/2015</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
-               </p>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>7.49€</b>
+             <small class="text-danger bg-white text-center">(<del>29.99€</del>)</small>
+              </p>
            
           </div>
         </div> 
@@ -4911,26 +4939,6 @@
         </div> 
       
       </a>
-      <a data-name="Metal Gear Solid V: The Phantom Pain" data-stars="4.58" data-percentage="01/09/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1955.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202010/0205/dyvo9eGUf7WTZx49eTpQyDuL.png?w=253&amp;h=253" alt="Metal Gear Solid V: The Phantom Pain">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.58</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>01/sep/2015</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="Zombie Vikings" data-stars="4.19" data-percentage="01/09/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3326.html">
       
         <div class="card m-2">
@@ -4951,20 +4959,20 @@
         </div> 
       
       </a>
-      <a data-name="Dynamite Fishing – World Games" data-stars="3.77" data-percentage="26/08/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4472.html">
+      <a data-name="Metal Gear Solid V: The Phantom Pain" data-stars="4.58" data-percentage="01/09/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./1955.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4539/CUSA03077_00/C0zezRPQBGMLMI60hO6Vl8kU62CD1xp0.png?w=253&amp;h=253" alt="Dynamite Fishing – World Games">
+          <img loading="lazy" class="card-img-top" src="https://vulcan.dl.playstation.net/ap/rnd/202010/0205/dyvo9eGUf7WTZx49eTpQyDuL.png?w=253&amp;h=253" alt="Metal Gear Solid V: The Phantom Pain">
            
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.77</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.58</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
 			   <img src="img/ps-now.png" class="mini-icon">
 		   </p>
 		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>26/ago/2015</small></h5>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>01/sep/2015</small></h5>
           <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
                </p>
            
           </div>
@@ -4988,6 +4996,26 @@
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
              <small class="text-danger bg-white text-center">(<del>19.99€</del>)</small>
               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="Dynamite Fishing – World Games" data-stars="3.77" data-percentage="26/08/2015"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4472.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4539/CUSA03077_00/C0zezRPQBGMLMI60hO6Vl8kU62CD1xp0.png?w=253&amp;h=253" alt="Dynamite Fishing – World Games">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.77</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>26/ago/2015</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
+               </p>
            
           </div>
         </div> 
@@ -5622,26 +5650,6 @@
         </div> 
       
       </a>
-      <a data-name="Thomas Was Alone" data-stars="4.48" data-percentage="26/11/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./934.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4395/CUSA00909_00/NtRhLXNfq6XRDRcmbU3ET0cEgS12DxDk.png?w=253&amp;h=253" alt="Thomas Was Alone">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.48</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>26/nov/2014</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>7.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="LittleBigPlanet™ 3" data-stars="4.28" data-percentage="26/11/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./831.html">
       
         <div class="card m-2">
@@ -5656,6 +5664,26 @@
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>26/nov/2014</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
+               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="Thomas Was Alone" data-stars="4.48" data-percentage="26/11/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./934.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4395/CUSA00909_00/NtRhLXNfq6XRDRcmbU3ET0cEgS12DxDk.png?w=253&amp;h=253" alt="Thomas Was Alone">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.48</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>26/nov/2014</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>7.99€</b>
                </p>
            
           </div>
@@ -5744,26 +5772,6 @@
         </div> 
       
       </a>
-      <a data-name="How to Survive: Storm Warning Edition" data-stars="4.29" data-percentage="29/10/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4390.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4040/CUSA00706_00/golFTyav4wtDd1E9LAEbvvRd1ZTwmKW5.png?w=253&amp;h=253" alt="How to Survive: Storm Warning Edition">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.29</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>29/oct/2014</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
       <a data-name="The Unfinished Swan™" data-stars="4.21" data-percentage="29/10/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3325.html">
       
         <div class="card m-2">
@@ -5778,6 +5786,26 @@
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>29/oct/2014</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
+               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
+      <a data-name="How to Survive: Storm Warning Edition" data-stars="4.29" data-percentage="29/10/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./4390.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4040/CUSA00706_00/golFTyav4wtDd1E9LAEbvvRd1ZTwmKW5.png?w=253&amp;h=253" alt="How to Survive: Storm Warning Edition">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.29</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>29/oct/2014</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
                </p>
            
           </div>
@@ -6047,13 +6075,13 @@
         </div> 
       
       </a>
-      <a data-name="Bound by Flame™" data-stars="3.55" data-percentage="07/05/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2536.html">
+      <a data-name="Titan Attacks!" data-stars="4.02" data-percentage="07/05/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./950.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4133/CUSA00303_00/Dnq8qcYOX2CoybqZaXavZ6856HBB0e5B.jpg?w=253&amp;h=253" alt="Bound by Flame™">
+          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4395/NPEJ00335_00/burc5gxbYjeSs01bjOAAIdc1XCsQogQ9.png?w=253&amp;h=253" alt="Titan Attacks!">
            
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.55</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.02</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
 			   <img src="img/ps-now.png" class="mini-icon">
 		   </p>
@@ -6067,13 +6095,13 @@
         </div> 
       
       </a>
-      <a data-name="Titan Attacks!" data-stars="4.02" data-percentage="07/05/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./950.html">
+      <a data-name="Bound by Flame™" data-stars="3.55" data-percentage="07/05/2014"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./2536.html">
       
         <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="http://apollo2.dl.playstation.net/cdn/EP4395/NPEJ00335_00/burc5gxbYjeSs01bjOAAIdc1XCsQogQ9.png?w=253&amp;h=253" alt="Titan Attacks!">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP4133/CUSA00303_00/Dnq8qcYOX2CoybqZaXavZ6856HBB0e5B.jpg?w=253&amp;h=253" alt="Bound by Flame™">
            
             <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.02</p>
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.55</p>
 		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
 			   <img src="img/ps-now.png" class="mini-icon">
 		   </p>
@@ -6229,6 +6257,26 @@
         </div> 
       
       </a>
+      <a data-name="Escape Plan™" data-stars="3.86" data-percentage="29/11/2013"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3680.html">
+      
+        <div class="card m-2">
+          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP9000/CUSA00153_00/zCVEevljh99FB7WATJ3zgG1auCbE1DFq.png?w=253&amp;h=253" alt="Escape Plan™">
+           
+            <div class="fluid-container">
+		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.86</p>
+		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
+			   <img src="img/ps-now.png" class="mini-icon">
+		   </p>
+		  </div>
+		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>29/nov/2013</small></h5>
+          <div class="card-body p-0">
+            <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
+               </p>
+           
+          </div>
+        </div> 
+      
+      </a>
       <a data-name="Sound Shapes™" data-stars="4.14" data-percentage="29/11/2013"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3725.html">
       
         <div class="card m-2">
@@ -6303,26 +6351,6 @@
 		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>29/nov/2013</small></h5>
           <div class="card-body p-0">
             <p class="card-text bg-success text-white text-center m-0 p-1"><b>19.99€</b>
-               </p>
-           
-          </div>
-        </div> 
-      
-      </a>
-      <a data-name="Escape Plan™" data-stars="3.86" data-percentage="29/11/2013"  class="ahorro linkGame col-6 col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-1 p-0" href="./3680.html">
-      
-        <div class="card m-2">
-          <img loading="lazy" class="card-img-top" src="https://apollo2.dl.playstation.net/cdn/EP9000/CUSA00153_00/zCVEevljh99FB7WATJ3zgG1auCbE1DFq.png?w=253&amp;h=253" alt="Escape Plan™">
-           
-            <div class="fluid-container">
-		   <p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.86</p>
-		   <p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-			   <img src="img/ps-now.png" class="mini-icon">
-		   </p>
-		  </div>
-		  <h5 class="bg-dark text-white text-center m-0 p-1 container-fluid"><small>29/nov/2013</small></h5>
-          <div class="card-body p-0">
-            <p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
                </p>
            
           </div>
