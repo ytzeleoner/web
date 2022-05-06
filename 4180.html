@@ -74,11 +74,15 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.59</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-					   <img src="img/ps-now.png" class="mini-icon">
+				   <i class="text-danger fas fa-caret-down"></i> 60%
+				   <img src="img/ps-now.png" class="mini-icon">
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>59.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>23.99€</b>
              		</p>
-             		</div>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 36.00€</b></p>
+            		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>59.99€</del>)</small></p>
+            		<p class="card-text text-info text-center">Hasta el 10 de mayo</p>
+          		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
@@ -86,7 +90,7 @@ body{
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
       		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 52.47 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 23.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/mar/2022 al 08/mar/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 06/may/2022 al 10/may/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Incluye Red Dead Redemption 2: Modo Historia y Red Dead Online.<br/><br/>Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es una historia épica sobre el honor y la lealtad en el umbral de una nueva era.<br/><br/>América, 1899. Arthur Morgan y la banda de Van der Linde se ven obligados a huir. Con agentes federales y los mejores cazarrecompensas de la nación pisándoles los talones, la banda deberá atracar, robar y luchar, para sobrevivir en su camino por el escabroso territorio del corazón de América. Mientras las divisiones internas aumentan y amenazan con separarlos a todos, Arthur deberá elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer.<br/><br/>Red Dead Redemption 2 también incluye el mundo multijugador compartido de Red Dead Online: forja tu propio camino mientras te enfrentas a agentes de la ley, bandas de forajidos y feroces animales salvajes para ganarte la vida en la frontera americana. Monta un campamento, cabalga en solitario o forma una cuadrilla, y explora todo tipo de entornos: desde las montañas nevadas del norte hasta los pantanos del sur, pasando por puestos remotos, granjas concurridas y ciudades bulliciosas. Persigue a fugitivos; caza, pesca y comercia; busca tesoros exóticos; monta tu propia destilería de licor ilegal; o hazte Naturalista para aprender los secretos del reino animal y mucho más en un mundo increíblemente profundo y detallado. Incluye todos los nuevos contenidos, modos de juego y demás mejoras implementadas desde el lanzamiento.<br/><br/><br/></p>
@@ -123,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['04 FEB', '07 FEB', '10 FEB', '13 FEB', '16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY'],
+      labels: ['05 FEB', '08 FEB', '11 FEB', '14 FEB', '17 FEB', '20 FEB', '23 FEB', '26 FEB', '01 MAR', '04 MAR', '07 MAR', '10 MAR', '13 MAR', '16 MAR', '19 MAR', '22 MAR', '25 MAR', '28 MAR', '31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR', '30 ABR', '03 MAY', '06 MAY'],
       datasets: [{
-        data: [23.99, 23.99, 23.99, 23.99, 23.99, 59.99, 59.99, 59.99, 59.99, 23.99, 23.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99],
+        data: [23.99, 23.99, 23.99, 23.99, 59.99, 59.99, 59.99, 59.99, 59.99, 23.99, 23.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 59.99, 23.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
