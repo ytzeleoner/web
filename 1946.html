@@ -88,7 +88,7 @@ body{
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 42.30 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 42.02 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 24.99 € </b></p>
       		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 27/abr/2022 al 12/may/2022 </small></p>
      </div><!--END ROW -->
@@ -127,7 +127,7 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['08 FEB', '11 FEB', '14 FEB', '17 FEB', '20 FEB', '23 FEB', '26 FEB', '01 MAR', '04 MAR', '07 MAR', '10 MAR', '13 MAR', '16 MAR', '19 MAR', '22 MAR', '25 MAR', '28 MAR', '31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR', '30 ABR', '03 MAY', '06 MAY', '09 MAY'],
+      labels: ['09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY'],
       datasets: [{
         data: [49.99, 49.99, 49.99, 49.99, 49.99, 24.99, 24.99, 24.99, 24.99, 24.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 24.99, 24.99, 24.99, 24.99, 24.99],
         lineTension: 0,
