@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.57</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 60%
+				   <i class="text-danger fas fa-caret-down"></i> 70%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>4.49€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 9.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 10.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
+            		<p class="card-text text-info text-center">Hasta el 26 de mayo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 10.97 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 14.87 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 4.49 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 11/may/2022 al 26/may/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>El juego presenta un caso que no podría ser más complicado: una madre desesperada, una niña desaparecida y un lugar místico. Sin embargo, para resolver la enigmática desaparición de la pequeña Tabitha Marsh, se busca al detective más experto e inteligente de todos... pero no tiene tiempo, así que te asignan a ti el caso. Este misterioso caso te llevará a la lejana aldea pesquera de Innsmouth, donde nada es lo que parece...<br/><br/>¡Salva a la chica, resuelve el caso y sobrevive en Innsmouth!<br/><br/>The Innsmouth Case es una aventura detectivesca con forma de libro interactivo inspirado en las increíbles obras de horror fantástico del gran H. P. Lovecraft. La combinación única de horror y humor hacen de The Innsmouth Case la primera aventura interactiva con toques de comedia y terror. Un juego en el que cada decisión es importante, y hay más de una forma de resolver el caso con éxito... ¡o fracasar de forma estrepitosa!<br/><br/>- Forma parte de una emocionante historia del universo de Lovecraft, en la que cada decisión que tomes tendrá consecuencias en la historia.<br/>- Esta aventura interactiva te cautivará con su combinación única de humor poco convencional y horror clásico.<br/>- Tú decides el destino que te espera en Innsmouth; el juego tiene un total de 27 finales diferentes a la espera de ser descubiertos. ¿Superas el día a día o tienes los días contados?<br/>- Explora Innsmouth en el siglo XXI, habla con más de 30 personajes animados y resuelve el misterio tras la desaparición de la pequeña Tabitha Marsh.<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE'],
+      labels: ['10 FEB', '13 FEB', '16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY'],
       datasets: [{
-        data: [7.49, 7.49, 7.49, 7.49, 7.49, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99, 5.99],
+        data: [14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 4.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

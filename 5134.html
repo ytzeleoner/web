@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.55</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 30%
+				   <i class="text-danger fas fa-caret-down"></i> 60%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>45.49€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>25.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 19.50€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 39.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>64.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 26 de mayo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 59.85 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 45.49 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 27/oct/2021 al 20/nov/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 64.56 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 25.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 11/may/2022 al 26/may/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>King's Bounty II Lord's Edition incluye el juego principal y el siguiente contenido:<br/><br/>• Barra de engaño<br/>• Martillo de hielo<br/>• Báculo de armonía<br/>• Espada de Tirano<br/>• Armadura del Vacío<br/>• Paquete premium "Héroes y villanos"<br/>• Perros guardianes del rey<br/><br/>King's Bounty II<br/><br/>La oscuridad desciende sobre el mundo de Nostria. Las conspiraciones, el sabotaje y la nigromancia ensombrecen el país. ¡Pero puede que un salvador -la última esperanza del reino- consiga combatirlos y restablezca la paz y el orden en Nostria! <br/><br/>King's Bounty II es la esperada secuela de la legendaria serie de videojuegos King's Bounty, una de las más famosas y representativas del género de los RPG por turnos, que amplía este legado con una historia épica, nuevas facciones, enemigos y características que conforman Antara, un mundo abierto y rebosante de fantasía. Tras la desbandada de los reinos, los condados exigen la independencia, los bandidos merodean por los caminos, todas las naciones de ultramar han rechazado la autoridad del rey y criaturas infectadas acechan a cualquier víctima desprevenida...<br/><br/>Pero unos nuevos héroes fortuitos, decididos a poner orden en el caos, podrían ser la última esperanza. Juega con uno de ellos. Recluta, desarrolla y dirige a tu ejército personal en una aventura no lineal llena de traiciones, sacrificios y supervivencia. Lucha por tu futuro, derrota a los enemigos en trepidantes combates por turnos, toma decisiones difíciles y disfruta con la intensidad de una de las sagas más clásicas, pero en versión renovada.<br/><br/><br/>Un único jugador offline<br/>Usa la función de vibración DUALSHOCK 4<br/>Juegos mejorados en la consola PS4 Pro<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV'],
+      labels: ['10 FEB', '13 FEB', '16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY'],
       datasets: [{
-        data: [64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 45.49, 45.49, 45.49, 45.49, 45.49, 45.49, 45.49, 45.49],
+        data: [64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 64.99, 25.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

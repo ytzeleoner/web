@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://apollo2.dl.playstation.net/cdn/EP2627/CUSA13405_00/NvTtqYfwF5Q9xVUCezG3XS469W3mlyBL.png?w=253&amp;h=253">
@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.82</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 50%
+				   <i class="text-danger fas fa-caret-down"></i> 60%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>8.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 7.19€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>7.19€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 6.29€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 9.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 10.80€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>17.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 17 de febrero</p>
+            		<p class="card-text text-info text-center">Hasta el 26 de mayo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 16.51 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 17.18 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 7.19 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2020 al 20/ene/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 11/may/2022 al 26/may/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>La edición especial incluye el juego de Darkwood, su banda sonora oficial y un tema dinámico.<br/><br/>Darkwood es survival horror desafiante que no recurre a los sustos forzados.<br/>Fabrica armas, prepara trampas, fortifica los escondites. Explora y busca comida en los escalofriantes bosques del bloque soviético durante el día y resguárdate en tu escondite durante la noche. Fuerzas horripilantes corrompen los bosques, así que espera y reza para que el sol salga por la mañana.<br/><br/>Ábrete paso por el extraño y extenuante mundo de Darkwood e indaga sobre los secretos más oscuros de los habitantes para escapar de la zona infestada antes de que destruya tu cuerpo y consuma tu mente.<br/><br><br></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['18 NOV', '21 NOV', '24 NOV', '27 NOV', '30 NOV', '03 DIC', '06 DIC', '09 DIC', '12 DIC', '15 DIC', '18 DIC', '21 DIC', '24 DIC', '27 DIC', '30 DIC', '02 ENE', '05 ENE', '08 ENE', '11 ENE', '14 ENE', '17 ENE', '20 ENE', '23 ENE', '26 ENE', '29 ENE', '01 FEB', '04 FEB', '07 FEB', '10 FEB', '13 FEB', '16 FEB'],
+      labels: ['10 FEB', '13 FEB', '16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY'],
       datasets: [{
-        data: [17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 8.99, 8.99, 8.99, 8.99, 8.99],
+        data: [8.99, 8.99, 8.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 7.19],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

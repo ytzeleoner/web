@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.72</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 25%
+				   <i class="text-danger fas fa-caret-down"></i> 35%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>9.74€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 8.44€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>8.44€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 7.14€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 3.25€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 4.55€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>12.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
+            		<p class="card-text text-info text-center">Hasta el 26 de mayo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 11.45 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 9.74 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 12.94 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 8.44 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 11/may/2022 al 26/may/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>I Saw Black Clouds es un thriller psicológico interactivo con elementos sobrenaturales e intrigantes subtramas.<br/><br/>Tras el suicidio de su amiga, Kristina regresa a su pueblo natal en busca de respuestas. Sin embargo, acaba desenterrando secretos perturbadores que la ponen en peligro a ella y a quienes la rodean. La verdad resulta ser mucho más compleja de lo que la joven imaginaba.<br/><br/>Kristina, traumatizada, intenta asimilar todo lo sucedido y aceptar sus sentimientos reprimidos. Por si eso no bastara, parece que su mente ha inventado distintas versiones del fatídico suceso, por lo que necesita desentrañar la verdad. Cuando regresa a su pueblo natal para el funeral, la joven se reencuentra con su mejor amiga, Charlotte (Rachel Jackson), y se embarca en un intrigante viaje de autodescubrimiento.<br/><br/>Tu forma de interactuar con los personajes del juego y las decisiones que tomes afectarán a tus descubrimientos, al camino que sigas y a la resolución que encuentres al final del viaje.<br/><br/><br/>• Un thriller psicológico interactivo filmado en el Reino Unido con actores reales.<br/>• Un argumento con ramificaciones que hacen que el curso de la historia cambie drásticamente en función del camino que elijas.<br/>• Un seguimiento en tiempo real del estado de las relaciones que influye en la historia a medida que avanzas.<br/>• Un seguimiento en tiempo real de los rasgos de personalidad que evolucionan en función de tus elecciones.<br/>• Con Nicole O'Neill (Gorrión rojo, La bella y la bestia) y Rachel Jackson (Outlander) como protagonistas.<br/>• Funciones desbloqueables, como las de omitir escena y evaluar la personalidad.<br/>• Un modo especial en el que se pueden pausar las elecciones para que el público participe durante las transmisiones en directo.<br/><br/><br/></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE'],
+      labels: ['10 FEB', '13 FEB', '16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY'],
       datasets: [{
-        data: [9.74, 9.74, 9.74, 9.74, 9.74, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 9.74, 9.74, 9.74, 9.74, 9.74, 9.74, 9.74, 9.74, 9.74, 9.74],
+        data: [12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 12.99, 8.44],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

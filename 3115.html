@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://vulcan.dl.playstation.net/img/rnd/202102/1811/8fkMjj7rMDlAnffXtTZt9vst.png?w=253&amp;h=253">
@@ -77,20 +77,20 @@ body{
 				   <i class="text-danger fas fa-caret-down"></i> 65%
 				   <img src="img/ps-now.png" class="mini-icon">
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>10.49€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>6.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 19.50€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 13.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+            		<p class="card-text text-info text-center">Hasta el 26 de mayo</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 23.56 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 8.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 10/nov/2021 al 02/dic/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 26.52 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 6.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 11/may/2022 al 26/may/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Las Islas Prohibidas te llaman, descubre sus secretos.<br/>Tras naufragar sola en una isla desierta, explora, adáptate y recorre la tierra y los peligrosos mares para sobrevivir.<br/><br/>Como Kara, eres una guerrera a la que una feroz tormenta en el mar separó de su tribu. Tras caer a las turbulentas aguas, te ves arrojada a las costas de las Islas Prohibidas, un paraíso misterioso.<br/><br/>Sin bote, ni comida ni herramientas, solo con tu voluntad y habilidad de supervivencia, descubre los abundantes recursos de esta hermosa isla. Fabrica utensilios y armas para cazar y defenderte de la salvaje y fantástica fauna de la naturaleza.<br/><br/>Al explorar otras islas y las ruinas dispersas por la tierra, descubrirás secretos del pasado y atisbos del futuro. Desvela el misterio tras todas ellas y quizá encuentres algo más que el modo de volver a casa.<br/><br/>Desvela los secretos de las islas<br/>Embárcate en un viaje personal y descubre la historia de las idílicas Islas Prohibidas; cada una tiene la llave de un misterio y revelaciones inesperadas.<br/><br/>Explora hasta donde alcanza la vista<br/>Pon rumbo al horizonte y recorre las islas, cada una con su propia y diversa fauna salvaje, paisajes y desafíos que afrontar. <br/><br/>Vive de la tierra<br/>Obtén recursos del agreste terreno de las islas, que puedes usar para crear diversas herramientas y armas par cazar animales salvajes y mejorar tu bote. Tendrás que zarpar cuando los recursos comiencen a escasear.<br/><br/>Construye la embarcación perfecta<br/>Tu bote es tu compañero clave en este viaje, fabrica tu embarcación personalizada para afrontar las traicioneras aguas y viajar de una isla a otra. Diseña tu bote para combatir los vientos tempestuosos, las olas monstruosas y las mortales criaturas marinas.<br/><br/><br/>Offline single player<br/>Uses DUALSHOCK 4 vibration function<br/>Enhanced game play on PS4 Pro console<br/>Offline play enabled<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR'],
+      labels: ['10 FEB', '13 FEB', '16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 10.49, 10.49, 10.49, 10.49, 10.49, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 10.49, 10.49, 10.49, 10.49, 10.49],
+        data: [29.99, 29.99, 10.49, 10.49, 10.49, 10.49, 10.49, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 6.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
