@@ -74,19 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.52</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-					   <img src="img/ps-now.png" class="mini-icon">
+				   <i class="text-danger fas fa-caret-down"></i> 50%
+				   <img src="img/ps-now.png" class="mini-icon">
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>9.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
              		</p>
-             		</div>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 5.00€</b></p>
+            		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
+            		<p class="card-text text-info text-center">Hasta el 02 de junio</p>
+          		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 9.17 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 9.06 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 4.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 23/feb/2022 al 10/mar/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 18/may/2022 al 02/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <b>Al jugar a este juego en PS5, es posible que se produzcan errores o experimentes un comportamiento inesperado y que algunas funciones para PS4 no estén disponibles. Para poder jugar a este juego en PS5, es posible que tengas que actualizar el software del sistema a la versión más reciente. Consulta PlayStation.com/bc para obtener más información.</b><br>Jimmy tenía UNA tarea: entregar un cargamento de pantalones para monos en el Monkey Park. Pero dentro del envío había también un puñado de cascos Peak Point que aumentan la inteligencia.<br/><br/>Lo bueno es que todos los monos llevan pantalones. Es un juego para toda la familia.<br/><br/>Lo malo es que el siniestro simio Specter ha recuperado su intelecto e instiga a los monos a dominar el mundo.<br/><br/>Jimmy, más vale que te pongas manos a la obra.<br/><br/>Estos clásicos de PlayStation®2 se ven increíbles en alta definición en PlayStation®4 y cuentan con trofeos, además de compatibilidad con Share Play, Uso a distancia, canales de actividades y funciones de segunda pantalla, para ver los manuales del juego en PlayStation®Vita o PlayStation®App. <br/><br/>Puesto que este título se ha convertido de la versión original de PlayStation®2 a la versión de PlayStation®4 y no es compatible con periféricos de PlayStation®2, es posible que en algunos momentos la mecánica de juego difiera de la original y que algunas funciones no estén disponibles. <br/><br/>Este producto es compatible con los siguientes idiomas Inglés<br/><br/><br/><br/></p>
@@ -123,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY'],
+      labels: ['18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY'],
       datasets: [{
-        data: [9.99, 9.99, 9.99, 4.99, 4.99, 4.99, 4.99, 4.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99],
+        data: [9.99, 9.99, 4.99, 4.99, 4.99, 4.99, 4.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 4.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
