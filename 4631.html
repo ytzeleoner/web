@@ -74,24 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.00</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 50%
+				   <i class="text-danger fas fa-caret-down"></i> 60%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>4.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 3.99€</small>
-            		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 5.00€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
+             		</p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 6.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
+            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 9.17 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 4.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 05/ene/2022 al 20/ene/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 9.92 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 3.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>‘My Aunt is a Witch’ es una novela visual llena de aventuras y búsquedas en el mundo de la magia donde tendrás la increíble oportunidad de convertirte en aprendiz de una de las brujas más peculiares y carismáticas.<br/><br/>El protagonista, un chico llamado Thomas, lleva una vida difícil. La cosa se pone aún peor cuando su padre se casa con una mujer que simplemente no puede soportar a su hijastro. Toda su vida cambia con un repentino viaje a la casa de su tía, a quien visitó una vez hace muchos años. Ahora definitivamente ha olvidado todos sus pensamientos tristes, porque su tía Alice es una verdadera bruja que tiene un gato que habla y un montón de cosas mágicas, y su casa no es exactamente el lugar adecuado para niños pequeños. Pero a pesar de todos los peligros, Thomas acepta el desafío y decide firmemente dominar la elaboración de pociones y revelar todos los secretos que se esconden tras la barrera mágica.<br/><br/>Características:<br/>- Hermoso y colorido estilo artístico<br/>- Atmósfera fabulosa y cálida<br/>- Banda sonora original y sonidos realistas que crean un efecto de presencia, lo cual ayuda a sumergirse en este mundo mágico<br/>- Mecánica de misiones<br/>- Lugares interactivos<br/><br/><br/></p>
@@ -128,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE'],
+      labels: ['24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY', '22 MAY', '25 MAY'],
       datasets: [{
-        data: [9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 4.99, 4.99, 4.99, 4.99, 4.99],
+        data: [9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 3.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
