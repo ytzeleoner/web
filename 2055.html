@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://apollo2.dl.playstation.net/cdn/EP0001/CUSA13885_00/VwB9sGQNc3gt8mdarimLI5Bxxok66wqN.png?w=253&amp;h=253">
@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 70%
+				   <i class="text-danger fas fa-caret-down"></i> 75%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>35.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 84.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 90.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>119.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 03 de marzo</p>
+            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 85.37 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 112.47 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 29.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 29/nov/2021 al 23/dic/2021 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>¡Es hora de defender el condado de Hope con este lote que incluye Far Cry® 5 Gold Edition y Far Cry® New Dawn Deluxe Edition!<br/><br/><br/>Far Cry® 5 Gold Edition<br/>La Gold Edition incluye el juego, el Pack Digital Deluxe y el Season Pass.<br/>Bienvenido al condado de Hope, en Montana, la tierra de los valientes y de la libertad, pero también de la secta apocalíptica conocida como el Proyecto de la Puerta del Edén. Enfréntate a su líder, Joseph Seed, y a sus hermanos, los Heraldos, para prender la llama de la resistencia y liberar a la comunidad.<br/><br/><br/>Far Cry® New Dawn Deluxe Edition<br/>Hazte con la Deluxe Edition y recibirás el Pack Digital Deluxe.<br/>Adéntrate en Montana, en un condado de Hope posapocalíptico y dinámico, 17 años después de una catástrofe nuclear mundial.<br/>Únete a los otros supervivientes y lidera la lucha contra la nueva y peligrosa amenaza de los Salteadores y sus despiadadas cabecillas, las gemelas, para impedir que se hagan con el control de los últimos recursos. <br/><br/><br/><br/><br/>Compras durante el juego opcionales<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE', '22 ENE', '25 ENE', '28 ENE', '31 ENE', '03 FEB', '06 FEB', '09 FEB', '12 FEB', '15 FEB', '18 FEB', '21 FEB', '24 FEB', '27 FEB', '02 MAR'],
+      labels: ['25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 35.99, 35.99, 35.99, 35.99, 35.99],
+        data: [35.99, 35.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 29.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

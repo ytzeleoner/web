@@ -78,19 +78,20 @@ body{
 				   
 				   </p>
             		<p class="card-text bg-success text-white text-center m-0 p-1"><b>29.99€</b>
-             		</p>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 23.99€</small>
+            		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 90.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>119.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 28 de abril</p>
+            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 90.32 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 88.34 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 29.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 13/abr/2022 al 28/abr/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Incluye:<br/>- Juego completo TEKKEN 7<br/>- Personaje adicional: Eliza<br/>- Todos los pases de temporada del 1 al 4 y las siguientes bonificaciones:<br/><br/>Pase de temporada 1:<br/>- Modo: Ultimate TEKKEN BOWL + Additional Outfits<br/>- 2 personajes invitados: Geese Howard y Noctis Lucis Caelum<br/>- Bonificación (conjunto de personalización)<br/><br/>Pase de temporada 2:<br/>- 4 personajes recurrentes: Anna Williams, Lei Wulong, Craig Marduk y Julia Chang<br/>- Personaje: Armor King<br/>- El personaje de The Walking Dead: Negan<br/>- Bonificación (conjunto de personalización)<br/><br/>Pase de temporada 3:<br/>- 2 personajes recurrentes: Zafina y Ganryu<br/>- 2 personajes originales: Leroy Smith y Fahkumram<br/>- Ver datos de fotogramas (función nueva)<br/>- Fase: Cave of Enlightenment<br/>- Bonificación (conjunto de personalización)<br/><br/>Pase de temporada 4:<br/>- Personaje: Kunimitsu<br/>- Personaje original: Lidia Sobieska<br/>- 2 fases: Vermilion Gates y Island Paradise<br/>- Bonificación (conjunto de personalización)<br/><br/>Aviso: TEKKEN 7 (juego completo), TEKKEN 7 Originals Edition, los pases de temporada del 1 al 4 y los contenidos descargables del 1 al 19 que se incluyen en esta edición se venden también por separado. No compres el mismo contenido por duplicado.<br/><br/><br/>Multijugador offline (2 jugadores)<br/>Multijugador online (2-8 jugadores). Requiere una suscripción pagada a PlayStation Plus. Las funciones online requieren tener una cuenta y están sujetas a nuestros términos de servicio (playstationnetwork.com/terms-of-service), nuestra política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/>Compatible con el casco de PlayStation VR<br/>Usa la función de vibración DUALSHOCK 4<br/>Uso a distancia permite a los usuarios conectarse y jugar en consolas PlayStation®4 y PlayStation®5 a través de un dispositivo móvil, PC u otra consola PlayStation®4 o PlayStation®5.<br/>Compras durante el juego opcionales<br/>Las funciones online requieren una cuenta y están sujetas a los términos del servicio (playstationnetwork.com/terms-of-service), la política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/><br><br></p>
@@ -127,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['27 ENE', '30 ENE', '02 FEB', '05 FEB', '08 FEB', '11 FEB', '14 FEB', '17 FEB', '20 FEB', '23 FEB', '26 FEB', '01 MAR', '04 MAR', '07 MAR', '10 MAR', '13 MAR', '16 MAR', '19 MAR', '22 MAR', '25 MAR', '28 MAR', '31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR'],
+      labels: ['25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY'],
       datasets: [{
-        data: [119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 29.99, 29.99, 29.99, 29.99, 29.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 29.99, 29.99, 29.99, 29.99, 29.99],
+        data: [119.99, 119.99, 29.99, 29.99, 29.99, 29.99, 29.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 29.99, 29.99, 29.99, 29.99, 29.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 29.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

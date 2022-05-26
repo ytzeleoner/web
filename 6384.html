@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 40%
+				   <i class="text-danger fas fa-caret-down"></i> 55%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>83.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>62.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 56.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 77.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>139.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 28 de abril</p>
+            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 130.76 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 83.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 13/abr/2022 al 28/abr/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 129.07 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 62.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Con este producto podrás descargar tanto la versión digital para PS4™ como la versión digital para PS5™ de este juego.<br/><br/>Incluye el juego de base, el Season Pass, el paquete de adornos definitivo y la expansión de Assassin's Creed Valhalla: El amanecer del Ragnarok.<br/><br/>En Assassin’s Creed Valhalla saquea a tus enemigos, haz prosperar tu asentamiento y consolida tu poder político para hallar tu lugar entre los dioses en el Valhalla.<br/><br/>- El contenido del Season Pass incluye las expansiones La Ira de los Druidas y El asedio de París.<br/>- El Pack Ultimate incluye el paquete de berserker (conjunto de equipo, paquete de asentamiento y paquete de drakkar).<br/>- Assassin's Creed Valhalla: El amanecer del Ragnarok: Cumple tu destino en la piel del dios nórdico Odín y completa tu saga.<br/><br/>Ahorra dinero en contenido para este juego adquiriendo el Season Pass. El contenido puede ser descargado de PlayStation®Store o en el propio juego una vez sea lanzado.<br/><br/>Si ya tienes la versión para PS4™ de este juego, puedes conseguir la versión digital para PS5™ sin coste adicional y sin necesidad de comprar este producto. Quienes tengan el disco de juego de PS4™ deberán introducirlo en la consola PS5™ cada vez que quieran descargar o jugar a la versión digital para PS5™. Quienes tengan el disco de juego de PS4™ y compren la consola PS5™ edición digital, sin lector de discos, no podrán conseguir la versión para PS5™ sin coste adicional.<br/><br/><br/>Un único jugador offline<br/>Compras durante el juego opcionales<br/>Las funciones online requieren una cuenta y están sujetas a los términos del servicio (playstationnetwork.com/terms-of-service), la política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['27 ENE', '30 ENE', '02 FEB', '05 FEB', '08 FEB', '11 FEB', '14 FEB', '17 FEB', '20 FEB', '23 FEB', '26 FEB', '01 MAR', '04 MAR', '07 MAR', '10 MAR', '13 MAR', '16 MAR', '19 MAR', '22 MAR', '25 MAR', '28 MAR', '31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR'],
+      labels: ['25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY'],
       datasets: [{
-        data: [139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 83.99, 83.99, 83.99, 83.99, 83.99],
+        data: [139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 83.99, 83.99, 83.99, 83.99, 83.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 139.99, 62.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

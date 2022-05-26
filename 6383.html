@@ -74,23 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 25%
+				   <i class="text-danger fas fa-caret-down"></i> 30%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>89.99€</b>
-             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 30.00€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>83.99€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 77.99€</small>
+            		</p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 36.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>119.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 10 de mayo</p>
+            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 113.73 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 89.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 06/may/2022 al 10/may/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 112.94 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 83.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>ESTE ROSTER DE LEYENDAS ES LO MÁS <br/>Triunfa con WWE 2K22 Edición nWo 4-Life, que incluye Superstars jugables de nWo y mucho más.<br/><br/>La Edición nWo 4-Life incluye también el contenido digital adicional de la Edición Deluxe para PS4™ y PS5™.<br/><br/>MOTOR DE JUEGO REDISEÑADO. NUEVOS CONTROLES. TODAS LAS FUNCIONES QUE TE PUEDAS IMAGINAR.<br/>Levántate de la grada y toma el control de toda la fuerza del Universo WWE. <br/><br/>INTRODUCCIÓN A Mi GM<br/>Demuestra quién manda como mánager de la WWE. Toma las riendas de Raw, SmackDown, NXT o NXT UK y forma un roster insuperable para enfrentarte a otros GM.<br/><br/>EMPIEZA TU CARRERA, ELIMINA A LA COMPETENCIA <br/>Toma el control no de una, sino de dos aventuras en Mi LEYENDA —masculina y femenina— para dictar tu camino según tus propias reglas. <br/><br/>CONTROLA EL RING CON TU FACCIÓN <br/>Con el nuevo modo Mi FACCIÓN, podrás crear una facción que rivalice contra los mismísimos nWo. ¡Recluta, gestiona y mejora Superstars de la WWE con eventos semanales y actualizaciones periódicas! <br/><br/>WWE 2K22: UN GOLPE DE EFECTO<br/><br/>El Pack Rey Mysterio solo está disponible en PlayStation®5<br/><br/><br/>Multijugador offline (2-4 jugadores)<br/>Multijugador online (2-8 jugadores). Requiere una suscripción pagada a PlayStation Plus. Las funciones online requieren tener una cuenta y están sujetas a nuestros términos de servicio (playstationnetwork.com/terms-of-service), nuestra política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/>Compras durante el juego opcionales<br/>Las funciones online requieren una cuenta y están sujetas a los términos del servicio (playstationnetwork.com/terms-of-service), la política de privacidad (playstationnetwork.com/privacy-policy) y la política de privacidad del editor del juego.<br/><br><br></p>
@@ -127,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['08 FEB', '11 FEB', '14 FEB', '17 FEB', '20 FEB', '23 FEB', '26 FEB', '01 MAR', '04 MAR', '07 MAR', '10 MAR', '13 MAR', '16 MAR', '19 MAR', '22 MAR', '25 MAR', '28 MAR', '31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR', '30 ABR', '03 MAY', '06 MAY', '09 MAY'],
+      labels: ['25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY'],
       datasets: [{
-        data: [119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 89.99, 89.99, 89.99, 89.99, 89.99, 119.99, 119.99, 89.99, 89.99],
+        data: [119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 119.99, 89.99, 89.99, 89.99, 89.99, 89.99, 119.99, 119.99, 119.99, 89.99, 119.99, 119.99, 119.99, 119.99, 119.99, 83.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
