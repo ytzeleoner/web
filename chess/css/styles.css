@@ -1,6 +1,9 @@
+*{
+	box-sizing: border-box;
+}
+
 body{
 	background-color: #196e76;
-	box-sizing: border-box;
 	overflow: hidden;
 	height: 100vh;
 	margin: 0;
