@@ -467,6 +467,33 @@ var ejercicios=[
 								],
 						respuestaCorrecta:"36"
 		}
+	},
+	{
+		nombre: "113702 Dif(1000)",
+		tipo: "Mate",
+		subtipo: "Basicos",
+		posicionInicial:"2r5/pp3ppb/4k2P/2q1p3/3p4/P1P2P2/1P1Q2P1/2KR3R b - - 0 25",
+		jugadasCPU: ['dxc3','Kf6','Qxd6','END'],
+		jugadasPlayer: ['Qd7+','Rd6+','Qxd6+'],
+		orientation: 'white'
+	},
+	{
+		nombre: "1695220 Dif(1168)",
+		tipo: "Mate",
+		subtipo: "Basicos",
+		posicionInicial:"8/4R2p/8/3B1p2/8/5pk1/7r/5K2 w - - 4 50",
+		jugadasCPU: ['Rf7','END'],
+		jugadasPlayer: ['Rh1#'],
+		orientation: 'black'
+	},
+	{
+		nombre: "1074542 Dif(1236)",
+		tipo: "Mate",
+		subtipo: "Basicos",
+		posicionInicial:"r1bqk2r/ppp2ppp/2n1p3/1B1p4/1b1Pn3/1PN1PN2/PBP2PPP/R2QK2R w KQkq - 5 8",
+		jugadasCPU: ['O-O','Bxc6+','Bxc3','END'],
+		jugadasPlayer: ['Bxc3','bxc6','Nxc3'],
+		orientation: 'black'
 	}
 	
 
