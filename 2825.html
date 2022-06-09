@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.38</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 60%
+				   <i class="text-danger fas fa-caret-down"></i> 65%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 2.99€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>3.49€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 2.49€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 6.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 6.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 02 de diciembre</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 8.47 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 3.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 17/nov/2021 al 02/dic/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 9.85 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 3.49 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 08/jun/2022 al 23/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>The Great Perhaps es el viaje en el tiempo de un astronauta en una Tierra destruida por desastres naturales. Entre las ruinas encuentra un curioso artilugio: una vieja linterna a cuya luz puede percibir retazos de otro tiempo y viajar al pasado.<br/><br/>The Great Perhaps (El gran quizás) cuenta la historia de un astronauta que regresa a una Tierra destruida por desastres naturales.<br/><br/>Allí, entre las ruinas, encuentra un curioso artilugio: una vieja linterna a cuya luz puede percibir retazos de otro tiempo y viajar al pasado.<br/><br/>Vive un constante viaje en el tiempo entre el escenario desnudo y melancólico de la Tierra postapocalíptica y el de sus intensos días olvidados.<br/><br/>El héroe se enfrentará a los peligros del presente postapocalíptico y a los del pasado. ¡Participa en su viaje y ayúdale a encontrar la causa del desastre para salvar el planeta!<br/><br/>Características principales:<br/><br/>Interesantes puzles y minijuegos basados en el viaje en el tiempo.<br/>Experimenta la fascinante atmósfera de un mundo postapocalíptico con estética soviética.<br/>Novedosa narrativa que conjuga el pasado y el presente.<br/>Personajes memorables con sus historias particulares.<br/>Banda sonora original interactiva que se adapta a cada línea temporal.<br/>Evocador estilo en 2D dibujado a mano.<br/><br/><br/><br/></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV'],
+      labels: ['11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY', '22 MAY', '25 MAY', '28 MAY', '31 MAY', '03 JUN', '06 JUN', '09 JUN'],
       datasets: [{
-        data: [9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 5.99, 5.99, 5.99, 5.99, 5.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 3.99, 3.99, 3.99, 3.99, 3.99],
+        data: [9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 3.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

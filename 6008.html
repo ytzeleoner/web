@@ -74,24 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.88</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 40%
+				   <i class="text-danger fas fa-caret-down"></i> 50%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>16.19€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 13.49€</small>
-            		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 10.80€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>13.49€</b>
+             		</p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 13.50€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>26.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de enero</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 23.55 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 16.19 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 26.69 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 13.49 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 08/jun/2022 al 23/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>¡DEMONIOS! ¿Estás listo para explorar las selvas del interior de Australia en esta versión remasterizada del juego clásico: TY el Tigre de Tasmania?<br/><br/>Únete a TY en una GRAN aventura para liberar a su familia del SUEÑO y para evitar que el malvado genio BOSS CASS elimine a los mamíferos de la parte superior de la cadena alimenticia.<br/><br/>¡Para ayudarte en tu búsqueda, tienes una BELLEZA de arsenal con boomerangs, dientes afilados y la ayuda de nuevos amigos!<br/><br/>Nada de tonterías, ¡vamos allí abajo a pasarlo BOMBA! ¡SERÁ GENIAL!<br/><br/>* Explora los 17 niveles del interior de Australia en su glorioso estilo de plataformas 3D de la vieja escuela.<br/>* 13 bumeranes diferentes, incluyendo Frostyrang, Flamerang y el potente Terrorang.<br/>* Gráficos y cámara mejorados; se han actualizado las sombras, los reflejos y las resoluciones en alta definición y 60?fps<br/>* Nuevo modo de juego llamado "Modo Extremo"<br/>* Nuevos aspectos para TY<br/>* Versión del director de audio<br/>* Más de 35 trofeos, incluido el Trofeo de Platino, más las tablas de clasificación de carrera de velocidad y tiempo de ataque.<br/><br/>* * * * *<br/><br/>¡Buenos días, colega! A veces las cosas pueden ser un poco confusas, por eso déjame recordarte qué sucede… Eres TY, el último tigre de Tasmania. Criado por una familia de bilbis, apenas puedes recordar a tus verdaderos padres. Siempre has pensado que todos los demás tigres de Tasmania murieron hace mucho tiempo.<br/><br/>Pero entonces el Viejo Bunyip te encontró y te contó que tu familia estaba viva, atrapada en el Sueño. Ahora resiste... mantén la calma... verás, no se quedarán allí para siempre, ¡si tienes las agallas para un poco de aventura!<br/><br/>Verás, en los confines del interior hay una especie de portal resplandeciente: es una puerta al Sueño. Cerca de ese portal hay algunas roca talladas; en ese lugar solían guardarse cinco antiguos talismanes místicos. Ahora, todo lo que tienes que hacer es encontrar los cinco talismanes, ponerlos en los espacios tallados, ¡y el portal hacia el Sueño se abrirá!<br/><br/>Antes de que salgas corriendo, deberías saber que hay un PEQUEÑO problema. Verás, hay un casuario malvado, Boss Cass, que también va en pos de los talismanes. Sí. ESE Boss Cass. El mismo que encerró a tu familia en el Sueño; el mismo que dijo a la junta escolar que eliminara todos los pasteles de carne de las tiendas. Y si no crees que sea lo suficientemente megalómano, TAMBIÉN atrapó a un montón de tus amigos bilbis en jaulas repartidas por todo el interior de Australia... Al parecer, era algo sobre libros atrasados de la biblioteca... Como sea, si quieres abrir el portal, ¡tendrás que llegar a los talismanes antes que el casuario y sus secuaces!<br/><br/><br/></p>
@@ -128,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV', '02 DIC', '05 DIC', '08 DIC', '11 DIC', '14 DIC', '17 DIC', '20 DIC', '23 DIC', '26 DIC', '29 DIC', '01 ENE', '04 ENE', '07 ENE', '10 ENE', '13 ENE', '16 ENE', '19 ENE'],
+      labels: ['11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY', '22 MAY', '25 MAY', '28 MAY', '31 MAY', '03 JUN', '06 JUN', '09 JUN'],
       datasets: [{
-        data: [26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 16.19, 16.19, 16.19, 16.19, 16.19, 16.19, 16.19, 16.19, 16.19, 16.19],
+        data: [26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 26.99, 13.49],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

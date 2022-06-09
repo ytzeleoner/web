@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 0</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 30%
+				   <i class="text-danger fas fa-caret-down"></i> 35%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>13.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>12.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 6.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 7.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 12 de mayo</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.62 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 13.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 27/abr/2022 al 12/may/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.85 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 12.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 08/jun/2022 al 23/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Cosechar las almas de los muertos y fichar en tu puesto puede hacerse monótono, pero es un trabajo honrado para un cuervo. La cosa se anima cuando roban el alma que tienes asignada y tienes que seguirle el rastro a un ladrón desesperado hasta un mundo que la muerte no ha tocado, donde las criaturas crecen más allá de lo que les toca y rebosan de codicia y poder.<br/><br/>Combate afilado: utiliza armas cuerpo a cuerpo, flechas y magia para vencer a un elenco fantástico de bestias y semidioses. Los errores se castigan y la victoria tiene su recompensa. Obtén ventaja personalizando las estadísticas de tu personaje y dominando las habilidades y mejoras que consigas.<br/><br/>Un mundo de lúgubre belleza: aventúrate más allá de las puertas y explora una tierra llena de habitantes retorcidos e incontables secretos, llevando esperanzas a los extraños y maravillosos personajes que encontrarás por el camino.<br/><br/>Un oscuro misterio que resolver: encuentra y derrota a tiranos colosales con sus propias historias y motivaciones. Vive un cuento sombrío pero lleno de humor negro, descubriendo las verdades que se ocultan detrás del flujo de almas, el papel de los cuervos y el origen de las puertas.<br/><br/><br/>Un único jugador offline<br/>Uso a distancia permite a los usuarios conectarse y jugar en consolas PlayStation®4 y PlayStation®5 a través de un dispositivo móvil, PC u otra consola PlayStation®4 o PlayStation®5.<br/>Juego sin conexión activado<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['10 FEB', '13 FEB', '16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY'],
+      labels: ['11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY', '22 MAY', '25 MAY', '28 MAY', '31 MAY', '03 JUN', '06 JUN', '09 JUN'],
       datasets: [{
-        data: [14.99, 14.99, 14.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 13.99, 13.99, 13.99, 13.99, 13.99],
+        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 13.99, 13.99, 13.99, 13.99, 13.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 12.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

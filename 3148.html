@@ -74,24 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.75</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 60%
+				   <i class="text-danger fas fa-caret-down"></i> 70%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>11.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 8.99€</small>
-            		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 18.00€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>8.99€</b>
+             		</p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 21.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 12 de mayo</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 24.06 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 11.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 27/abr/2022 al 12/may/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 26.56 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 8.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 08/jun/2022 al 23/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>¡Vuelven el sistema de combate BLiTZ y el motor gráfico CANVAS!<br><br>La nueva generación del sistema de combate BLiTZ: El sistema de combate BLiTZ viene pisando fuerte en este título que tiene parte de juego de estrategia por turnos, parte de juego de rol y parte de juego de disparos en tercera persona en tiempo real. Enfréntate a la amenaza imperial con más unidades en mapas más grandes que nunca. En Valkyria Chronicles 4, se estrena el granadero, una nueva unidad explosiva, así como varias opciones para apoyo, tanto defensivo como ofensivo, en combate.<br><br>Un impresionante mundo pintado a la acuarela: ¡Vuelve el estilo visual dibujado a mano, que siempre ha sido el sello distintivo de la franquicia! El motor gráfico CANVAS, inspirado en composiciones en acuarela, mezcla elementos visuales de la realidad y la imaginación para crear un mundo expresivo lleno de emociones coloridas. Observa cómo se desarrolla la aventura del escuadrón E como si se tratase de una pintura interactiva.<br><br>1 jugador<br>Salida de vídeo HD 720p,1080i,1080p<br><br></p>
@@ -128,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['10 FEB', '13 FEB', '16 FEB', '19 FEB', '22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY'],
+      labels: ['11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY', '22 MAY', '25 MAY', '28 MAY', '31 MAY', '03 JUN', '06 JUN', '09 JUN'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 11.99, 11.99, 11.99, 11.99, 11.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 11.99, 11.99, 11.99, 11.99, 11.99],
+        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 11.99, 11.99, 11.99, 11.99, 11.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 8.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

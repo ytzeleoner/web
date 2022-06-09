@@ -81,16 +81,16 @@ body{
              		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 15.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>24.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 24 de mayo</p>
+            		<p class="card-text text-info text-center">Hasta el 23 de junio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.07 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 19.22 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 9.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 20/may/2022 al 24/may/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 08/jun/2022 al 23/jun/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>UNTURNED es un sandbox de supervivencia de mundo abierto en donde asumes el papel de un superviviente en las ruinas infestadas de zombis de una sociedad contemporánea, y que debe trabajar codo con codo con tus amigos y formar alianzas para seguir entre los vivos. Encuentra armas y suministros para sobrevivir a los zombis y recibe puntos de experiencia que podrán usarse para mejoras a medida que progresas.<br/><br/>Puedes saquear indumentarias, armas, comida y suministros, todo mientras sorteas zombis y a otros jugadores. También puedes recoger y fabricar recursos (madera, metal, etc...) para crear tu propio bastión, tus defensas, etc.<br/><br/>Explora los mapas y encuentra aquello que buscas: cada recurso te servirá para mantenerte con vida y crear el equipo necesario para defenderte de los zombis y de otros jugadores. Contando con una amplia variedad de objetos, armas y vehículos (aviones, coches, tanques...), ¡tú eliges lo más indicado para tu estrategia!<br/><br/>Acabar con zombis te ayudará a conseguir puntos de experiencia a medida que avances en el juego, que te servirán para llevar a cabo mejoras y aumentar tus habilidades en tres categorías: Ofensiva, Defensiva y Apoyo.<br/><br/>¡Sobrevive en línea y lucha junto hasta 24 amigos gracias a los servidores especializados, o comparte tu aventura en casa con el multijugador con pantalla dividida!<br/><br/>¡Permanece ENTRE LOS VIVOS!<br/><br/>• Mapas enormes - explora hasta 8 mapas sandbox viajando por tierra, mar y aire<br/>• Fabrica - crea tu propio equipo y estructuras con los suministros que consigas<br/>• Potencia -  mejora tus habilidades en tres categorías: Ofensiva, Defensiva y Apoyo<br/>• Personaliza - los avatares son totalmente personalizables<br/>• Multijugador - enfréntate a hordas de zombis y enemigos solo o en compañía<br/>• Compite o aúna fuerzas -  trata de formar alianzas con otros jugadores o acaba con toda la competencia<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['22 FEB', '25 FEB', '28 FEB', '03 MAR', '06 MAR', '09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY'],
+      labels: ['11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY', '22 MAY', '25 MAY', '28 MAY', '31 MAY', '03 JUN', '06 JUN', '09 JUN'],
       datasets: [{
-        data: [9.99, 9.99, 9.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 9.99, 9.99],
+        data: [24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 24.99, 9.99, 24.99, 24.99, 24.99, 24.99, 24.99, 9.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
