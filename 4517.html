@@ -81,16 +81,16 @@ body{
              		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 5.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>9.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 26 de mayo</p>
+            		<p class="card-text text-info text-center">Hasta el 07 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 9.17 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 9.11 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 4.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 11/may/2022 al 26/may/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jun/2022 al 07/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Reúne provisiones, rescata a tu familia y mantente con vida en tu refugio nuclear. Toma decisiones difíciles, caza cucarachas mutantes... y tal vez sobrevivas. O no.<br/><br/>Dolores, Ted, Mary Jane y Timmy vuelven para enfrentarse al apocalipsis nuclear en esta nueva edición remasterizada de la clásica aventura atómica: 60 Seconds! Reatomized, con resolución 4K, gráficos en 2D actualizados y texturas en 3D dibujadas a mano, así como un nuevo menú interactivo, un sistema de interfaz mejorado y, cómo no..., ¡nuevo contenido!<br/><br/>NUEVO MODO DE JUEGO<br/>Desafíos de supervivencia: ¡el nuevo modo de juego de historias cortas y únicas que pondrán a prueba tu habilidad de sobrevivir!<br/><br/>NUEVAS OPORTUNIDADES<br/>de escapar del yermo con una historia que abarcará varias partidas. ¿Puedes escapar con estilo?<br/><br/>NUEVO SISTEMA DE RELACIONES<br/>con más historias e interacciones entre los miembros de la familia McDoodle.<br/><br/>NUEVOS SONIDOS, ARTE Y CONTENIDO VISUAL DESBLOQUEABLE<br/>que te permitirá darle un toque de color a tu refugio nuclear.<br/><br/>Con tan solo 60 segundos para el impacto, recorre la casa a toda prisa en busca de familiares y provisiones. Lo tienes todo en tu contra: el tiempo, tus propios muebles y hasta tu hogar, que cambiará cada vez que juegues. Y lo más importante de todo: ¿qué te llevarás contigo y a quién dejarás atrás?<br/><br/>Llegar al refugio nuclear a tiempo y con vida no es más que el principio. Las personas a las que salves y los objetos que consigas encontrar a tiempo determinarán tus opciones de supervivencia. Cada historia será totalmente distinta y cada día te deparará sucesos inesperados. ¿Tendrán todas estas historias un final feliz? Todo depende de ti. Raciona la comida y el agua, utiliza sabiamente tus provisiones, afronta decisiones complicadas y aventúrate en el yermo.<br/><br/>Buena suerte.<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY', '22 MAY', '25 MAY'],
+      labels: ['24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN', '10 JUN', '13 JUN', '16 JUN', '19 JUN', '22 JUN'],
       datasets: [{
-        data: [9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 4.99, 4.99, 4.99, 4.99, 4.99],
+        data: [9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 4.99, 4.99, 4.99, 4.99, 4.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 9.99, 4.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

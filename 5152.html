@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.75</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 20%
+				   <i class="text-danger fas fa-caret-down"></i> 50%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>39.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>24.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 10.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 25.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>49.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 20 de noviembre</p>
+            		<p class="card-text text-info text-center">Hasta el 07 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 47.35 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 39.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 27/oct/2021 al 20/nov/2021 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 49.72 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 24.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jun/2022 al 07/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>¡HÁGASE CON EL CONTROL!<br/>Mientras las plataformas se llenan de pasajeros y el tráfico ferroviario aumenta para cumplir con la creciente demanda, comienza la hora punta. Tome el control de trenes repletos y navega por la ajetreada red, recibiendo señales de comprobación constantes mientras recorre estación tras estación. Luche para llegar a tiempo y evitar costosos retrasos en Train Sim World 2: Rush Hour.<br/><br/>---<br/><br/>RUTAS AUTÉNTICAS<br/>Explore la línea de viajeros más concurrida de los EE UU en Boston - Providence, enfréntese a una ruta de traslado frenética en London - Brighton y domine los múltiples servicios alemanes en Riesa - Dresden. <br/><br/>TRENES MÍTICOS<br/>Súbase a la cabina de locomotoras y trenes con licencia oficial, como la "Cities Sprinter" de Amtrak, la Gatwick Express BR Class 387, la BR 442 de Deutsche Bahn y muchas más.<br/><br/>HERRAMIENTAS PERSONALIZADAS<br/>Desate su creatividad y dele un toque personal a sus locomotoras con el diseñador de libreas. Use el planificador de escenario para conducir lo que quiera, por donde quiera y cuando quiera.<br/><br/>---<br/><br/>Rutas incluidas en esta Deluxe Edition<br/>Northeast Corridor: Boston – Providence • Brighton Main Line: London Victoria – Brighton • Riesa - Dresden • Bakerloo Line • Schnellfahrstrecke Köln-Aachen • Sand Patch Grade<br/><br/><br/>Un único jugador offline<br/>Compras durante el juego opcionales<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['21 AGO', '24 AGO', '27 AGO', '30 AGO', '02 SEP', '05 SEP', '08 SEP', '11 SEP', '14 SEP', '17 SEP', '20 SEP', '23 SEP', '26 SEP', '29 SEP', '02 OCT', '05 OCT', '08 OCT', '11 OCT', '14 OCT', '17 OCT', '20 OCT', '23 OCT', '26 OCT', '29 OCT', '01 NOV', '04 NOV', '07 NOV', '10 NOV', '13 NOV', '16 NOV', '19 NOV'],
+      labels: ['24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN', '10 JUN', '13 JUN', '16 JUN', '19 JUN', '22 JUN'],
       datasets: [{
-        data: [49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99, 39.99],
+        data: [49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 49.99, 24.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
