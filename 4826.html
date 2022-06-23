@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="http://apollo2.dl.playstation.net/cdn/EP0001/CUSA01910_00/a3pL34y0wJ2xou9myR8f0gTHnLk63ndy.png?w=253&amp;h=253">
@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.09</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 70%
+				   <i class="text-danger fas fa-caret-down"></i> 80%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>3.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 14.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 16.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 26 de mayo</p>
+            		<p class="card-text text-info text-center">Hasta el 07 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 17.68 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 17.33 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 3.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/feb/2022 al 17/feb/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/jun/2022 al 07/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Londres está cayendo. ¿Estás preparado? La última Plaga se cierne sobre nosotros. Tal y como se predijo. Por segunda vez en la historia, una gran plaga ha envuelto Londres en una niebla mortal. Las campanas del Big Ben repican mientras miles de incautos mueren o son infectados por una enfermedad más horrible que la muerte.<br><br>Todavía respiras, por ahora. ¿Pero cuánto sobrevivirás en las laberínticas calles de Londres y sus canales subterráneos, abandonado por el mundo exterior y rodeado de infectados? Los restos horripilantes de una humanidad arrasada por la terrible enfermedad se arrastran por las calles, acechando tras cada esquina en busca de carne viva.<br><br>La intensa emoción de supervivencia ya está disponible para PS4™. Zombi aprovecha la potencia de la nueva generación para traer un nuevo nivel de terror. Pon a prueba tu voluntad de supervivencia, pero cuidado: la muerte es permanente y un mal movimiento puede hacerte perderlo todo.<br><br>1 jugador<br>22GB mínimo<br>Función de vibración DUALSHOCK®4<br>Salida de vídeo HD 720p,1080i,1080p<br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['24 FEB', '27 FEB', '02 MAR', '05 MAR', '08 MAR', '11 MAR', '14 MAR', '17 MAR', '20 MAR', '23 MAR', '26 MAR', '29 MAR', '01 ABR', '04 ABR', '07 ABR', '10 ABR', '13 ABR', '16 ABR', '19 ABR', '22 ABR', '25 ABR', '28 ABR', '01 MAY', '04 MAY', '07 MAY', '10 MAY', '13 MAY', '16 MAY', '19 MAY', '22 MAY', '25 MAY'],
+      labels: ['25 MAR', '28 MAR', '31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR', '30 ABR', '03 MAY', '06 MAY', '09 MAY', '12 MAY', '15 MAY', '18 MAY', '21 MAY', '24 MAY', '27 MAY', '30 MAY', '02 JUN', '05 JUN', '08 JUN', '11 JUN', '14 JUN', '17 JUN', '20 JUN', '23 JUN'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 5.99, 5.99, 5.99, 5.99, 5.99],
+        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 5.99, 5.99, 5.99, 5.99, 5.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 3.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

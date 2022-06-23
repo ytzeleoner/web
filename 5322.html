@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://vulcan.dl.playstation.net/ap/rnd/202007/0210/1hTcaL0ZROBNuObezTudW9xx.png?w=253&amp;h=253">
@@ -74,22 +74,22 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.98</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 50%
+				   <i class="text-danger fas fa-caret-down"></i> 30%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>1.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 1.59€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>2.79€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 2.59€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 2.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 1.20€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>3.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 02 de diciembre</p>
+            		<p class="card-text text-info text-center">Hasta el 07 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 3.70 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 3.96 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 1.99 € </b></p>
       		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 17/nov/2021 al 02/dic/2021 </small></p>
      </div><!--END ROW -->
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['31 AGO', '03 SEP', '06 SEP', '09 SEP', '12 SEP', '15 SEP', '18 SEP', '21 SEP', '24 SEP', '27 SEP', '30 SEP', '03 OCT', '06 OCT', '09 OCT', '12 OCT', '15 OCT', '18 OCT', '21 OCT', '24 OCT', '27 OCT', '30 OCT', '02 NOV', '05 NOV', '08 NOV', '11 NOV', '14 NOV', '17 NOV', '20 NOV', '23 NOV', '26 NOV', '29 NOV'],
+      labels: ['25 MAR', '28 MAR', '31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR', '30 ABR', '03 MAY', '06 MAY', '09 MAY', '12 MAY', '15 MAY', '18 MAY', '21 MAY', '24 MAY', '27 MAY', '30 MAY', '02 JUN', '05 JUN', '08 JUN', '11 JUN', '14 JUN', '17 JUN', '20 JUN', '23 JUN'],
       datasets: [{
-        data: [3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 1.99, 1.99, 1.99, 1.99, 1.99],
+        data: [3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 3.99, 2.79],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
