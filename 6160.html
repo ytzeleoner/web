@@ -61,7 +61,7 @@ body{
      <div class="row m-0">
      	<div class="col-3 d-sm-none d-md-none d-lg-none"></div>
      	<div class="col-6 col-sm-3 col-md-4 col-lg-4">
-     		<p class="rounded p-0 m-0 text-white text-center bg-danger d-none"><small>¡MINIMO HISTORICO!</small></p>
+     		<p class="rounded p-0 m-0 text-white text-center bg-danger ##MINIMO_HISTORICO##"><small>¡MINIMO HISTORICO!</small></p>
         	<div class="card m-2">
           		<!--<picture>
 			  		<source media="(min-width: 1200px)" srcset="https://vulcan.dl.playstation.net/ap/rnd/202012/2107/6KYl90D91Fa7gJXbqT518RpZ.png?w=253&amp;h=253">
@@ -74,24 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.67</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 40%
+				   <i class="text-danger fas fa-caret-down"></i> 50%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>17.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 14.99€</small>
-            		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 12.00€</b></p>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>14.99€</b>
+             		</p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 15.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 28 de abril</p>
+            		<p class="card-text text-info text-center">Hasta el 14 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 26.17 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 26.13 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 14.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 22/dic/2021 al 20/ene/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 29/jun/2022 al 14/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Citizens Unite!: Earth x Space es una compilación de dos juegos, que incluye "Citizens of Earth", donde el Vicepresidente novato y su grupo de Ciudadanos investigan los extraños misterios que están apareciendo por toda la Tierra, y "Citizens of Space", donde el nuevo Embajador de la Tierra se embarca en un viaje para encontrar la Tierra desaparecida con ayuda de Ciudadanos de toda la galaxia.<br/><br/>Esta vez las dos aventuras se han unido con elementos completamente nuevos. ¡Recluta a 88 Ciudadanos con habilidades únicas para salvar la Tierra en las dos épocas! Viaja en el tiempo hacia atrás o adelante yendo entre "Citizens of Earth" y "Citizens of Space", desbloqueando contenido nuevo... ¡y desvelando el auténtico final!<br/><br/>¡Une a los Ciudadanos para salvar la línea temporal de los misteriosos enemigos que están actuando en secreto!<br/><br/><br/></p>
@@ -128,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['27 ENE', '30 ENE', '02 FEB', '05 FEB', '08 FEB', '11 FEB', '14 FEB', '17 FEB', '20 FEB', '23 FEB', '26 FEB', '01 MAR', '04 MAR', '07 MAR', '10 MAR', '13 MAR', '16 MAR', '19 MAR', '22 MAR', '25 MAR', '28 MAR', '31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR'],
+      labels: ['31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR', '30 ABR', '03 MAY', '06 MAY', '09 MAY', '12 MAY', '15 MAY', '18 MAY', '21 MAY', '24 MAY', '27 MAY', '30 MAY', '02 JUN', '05 JUN', '08 JUN', '11 JUN', '14 JUN', '17 JUN', '20 JUN', '23 JUN', '26 JUN', '29 JUN'],
       datasets: [{
-        data: [29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99],
+        data: [17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 17.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 14.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

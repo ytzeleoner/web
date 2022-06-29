@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 3.73</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 60%
+				   <i class="text-danger fas fa-caret-down"></i> 70%
 				   <img src="img/ps-now.png" class="mini-icon">
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>7.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 5.99€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 3.99€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 12.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 14.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
+            		<p class="card-text text-info text-center">Hasta el 14 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.14 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 7.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 17.86 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 29/jun/2022 al 14/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Rad es un joven revoltoso y alegre que pasa demasiado tiempo jugando a videojuegos. Un día, al despertar tras una larga noche jugando, Rad se encuentra con que su vieja consola Dusty se ha encendido sola. Cuando se abre un vórtice que le proyecta dentro de su televisor, se convierte en el protagonista de su propio videojuego. El juego bebe de clásicos de plataformas de los 90, como Commander Keen, Conker, Ruff'n'Tumble y Jazz Jackrabbit.<br><br>Características<br>Armas: Dusty arma a Rad con 7 armas extremas.<br><br>Música y sonido: Andrew Hulshult ha creado una fantástica e inspirada banda sonora con referencias al sonido de los MIDI y de los sintetizadores.<br><br>El Pixelverso: Rad y Dusty forman un gran equipo, pero solo Dusty puede entrar en el electrificado Pixelverso, la peligrosa región en una fractura del espacio-tiempo más allá del mundo de los juegos.<br><br>Huevos de Pascua clásicos: colecciona objetos difíciles de encontrar en habitaciones secretas más difíciles de encontrar todavía. <br><br>1 jugador<br>9GB mínimo<br>Función de vibración DUALSHOCK®4<br>Salida de vídeo HD 720p,1080i,1080p<br><br></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN'],
+      labels: ['31 MAR', '03 ABR', '06 ABR', '09 ABR', '12 ABR', '15 ABR', '18 ABR', '21 ABR', '24 ABR', '27 ABR', '30 ABR', '03 MAY', '06 MAY', '09 MAY', '12 MAY', '15 MAY', '18 MAY', '21 MAY', '24 MAY', '27 MAY', '30 MAY', '02 JUN', '05 JUN', '08 JUN', '11 JUN', '14 JUN', '17 JUN', '20 JUN', '23 JUN', '26 JUN', '29 JUN'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 7.99, 7.99, 7.99, 7.99, 7.99],
+        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 7.99, 7.99, 7.99, 7.99, 7.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 5.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
