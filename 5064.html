@@ -74,24 +74,24 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.15</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 60%
+				   <i class="text-danger fas fa-caret-down"></i> 65%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
-            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 5.24€</small>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>5.24€</b>
+            		     <img src="img/psplus.png" class="mini-icon"><small class="text-warning"> 4.49€</small>
             		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 9.00€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 9.75€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>14.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
+            		<p class="card-text text-info text-center">Hasta el 21 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 13.61 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 13.29 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.24 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 06/jul/2022 al 21/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Coge tu revolver y rescata a tu pareja en este juego rogue-like atmosférico e impactante.<br/><br/>Colt Canyon es un shooter en arte pixelado 2D donde controlas a un vaquero, o uno de los personajes desbloqueables, que debe salvar a su pareja de los crueles bandidos. Coge tu pistola y tu dinamita, y ábrete paso a través de un cañón lleno de tesoros, armas, obstáculos y canallas.<br/><br/>Quizás no solo salves a tu pareja. Ten cuidado, tu trabajo no se acaba cuando la encuentres, también tienes que volver a casa...<br/><br/>CARACTERÍSTICAS<br/>• Varios personajes y armas para jugar y desbloquear<br/>• Entornos y enemigos dinámicos e inmersivos<br/>• Compañeros controlados por IA<br/>• Cooperativo local<br/>• Mejoras para ti y tus compañeros<br/>• Niveles abiertos, persistentes y aleatorios<br/>• Sigilo estratégico y acción trepidante<br/>• Jefes<br/>• Elementos roguelike<br/>• Muerte permanente<br/>• Rejugabilidad alta<br/>• Arte pixelado<br/>• Efectos de partículas<br/>• Y mucho más...<br/><br/>¡Inspirado y perfeccionado tras jugar innumerables horas a títulos similares!<br/><br/><br/>Multijugador offline (2 jugadores)<br/>Usa la función de vibración DUALSHOCK 4<br/>El juego de PS4 puede controlarse con PS Vita<br/>Juegos mejorados en la consola PS4 Pro<br/><br><br></p>
@@ -128,9 +128,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN'],
+      labels: ['08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN', '10 JUN', '13 JUN', '16 JUN', '19 JUN', '22 JUN', '25 JUN', '28 JUN', '01 JUL', '04 JUL', '07 JUL'],
       datasets: [{
-        data: [14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 5.99, 5.99, 5.99, 5.99, 5.99],
+        data: [14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 5.99, 5.99, 5.99, 5.99, 5.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 14.99, 5.24],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

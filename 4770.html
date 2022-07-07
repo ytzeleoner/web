@@ -81,16 +81,16 @@ body{
              		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 10.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
+            		<p class="card-text text-info text-center">Hasta el 21 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.45 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 18.12 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 9.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 06/jul/2022 al 21/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>En un mundo donde solo queda un distante recuerdo de la existencia humana, eres Clid, un caracol excéntrico y alborotador al que acaban de expulsar de su ciudadela. Junto a Belu, una luciérnaga fiel y parlanchina, conocerás a una peculiar pandilla de exiliados y encontrarás un nuevo hogar. Con este nuevo grupo de amigos descubrirás un nuevo propósito: exterminar la misteriosa plaga de babosas que está asolando el territorio.<br/><br/>Clid The Snail es un juego de disparos de perspectiva isométrica donde la trama liderada por Clid, sus carismáticos compañeros, y el combate son el núcleo de la acción. A través de Clid descubrirás una historia sobre el exilio, la amistad y la traición, y vivirás las aventuras de un caracol problemático y rebelde que no encuentra un lugar al que pertencer. Explora un mundo traicionero lleno de amenazas y desafíos, donde el posicionamiento estratégico, los disparos precisos y el comportamiento del enemigo son cruciales para tu supervivencia. Descubre la verdad que se esconde tras la plaga de babosas que azota al mundo y salva el territorio de la ruina total. <br/><br/>¡CONOCE A TU NUEVA FAMILIA DE EXILIADOS!<br/>Un tímido erizo, una tortuga chamán, un murciélago mudo, una rana ninja y un camaleón tuerto: estos son los miembros de Alastor. Regresa a casa después de cada misión para descansar, reabastecerte, mejorar tu equipo y estrechar lazos. Conoce a estos personajes únicos y desentraña su pasado para descubrir la clave de la historia.<br/><br/>¡AFRONTA EL COMBATE DE MANERA ESTRATÉGICA!<br/>Usa tus armas, granadas y conchas de caracol con creatividad para superar a tus enemigos. Usa el entorno a tu favor y aprende a posicionarte para conseguir la victoria.<br/><br/>¡VIAJA POR UN MUNDO PELIGROSO (Y HERMOSO)!<br/>Pantanos, desiertos, montañas, islas… Cada misión te llevará a un nuevo lugar por descubrir. ¡Ayuda a los residentes locales a luchar contra la amenaza de las babosas y conviértete en su héroe! Y no te olvides de prestar atención a todo: explora todos los niveles en busca de sorpresas adicionales.<br/><br/>¡DERROTA A JEFES ABOMINABLES!<br/>Te aguardan escalofriantes amenazas al final de cada misión. Necesitarás estudiar el comportamiento de tus adversarios, prestar atención a los detalles y elegir con cuidado tus armas para sobrevivir a estos peligrosos combates.<br/><br/>¡NO PODRÁS SOLUCIONARLO TODO CON DISPAROS!<br/>Disparar no siempre es la respuesta. Usa tus armas y tu intelecto para resolver acertijos, encontrar secretos y avanzar en la historia. A veces, las respuestas se ocultan a simple vista…<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN'],
+      labels: ['08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN', '10 JUN', '13 JUN', '16 JUN', '19 JUN', '22 JUN', '25 JUN', '28 JUN', '01 JUL', '04 JUL', '07 JUL'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 9.99, 9.99, 9.99, 9.99, 9.99],
+        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 9.99, 9.99, 9.99, 9.99, 9.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 9.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

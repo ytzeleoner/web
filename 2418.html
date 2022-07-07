@@ -74,23 +74,23 @@ body{
           		<div class="card-body p-0">
           			<p class="text-white text-left mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;background-color: rgba(0,0,0,0.7);"><i class="text-warning fas fa-star"></i> 4.78</p>
           			<p class="text-white text-right mb-0 ml-0 mr-0 p-1" container-fluid style="margin-top: -2.0em;">
-				   <i class="text-danger fas fa-caret-down"></i> 75%
+				   <i class="text-danger fas fa-caret-down"></i> 80%
 				   
 				   </p>
-            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>7.49€</b>
+            		<p class="card-text bg-success text-white text-center m-0 p-1"><b>5.99€</b>
              		</p>
-             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 22.50€</b></p>
+             		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 24.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>29.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 09 de junio</p>
+            		<p class="card-text text-info text-center">Hasta el 21 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 22.57 € </b> </p>
-      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 7.49 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 25/may/2022 al 09/jun/2022 </small></p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 22.04 € </b> </p>
+      		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 5.99 € </b></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 06/jul/2022 al 21/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>JEHUTY vive y ANUBIS crece. ZONE OF THE ENDERS: The 2nd Runner vuelve en 4K y realidad virtual para PlayStation®4.<br/><br/>Vuelve a vivir la experiencia de ZONE OF THE ENDERS: The 2nd Runner -  M∀RS en la versión remasterizada de este juego clásico de acción robótica 3D a alta velocidad recreado en realidad virtual, con resolución 4K nativa y sonido surround. Entra en la cabina de JEHUTY y vuela por el cielo de Marte.<br/><br/>En el año 2174, la despótica organización militar BAHRAM utiliza la nueva tecnología robótica Orbital Frame para garantizar su dominio sobre Marte y la Tierra. Al hacerse con el control del Orbital Frame JEHUTY, el jugador se convierte en la última esperanza para ambos planetas. Ataca el corazón del ejército de BAHRAM con un poder sin igual.<br/><br/>Además, en consolas PS5™: necesitas el adaptador para PlayStation Camera (no requiere compra), visita Playstation.com/camera-adaptor; para una mejor experiencia con PlayStation®VR en PS5™ recomendamos usar el mando inalámbrico DUALSHOCK®4.<br/><br/><br/>Multijugador offline (2 jugadores)<br/>Compatible con el casco de PlayStation VR<br/>Compatible con PlayStation Camera<br/>Usa la función de vibración DUALSHOCK 4<br/>Uso a distancia permite a los usuarios conectarse y jugar en consolas PlayStation®4 y PlayStation®5 a través de un dispositivo móvil, PC u otra consola PlayStation®4 o PlayStation®5.<br/><br><br></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['09 MAR', '12 MAR', '15 MAR', '18 MAR', '21 MAR', '24 MAR', '27 MAR', '30 MAR', '02 ABR', '05 ABR', '08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN'],
+      labels: ['08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN', '10 JUN', '13 JUN', '16 JUN', '19 JUN', '22 JUN', '25 JUN', '28 JUN', '01 JUL', '04 JUL', '07 JUL'],
       datasets: [{
-        data: [7.49, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 7.49, 7.49, 7.49, 7.49, 7.49, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 7.49, 7.49, 7.49, 7.49, 7.49],
+        data: [29.99, 29.99, 7.49, 7.49, 7.49, 7.49, 7.49, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 7.49, 7.49, 7.49, 7.49, 7.49, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 29.99, 5.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',

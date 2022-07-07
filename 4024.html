@@ -81,16 +81,16 @@ body{
              		</p>
              		<p class="card-text bg-warning text-center m-0 p-1"><b>Ahorras 13.00€</b></p>
             		<p class="p-0 m-0 text-center"><small class="text-danger text-center">Antes: (<del>19.99€</del>)</small></p>
-            		<p class="card-text text-info text-center">Hasta el 17 de marzo</p>
+            		<p class="card-text text-info text-center">Hasta el 21 de julio</p>
           		</div>
         	</div> 
       	</div>
       	<div class="col-12 col-sm-9 col-md-8 col-lg-8">
       		<h3 class="rounded text-center container-fluid  text-dark m-0 p-2" style="background-color: rgba(255,255,255,0.8);"> Evolución del Precio </h3>
       		<canvas class="my-4 w-100 chartjs-render-monitor p-0" id="myChart" style="display: block; background-color: rgba(255,255,255,0.85);"></canvas>
-      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 16.99 € </b> </p>
+      		<p class="bg-warning text-center pd-2 m-0"> Precio medio ultimos 90 dias: <b> 19.70 € </b> </p>
       		<p class="bg-white text-center pd-2 m-0"> Su precio más bajo histórico ha sido de: <b> 6.99 € </b></p>
-      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 02/mar/2022 al 17/mar/2022 </small></p>
+      		<p class="bg-white text-center pd-0 m-0"> <small>Oferta activa del: 06/jul/2022 al 21/jul/2022 </small></p>
      </div><!--END ROW -->
 	<div class="row col-12 p-2 m-0">
 		<p class=" col-12 rounded text-center text-light p-2 mt-2" style="background-color: rgba(0,0,0,0.8);"> <br>Going Under es un juego de mazmorras en el que explorarás las ruinas malditas de pymes tecnológicas fallidas. Como becario sin paga en la ciudad de Neo-Cascadia, empuñarás materiales de oficina mientras te abres paso a través de las poco convencionales mazmorras procedurales que hay bajo tu empresa.<br/><br/>[El futuro es un bodrio]<br/>Los negocios fallidos ya no dejan de existir sino que se hunden bajo tierra y sus empleados están condenados a vagar por sus pasillos como monstruos durante toda la eternidad. Tu deber será acabar con el sufrimiento de estos monstruos y recuperar sus recursos, para que tu jefe pueda permitirse un coche nuevo, o algo así.<br/><br/>[No todos los héroes tienen sueldo]<br/>Lucha para abrirte paso por las ruinas de las pymes fallidas de trabajo temporal, de sitios de citas y de criptodivisas. Descubre las verdaderas intenciones de la compañía para la que trabajas, una startup de bebidas carbonatadas conocida como Fizzle, y su empresa matriz, un fabricante de paquetes por suscripción con un ejército de útiles drones de transporte. ¡Entabla amistad con tus compañeros de trabajo! ¡Contrata a un trasgo autónomo! ¡Sal con un limo! ¡Invierte en criptodivisas! ¡Quema un vehículo compartido!<br/><br/>[Lucha con flexibilidad]<br/>En las mazmorras de Going Under, casi todo se puede usar como arma: portátiles, escobas e incluso almohadas. También puedes encontrar armas convencionales, pero se pueden romper en cualquier momento si no tienes cuidado. Deberás jugar con cautela y elegir el arma correcta para cada situación si quieres sobrevivir a tu pasantía.<br/><br/>[Jefes horribles]<br/>Y tú que creías que tu jefe era un monstruo. En las profundidades de las mazmorras acechan los fundadores de las pymes malditas, enriqueciéndose con sus inversiones mientras sus empleados luchan entre ellos. Acaba con ellos y vuelve a la superficie con sus reliquias encantadas para fortalecer la compañía para la que trabajas.<br/><br/>[Gana experiencia, no dinero]<br/>Mientras exploras, te encontrarás con poderosas habilidades que cambian tu forma de jugar. Apréndelas en la cafetería y aparecerán en futuras partidas. Usa una habilidad a menudo y la "promocionarás" para tenerla disponible al principio de tus expediciones. Combina varias habilidades para crear sinergias absurdas y purga la empresa en un pispás.<br/><br/>[Un mundo de personajes]<br/>Completa las tareas de tus compañeros para ganar influencia con ellos y desbloquear sus bonificaciones únicas. Aprende más sobre Neo-Cascadia, sobre los orígenes de Fizzle y sobre cómo el imperio de drones de transporte conocido como Cubicle ha llegado a dominar la ciudad. ¿Podrás salvar a tu compañía mientras salvas tu pellejo?<br/><br/><br/></p>
@@ -127,9 +127,9 @@ body{
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['07 DIC', '10 DIC', '13 DIC', '16 DIC', '19 DIC', '22 DIC', '25 DIC', '28 DIC', '31 DIC', '03 ENE', '06 ENE', '09 ENE', '12 ENE', '15 ENE', '18 ENE', '21 ENE', '24 ENE', '27 ENE', '30 ENE', '02 FEB', '05 FEB', '08 FEB', '11 FEB', '14 FEB', '17 FEB', '20 FEB', '23 FEB', '26 FEB', '01 MAR', '04 MAR', '07 MAR'],
+      labels: ['08 ABR', '11 ABR', '14 ABR', '17 ABR', '20 ABR', '23 ABR', '26 ABR', '29 ABR', '02 MAY', '05 MAY', '08 MAY', '11 MAY', '14 MAY', '17 MAY', '20 MAY', '23 MAY', '26 MAY', '29 MAY', '01 JUN', '04 JUN', '07 JUN', '10 JUN', '13 JUN', '16 JUN', '19 JUN', '22 JUN', '25 JUN', '28 JUN', '01 JUL', '04 JUL', '07 JUL'],
       datasets: [{
-        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 6.99, 6.99, 6.99, 6.99, 6.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 6.99, 6.99],
+        data: [19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 19.99, 6.99],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
