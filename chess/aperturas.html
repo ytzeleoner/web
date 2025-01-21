@@ -2,6 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 
 <link rel="stylesheet"
       href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
@@ -164,9 +165,18 @@ function nuevoTablero(){
 			aperturaSeleccionada=numeroApertura
 			aperturasJugadas=[]
 			numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
+			console.log("Variante: "+apertura[numeroApertura].variante[numVariante].nombre)
+			if (apertura[numeroApertura].variante[numVariante].nombre.startsWith("resultado")){
+				aperturasJugadas.push(numVariante);
+				console.log("Quitando la apertura duplicada "+numVariante)
+			}
 			 
 		 	while (aperturasJugadas.includes(numVariante)){
 		 		 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length)
+				  if (apertura[numeroApertura].variante[numVariante].nombre.startsWith("resultado")){
+						aperturasJugadas.push(numVariante);
+						console.log("Quitando la apertura duplicada "+numVariante)
+					}
 			}
 
 			console.log("Variante numero "+numVariante);
@@ -176,13 +186,30 @@ function nuevoTablero(){
 			 aperturasJugadas.push(numVariante);
 		}else{
 			 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length);
+
+			 if (apertura[numeroApertura].variante[numVariante].nombre.startsWith("resultado")){
+				aperturasJugadas.push(numVariante);
+				console.log("Quitando la apertura duplicada "+numVariante)
+			 }	
 			 
 		 	while (aperturasJugadas.includes(numVariante)){
 		 		 numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length)
+				if (apertura[numeroApertura].variante[numVariante].nombre.startsWith("resultado")){
+					aperturasJugadas.push(numVariante);
+					console.log("Quitando la apertura duplicada "+numVariante)
+					console.log("Aperturas Jugadas --> "+aperturasJugadas)
+				}
+				if (aperturasJugadas.length == apertura[numeroApertura].variante.length){
+					alert("Ya has completado todas las variantes de esta apertura")
+					numeroApertura=getRandomMaxNumber(apertura.length);
+					aperturaSeleccionada=numeroApertura
+					aperturasJugadas=[]
+					numVariante=getRandomMaxNumber(apertura[numeroApertura].variante.length)
+				}
 			}
 
 			// PARA FORZAR VARIANTE CONCRETA
-			//numVariante=10;
+			//numVariante=34;
 			
 
 			console.log("Variante numero "+numVariante);
