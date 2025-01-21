@@ -47,7 +47,7 @@ var partida=[
 		],
 	},
 	{
-		nombre: "Rui Lopez Modelo (Magnus Carlsen - Topalov)",
+		nombre: "Rui Lopez  (Magnus Carlsen - Topalov)",
 		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
 		jugadasCPU: ['','e5','Nc6','a6','Nf6','Be7','b5','d6','Rb8','axb5','O-O','Bd7','Ra8','Qxa8','h6','Re8','Qc8','Bf8','Na5','Rxf8','Re8','Bg4','exf4','Nc4','c5','cxd4','Qd8','Be6','Qa5','Nh7','g6','Nxe5','END'],
 		jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','d3','Bb3','a4','axb5','Nbd2','Re1','c3','Rxa8','d4','Nf1','Ng3','Nh4','Ng6','Nxf8','Bc2','f4','Qd3','Bxf4','Bc1','Rf1','cxd4','h3','b3','Kh2','e5','d5','dxe6'],
@@ -219,6 +219,81 @@ var partida=[
 		],
 		respuestas:[
 		],
+	},
+	{
+		nombre: "2011 - Rui Lopez  (Topalov - Ivanchuk)",
+		posicionInicial: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+		jugadasCPU: ['','e5','Nc6','a6','Nf6','Be7','b5','d6','O-O','Na5','c5','Qc7','cxd4','Nc6','a5','a4','Bd7','Qb7','END'],
+		jugadasPlayer: ['e4','Nf3','Bb5','Ba4','O-O','Re1','Bb3','c3','h3','Bc2','d4','Nbd2','cxd4','Nb3','Be3','Nbd2','Rc1'],
+		moverAuto:     [true, true, true, true, true,true , true,true,true, true, true,true,  true, true, true,   true, false],
+		orientation: "white",
+		comentarios:[
+
+		],
+		preguntas:[
+			{},{},{},
+			{},{},{},{},{
+				id: "d6",
+				titulo: "d6 es una jugada muy  habitual en esta apertura, ¿qué características tiene?",
+						opciones: [
+									{
+										texto:"Libera al caballo negro de la defensa del peón de e5 y puede amenazar y al semi-encerrado alfil blanco de b3"
+									},
+									{
+										texto: "No es una jugada habitual contra la apertura Rui Lopez, de hecho deja encerrado al alfil negro en e7"
+									},
+									{
+										texto: "Estratégicamente tiene una pega que es que se queda el alfil negro de e7 encerrado un tiempo"
+									}
+								],
+						respuestaCorrecta:"13"
+			},{},{},{},{},
+			{
+				id: "cxd4",
+				titulo: "¿Por que han decidido comer el peón de d4 las negras?",
+						opciones: [
+									{
+										texto:"Error, Ivanchuk ha  abierto la columna C con la reina en medio"
+									},
+									{
+										texto: "Bien jugado, tienen que evitar que Topalov cierre el centro con d5 y quedaría cerrado el flanco de dama"
+									},
+									{
+										texto: "Estratégicamente tiene una pega que es que se queda el alfil negro de e7 encerrado un tiempo"
+									},
+								],
+						respuestaCorrecta:"2"
+			},{},
+			{
+				id: "a5",
+				titulo: "¿Cual es la idea de Ivanchuk con a5?",
+						opciones: [
+									{
+										texto:"Buscar una casilla fuerte para el caballo en b4"
+									},
+									{
+										texto: "Presionar el peón de d4, amenazando a un protector, el caballo de b3"
+									},
+									{
+										texto: "Estratégicamente tiene una pega que es que se queda el alfil negro de e7 encerrado un tiempo"
+									},
+									{
+										texto: "Bien jugado, tienen que evitar que Topalov cierre el centro con d5 y quedaría cerrado el flanco de dama"
+									}
+								],
+						respuestaCorrecta:"2"
+			},{},{},{},
+			{
+				id: "Qb7",
+				titulo: "MUEVE: ¿Cual es el último movimiento de apertura que juega Topalov?",
+						opciones: [
+									{
+										texto:"MUEVE"
+									}
+								],
+						respuestaCorrecta:"1"
+			}
+		]
 	},
 	{
 		nombre: "1750 - Francois Antoine de Legall de Kermeur - Saint Brie",

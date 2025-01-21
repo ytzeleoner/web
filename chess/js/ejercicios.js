@@ -467,6 +467,140 @@ var ejercicios=[
 								],
 						respuestaCorrecta:"36"
 		}
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "Geometrico",
+		posicionInicial:"2k2b1r/pp1r1ppp/2n1p1q1/2p5/2PPQB2/2P2N2/P4PPP/1R2K3 w - - 0 1",
+		jugadasCPU: ['','bxc6+','END'],
+		jugadasPlayer: ['Qxc6+','Rb8#'],
+		orientation: 'white',
+		pregunta: {
+			titulo: "¿Qué Táctica o Mate existe en esta jugada?",
+						opciones: [
+									{
+										texto:"Mate utilizando geometría torre alfil"
+									},
+									{
+										texto: "Mate de la Coz"
+									},
+									{
+										texto: "Desviación"
+									},
+									{
+										texto: "Ataque a la descubierta"
+									},
+									{
+										texto: "Encerrar pieza"
+									},
+									{
+										texto: "Mate de Boden"
+									}
+								],
+						respuestaCorrecta:"1"
+		}
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "Geometrico",
+		posicionInicial:"b2qr1k1/5p1p/pn5Q/1p1n1p2/3PR3/3B4/PB3PPP/6K1 w - - 0 1",
+		jugadasCPU: ['','fxg4','Kh8','Kg8','Kf8','END'],
+		jugadasPlayer: ['Rg4+','Bxh7+','Bg6+','Qh7+','Qxf7#'],
+		orientation: 'white',
+		pregunta: {
+			titulo: "¿Qué Táctica o Mate existe en esta jugada?",
+						opciones: [
+									{
+										texto:"Mate utilizando geometría torre alfil"
+									},
+									{
+										texto: "Mate de la Coz"
+									},
+									{
+										texto: "Desviación"
+									},
+									{
+										texto: "Mate utilizando geometría alfil dama"
+									},
+									{
+										texto: "Encerrar pieza"
+									},
+									{
+										texto: "Mate de Boden"
+									}
+								],
+						respuestaCorrecta:"4"
+		}
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "Greco",
+		posicionInicial:"5rk1/5ppp/8/6NQ/2B5/8/5PPP/6K1 b - - 0 1",
+		jugadasCPU: ['h6','Kh8','hxg5','END'],
+		jugadasPlayer: ['Bxf7+','Qg6','Qh5#'],
+		orientation: 'white',
+		pregunta: {
+			titulo: "¿Qué Táctica o Mate existe en esta jugada?",
+						opciones: [
+									{
+										texto:"Mate utilizando geometría torre alfil"
+									},
+									{
+										texto: "Mate del Greco"
+									},
+									{
+										texto: "Desviación"
+									},
+									{
+										texto: "Mate utilizando geometría alfil dama"
+									},
+									{
+										texto: "Encerrar pieza"
+									},
+									{
+										texto: "Mate de Boden"
+									}
+								],
+						respuestaCorrecta:"2"
+		}
+
+
+	},
+	{
+		nombre: "Patrones de Ataque",
+		tipo: "Mate",
+		subtipo: "Greco",
+		posicionInicial:"rn3rk1/ppp3pp/8/4bP1Q/3qN3/3B4/PP3p1P/2R2K1R w - - 0 1",
+		jugadasCPU: ['','Kh8','h6','hxg5','END'],
+		jugadasPlayer: ['Bc4+','Ng5','Qg6','Qh5#'],
+		orientation: 'white',
+		pregunta: {
+			titulo: "¿Qué Táctica o Mate existe en esta jugada?",
+						opciones: [
+									{
+										texto:"Mate utilizando geometría torre alfil"
+									},
+									{
+										texto: "Mate del Greco"
+									},
+									{
+										texto: "Desviación"
+									},
+									{
+										texto: "Mate utilizando geometría alfil dama"
+									},
+									{
+										texto: "Encerrar pieza"
+									},
+									{
+										texto: "Mate de Boden"
+									}
+								],
+						respuestaCorrecta:"2"
+		}
 	}
 	
 
