@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Diario</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>Quiz Diario</h1>
+    <div id="score">Puntuación: 0</div>
+    <div id="timer">Tiempo restante: <span id="countdown">10</span>s</div>
+    <div id="question-container">
+      <img id="question-image" src="" alt="Imagen de la pregunta" style="display: none;">
+      <div id="question"></div>
+      <div id="options"></div>
+    </div>
+    <button id="next" style="display: none;" onclick="loadNextQuestion()">Siguiente</button>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
