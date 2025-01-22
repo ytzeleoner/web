@@ -7,10 +7,15 @@ let timer; // Para la cuenta atrás
 async function fetchQuestions() {
   const sheetId = '1M1xFqxDGPi3WiN-n6TnVFmhTTsBL7Mj0sSLePySPNBw';
   const range = 'Questions!A2:I'; // Ajusta el rango según tus datos
-  const apiKey = 'AIzaSyCoUUk23MoqS2KzVfv8vYwpI-sX4seP1KA';
+  const apiKey = localStorage.getItem("API_KEY_SHEETS");
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
   const response = await fetch(url);
   const data = await response.json();
+
+ if (!apiKey) {
+	window.location.href="getAPIKey.html"
+ }
+
   questions = data.values.map(row => ({
     question: row[1],
     image: row[2],
@@ -82,4 +87,5 @@ function startTimer() {
 }
 
 // Inicia el quiz
+
 fetchQuestions();

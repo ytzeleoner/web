@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Clave de API</title>
+    <style>
+        #apiForm {
+            display: none; /* Se oculta inicialmente */
+            margin-top: 20px;
+        }
+        #apiKeyInput {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la aplicación</h1>
+    
+    <!-- Mensaje de error si la clave no está disponible -->
+    <div id="errorMessage" style="color: red; display: none;">
+        <p>La clave de API no está disponible. Por favor ingrésala.</p>
+    </div>
+
+    <!-- Formulario para que el usuario ingrese la clave -->
+    <div id="apiForm">
+        <label for="apiKeyInput">Ingresa tu clave de API:</label>
+        <input type="text" id="apiKeyInput" placeholder="Clave de API">
+        <button onclick="guardarClave()">Guardar Clave</button>
+    </div>
+
+    <script>
+        // Función para verificar si la clave está en localStorage
+        function verificarClaveAPI() {
+            const apiKey = localStorage.getItem('API_KEY_SHEETS');
+            
+            if (!apiKey) {
+                // Si la clave no existe, mostrar el formulario
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('apiForm').style.display = 'block';
+            } else {
+                console.log("Clave de API disponible:", apiKey);
+                // Aquí puedes continuar con la lógica de tu aplicación
+            }
+        }
+
+        // Función para guardar la clave introducida por el usuario
+        function guardarClave() {
+            const apiKey = document.getElementById('apiKeyInput').value;
+            
+            if (apiKey) {
+                // Guardar la clave en localStorage
+                localStorage.setItem('API_KEY_SHEETS', apiKey);
+                alert("Clave de API guardada correctamente.");
+
+                // Ocultar el formulario y el mensaje de error
+                document.getElementById('apiForm').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'none';
+
+                // Aquí puedes continuar con la lógica de tu aplicación, ya que la clave ahora está disponible
+            } else {
+                alert("Por favor, ingresa una clave de API válida.");
+            }
+        }
+
+        // Ejecutar la verificación al cargar la página
+        verificarClaveAPI();
+    </script>
+</body>
+</html>
