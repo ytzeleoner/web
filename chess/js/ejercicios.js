@@ -469,7 +469,6 @@ var ejercicios=[
 		}
 	},
 	{
-<<<<<<< HEAD
 		nombre: "Patrones de Ataque",
 		tipo: "Mate",
 		subtipo: "Geometrico",
@@ -602,7 +601,8 @@ var ejercicios=[
 								],
 						respuestaCorrecta:"2"
 		}
-=======
+	},
+	{
 		nombre: "113702 Dif(1000)",
 		tipo: "Mate",
 		subtipo: "Basicos",
@@ -628,7 +628,6 @@ var ejercicios=[
 		jugadasCPU: ['O-O','Bxc6+','Bxc3','END'],
 		jugadasPlayer: ['Bxc3','bxc6','Nxc3'],
 		orientation: 'black'
->>>>>>> 11554239e1806268f18808677113185ae31945bd
 	}
 	
 
