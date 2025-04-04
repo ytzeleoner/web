@@ -70,12 +70,14 @@ function checkAnswer(answer) {
   clearInterval(timer); // Detén el temporizador
 }
 
-// Carga la siguiente pregunta
-function loadNextQuestion() {
-  currentQuestionIndex++;
-  document.getElementById('next').style.display = 'none';
-  loadQuestion();
-}
+// vent listeners modernos:
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('next').addEventListener('click', function() {
+        currentQuestionIndex++;
+        this.style.display = 'none';
+        loadQuestion();
+    });
+});
 
 // Inicia un temporizador de cuenta atrás
 function startTimer() {
