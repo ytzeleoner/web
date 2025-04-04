@@ -14,11 +14,11 @@ async function fetchQuestions() {
   
   const range = 'Questions!A2:I'; // Ajusta el rango según tus datos
   
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${APIKEY}`;
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${API_KEY}`;
   const response = await fetch(url);
   const data = await response.json();
 
- if (!APIKEY) {
+ if (!API_KEY) {
 	window.location.href="getAPIKey.html"
  }
 
