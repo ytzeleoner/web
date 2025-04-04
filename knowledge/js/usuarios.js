@@ -17,7 +17,7 @@ let users = [];
 document.addEventListener('DOMContentLoaded', loadUsers);
 
 async function loadUsers() {
-	alert("cargando usuarios")
+	
     try {
         const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${USERS_RANGE}?key=${API_KEY}`;
 alert(url)
@@ -81,7 +81,7 @@ userSelect.addEventListener('change', function() {
         userPoints.textContent = selectedUser.puntos;
         
         // Manejar avatar (usar default si no hay)
-        userAvatar.src = selectedUser.avatar || 'default-avatar.png';
+        userAvatar.src = selectedUser.avatar || 'img/usuario.png';
         
         userPreview.style.display = 'block';
         startButton.disabled = false;
