@@ -18,7 +18,7 @@ async function fetchQuestions() {
   const response = await fetch(url);
   const data = await response.json();
 
- if (!apiKey) {
+ if (!APIKEY) {
 	window.location.href="getAPIKey.html"
  }
 

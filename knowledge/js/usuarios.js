@@ -17,8 +17,10 @@ let users = [];
 document.addEventListener('DOMContentLoaded', loadUsers);
 
 async function loadUsers() {
+	alert("cargando usuarios")
     try {
         const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${USERS_RANGE}?key=${API_KEY}`;
+alert(url)
         const response = await fetch(url);
         
         if (!response.ok) {
