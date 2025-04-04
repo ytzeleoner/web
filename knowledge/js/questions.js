@@ -1,14 +1,20 @@
+import { SHEET_ID, API_KEY } from './config.js';
+
+
 let questions = []; // Almacenará las preguntas del quiz
 let currentQuestionIndex = 0;
 let score = 0;
 let timer; // Para la cuenta atrás
 
+
+
+
 // Obtén las preguntas desde Google Sheets
 async function fetchQuestions() {
-  const sheetId = '1M1xFqxDGPi3WiN-n6TnVFmhTTsBL7Mj0sSLePySPNBw';
+  
   const range = 'Questions!A2:I'; // Ajusta el rango según tus datos
-  const apiKey = localStorage.getItem("API_KEY_SHEETS");
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+  
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${APIKEY}`;
   const response = await fetch(url);
   const data = await response.json();
 
@@ -89,3 +95,65 @@ function startTimer() {
 // Inicia el quiz
 
 fetchQuestions();
+
+
+
+async function saveAnswerToSheet(userId,questionId,points){
+	
+	const RANGE = 'Respuestas!A:D'
+	const date= new Date().toISOString();
+	const values= [
+	[userId,questionId,points,date]	
+	];
+	
+	const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}:append?valueInputOption=USER_ENTERED&key=${API_KEY}`;
+  
+  const body = {
+    values: values,
+    majorDimension: "ROWS"
+  };
+  
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    });
+    
+    if (!response.ok) {
+      throw new Error('Error al guardar');
+    }
+    
+    console.log('Respuesta guardada exitosamente');
+    return true;
+  } catch (error) {
+    console.error('Error:', error);
+    // Fallback: Guardar en localStorage para enviar luego
+    saveToLocalStorage({ userId, questionId, isCorrect, date });
+    return false;
+  }
+	
+}
+
+
+
+// Cargar usuario seleccionado
+document.addEventListener('DOMContentLoaded', function() {
+    const selectedUser = JSON.parse(localStorage.getItem('selectedUser'));
+    
+    if (selectedUser) {
+        // Mostrar información del usuario en el header
+        document.getElementById('currentUserAvatar').src = selectedUser.avatar || 'default-avatar.png';
+        document.getElementById('currentUserName').textContent = selectedUser.nombre;
+        document.getElementById('currentUserLevel').textContent = selectedUser.nivel;
+        document.getElementById('currentUserPoints').textContent = selectedUser.puntos;
+    } else {
+        // Si no hay usuario seleccionado, redirigir
+        window.location.href = 'index.html';
+    }
+    
+    // Aquí iría el código para cargar las preguntas
+    // loadQuestions(selectedUser.id);
+});
